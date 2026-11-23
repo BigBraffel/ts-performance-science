@@ -1265,7 +1265,7 @@ function disclaimerHTML(short) {
   return `<div class="card disclaimer" role="note">${DISCLAIMER.map(([h, p]) => `<h3>${h}</h3><p>${p}</p>`).join("")}</div>`;
 }
 /* --- Melden: schwebender Knopf; Meldungen werden als GitHub-Issues gesammelt und bei der nächsten Aktualisierung geprüft --- */
-const REPO = "https://github.com/BigBraffel/forschungsstand-sport";
+const REPO = "https://github.com/BigBraffel/ts-performance-science";
 let fabArt = "Inhalt";
 function fabText() {
   const ort = `${document.title} (${location.href})`, txt = $("fab-text").value.trim();
