@@ -296,6 +296,7 @@ table.cmp td { vertical-align: top; width: 41%; }
 .tour-card { position: fixed; background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 12px; padding: 18px; box-shadow: 0 12px 40px rgba(0, 0, 0, .45); display: flex; flex-direction: column; gap: 8px; box-sizing: border-box; max-height: calc(100vh - 16px); overflow-y: auto; }
 .tour-card.center { top: 50% !important; left: 50% !important; transform: translate(-50%, -50%); width: min(560px, calc(100vw - 24px)) !important; }
 .tour-card h2 { margin: 0; font-size: 1.15rem; }
+@media (max-width: 420px), (max-height: 700px) { .tour-card { padding: 14px; gap: 6px; } .tour-card p { font-size: .9rem; line-height: 1.45; } }
 .tour-card p { margin: 0; color: var(--ink-2); line-height: 1.55; }
 .tour-n { font-size: .75rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; }
 .tour-btns { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
@@ -1201,16 +1202,21 @@ const TOUR = [
   { t: "Bitte beachten", x: "Die Seite ist im Aufbau, und an vielem wird noch gearbeitet. Recherche und Zusammenfassung macht eine KI: Fehler sind möglich, es gibt keinen Anspruch auf Richtigkeit oder Vollständigkeit. Dosierungen und Empfehlungen setzt du auf eigene Gefahr um; es kann unbekannte Risiken geben. Keine Haftung für Folgen. <a href=\"#hinweis\" data-tour-end>Vollständiger Haftungsausschluss</a>" },
   { sel: "#q", menu: true, t: "Suche", x: "Durchsucht alle Themen, Befunde, Empfehlungen und Quellen auf einmal – zum Beispiel nach „Koffein“ oder „Schlaf“." },
   { sel: "#nav-tools", menu: true, t: "Werkzeuge", x: "<b>Mein Ziel</b> stellt Themen und Supplemente zu deinem Ziel zusammen. <b>Mythen-Check</b> prüft verbreitete Behauptungen. <b>Neu</b> zeigt alle Änderungen, <b>Rechner</b> rechnet Empfehlungen auf dein Gewicht und Training um, <b>Glossar</b> erklärt Fachbegriffe. Über <b>Hilfe</b> startest du diese Einführung erneut." },
-  { sel: "#nav-topics", menu: true, t: "Themen", x: "Drei Bereiche: Training, Ernährung und Supplemente. Ein Klick auf eine Gruppe klappt sie auf. Bei den Supplementen gibt es zusätzlich eine Übersicht, einen direkten Vergleich zweier Präparate und alle Risiken auf einen Blick." },
-  { page: "kreatin", sel: ".takeaways", t: "Jede Themenseite: das Kurzfazit", x: "Oben stehen die wichtigsten Aussagen. Das Etikett zeigt, wie gut sie belegt sind: <b>hoch</b> (mehrere übereinstimmende Metaanalysen), <b>moderat</b> oder <b>niedrig</b> (wenige oder widersprüchliche Studien). Unterstrichene Fachbegriffe erklären sich beim Antippen." },
-  { page: "kreatin", sel: "#wirkung", t: "Wirkungsübersicht", x: "Bei Supplementen und Ernährungsthemen: Der <b>Buchstabe</b> sagt, worauf eine Aussage beruht – A mindestens zwei Metaanalysen, B eine Metaanalyse, C systematische Reviews oder Positionspapiere, D nur Einzelstudien. Die <b>Farbe</b> zeigt den Effekt: dunkelgrün stark, hellgrün klein, grau kein Effekt, sandfarben uneinheitlich, rot ein Nachteil." },
-  { page: "kreatin", sel: "#ableitungen", t: "Ableitungen für die Praxis", x: "Was folgt daraus für Training und Ernährung? Dosierung, Zeitpunkt, für wen es sich lohnt – jeweils mit Quelle." },
-  { page: "kreatin", sel: "#variablen", t: "Im Detail", x: "Jeder Abschnitt listet die Befunde nach Aussagekraft: Metaanalysen zuerst, mit Studienzahl und Jahr. Die Abbildungen zeigen Effektgrößen; beim Darüberfahren erscheinen Details, darunter gibt es jede Grafik als Tabelle. Die <b>kritische Einordnung</b> erklärt Schwächen und Widersprüche." },
-  { page: "kreatin", sel: "#verlauf", t: "Forschungsverlauf", x: "Wie hat sich die Einschätzung über die Jahre entwickelt? Die Zeitleiste markiert Bestätigungen und Widersprüche; bei einigen Themen zeigt ein Diagramm, wie sich der geschätzte Effekt mit neuen Metaanalysen verändert hat." },
-  { page: "kreatin", sel: "#quellen", t: "Quellen, Methodik und Fehler melden", x: "Alle Quellen im APA-Format mit Link zu PubMed; ältere Arbeiten sind als „ältere Quelle“ gekennzeichnet. Unter Methodik stehen Suchanfrage und gesichtete Treffer. Fällt dir ein Fehler auf, melde ihn über „Fehler melden“ – jede Meldung wird gegen die Originalquelle geprüft." },
+  { sel: "#nav-topics > ul:first-of-type", menu: true, t: "Themen", x: "Drei Bereiche: Training (hier zu sehen), Ernährung und Supplemente. Ein Klick auf eine Gruppe klappt sie auf. Bei den Supplementen gibt es zusätzlich eine Übersicht, einen direkten Vergleich zweier Präparate und alle Risiken auf einen Blick." },
+  { page: "kreatin", sel: ".takeaways > :first-child", t: "Jede Themenseite: das Kurzfazit", x: "Oben stehen die wichtigsten Aussagen, jede als eigene Karte wie diese. Das Etikett zeigt, wie gut sie belegt sind: <b>hoch</b> (mehrere übereinstimmende Metaanalysen), <b>moderat</b> oder <b>niedrig</b> (wenige oder widersprüchliche Studien). Unterstrichene Fachbegriffe erklären sich beim Antippen." },
+  { page: "kreatin", sel: ["#wirkung .mx-cols", "#wirkung .mx-grp > summary", "#wirkung .mx-grp > .mx-row:nth-of-type(2)"], t: "Wirkungsübersicht", x: "Bei Supplementen und Ernährungsthemen, nach Zielen gruppiert (hier: Kraft). Der <b>Buchstabe</b> sagt, worauf eine Aussage beruht – A mindestens zwei Metaanalysen, B eine Metaanalyse, C systematische Reviews oder Positionspapiere, D nur Einzelstudien. Die <b>Farbe</b> zeigt den Effekt: dunkelgrün stark, hellgrün klein, grau kein Effekt, sandfarben uneinheitlich, rot ein Nachteil." },
+  { page: "kreatin", sel: "#ableitungen .rx > :first-child", t: "Ableitungen für die Praxis", x: "Was folgt daraus für Training und Ernährung? Dosierung, Zeitpunkt, für wen es sich lohnt – jeweils mit Quelle." },
+  { page: "kreatin", sel: "#variablen .findings > li:first-child", t: "Im Detail", x: "Jeder Abschnitt listet die Befunde nach Aussagekraft – wie hier: Studienart, Zahl der Studien und Jahr stehen über jedem Befund, Metaanalysen zuerst. Die Abbildungen zeigen Effektgrößen; beim Darüberfahren erscheinen Details, darunter gibt es jede Grafik als Tabelle. Die <b>kritische Einordnung</b> erklärt Schwächen und Widersprüche." },
+  { page: "kreatin", sel: "#timeline > li:first-child", t: "Forschungsverlauf", x: "Wie hat sich die Einschätzung über die Jahre entwickelt? Die Zeitleiste – hier ihr erster Eintrag – markiert Bestätigungen und Widersprüche; bei einigen Themen zeigt ein Diagramm, wie sich der geschätzte Effekt mit neuen Metaanalysen verändert hat." },
+  { page: "kreatin", sel: "#quellen li:first-child", t: "Quellen, Methodik und Fehler melden", x: "Alle Quellen im APA-Format mit Link zu PubMed, wie diese hier; ältere Arbeiten sind als „ältere Quelle“ gekennzeichnet. Unter Methodik stehen Suchanfrage und gesichtete Treffer. Fällt dir ein Fehler auf, melde ihn über „Fehler melden“ – jede Meldung wird gegen die Originalquelle geprüft." },
   { page: "start", sel: "main [data-app]", t: "Als App und offline", x: "Mit diesem Knopf installierst du die Seite als App und speicherst alle Themen auf dem Gerät. Sie funktioniert dann auch ohne Internet und holt sich bei jedem Öffnen mit Internet den neuesten Stand. Viel Spaß beim Stöbern!" }
 ];
 let tourI = -1;
+const tourEls = (st) => (Array.isArray(st.sel) ? st.sel : st.sel ? [st.sel] : []).map(q => document.querySelector(q)).filter(e => e && e.getClientRects().length);
+function tourRect(els) {
+  const rs = els.map(e => e.getBoundingClientRect()), top = Math.min(...rs.map(r => r.top)), left = Math.min(...rs.map(r => r.left)), bottom = Math.max(...rs.map(r => r.bottom)), right = Math.max(...rs.map(r => r.right));
+  return { top, left, bottom, right, width: right - left, height: bottom - top };
+}
 const tourSeen = () => { try { return localStorage.getItem(TOUR_KEY) === "1"; } catch (e) { return true; } };
 function startTour() {
   if (!$("tour")) document.body.insertAdjacentHTML("beforeend", `<div id="tour" class="tour" role="dialog" aria-modal="true" aria-labelledby="tour-h"><div class="tour-spot" id="tour-spot"></div>
@@ -1230,23 +1236,34 @@ async function showStep(i) {
   $("tour-n").textContent = `Schritt ${i + 1} von ${TOUR.length}`; $("tour-h").textContent = st.t; $("tour-x").innerHTML = st.x;
   $("tour").querySelector('[data-tour="back"]').hidden = i === 0;
   $("tour").querySelector('[data-tour="next"]').textContent = i === TOUR.length - 1 ? "Los geht’s" : i === 3 ? "Verstanden, weiter" : "Weiter";
-  const el = st.sel && document.querySelector(st.sel);
-  if (el) { const big = el.offsetHeight > innerHeight * 0.45; el.scrollIntoView({ block: big ? "start" : "center", behavior: "instant" }); if (big) scrollBy({ top: -16, behavior: "instant" }); await new Promise(r => setTimeout(r, 250)); }
+  const els = tourEls(st), el = els[0];
+  if (el) {
+    /* Element und Erklärung zusammen mittig ins Bild holen (Erklärung darunter) */
+    el.scrollIntoView({ block: "center", behavior: "instant" });
+    const card = $("tour-card"); card.classList.remove("center"); card.style.width = Math.min(380, innerWidth - 24) + "px";
+    const r = tourRect(els), need = r.height + 26 + card.offsetHeight;
+    if (need <= innerHeight - 16) scrollBy({ top: r.top - (innerHeight - need) / 2, behavior: "instant" });
+    await new Promise(res => setTimeout(res, 200));
+  }
   placeTour();
 }
 function placeTour() {
   const st = TOUR[tourI]; if (!st) return;
-  const el = st.sel && document.querySelector(st.sel), spot = $("tour-spot"), card = $("tour-card");
-  if (!el) { spot.hidden = true; card.classList.add("center"); card.style.top = card.style.left = ""; return; }
-  const r0 = el.getBoundingClientRect(), pad = 6, vw = innerWidth, vh = innerHeight;
-  /* hohe Bereiche nur oben hervorheben, damit die Erklärung darunter Platz hat */
-  const r = { top: r0.top, left: r0.left, width: r0.width, height: Math.min(r0.height, vh * 0.42), bottom: r0.top + Math.min(r0.height, vh * 0.42) };
+  const els = tourEls(st), spot = $("tour-spot"), card = $("tour-card");
+  if (!els.length) { spot.hidden = true; card.classList.add("center"); card.style.top = card.style.left = ""; return; }
+  const r = tourRect(els), pad = 6, vw = innerWidth, vh = innerHeight, gap = 14;
   spot.hidden = false; card.classList.remove("center");
-  Object.assign(spot.style, { top: Math.max(4, r.top - pad) + "px", left: Math.max(4, r.left - pad) + "px", width: Math.min(vw - 8, r.width + 2 * pad) + "px", height: Math.min(vh - 8, r.height + 2 * pad) + "px" });
-  const cw = Math.min(380, vw - 24), ch = card.offsetHeight;
-  let top = r.bottom + 12; if (top + ch > vh - 8) top = r.top - ch - 12; if (top < 8) top = Math.max(8, vh - ch - 8);
-  let left = Math.min(Math.max(12, r.left), vw - cw - 12);
-  Object.assign(card.style, { top: top + "px", left: left + "px", width: cw + "px" });
+  Object.assign(spot.style, { top: r.top - pad + "px", left: r.left - pad + "px", width: r.width + 2 * pad + "px", height: r.height + 2 * pad + "px" });
+  const cw = Math.min(380, vw - 24); card.style.width = cw + "px"; const ch = card.offsetHeight;
+  /* Erklärung unter, über, rechts oder links neben das Element – dort, wo sie ganz hineinpasst */
+  const clampX = (x) => Math.min(Math.max(12, x), vw - cw - 12), clampY = (y) => Math.min(Math.max(8, y), vh - ch - 8);
+  const opts = [
+    [r.bottom + pad + gap + ch <= vh - 8, clampX(r.left), r.bottom + pad + gap],
+    [r.top - pad - gap - ch >= 8, clampX(r.left), r.top - pad - gap - ch],
+    [r.right + pad + gap + cw <= vw - 12, r.right + pad + gap, clampY(r.top)],
+    [r.left - pad - gap - cw >= 12, r.left - pad - gap - cw, clampY(r.top)]];
+  const [, left, top] = opts.find(o => o[0]) || [true, clampX(r.left), vh - ch - 8];
+  Object.assign(card.style, { top: top + "px", left: left + "px" });
 }
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-tour]"), end = e.target.closest("[data-tour-end]");
