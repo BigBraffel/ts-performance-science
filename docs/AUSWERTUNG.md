@@ -73,6 +73,9 @@ Zusätzlich: Startseite (`#start`) und „Mein Ziel“ (`#ziel`). Neue Themen in
 
 Ein neues Thema kommt in die passende bestehende Gruppe; eine neue Gruppe nur, wenn mindestens drei Themen hineinpassen. Supplemente zusätzlich in `SUPPS` eintragen. Der Titel in `NAV` soll dem Feld `title` der Themendatei entsprechen (bestimmt die Sortierung der Supplement-Übersicht). Der Haftungsausschluss (`DISCLAIMER`) steht auf der Supplement-Übersicht, im Rechner und unter `#hinweis`.
 
+## Einführung (Tour)
+`TOUR` in `index.html`: Schritte mit optionaler Seite (`page`), hervorzuhebendem Element (`sel`) und Text. Startet beim ersten Besuch, sonst über „? Hilfe“. Bei neuen Hauptfunktionen einen Schritt ergänzen bzw. Texte anpassen; ändert sich die Tour stark, `TOUR_KEY` hochzählen, damit alle sie neu sehen.
+
 ## Rechner und App
 - Rechner-Karten (`CALC`) haben eine Bedingung `wann` je Trainingsart (kraft, intervall, ausdauer), Dauer, Wettkampf und Doppeleinheit. Neue Karten nur, wenn die Empfehlung für diese Trainingsart in den Quellen des Themas steht.
 - App/Offline (nur GitHub Pages): `sw.js` speichert auf Knopfdruck alle Themen und Register und erneuert sie bei jedem Online-Besuch. Bei Änderungen an `sw.js` die Konstante `CACHE` hochzählen.
