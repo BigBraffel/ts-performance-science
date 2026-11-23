@@ -285,21 +285,6 @@ table.cmp td { vertical-align: top; width: 41%; }
 .verdict { font-size: .78rem; font-weight: 700; border-radius: 99px; padding: 2px 10px; color: #fff; }
 .verdict.e1 { background: var(--e1); } .verdict.e3 { background: var(--e3); color: #2a1010; } .verdict.e4 { background: var(--e4); }
 .verdict.e0 { background: var(--e0); } .verdict.em { background: var(--em); color: #2a2410; }
-.tools .toggle { font: inherit; font-size: .8rem; color: var(--ink-2); background: none; border: 1px dashed var(--line); border-radius: 99px; padding: 4px 10px; cursor: pointer; }
-.tools .toggle[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
-.simple-hint { font-size: .85rem; color: var(--ink-3); margin: 0 0 4px; }
-.linkbtn { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
-.simple h1 { margin-top: 4px; }
-.simple .lead { font-size: 1.1rem; max-width: 70ch; }
-.simple-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
-.simple-cards .card { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
-.simple-cards h3 { margin: 0; font-size: 1.05rem; }
-.simple-cards p { margin: 0; color: var(--ink-2); }
-.simple-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
-.simple-list h3 { margin: 0 0 10px; font-size: 1rem; }
-.simple-list ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.simple-list li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: center; }
-.simple-list.ok { border-top: 3px solid var(--e1); } .simple-list.no { border-top: 3px solid var(--e0); } .simple-list.warn { border-top: 3px solid var(--e4); }
 .disclaimer { border-left: 4px solid var(--warn); background: var(--warn-bg); display: flex; flex-direction: column; gap: 8px; }
 .disclaimer h2, .disclaimer h3 { margin: 0; font-size: 1rem; }
 .disclaimer p { margin: 0; max-width: 95ch; font-size: .9rem; color: var(--ink); }
@@ -581,9 +566,7 @@ function navItem(it, cur) {
   return `<li><a href="#${it.id}" class="${it.id === cur ? "active" : ""}${ok ? "" : " planned"}"${it.id === cur ? ' aria-current="page"' : ""}>${it.title}${ok ? "" : " <em>geplant</em>"}</a></li>`;
 }
 function renderNav(cur) {
-  $("nav-tools").innerHTML = TOOLS.map(t => `<a href="#${t.id}"${t.id === cur ? ' class="active" aria-current="page"' : ""}>${t.title}</a>`).join("")
-    + `<button type="button" id="einfach-btn" class="toggle" aria-pressed="${einfach}" title="Nur das Wichtigste, ohne Statistik und Quellen">${einfach ? "✓ Einfach erklärt" : "Einfach erklärt"}</button>`;
-  $("einfach-btn").addEventListener("click", () => setEinfach(!einfach));
+  $("nav-tools").innerHTML = TOOLS.map(t => `<a href="#${t.id}"${t.id === cur ? ' class="active" aria-current="page"' : ""}>${t.title}</a>`).join("");
   $("nav-topics").innerHTML = NAV.map(g => `<h4>${g.group}</h4><ul class="topics">${g.items.map(it => {
     if (!it.children) return navItem(it, cur);
     const open = it.children.some(c => c.id === cur);
@@ -605,15 +588,14 @@ async function load() {
   renderNav(location.hash.replace("#", "") || r.topic);
   const PAGE_FN = { supplemente: renderSupOverview, suche: renderSearch, neu: renderNews, rechner: renderCalc, glossar: renderGlossar, hinweis: renderHinweis,
     start: renderStart, ziel: renderZiel, mythen: renderMythen, vergleich: renderVergleich, sicherheit: renderSicherheit };
-  if (PAGE_FN[r.topic]) { await PAGE_FN[r.topic](); return applyEinfach(); }
+  if (PAGE_FN[r.topic]) return PAGE_FN[r.topic]();
   if (!AVAILABLE.includes(r.topic)) return renderPlanned(r.topic);
   if (!cache[r.topic]) {
     try { cache[r.topic] = await (await fetch(`data/topics/${r.topic}.json`)).json(); }
     catch (e) { $("main").innerHTML = `<section><div class="card empty"><h2>Thema konnte nicht geladen werden</h2><p>Bitte die Seite neu laden.</p></div></section>`; return; }
   }
   T = cache[r.topic]; active = "alle";
-  if (einfach) await renderSimple(T); else renderTopic(T);
-  applyEinfach();
+  renderTopic(T);
   applyGlossar($("main"));
   document.title = `Forschungsstand ${T.title}`;
   const pend = pendingScroll; pendingScroll = null;
@@ -1172,7 +1154,7 @@ const VERDICT = { "falsch": ["e4", "Falsch"], "stark übertrieben": ["e3", "Star
 async function renderMythen() {
   $("toc").innerHTML = ""; document.title = "Mythen-Check – Forschungsstand Sport";
   $("main").innerHTML = `<section><h1>Mythen-Check</h1><p class="cap">Wird geladen …</p></section>`;
-  if (!MYTHEN) MYTHEN = await fetch("data/mythen.json").then(r => r.json()); const M = MYTHEN; await loadAll();
+  const [M] = await Promise.all([fetch("data/mythen.json").then(r => r.json()), loadAll()]);
   $("main").innerHTML = `<section>
     <h1>Mythen-Check</h1>
     <p class="lead">Verbreitete Behauptungen aus Gym, Laufgruppe und Social Media – geprüft an der Studienlage. Jede Einschätzung stützt sich auf die Quellen des jeweiligen Themas.</p>
@@ -1185,46 +1167,6 @@ async function renderMythen() {
   window.scrollTo(0, 0);
 }
 
-/* Einfache Ansicht: Statistik, Intervalle und Zitate im Fließtext ausblenden, Fachabschnitte zuklappen */
-let einfach = false; try { einfach = localStorage.getItem("fs-einfach") === "1"; } catch (e) {}
-const STAT = /\s*\[[^\[\]]*\d[^\[\]]*;[^\[\]]*\d[^\[\]]*\]|\s*\((?:[^()]*?(?:\b(?:SMD|WMD|MD|ES|RR|OR|HR|NNT|KI|CI)\b|I²|\bg\s?=|\bp\s?[<=>]|\br\s?=)[^()]*)\)|\s*\((?:[^()]*?\bet al\.|[^()]*?&amp;[^()]*?|[A-ZÄÖÜ][^()]*?), \d{4}[a-z]?(?:;[^()]*)?\)/g;
-function applyEinfach() {
-  document.body.classList.toggle("einfach", einfach);
-  $("einfach-btn").setAttribute("aria-pressed", String(einfach));
-  if (!einfach) return;
-  $("main").querySelectorAll("p, li > span, .mx-detail p").forEach(el => {
-    if (el.closest("#quellen, .tbl-wrap, .cite") || el.dataset.simple) return;
-    el.dataset.simple = "1"; el.innerHTML = el.innerHTML.replace(STAT, "");
-  });
-}
-
-/* Einfache Themenansicht: eigenes, reduziertes Layout statt der Detailseite */
-let MYTHEN = null;
-async function renderSimple(t) {
-  if (!MYTHEN) MYTHEN = await fetch("data/mythen.json").then(r => r.json()).catch(() => ({ items: [] }));
-  const plain = (x) => strip(String(x || "")).replace(STAT, "");
-  const myths = MYTHEN.items.filter(m => m.topic === t.id);
-  const items = t.matrix ? allItems([t]) : [];
-  const grp = (f) => items.filter(f).sort((a, b) => rank(a) - rank(b));
-  const hilft = grp(i => i.b === "nutzen" && i.m !== 0 && i.m != null), nicht = grp(i => i.m === 0 || i.g === "0"), vorsicht = grp(i => i.b === "schaden" && i.m !== 0);
-  const list = (h, l, cls) => l.length ? `<div class="card simple-list ${cls}"><h3>${h}</h3><ul>${l.map(i => `<li>${lt1(i)}<span>${i.n}</span></li>`).join("")}</ul></div>` : "";
-  $("main").innerHTML = `<section id="ueberblick" class="simple">
-    <p class="simple-hint">Einfache Ansicht · Stand ${fmtDate(t.stand)} · <button type="button" class="linkbtn" data-detail>Alle Details und Quellen anzeigen</button></p>
-    <h1>${t.title}</h1>
-    ${t.def ? `<p class="lead">${plain(t.def.t)}</p>` : ""}
-    <h2>Das Wichtigste</h2>
-    <div class="simple-cards">${t.takeaways.map(k => `<div class="card"><span class="pill ev-${k.ev}">Evidenz ${k.ev}</span><h3>${plain(k.t)}</h3><p>${plain(k.p)}</p></div>`).join("")}</div>
-    ${items.length ? `<h2 id="wirkung">Wobei hilft es?</h2><p class="cap">Buchstabe = wie gut belegt (A sehr gut … D wenig), Farbe = Effekt.</p><div class="simple-grid">${list("Hilft", hilft, "ok")}${list("Hilft nicht", nicht, "no")}${list("Vorsicht", vorsicht, "warn")}</div>` : ""}
-    <h2 id="ableitungen">Was heißt das für dich?</h2>
-    <div class="rx">${t.rx.map(c => `<div class="card"><span class="label">${c.label}</span><span class="value">${c.value}</span><p>${plain(c.text)}</p></div>`).join("")}</div>
-    ${myths.length ? `<h2>Mythen zu diesem Thema</h2><div class="myth-list">${myths.map(m => `<div class="card myth"><div class="myth-head"><span class="verdict ${VERDICT[m.v][0]}">${VERDICT[m.v][1]}</span></div><h3>„${m.m}“</h3><p>${m.t}</p></div>`).join("")}</div>` : ""}
-    <div class="card report"><p>Die Inhalte werden mit KI erstellt und können Fehler enthalten. Alle Zahlen, Quellen und die kritische Einordnung stehen in der Detailansicht.</p><div class="start-cta"><button type="button" class="btn-primary" data-detail>Detailansicht öffnen</button>${reportLink(t)}</div></div>
-  </section>`;
-  $("toc").innerHTML = [["ueberblick", "Das Wichtigste"], ...(items.length ? [["wirkung", "Wobei hilft es?"]] : []), ["ableitungen", "Für dich"]].map(([i, l]) => `<li><button type="button" data-scroll="${i}">${l}</button></li>`).join("");
-}
-/* per Delegation, weil applyGlossar die Absätze neu schreibt */
-document.addEventListener("click", (e) => { if (e.target.closest("[data-detail]")) setEinfach(false); });
-function setEinfach(on) { einfach = on; try { localStorage.setItem("fs-einfach", on ? "1" : "0"); } catch (e) {} load(); }
 
 /* --- Hinweise und Haftungsausschluss --- */
 const DISCLAIMER = [
