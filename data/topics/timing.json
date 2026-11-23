@@ -1,7 +1,7 @@
 {
  "id": "timing",
  "title": "Nährstoff-Timing rund ums Training",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Gibt es ein „anaboles Fenster“, wie sollte Protein über den Tag verteilt sein, lohnt sich Protein vor dem Schlafen, und sollte man nüchtern oder gegessen trainieren? Zusammengefasst aus Metaanalysen, systematischen Reviews und den ISSN-Positionspapieren.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierende Erwachsene. Wie viel Protein und Kohlenhydrate insgesamt sinnvoll sind, steht auf den Seiten <a href=\"#protein\">Protein</a> und <a href=\"#kohlenhydrate\">Kohlenhydrate</a>; hier geht es nur um den Zeitpunkt.",
@@ -512,6 +512,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 1 525 Einträgen, 244 Übersichtsarbeiten nach Titel geprüft (davon 13 aus regelbasiert ausgeschlossenen Einträgen und 99 über eine ergänzende Suche nach Übersichtsarbeiten), 21 Quellen aufgenommen."
   }
@@ -523,7 +527,7 @@
    "kat": "masse",
    "items": [
     {
-     "n": "Muskelmasse durch Protein direkt ums Training (statt zu anderen Zeiten)",
+     "n": "Direkt ums Training (statt zu anderen Zeiten)",
      "g": "A",
      "d": null,
      "m": 0,
@@ -536,7 +540,25 @@
       "casuso2025"
      ],
      "t": "Kein Zeitpunkt überlegen (Wirth et al., 2020: 26 Studien zur fettfreien Masse); nach Abgleich der Gesamtmenge kein Effekt (23 Studien). Vor vs. nach dem Training: SMD −0,08.",
-     "v": "fenster"
+     "v": "fenster",
+     "pop": "alle",
+     "w": "Muskelmasse: Zeitpunkt der Proteinzufuhr"
+    },
+    {
+     "n": "Ältere: Dosis, Häufigkeit und Zeitpunkt",
+     "g": "B",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": 28,
+     "p": 3204,
+     "s": [
+      "hettiarachchi2024"
+     ],
+     "t": "Protein erhöhte die Muskelmasse (SMD 0,116), Dosis, Häufigkeit und Zeitpunkt änderten daran nichts.",
+     "v": "verteilung",
+     "pop": "aelter",
+     "w": "Muskelmasse: Zeitpunkt der Proteinzufuhr"
     },
     {
      "n": "Kraft durch Protein ums Training",
@@ -551,7 +573,8 @@
       "casuso2025"
      ],
      "t": "Kein Effekt des Zeitpunkts auf die Kraft (20 Studien). Einzig die Beinpresse war bei Protein vor dem Training knapp besser (SMD 0,70; 5 Studien).",
-     "v": "fenster"
+     "v": "fenster",
+     "pop": "alle"
     },
     {
      "n": "Kraft durch Protein am Abend",
@@ -566,7 +589,8 @@
       "reis2021"
      ],
      "t": "Gegenüber Placebo Handkraft +2,85 kg und Beinpresse +12,12 kg; kein direkter Vergleich mit anderen Zeitpunkten, Gesamtproteinmenge nicht abgeglichen.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle"
     },
     {
      "n": "Gleichmäßige Proteinverteilung über den Tag",
@@ -581,21 +605,8 @@
       "hudson2020"
      ],
      "t": "Mehr Muskelmasse in 3 von 7, mehr Kraft in 2 von 7 Studien; der Effekt ist nicht von der Gesamtmenge zu trennen.",
-     "v": "verteilung"
-    },
-    {
-     "n": "Dosis, Häufigkeit und Zeitpunkt bei Älteren",
-     "g": "B",
-     "d": null,
-     "m": 0,
-     "b": "neutral",
-     "k": 28,
-     "p": 3204,
-     "s": [
-      "hettiarachchi2024"
-     ],
-     "t": "Protein erhöhte die Muskelmasse (SMD 0,116), Dosis, Häufigkeit und Zeitpunkt änderten daran nichts.",
-     "v": "verteilung"
+     "v": "verteilung",
+     "pop": "alle"
     },
     {
      "n": "Muskelmasse und Kraft bei Krafttraining nüchtern",
@@ -609,7 +620,8 @@
       "vieira2025"
      ],
      "t": "Fettfreie Masse SMD 0,529, Hypertrophie SMD 0,645, Kraft SMD 0,415, alle nicht signifikant; 3 von 4 Studien mit hohem Verzerrungsrisiko.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     }
    ]
   },
@@ -619,7 +631,7 @@
    "kat": "ausdauer",
    "items": [
     {
-     "n": "Lange Ausdauerleistung mit Mahlzeit vorher",
+     "n": "Lange Belastungen",
      "g": "B",
      "d": "auf",
      "m": -1,
@@ -630,10 +642,12 @@
       "aird2018"
      ],
      "t": "Gegessen besser als nüchtern bei langen Belastungen (p = 0,012); Effektgröße im Abstract nicht angegeben.",
-     "v": "nuechtern"
+     "v": "nuechtern",
+     "pop": "alle",
+     "w": "Ausdauerleistung mit Mahlzeit vorher"
     },
     {
-     "n": "Kürzere Ausdauerleistung mit Mahlzeit vorher",
+     "n": "Kürzere Belastungen",
      "g": "B",
      "d": null,
      "m": 0,
@@ -644,7 +658,9 @@
       "aird2018"
      ],
      "t": "Kein Unterschied zwischen nüchtern und gegessen (p = 0,687).",
-     "v": "nuechtern"
+     "v": "nuechtern",
+     "pop": "alle",
+     "w": "Ausdauerleistung mit Mahlzeit vorher"
     }
    ]
   },
@@ -667,7 +683,8 @@
       "kerksick2017"
      ],
      "t": "20–40 g Casein etwa 30 Minuten vor dem Schlafen steigerten die nächtliche Proteinsynthese; für einen deutlichen Anstieg vermutlich mindestens 40 g nötig.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle"
     }
    ]
   },
@@ -689,7 +706,8 @@
       "kazeminasab2025"
      ],
      "t": "+3,08 g Fett pro Einheit; praktisch gering. Eine neuere Analyse fand im respiratorischen Quotienten keinen Unterschied.",
-     "v": "nuechtern"
+     "v": "nuechtern",
+     "pop": "alle"
     },
     {
      "n": "Blutzucker und Insulin nach nüchterner Belastung",
@@ -703,7 +721,8 @@
       "kazeminasab2025"
      ],
      "t": "Nüchtern stiegen Blutzucker (+0,263 mmol/l) und Insulin (+8,84 mU/ml) stärker als gegessen; kein Hinweis auf einen Stoffwechselvorteil.",
-     "v": "nuechtern"
+     "v": "nuechtern",
+     "pop": "alle"
     },
     {
      "n": "Energieverbrauch bei Casein vor dem Schlaf",
@@ -718,7 +737,8 @@
       "kerksick2017"
      ],
      "t": "Wenig bis kein Effekt auf Energieumsatz, Fettstoffwechsel und Appetit (11 Studien); das ISSN berichtet einen höheren nächtlichen Umsatz.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle"
     }
    ]
   },
@@ -739,7 +759,8 @@
       "frampton2022"
      ],
      "t": "24-Stunden-Aufnahme −2 095 kJ gegenüber gegessen trainieren, aber geringerer Energieverbrauch (−0,67 kJ/min); kurze Laborstudien mit methodischen Schwächen.",
-     "v": "nuechtern"
+     "v": "nuechtern",
+     "pop": "alle"
     },
     {
      "n": "Hunger nach Nüchterntraining",
@@ -753,7 +774,8 @@
       "frampton2022"
      ],
      "t": "Subjektiver Hunger +23 mm auf der Skala gegenüber gegessen trainieren.",
-     "v": "nuechtern"
+     "v": "nuechtern",
+     "pop": "alle"
     },
     {
      "n": "Fettmasse bei Krafttraining nüchtern (Abnahme)",
@@ -767,7 +789,8 @@
       "vieira2025"
      ],
      "t": "SMD −1,001, knapp signifikant; nur 4 Studien, 3 mit hohem Verzerrungsrisiko.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     }
    ]
   },
@@ -788,7 +811,8 @@
       "hsieh2025"
      ],
      "t": "Frühstück veränderte die Wirkung der Belastung auf die geistige Leistung nicht; niedrige Studienqualität.",
-     "v": "vorher"
+     "v": "vorher",
+     "pop": "alle"
     }
    ]
   }

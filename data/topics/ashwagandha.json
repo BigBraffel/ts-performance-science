@@ -1,7 +1,7 @@
 {
  "id": "ashwagandha",
  "title": "Ashwagandha",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Senkt Ashwagandha Stress und Cortisol, verbessert es Schlaf, Kraft und Ausdauer, und wie sicher ist die Pflanze für Leber und Schilddrüse? Zusammengefasst aus Metaanalysen, systematischen Reviews und Sicherheitsübersichten.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Die meisten Studien sind klein, kurz (meist bis 12 Wochen, höchstens 180 Tage) und nutzen unterschiedliche Extrakte; die Sicherheit bei längerer Einnahme ist offen.",
@@ -486,6 +486,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert (Zielgruppe der Studien je Befund ergänzt)."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 993 Einträgen, 169 Übersichtsarbeiten nach Titel geprüft (davon 39 zunächst per Titelregel einer anderen Kategorie zugeordnet), dazu 2 Übersichtsarbeiten aus einer ergänzenden Suche; 22 Quellen aufgenommen."
   }
@@ -509,7 +513,8 @@
       "lix2026"
      ],
      "t": "Bankdrücken SMD 0,60, Unterkörper 0,52; nach strengerer Korrektur nicht mehr signifikant, Evidenzsicherheit niedrig.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -530,7 +535,8 @@
       "lee2026"
      ],
      "t": "SMD 0,86 [0,41; 1,31] aus 2 Studien; sehr niedrige Evidenzsicherheit, keine direkte Messung der Muskelmasse.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -551,7 +557,8 @@
       "lee2026"
      ],
      "t": "SMD −0,32 [−0,72; 0,08], nicht signifikant.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -572,7 +579,8 @@
       "lix2026"
      ],
      "t": "g = 0,47 [0,25; 0,69]; das Vorhersageintervall [−0,40; 1,33] schließt aber null ein.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     },
     {
      "n": "Aerobe Ausdauerleistung",
@@ -586,7 +594,8 @@
       "lix2026"
      ],
      "t": "g = 0,54 [0,22; 0,85]; am konsistentesten unter den Leistungsbereichen.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     },
     {
      "n": "VO₂max",
@@ -600,7 +609,8 @@
       "perezgomez2020"
      ],
      "t": "Mittlere Differenz 3,00 [0,18; 5,82] bei hoher Heterogenität; die Einheit ist im Abstract nicht angegeben.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -622,7 +632,8 @@
       "fatima2024"
      ],
      "t": "SMD −0,59 [−0,75; −0,42] zugunsten von Ashwagandha (negativ = besser); deutlicher bei Schlaflosigkeit, ab 600 mg und ab 8 Wochen.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle"
     },
     {
      "n": "Einschlafzeit (Abnahme)",
@@ -636,7 +647,8 @@
       "fatima2024"
      ],
      "t": "Bei Angststörungen oder Schlaflosigkeit verkürzt; Wachzeit nach dem Einschlafen unverändert.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle"
     }
    ]
   },
@@ -659,7 +671,8 @@
       "albalawi2025"
      ],
      "t": "SMD −1,75 bzw. PSS −4,72 Punkte in zwei Analysen, in einer dritten nicht signifikant (SMD −0,355).",
-     "v": "stress"
+     "v": "stress",
+     "pop": "alle"
     },
     {
      "n": "Angst (Abnahme)",
@@ -674,7 +687,8 @@
       "arumugam2024"
      ],
      "t": "SMD −1,55 [−2,37; −0,74], aber extrem heterogen (I² = 93,8 %) bei niedriger Evidenzsicherheit.",
-     "v": "stress"
+     "v": "stress",
+     "pop": "alle"
     }
    ]
   },
@@ -698,7 +712,8 @@
       "dellaporta2023"
      ],
      "t": "SMD −1,18 (23 Studien); −1,16 µg/dl [−1,64; −0,69] in einer weiteren Analyse.",
-     "v": "stress"
+     "v": "stress",
+     "pop": "alle"
     },
     {
      "n": "Testosteron bei Männern",
@@ -714,7 +729,8 @@
       "morgado2024"
      ],
      "t": "+57,43 ng/dl; als klein eingestuft, da die Werte laut Sicherheitsreview im physiologischen Bereich blieben. Bei Frauen kein Effekt.",
-     "v": "hormone"
+     "v": "hormone",
+     "pop": "alle"
     },
     {
      "n": "Schilddrüsenhormon T4",
@@ -728,7 +744,8 @@
       "fornalik2026"
      ],
      "t": "+0,61 µg/dl; TSH und T3 unverändert. Als sehr klein eingestuft.",
-     "v": "hormone"
+     "v": "hormone",
+     "pop": "alle"
     }
    ]
   },
@@ -749,7 +766,8 @@
       "farrin2026"
      ],
      "t": "−3,09 mg/dl [−5,61; −0,58]; als sehr klein eingestuft; HbA1c unverändert; sehr niedrige Evidenzsicherheit.",
-     "v": "stoffwechsel"
+     "v": "stoffwechsel",
+     "pop": "alle"
     }
    ]
   },
@@ -772,7 +790,8 @@
       "arumugam2024"
      ],
      "t": "Keine schweren Ereignisse bis 180 Tage; leichte Beschwerden auch unter Placebo. Teils Autoren mit Branchenverbindungen.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Leberschäden (Fallberichte)",
@@ -787,7 +806,8 @@
       "philips2023"
      ],
      "t": "Meist cholestatisch und nach Absetzen rückläufig; Todesfälle bei vorbestehender Lebererkrankung. Häufigkeit unbekannt.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

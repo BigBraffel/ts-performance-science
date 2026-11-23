@@ -1,7 +1,7 @@
 {
  "id": "alkohol",
  "title": "Alkohol und Training",
- "stand": "2026-11-21",
+ "stand": "2026-11-23",
  "lead": "Wie stark beeinträchtigt Alkohol Leistung, Regeneration, Muskelaufbau, Hormone und Schlaf, ab welcher Menge, und ist „moderates“ Trinken gesund? Zusammengefasst aus Metaanalysen, Umbrella Reviews, systematischen Reviews und einer Schlüsselstudie zur Muskelproteinsynthese.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierende Erwachsene. Zu akuten Effekten auf Training und Regeneration gibt es nur wenige kleine Studien und keine Metaanalyse; die Gesundheitsaussagen beruhen auf großen Kohorten- und Genanalysen.",
@@ -570,6 +570,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "21.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 3 369 Einträgen, 390 Übersichtsarbeiten nach Titel geprüft, zusätzlich 270 regelbasiert ausgeschlossene Übersichtsarbeiten nachgesichtet und eine gezielte Zusatzsuche zu Alkohol und Erholung; 24 Quellen aufgenommen."
   }
@@ -593,7 +597,8 @@
       "wynne2021"
      ],
      "t": "Kraft, Schnellkraft und Kraftausdauer blieben nach Alkohol in den Studien unverändert (12 Studien, ohne Metaanalyse).",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -616,7 +621,8 @@
       "levitt2022"
      ],
      "t": "−24 % mit Protein und −37 % mit Kohlenhydraten nach 1,5 g/kg Alkohol; einzelne Studie mit 8 Männern und hoher Dosis.",
-     "v": "regeneration"
+     "v": "regeneration",
+     "pop": "einsteiger"
     },
     {
      "n": "Muskelschädigungs- und Entzündungsmarker",
@@ -630,7 +636,8 @@
       "lakicevic2019"
      ],
      "t": "Kreatinkinase, CRP, Zytokine und Muskelkater blieben unverändert.",
-     "v": "regeneration"
+     "v": "regeneration",
+     "pop": "alle"
     }
    ]
   },
@@ -651,7 +658,8 @@
       "santi2024"
      ],
      "t": "Gesamttestosteron MD −4,02 [−6,30; −1,73] (Einheit im Abstract nicht angegeben), Östradiol +7,65; nur bei chronischem Konsum.",
-     "v": "hormone"
+     "v": "hormone",
+     "pop": "alle"
     },
     {
      "n": "Cortisol nach Training",
@@ -665,7 +673,8 @@
       "lakicevic2019"
      ],
      "t": "Cortisol stieg nach Alkohol in der Erholungsphase; Größe nicht gepoolt.",
-     "v": "hormone"
+     "v": "hormone",
+     "pop": "alle"
     }
    ]
   },
@@ -686,7 +695,8 @@
       "gardiner2025"
      ],
      "t": "Weniger und später einsetzender REM-Schlaf schon bei Mengen bis 0,5 g/kg (zwei Getränke), mit der Dosis zunehmend; Größe im Abstract nicht beziffert.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle"
     },
     {
      "n": "Einschlafzeit (hohe Dosis)",
@@ -700,7 +710,8 @@
       "gardiner2025"
      ],
      "t": "Nur ab etwa 0,85 g/kg kürzer; geht mit stärkerer REM-Störung einher.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle"
     }
    ]
   },
@@ -721,7 +732,8 @@
       "dionisi2026"
      ],
      "t": "Jedes Trinken erhöhte die Verletzungswahrscheinlichkeit (OR 2,80); Daten aus der Allgemeinbevölkerung.",
-     "v": "sportler"
+     "v": "sportler",
+     "pop": "alle"
     },
     {
      "n": "Frakturen",
@@ -735,7 +747,8 @@
       "ke2023"
      ],
      "t": "Höchster gegen niedrigster Konsum RR 1,26 [1,17; 1,37]; je 14 g/Tag +6 %.",
-     "v": "sportler"
+     "v": "sportler",
+     "pop": "alle"
     }
    ]
   },
@@ -745,7 +758,7 @@
    "kat": "herz",
    "items": [
     {
-     "n": "Gesamtsterblichkeit bei geringer Menge (bis etwa 24 g/Tag)",
+     "n": "Geringe Menge (bis etwa 24 g/Tag)",
      "g": "A",
      "d": null,
      "m": 0,
@@ -760,10 +773,12 @@
       "ronksley2011"
      ],
      "t": "Nach Korrektur für Verzerrungen kein Vorteil (RR 0,93, nicht signifikant; 107 Studien); frühere Schutzeffekte (RR 0,87) beruhten weitgehend auf verzerrten Vergleichsgruppen.",
-     "v": "sterblichkeit"
+     "v": "sterblichkeit",
+     "pop": "alle",
+     "w": "Gesamtsterblichkeit"
     },
     {
-     "n": "Gesamtsterblichkeit ab 45 g/Tag",
+     "n": "Ab 45 g/Tag",
      "g": "A",
      "d": "auf",
      "m": 2,
@@ -775,7 +790,9 @@
       "wood2018"
      ],
      "t": "RR 1,19 bei 45–64 g/Tag und 1,35 ab 65 g/Tag; über 350 g/Woche 4–5 Jahre geringere Lebenserwartung.",
-     "v": "sterblichkeit"
+     "v": "sterblichkeit",
+     "pop": "alle",
+     "w": "Gesamtsterblichkeit"
     },
     {
      "n": "Vorhofflimmern (hoher Konsum)",
@@ -789,7 +806,8 @@
       "gallagher2017"
      ],
      "t": "HR 1,34 [1,20; 1,49]; bis 1 Getränk pro Tag kein Zusammenhang (HR 0,95).",
-     "v": "krankheit"
+     "v": "krankheit",
+     "pop": "alle"
     }
    ]
   },
@@ -799,7 +817,7 @@
    "kat": "sicherheit",
    "items": [
     {
-     "n": "Krebs gesamt bei geringem Konsum",
+     "n": "Krebs gesamt",
      "g": "B",
      "d": null,
      "m": 0,
@@ -810,10 +828,12 @@
       "jun2023"
      ],
      "t": "RR 1,02 [0,99; 1,04]; einzelne Krebsarten (Speiseröhre, Darm, Brust) aber schon bei geringem Konsum häufiger.",
-     "v": "krankheit"
+     "v": "krankheit",
+     "pop": "alle",
+     "w": "Krebsrisiko bei geringem Konsum"
     },
     {
-     "n": "Brustkrebs bei geringem Konsum",
+     "n": "Brustkrebs",
      "g": "B",
      "d": "auf",
      "m": 1,
@@ -825,7 +845,9 @@
       "jun2023"
      ],
      "t": "RR 1,05 bei geringem Konsum; kleiner, aber messbarer Anstieg.",
-     "v": "krankheit"
+     "v": "krankheit",
+     "pop": "alle",
+     "w": "Krebsrisiko bei geringem Konsum"
     },
     {
      "n": "Sarkopenie",
@@ -839,7 +861,8 @@
       "bu2024"
      ],
      "t": "OR 0,964 [0,912; 1,019] (62 Studien); Beobachtungsdaten Älterer.",
-     "v": "krankheit"
+     "v": "krankheit",
+     "pop": "alle"
     }
    ]
   }

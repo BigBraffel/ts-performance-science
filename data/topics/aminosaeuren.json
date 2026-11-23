@@ -1,7 +1,7 @@
 {
  "id": "aminosaeuren",
  "title": "BCAA und essenzielle Aminosäuren (EAA)",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Bringen BCAA, Leucin oder essenzielle Aminosäuren mehr Muskeln, Kraft oder Ausdauer, lindern sie Muskelkater, und sind sie besser als vollständiges Protein? Zusammengefasst aus Metaanalysen, systematischen Reviews und Positionspapieren.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierende Erwachsene und für Ältere. Entscheidend für den Muskelaufbau ist die gesamte Proteinzufuhr; isolierte BCAA sind dafür kein Ersatz.",
@@ -531,6 +531,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert (Zielgruppe der Studien je Befund ergänzt)."
+  },
+  {
    "d": "17.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 1 505 Einträgen, 470 Übersichtsarbeiten nach Titel geprüft (davon 186 zunächst per Titelregel einer anderen Kategorie zugeordnet), dazu 4 Übersichtsarbeiten aus einer ergänzenden Suche; 24 Quellen aufgenommen."
   }
@@ -559,7 +563,8 @@
       "rahimi2017"
      ],
      "t": "Muskelkater geringer: SMD −0,28 bis −0,92 (25 Studien) bzw. g = −0,82 bis −1,82 (18 Studien). Die erste Metaanalyse 2017 fand noch keinen signifikanten Effekt.",
-     "v": "muskelkater"
+     "v": "muskelkater",
+     "pop": "alle"
     },
     {
      "n": "Kreatinkinase (Muskelschadensmarker)",
@@ -576,7 +581,8 @@
       "salem2024a"
      ],
      "t": "Schadensmarker nach 48 h niedriger (SMD −0,41); Kreatinkinase nach 24 h um 145 U/l niedriger (8 Studien).",
-     "v": "muskelkater"
+     "v": "muskelkater",
+     "pop": "alle"
     },
     {
      "n": "Lactatdehydrogenase (LDH)",
@@ -592,7 +598,8 @@
       "salem2024a"
      ],
      "t": "Zu keinem Zeitpunkt signifikant verändert (18 Studien).",
-     "v": "muskelkater"
+     "v": "muskelkater",
+     "pop": "alle"
     },
     {
      "n": "Erholung der Muskelleistung",
@@ -607,7 +614,8 @@
       "salem2024a"
      ],
      "t": "Kraft und Leistung 24 und 48 h nach der Belastung wie mit Placebo (SMD 0,08 bis 0,21, nicht signifikant).",
-     "v": "muskelkater"
+     "v": "muskelkater",
+     "pop": "alle"
     }
    ]
   },
@@ -629,7 +637,8 @@
       "julea2025"
      ],
      "t": "Zwei systematische Reviews (24 bzw. 22 Studien): vernachlässigbare oder uneinheitliche Effekte; keine Metaanalyse.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     },
     {
      "n": "Körperzusammensetzung",
@@ -644,7 +653,8 @@
       "martinho2022"
      ],
      "t": "Nur 1 von 22 Studien fand eine Veränderung der Körperzusammensetzung.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -665,7 +675,8 @@
       "delguerra2026"
      ],
      "t": "15 Studien: keine konsistente Verbesserung von Leistung, Ermüdung oder Erholung trotz biochemischer Veränderungen.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "trainiert"
     },
     {
      "n": "Cortisol nach Belastung",
@@ -679,7 +690,8 @@
       "pourgharib2024"
      ],
      "t": "Cortisol ab 120 Minuten nach Belastung niedriger; Effektgröße im Abstract nicht berichtet, Bedeutung für die Leistung unklar.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     }
    ]
   },
@@ -701,7 +713,8 @@
       "ferrando2023"
      ],
      "t": "BCAA steigern die Proteinsynthese nur vorübergehend und schwächer als ein vollständiges Protein; Zahlen nennt das Abstract nicht.",
-     "v": "mps"
+     "v": "mps",
+     "pop": "alle"
     },
     {
      "n": "Muskelproteinsynthese mit Leucin bei Älteren",
@@ -716,7 +729,8 @@
       "wilkinson2023"
      ],
      "t": "Syntheserate erhöht (standardisierte Differenz 1,08), ohne Zunahme der fettfreien Masse (0,18, nicht signifikant).",
-     "v": "mps"
+     "v": "mps",
+     "pop": "aelter"
     }
    ]
   },
@@ -738,7 +752,8 @@
       "huang2025"
      ],
      "t": "SMD 0,35 [0,15; 0,55] in 35 Studien; hohe Heterogenität.",
-     "v": "aeltere"
+     "v": "aeltere",
+     "pop": "aelter"
     },
     {
      "n": "Muskelmasse mit BCAA-reichen Supplementen",
@@ -754,7 +769,8 @@
       "li2026"
      ],
      "t": "SMD 0,25 [0,10; 0,40]; mit Krafttraining nur der Skelettmuskelindex erhöht (SMD 0,34).",
-     "v": "aeltere"
+     "v": "aeltere",
+     "pop": "aelter"
     },
     {
      "n": "Muskelmasse und Kraft mit isoliertem Leucin",
@@ -769,7 +785,8 @@
       "xu2015"
      ],
      "t": "Fettfreie Masse +0,03 kg und Handkraft +1,23 kg, beides nicht signifikant; mit Vitamin D Handkraft +2,17 kg.",
-     "v": "aeltere"
+     "v": "aeltere",
+     "pop": "aelter"
     }
    ]
   },
@@ -790,7 +807,8 @@
       "ferrando2023"
      ],
      "t": "Laut ISSN liegt die sichere Obergrenze der EAA-Zufuhr ohne angeborene Stoffwechselerkrankung weit über üblichen Supplementmengen; eigene Sicherheitsmetaanalysen fehlen.",
-     "v": "mps"
+     "v": "mps",
+     "pop": "alle"
     }
    ]
   }

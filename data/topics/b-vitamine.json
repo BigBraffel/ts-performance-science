@@ -1,7 +1,7 @@
 {
  "id": "b-vitamine",
  "title": "B-Vitamine (inkl. Vitamin B12)",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Wer braucht zusätzliches Vitamin B12, helfen B-Vitamine gegen Müdigkeit oder für das Gehirn, und schützt die Senkung des Homocysteins vor Herzinfarkt, Schlaganfall oder Knochenbrüchen? Zusammengefasst aus Metaanalysen, Cochrane-Reviews und systematischen Reviews.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Zu sportlicher Leistung und Müdigkeit gibt es keine Metaanalysen mit Ergebnis; die Evidenz betrifft vor allem Versorgungsstatus, Homocystein und große Gesundheitsendpunkte.",
@@ -555,6 +555,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 3252 Einträgen, 613 Übersichtsarbeiten nach Titel geprüft (davon 177 zunächst per Titelregel einer anderen Kategorie zugeordnet), dazu 2 Übersichtsarbeiten aus einer ergänzenden Suche; 21 Quellen aufgenommen."
   }
@@ -566,7 +570,7 @@
    "kat": "status",
    "items": [
     {
-     "n": "B12-Status bei veganer Ernährung",
+     "n": "Gegenüber Mischköstlern",
      "g": "B",
      "d": "ab",
      "m": 3,
@@ -579,10 +583,12 @@
       "obersby2013"
      ],
      "t": "Serum-B12 −0,72 [−1,26; −0,18] und Homocystein +0,57 gegenüber Mischköstlern; Effektmaß im Abstract nicht benannt, als mittel eingestuft.",
-     "v": "status"
+     "v": "status",
+     "w": "B12-Status bei veganer Ernährung",
+     "pop": "alle"
     },
     {
-     "n": "B12-Status durch Supplemente bei Veganern",
+     "n": "Mit gegenüber ohne Supplemente",
      "g": "B",
      "d": "auf",
      "m": -1,
@@ -593,7 +599,9 @@
       "niklewicz2024"
      ],
      "t": "Supplementnutzer hatten in allen Biomarkern bessere Werte als Veganer ohne Supplemente.",
-     "v": "status"
+     "v": "status",
+     "w": "B12-Status bei veganer Ernährung",
+     "pop": "alle"
     }
    ]
   },
@@ -617,7 +625,8 @@
       "clarke2010"
      ],
      "t": "Folsäure −25 % [23; 28 %], B12 zusätzlich −7 %; B12 allein −4,15 µmol/l.",
-     "v": "homocystein"
+     "v": "homocystein",
+     "pop": "alle"
     },
     {
      "n": "Herzinfarkt",
@@ -634,10 +643,11 @@
       "ren2026"
      ],
      "t": "RR 1,02 [0,95; 1,10]; hohe Evidenzqualität.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
-     "n": "Schlaganfall (Abnahme)",
+     "n": "Alle Studien (Abnahme)",
      "g": "A",
      "d": "ab",
      "m": 2,
@@ -651,10 +661,12 @@
       "ren2026"
      ],
      "t": "RR 0,90 [0,83; 0,98] bzw. 0,90 [0,82; 0,99] im Cochrane-Review; in zwei Analysen nicht signifikant.",
-     "v": "herz"
+     "v": "herz",
+     "w": "Schlaganfall",
+     "pop": "alle"
     },
     {
-     "n": "Schlaganfall ohne Folsäureanreicherung (Abnahme)",
+     "n": "Ohne Folsäureanreicherung (Abnahme)",
      "g": "B",
      "d": "ab",
      "m": 3,
@@ -666,7 +678,9 @@
       "zhang2024a"
      ],
      "t": "RR 0,66 [0,50; 0,86] mit Folsäure, B12 und B6; mit Anreicherung kein Nutzen (RR 1,04).",
-     "v": "schlaganfall"
+     "v": "schlaganfall",
+     "w": "Schlaganfall",
+     "pop": "alle"
     }
    ]
   },
@@ -690,7 +704,8 @@
       "ren2026"
      ],
      "t": "RR 1,01 [0,96; 1,06]; in allen Analysen ohne Effekt.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Krebs",
@@ -705,7 +720,8 @@
       "obeid2022"
      ],
      "t": "RR 1,05 [0,98; 1,13]; kein Beleg für Ursächlichkeit hoher B12-Werte.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Schwere unerwünschte Ereignisse",
@@ -719,7 +735,8 @@
       "marticarvajal2017"
      ],
      "t": "RR 1,07 [1,00; 1,14]; Intervall berührt die 1.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Nervenschäden bei hoher B6-Zufuhr",
@@ -734,7 +751,8 @@
       "vankeulen2026"
      ],
      "t": "Sensible Neuropathie bei hohen B6-Spiegeln, rückläufig nach Absetzen; Schwelle unsicher.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   },
@@ -757,7 +775,8 @@
       "clarke2014"
      ],
      "t": "g = 0,110 nach Bereinigung (hohe Sicherheit); MMSE +0,14 Punkte; in 11 großen Studien kein Effekt.",
-     "v": "kognition"
+     "v": "kognition",
+     "pop": "aelter"
     },
     {
      "n": "Depressive Symptome",
@@ -771,7 +790,8 @@
       "markun2021"
      ],
      "t": "Kein Effekt bei Menschen ohne ausgeprägten B12-Mangel.",
-     "v": "kognition"
+     "v": "kognition",
+     "pop": "alle"
     }
    ]
   },
@@ -793,7 +813,8 @@
       "ruan2015"
      ],
      "t": "RR 1,06 [0,95; 1,18]; laut Trial-Sequential-Analyse ausreichend abgesichert.",
-     "v": "knochen"
+     "v": "knochen",
+     "pop": "alle"
     },
     {
      "n": "Knochendichte",
@@ -807,7 +828,8 @@
       "luo2024"
      ],
      "t": "Kein Effekt an Lendenwirbelsäule und Schenkelhals; Datenlage laut Autoren begrenzt.",
-     "v": "knochen"
+     "v": "knochen",
+     "pop": "alle"
     }
    ]
   }

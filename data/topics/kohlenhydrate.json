@@ -1,7 +1,7 @@
 {
  "id": "kohlenhydrate",
  "title": "Kohlenhydrate",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Wie viel Kohlenhydrate brauchen Sportler vor, während und nach der Belastung, nützen sie auch im Krafttraining, und was taugen Low-Carb, ketogene Diät und „Train low“? Dazu: Ballaststoffe, Zucker und glykämischer Index als Gesundheitsfaktoren. Zusammengefasst aus Metaanalysen, Umbrella Reviews und Positionspapieren.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierende Erwachsene. Die Zufuhr richtet sich nach Dauer und Intensität der Belastung: Je länger und intensiver, desto wichtiger sind Kohlenhydrate. Für Krafttraining und Alltag zählen eher Menge und Qualität über den Tag.",
@@ -812,6 +812,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 4 697 Einträgen, 712 Übersichtsarbeiten nach Titel geprüft (685 aus der Themensuche, 27 aus ergänzenden Suchen), 36 Quellen aufgenommen."
   }
@@ -838,7 +842,8 @@
       "pochmuller2016"
      ],
      "t": "SMD 0,43 (96 Studien); Zeitfahren ES 0,30, Zeit bis zur Erschöpfung ES 0,47 (50 Studien). Geringer nach einer Mahlzeit und bei hoher Fitness.",
-     "v": "waehrend"
+     "v": "waehrend",
+     "pop": "alle"
     },
     {
      "n": "Exogene Kohlenhydratoxidation: Glukose plus Fruktose statt Glukose",
@@ -854,7 +859,8 @@
       "tarrit2026"
      ],
      "t": "+0,27 g/min exogene Oxidation (14 RCTs, n = 125); bei rund 1 g/min Zufuhr ein praktisch relevanter, kleiner bis mittlerer Zugewinn. Leistungsvorteil im Umbrella Review berichtet.",
-     "v": "waehrend"
+     "v": "waehrend",
+     "pop": "trainiert"
     },
     {
      "n": "Muskelglykogen durch Carb-Loading (über 6,5 g/kg/Tag)",
@@ -870,7 +876,8 @@
       "kerksick2017"
      ],
      "t": "+191,9 mmol/kg Trockenmasse (18 Studien), sehr heterogen (I² 94 %); als deutliche Speicherfüllung eingestuft. Leistungsvorteil vor allem bei Belastungen über 90 Minuten.",
-     "v": "vorher"
+     "v": "vorher",
+     "pop": "alle"
     },
     {
      "n": "Ausdauerleistung: Kohlenhydrat-Mundspülung",
@@ -887,7 +894,8 @@
       "suen2026"
      ],
      "t": "g = 0,17–0,25 je nach Messgröße (90 Studien), auch nach einer Mahlzeit g = 0,18. Bei hochintensiven Intervallen (SMD 0,18) und Kurzbelastungen kein signifikanter Effekt.",
-     "v": "mundspuelung"
+     "v": "mundspuelung",
+     "pop": "alle"
     },
     {
      "n": "Ausdauerleistung: „Train low“ (periodisierte Restriktion)",
@@ -902,10 +910,11 @@
       "burke2011"
      ],
      "t": "SMD 0,17, nicht signifikant (9 Studien mit gut trainierten Ausdauersportlern).",
-     "v": "lowcarb"
+     "v": "lowcarb",
+     "pop": "trainiert"
     },
     {
-     "n": "Leistung: ketogene statt kohlenhydratreiche Ernährung",
+     "n": "Alle Studien",
      "g": "B",
      "d": null,
      "m": 0,
@@ -917,8 +926,44 @@
       "erlenbusch2005",
       "leaf2024"
      ],
-     "t": "Kein Vorteil; Tendenz zugunsten Kohlenhydraten (Zeitfahren −3,3 %, 1RM −5,7 %, Intervalle schließen null ein). Ältere Analyse ES −0,60 bei großer Heterogenität; ISSN: neutral oder nachteilig.",
-     "v": "lowcarb"
+     "t": "Kein Vorteil: Eine ältere Analyse fand ES −0,60 zugunsten Kohlenhydraten bei großer Heterogenität (20 Studien); ISSN: neutral oder nachteilig.",
+     "v": "lowcarb",
+     "pop": "alle",
+     "w": "Leistung: ketogene statt kohlenhydratreiche Ernährung"
+    },
+    {
+     "g": "B",
+     "k": 18,
+     "p": null,
+     "s": [
+      "koerich2023",
+      "erlenbusch2005",
+      "leaf2024"
+     ],
+     "v": "lowcarb",
+     "n": "Trainierte",
+     "pop": "trainiert",
+     "m": 0,
+     "d": null,
+     "b": "neutral",
+     "t": "Tendenz zugunsten Kohlenhydraten (Zeitfahren −3,3 %, 1RM −5,7 %), Intervalle schließen null ein (18 Studien); ältere Analyse bei Trainierten ES −0,05. Studien mit Elitesportlern zeigten Leistungseinbußen (ISSN).",
+     "w": "Leistung: ketogene statt kohlenhydratreiche Ernährung"
+    },
+    {
+     "g": "B",
+     "k": null,
+     "p": null,
+     "s": [
+      "erlenbusch2005"
+     ],
+     "v": "lowcarb",
+     "n": "Untrainierte",
+     "pop": "einsteiger",
+     "m": 4,
+     "d": "ab",
+     "b": "schaden",
+     "t": "ES −2,84 zugunsten Kohlenhydraten in einer älteren Analyse; Studienzahl und Signifikanz der Untergruppe nicht berichtet.",
+     "w": "Leistung: ketogene statt kohlenhydratreiche Ernährung"
     }
    ]
   },
@@ -940,10 +985,11 @@
       "henselmans2022"
      ],
      "t": "SMD 0,15, nicht signifikant (11 RCTs); Evidenzsicherheit niedrig. Auch die Kraftleistung war in 15 von 17 Langzeitstudien unverändert.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
-     "n": "Fettfreie Masse unter ketogener Diät",
+     "n": "Mit Krafttraining (alle Studien)",
      "g": "B",
      "d": "ab",
      "m": 2,
@@ -955,8 +1001,26 @@
       "koerich2023",
       "leaf2024"
      ],
-     "t": "−1,26 kg trotz Krafttraining (13 RCTs, n = 244); teils Wasser und Glykogen. Bei Trainierten −0,8 kg mit großer Unsicherheit.",
-     "v": "lowcarb"
+     "t": "−1,26 kg trotz Krafttraining (13 RCTs, n = 244); teils Wasser und Glykogen.",
+     "v": "lowcarb",
+     "pop": "alle",
+     "w": "Fettfreie Masse unter ketogener Diät"
+    },
+    {
+     "g": "B",
+     "k": 18,
+     "p": null,
+     "s": [
+      "koerich2023"
+     ],
+     "v": "lowcarb",
+     "n": "Trainierte",
+     "pop": "trainiert",
+     "m": 0,
+     "d": null,
+     "b": "neutral",
+     "t": "−0,8 kg [−3,4; 1,9], Intervall schließt null ein (18 Studien); große Unsicherheit.",
+     "w": "Fettfreie Masse unter ketogener Diät"
     }
    ]
   },
@@ -979,7 +1043,8 @@
       "vandenbogaerde2011"
      ],
      "t": "+4,0 % mittlere Leistung gegenüber Wasser (45 Studien, n = 486); nach den Schwellen von Vandenbogaerde &amp; Hopkins (ab 2,7 % groß) ein großer Effekt.",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "alle"
     },
     {
      "n": "Glykogensynthese: Protein zusätzlich zu Kohlenhydraten",
@@ -994,7 +1059,8 @@
       "mccartney2018"
      ],
      "t": "Insgesamt g = 0,13, nicht signifikant (20 Studien); nur mit zusätzlicher Energie g = 0,26.",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "alle"
     }
    ]
   },
@@ -1004,7 +1070,7 @@
    "kat": "koerper",
    "items": [
     {
-     "n": "Fettmasse unter ketogener Diät mit Krafttraining",
+     "n": "Mit Krafttraining (alle Studien)",
      "g": "B",
      "d": "ab",
      "m": 2,
@@ -1016,7 +1082,25 @@
       "koerich2023"
      ],
      "t": "−2,21 kg Fettmasse, −2,27 Prozentpunkte Körperfett (13 RCTs); vermutlich teils durch geringere Energiezufuhr.",
-     "v": "lowcarb"
+     "v": "lowcarb",
+     "pop": "alle",
+     "w": "Fettmasse unter ketogener Diät"
+    },
+    {
+     "g": "B",
+     "k": 18,
+     "p": null,
+     "s": [
+      "koerich2023"
+     ],
+     "v": "lowcarb",
+     "n": "Trainierte",
+     "pop": "trainiert",
+     "m": 0,
+     "d": null,
+     "b": "neutral",
+     "t": "−2,4 kg [−5,4; 0,2], Intervall schließt null ein (18 Studien).",
+     "w": "Fettmasse unter ketogener Diät"
     },
     {
      "n": "Körpergewicht bei mehr freiem Zucker",
@@ -1031,7 +1115,8 @@
       "temorenga2014"
      ],
      "t": "+0,75 kg bei mehr, −0,80 kg bei weniger Zucker (30 Studien); bei gleicher Energiemenge kein Unterschied. Als kleiner Effekt eingestuft.",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     }
    ]
   },
@@ -1053,7 +1138,8 @@
       "reynolds2019"
      ],
      "t": "HR 0,77 (64 Kohorten, über 3,5 Millionen Personen); 15–30 % weniger Sterblichkeit und Krankheiten in der Lancet-Serie.",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     },
     {
      "n": "Sterblichkeit bei hohem glykämischem Index",
@@ -1068,7 +1154,8 @@
       "reynolds2019"
      ],
      "t": "RR 1,10 für Gesamtsterblichkeit (15 Kohorten), Intervall berührt 1; in der Lancet-Serie kaum Unterschiede bei niedriger Evidenzsicherheit.",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     },
     {
      "n": "Sterblichkeit bei sehr niedrigem oder sehr hohem Kohlenhydratanteil",
@@ -1083,7 +1170,8 @@
       "ghorbani2023"
      ],
      "t": "U-förmig: unter 40 % HR 1,20, über 70 % HR 1,23; günstigster Bereich 50–55 %. Pflanzlicher Ersatz HR 0,82, tierischer HR 1,18.",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     }
    ]
   }

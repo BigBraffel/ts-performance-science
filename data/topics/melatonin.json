@@ -1,7 +1,7 @@
 {
  "id": "melatonin",
  "title": "Melatonin",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Hilft Melatonin beim Einschlafen, gegen Jetlag und bei der Erholung von Sportlern, und wie sicher ist es? Zusammengefasst aus Cochrane-Reviews, Metaanalysen und Sicherheitsübersichten.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Die Schlafeffekte sind klein, beim Jetlag deutlicher. Für sportliche Leistung ist die Studienlage widersprüchlich und beruht auf wenigen, kleinen Studien.",
@@ -540,6 +540,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 1 483 Einträgen, 364 Übersichtsarbeiten nach Titel geprüft (davon 70 zunächst per Titelregel einer anderen Kategorie zugeordnet), dazu 175 Übersichtsarbeiten aus einer ergänzenden Suche nach Titel gesichtet; 22 Quellen aufgenommen."
   }
@@ -563,7 +567,8 @@
       "drummond2024"
      ],
      "t": "Eine Metaanalyse fand SMD 0,58 bei abendlicher Einnahme, eine andere keinen Effekt (Zeitfahren −0,04). Sehr kleine Studien.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -586,7 +591,8 @@
       "faria2024"
      ],
      "t": "Schnellkraft SMD 0,29 in einer Analyse, Kraft 0,19 nicht signifikant in einer anderen; akut vor der Belastung teils Leistungsabfall.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -612,10 +618,11 @@
       "choi2022"
      ],
      "t": "−4 bis −12 min; als sehr klein eingestuft, da es nur wenige Minuten sind. Bei chronischer Schlaflosigkeit Erwachsener in einer Analyse nicht signifikant.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle"
     },
     {
-     "n": "Gesamtschlafzeit (Zunahme)",
+     "n": "Gesamtschlafzeit nachts (Zunahme)",
      "g": "B",
      "d": "auf",
      "m": 1,
@@ -627,7 +634,25 @@
       "brzezinski2005"
      ],
      "t": "+8,25 min bzw. +12,8 min; als sehr klein eingestuft.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle",
+     "w": "Schlafdauer"
+    },
+    {
+     "n": "Tagschlaf nach Nachtschicht (Zunahme)",
+     "g": "C",
+     "d": "auf",
+     "m": -1,
+     "b": "nutzen",
+     "k": 7,
+     "p": 263,
+     "s": [
+      "liira2014"
+     ],
+     "t": "+24 min [9,8; 38,9]; niedrige Evidenzqualität, standardisierte Größe nicht berichtet.",
+     "v": "jetlag",
+     "pop": "alle",
+     "w": "Schlafdauer"
     },
     {
      "n": "Schlafqualität",
@@ -642,7 +667,8 @@
       "fatemeh2022"
      ],
      "t": "SMD 0,22 [0,12; 0,32]; PSQI −1,24 Punkte bei sehr hoher Heterogenität (überwiegend Kranke).",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "alle"
     },
     {
      "n": "Jetlag-Symptome (Abnahme)",
@@ -658,21 +684,8 @@
       "buscemi2006"
      ],
      "t": "NNT 2 bei Flügen über fünf oder mehr Zeitzonen; die Einschlafzeit selbst änderte sich bei Schlafeinschränkung nicht.",
-     "v": "jetlag"
-    },
-    {
-     "n": "Tagschlaf nach Nachtschicht (Zunahme)",
-     "g": "C",
-     "d": "auf",
-     "m": -1,
-     "b": "nutzen",
-     "k": 7,
-     "p": 263,
-     "s": [
-      "liira2014"
-     ],
-     "t": "+24 min [9,8; 38,9]; niedrige Evidenzqualität, standardisierte Größe nicht berichtet.",
-     "v": "jetlag"
+     "v": "jetlag",
+     "pop": "alle"
     }
    ]
   },
@@ -694,7 +707,8 @@
       "almendrosruiz2023"
      ],
      "t": "SMD 0,59 [0,29; 0,89] zugunsten von Melatonin, I² = 0 %; LDH nicht signifikant.",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "alle"
     }
    ]
   },
@@ -716,7 +730,8 @@
       "drummond2024"
      ],
      "t": "SMD 1,03 [0,24; 1,81], überwiegend außerhalb des Sports; bei Sportlern stieg die Glutathionperoxidase (1,40).",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "alle"
     }
    ]
   },
@@ -739,7 +754,8 @@
       "foley2019"
      ],
      "t": "RR 1,40 [1,15; 1,69] bei Dosen ab 10 mg; Tagesmüdigkeit bei 1,66 % in 37 Studien mit üblichen Dosen.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Schwere Nebenwirkungen",
@@ -755,7 +771,8 @@
       "buscemi2006"
      ],
      "t": "RR 0,88 [0,52; 1,50]; in 37 Studien keine lebensbedrohlichen Ereignisse. Langzeitdaten fehlen.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

@@ -54,6 +54,8 @@ for sub in ('topics', 'screening', 'kandidaten'):
                 if it.get('m') not in (0, None) and it.get('d') not in ('auf', 'ab'): fehler.append(f'{sub}/{f}: Wirkung "{n}" ohne Richtung')
                 if it.get('b') not in ('nutzen', 'schaden', 'neutral'): fehler.append(f'{sub}/{f}: Wirkung "{n}" ohne Bewertung')
                 if it.get('v') not in vids: fehler.append(f'{sub}/{f}: Wirkung "{n}" verweist auf unbekannten Abschnitt')
+                if it.get('pop', 'alle') not in ('alle', 'einsteiger', 'trainiert', 'aelter'): fehler.append(f'{sub}/{f}: Wirkung "{n}" mit unbekannter Zielgruppe "{it.get("pop")}"')
+                if 'w' in it and not str(it['w']).strip(): fehler.append(f'{sub}/{f}: Wirkung "{n}" mit leerem Oberbegriff')
                 for k in it.get('s', []):
                     if k not in src: fehler.append(f'{sub}/{f}: Wirkung "{n}" zitiert fehlende Quelle "{k}"')
         for v in j.get('vars', []):

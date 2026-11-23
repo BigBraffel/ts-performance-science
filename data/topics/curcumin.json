@@ -1,7 +1,7 @@
 {
  "id": "curcumin",
  "title": "Curcumin (Kurkuma)",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Lindert Curcumin Muskelkater und Muskelschaden, senkt es Entzündungsmarker und Gelenkschmerz, und welche Rolle spielen Formulierung und Lebersicherheit? Zusammengefasst aus Metaanalysen, Umbrella Reviews und Fallserien.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Die Studien zum Sport sind klein und verwenden sehr unterschiedliche Präparate; die Entzündungs- und Gelenkdaten stammen überwiegend von Menschen mit Erkrankungen.",
@@ -485,6 +485,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 1 576 Einträgen, 309 Übersichtsarbeiten nach Titel geprüft (davon 83 zunächst per Titelregel einer anderen Kategorie zugeordnet), dazu 68 Übersichtsarbeiten und eine Suche nach Fallserien zu Leberschäden ergänzend gesichtet; 22 Quellen aufgenommen."
   }
@@ -511,7 +515,8 @@
       "oxley2024"
      ],
      "t": "VAS −0,56 bzw. Index −0,48 in zwei Analysen; nach Messzeitpunkt getrennt in einer dritten nicht signifikant.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     },
     {
      "n": "Kreatinkinase nach Belastung (Abnahme)",
@@ -528,7 +533,8 @@
       "oxley2024"
      ],
      "t": "−48,54 bis −137,32 U/l in drei Analysen, bei hoher Heterogenität; in einer Analyse nach Zeitpunkten kein signifikanter Effekt.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     },
     {
      "n": "Kraft nach Muskelschaden",
@@ -542,7 +548,8 @@
       "beba2022"
      ],
      "t": "Maximalkraft +3,10 Nm [1,45; 4,75]; standardisierte Größe nicht berichtet, nur eine Analyse.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     },
     {
      "n": "Beweglichkeit nach Muskelschaden",
@@ -557,7 +564,8 @@
       "liu2024"
      ],
      "t": "+6,49° [3,91; 9,07] bzw. +4,10; standardisierte Größe nicht berichtet.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     }
    ]
   },
@@ -578,7 +586,8 @@
       "lloretgil2026"
      ],
      "t": "Vorteile in 4 von 8 Studien, sehr niedrige Vertrauenswürdigkeit; keine gepoolte Analyse.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     }
    ]
   },
@@ -588,7 +597,7 @@
    "kat": "entzuendung",
    "items": [
     {
-     "n": "CRP (Abnahme)",
+     "n": "CRP",
      "g": "B",
      "d": "ab",
      "m": 3,
@@ -602,10 +611,12 @@
       "sahebkar2014"
      ],
      "t": "ES −0,74 [−1,11; −0,37] aus 10 Metaanalysen; −0,58 mg/l in 66 Studien. Überwiegend Menschen mit Erkrankungen.",
-     "v": "entzuendung"
+     "v": "entzuendung",
+     "pop": "alle",
+     "w": "Entzündungsmarker (Abnahme)"
     },
     {
-     "n": "IL-6 und TNF-α (Abnahme)",
+     "n": "IL-6 und TNF-α",
      "g": "B",
      "d": "ab",
      "m": 4,
@@ -617,7 +628,9 @@
       "dehzad2023a"
      ],
      "t": "IL-6 ES −1,07, TNF-α −1,92; nach Belastung bei Sportlern kein einheitlicher Effekt.",
-     "v": "entzuendung"
+     "v": "entzuendung",
+     "pop": "alle",
+     "w": "Entzündungsmarker (Abnahme)"
     },
     {
      "n": "Antioxidative Kapazität",
@@ -631,7 +644,8 @@
       "dehzad2023a"
      ],
      "t": "+0,21 mmol/l, Malondialdehyd −0,33 µmol/l; standardisierte Größe nicht berichtet.",
-     "v": "entzuendung"
+     "v": "entzuendung",
+     "pop": "alle"
     }
    ]
   },
@@ -655,7 +669,8 @@
       "shi2026"
      ],
      "t": "Schmerz SMD −0,57 (8 Studien, n = 606); in 15 Studien weniger Schmerz und Steifigkeit, ähnlich wie NSAR.",
-     "v": "gelenke"
+     "v": "gelenke",
+     "pop": "alle"
     }
    ]
   },
@@ -676,7 +691,8 @@
       "dehzad2023b"
      ],
      "t": "ALT −4,09 U/l, AST −3,81 U/l; als sehr klein eingestuft, laut Autoren ohne gesicherte klinische Bedeutung.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Leberschäden (Fallberichte)",
@@ -692,7 +708,8 @@
       "akhtar2026"
      ],
      "t": "10 Fälle im US-Register mit einem Todesfall, 7 Fälle in Italien; Häufigkeit unbekannt, sehr selten.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Nebenwirkungen in Studien",
@@ -707,7 +724,8 @@
       "akhtar2026"
      ],
      "t": "Bei Arthrose wie unter Placebo und seltener als unter NSAR.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

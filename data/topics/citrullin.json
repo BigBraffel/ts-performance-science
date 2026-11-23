@@ -1,7 +1,7 @@
 {
  "id": "citrullin",
  "title": "Citrullin",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Verbessert Citrullin die Kraftausdauer, die Ausdauerleistung oder die Erholung, wirkt es auf Blutdruck und Gefäße, und wie schneidet es im Vergleich zu Arginin ab? Zusammengefasst aus Metaanalysen und systematischen Reviews.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Citrullin wird im Körper zu Arginin umgebaut und dient der Stickstoffmonoxid-Bildung. Die Leistungseffekte sind klein und unsicher.",
@@ -559,6 +559,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 1 708 Einträgen, 294 Übersichtsarbeiten nach Titel geprüft (davon 14 aus regelbasiert ausgeschlossenen Einträgen und 104 über eine ergänzende Suche nach Übersichtsarbeiten), 27 Quellen aufgenommen."
   }
@@ -582,7 +586,8 @@
       "wang2026"
      ],
      "t": "SMD 0,20 (12 Studien, I² = 0 %); mit Citrullinmalat in 30 Studien g = 0,16 bei niedriger Evidenzqualität.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Wiederholungen bis zum Versagen (Citrullinmalat)",
@@ -596,7 +601,8 @@
       "varvik2021"
      ],
      "t": "3 ± 5 Wiederholungen mehr (6,4 %), SMD 0,196; Oberkörper nicht signifikant.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Maximalkraft (Citrullinmalat)",
@@ -610,7 +616,8 @@
       "aguiar2022"
      ],
      "t": "SMD 0,13 [−0,21; 0,46], nicht signifikant.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "trainiert"
     }
    ]
   },
@@ -633,7 +640,8 @@
       "dunienville2021"
      ],
      "t": "SMD 0,15 (10 Studien) bzw. 0,03 für Zeit bis zur Erschöpfung (9 Studien), jeweils nicht signifikant.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     }
    ]
   },
@@ -654,7 +662,8 @@
       "ashtarylarky2025"
      ],
      "t": "Kein Effekt in 21 Studien; Untergruppen mit weniger Fettmasse ab 6 g/Tag.",
-     "v": "koerper"
+     "v": "koerper",
+     "pop": "alle"
     },
     {
      "n": "Körperfett zusammen mit Training (Abnahme)",
@@ -668,7 +677,8 @@
       "wang2026k"
      ],
      "t": "SMD −0,21 gegenüber Training allein, knapp signifikant; fettfreie Masse unverändert.",
-     "v": "koerper"
+     "v": "koerper",
+     "pop": "alle"
     }
    ]
   },
@@ -690,7 +700,8 @@
       "xu2026"
      ],
      "t": "Signifikant geringer (7 Studien, p = 0,04); Wassermelone mit Citrullin SMD −0,97. Nach 72 Stunden kein Unterschied.",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "alle"
     },
     {
      "n": "Anstrengungsempfinden",
@@ -706,7 +717,8 @@
       "wang2026"
      ],
      "t": "Geringer in einer Analyse (p = 0,03), in zwei anderen kein Effekt (SMD −0,03).",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "alle"
     }
    ]
   },
@@ -727,7 +739,8 @@
       "porto2023"
      ],
      "t": "Weder Citrullin noch Arginin veränderten die Marker (7 Studien).",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "alle"
     }
    ]
   },
@@ -737,7 +750,7 @@
    "kat": "herz",
    "items": [
     {
-     "n": "Systolischer Blutdruck",
+     "n": "Systolisch",
      "g": "B",
      "d": "ab",
      "m": 2,
@@ -752,10 +765,12 @@
       "lei2026"
      ],
      "t": "Etwa −4 mmHg (−4,02 bis −4,49) in drei Analysen; praktisch bedeutsam für Ältere. Die erste Analyse mit 5 Interventionen fand keinen Effekt.",
-     "v": "gefaesse"
+     "v": "gefaesse",
+     "w": "Blutdruck",
+     "pop": "alle"
     },
     {
-     "n": "Diastolischer Blutdruck",
+     "n": "Diastolisch",
      "g": "C",
      "d": "ab",
      "m": 1,
@@ -768,7 +783,9 @@
       "barkhidarian2019"
      ],
      "t": "−2,54 bzw. −3,63 mmHg; in einer Analyse nur ab 6 g/Tag signifikant.",
-     "v": "gefaesse"
+     "v": "gefaesse",
+     "w": "Blutdruck",
+     "pop": "alle"
     },
     {
      "n": "Gefäßfunktion (flussvermittelte Erweiterung)",
@@ -783,7 +800,8 @@
       "luo2025g"
      ],
      "t": "+0,9 Prozentpunkte bei längerer Einnahme bzw. +1,81; akut kein Effekt.",
-     "v": "gefaesse"
+     "v": "gefaesse",
+     "pop": "alle"
     },
     {
      "n": "Gefäßsteifigkeit (Pulswellengeschwindigkeit)",
@@ -798,7 +816,8 @@
       "bahari2026"
      ],
      "t": "−0,14, nicht signifikant; bei Frauen nach der Menopause uneinheitlich.",
-     "v": "gefaesse"
+     "v": "gefaesse",
+     "pop": "aelter"
     },
     {
      "n": "Vergleich: Blutdrucksenkung durch Arginin",
@@ -813,7 +832,8 @@
       "dong2011"
      ],
      "t": "Systolisch −6,40 mmHg (22 Studien) bzw. −5,39 mmHg (11 Studien), ähnlich wie Citrullin.",
-     "v": "arginin"
+     "v": "arginin",
+     "pop": "alle"
     }
    ]
   },
@@ -834,7 +854,8 @@
       "bahari2026"
      ],
      "t": "In 12 Studien bei Frauen nach der Menopause keine Nebenwirkungen berichtet.",
-     "v": "gefaesse"
+     "v": "gefaesse",
+     "pop": "aelter"
     },
     {
      "n": "Vergleich: Leistungseffekt von Arginin",
@@ -850,7 +871,8 @@
       "brooks2016"
      ],
      "t": "Positive Metaanalyse (aerob SMD 0,84, I² = 89 %) methodisch kritisiert; ein systematischer Review sah kaum Nutzen.",
-     "v": "arginin"
+     "v": "arginin",
+     "pop": "alle"
     }
    ]
   }

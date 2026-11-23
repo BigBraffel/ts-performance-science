@@ -1,7 +1,7 @@
 {
  "id": "calcium",
  "title": "Calcium",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Stärkt zusätzliches Calcium die Knochen, schützt es vor Brüchen und Stressfrakturen, und wie steht es um Herz, Blutdruck und Nierensteine? Zusammengefasst aus Metaanalysen, Cochrane-Reviews und einem Umbrella Review.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Calcium aus der Nahrung wirkte auf die Knochendichte ebenso wie Supplemente. Supplemente sind vor allem dann sinnvoll, wenn die Zufuhr über die Ernährung niedrig ist.",
@@ -714,6 +714,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "17.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 4 012 Einträgen, 814 Übersichtsarbeiten nach Titel geprüft (369 aus der Themensuche, 445 aus ergänzenden Suchen zu Brüchen, Stressfrakturen, Herz-Kreislauf, Nierensteinen und Blutdruck), 26 Quellen aufgenommen."
   }
@@ -725,7 +729,7 @@
    "kat": "knochen",
    "items": [
     {
-     "n": "Knochendichte ab 50 Jahren",
+     "n": "Ab 50 Jahren",
      "g": "A",
      "d": "auf",
      "m": 1,
@@ -738,10 +742,12 @@
       "tang2007"
      ],
      "t": "+0,7 % bis +1,8 % an allen Messorten (51 Studien, n = 12 257); nach 1 Jahr kein weiterer Zuwachs. Als sehr kleiner Effekt eingestuft, da ohne klinisch relevanten Frakturschutz.",
-     "v": "knochendichte"
+     "v": "knochendichte",
+     "w": "Knochendichte",
+     "pop": "alle"
     },
     {
-     "n": "Knochendichte unter 35 Jahren",
+     "n": "Unter 35 Jahren",
      "g": "B",
      "d": "auf",
      "m": 2,
@@ -754,10 +760,12 @@
       "mendez2023"
      ],
      "t": "Schenkelhals SMD 0,63, Gesamtkörper SMD 0,33; Hüfte gesamt und Lendenwirbelsäule unverändert. Bei jungen Frauen fand der Cochrane-Review keinen Effekt.",
-     "v": "knochendichte"
+     "v": "knochendichte",
+     "w": "Knochendichte",
+     "pop": "alle"
     },
     {
-     "n": "Knochendichte durch Training zusätzlich zu Calcium und Vitamin D",
+     "n": "Training zusätzlich zu Calcium und Vitamin D (nach der Menopause)",
      "g": "B",
      "d": "auf",
      "m": 2,
@@ -768,10 +776,12 @@
       "bai2025"
      ],
      "t": "Lendenwirbelsäule SMD 0,31, Schenkelhals SMD 0,47 gegenüber Supplementen allein (13 RCTs, Frauen nach der Menopause).",
-     "v": "knochendichte"
+     "v": "knochendichte",
+     "w": "Knochendichte",
+     "pop": "aelter"
     },
     {
-     "n": "Knochenbrüche gesamt: Calcium allein",
+     "n": "Calcium allein",
      "g": "A",
      "d": null,
      "m": 0,
@@ -784,10 +794,12 @@
       "zhao2017"
      ],
      "t": "RR 0,91 nicht signifikant (11 Studien); ältere Analyse RR 0,89, aber in Studien mit geringstem Verzerrungsrisiko kein Effekt.",
-     "v": "frakturen"
+     "v": "frakturen",
+     "w": "Knochenbrüche gesamt",
+     "pop": "alle"
     },
     {
-     "n": "Knochenbrüche gesamt: Calcium plus Vitamin D",
+     "n": "Calcium plus Vitamin D",
      "g": "A",
      "d": "ab",
      "m": 1,
@@ -801,10 +813,12 @@
       "tang2007"
      ],
      "t": "RR 0,91 (15 Studien, n = 51 126) bzw. 0,94; gemessen an klinischen Schwellen wenig bis kein Nutzen.",
-     "v": "frakturen"
+     "v": "frakturen",
+     "w": "Knochenbrüche gesamt",
+     "pop": "alle"
     },
     {
-     "n": "Hüftbrüche: Calcium allein",
+     "n": "Calcium allein",
      "g": "C",
      "d": "auf",
      "m": null,
@@ -817,10 +831,12 @@
       "bolland2015"
      ],
      "t": "RR 1,64 in 4 RCTs, 1,53 (nicht signifikant) in einer weiteren Analyse, 0,95 in der größten Analyse.",
-     "v": "frakturen"
+     "v": "frakturen",
+     "w": "Hüftbrüche",
+     "pop": "alle"
     },
     {
-     "n": "Hüftbrüche: Calcium plus Vitamin D",
+     "n": "Calcium plus Vitamin D",
      "g": "C",
      "d": "ab",
      "m": null,
@@ -834,7 +850,9 @@
       "masse2026"
      ],
      "t": "RR 0,70 bzw. 0,84 in zwei Analysen, RR 1,09 ohne Effekt in einer dritten; aktuell wenig bis kein Nutzen.",
-     "v": "frakturen"
+     "v": "frakturen",
+     "w": "Hüftbrüche",
+     "pop": "alle"
     },
     {
      "n": "Stressfrakturen bei Rekruten und Sportlerinnen",
@@ -849,7 +867,8 @@
       "arslan2021"
      ],
      "t": "Ein RCT bei Rekrutinnen und Beobachtungsdaten bei Läuferinnen; am stärksten über 1 500 mg/Tag. Keine Metaanalyse.",
-     "v": "stressfraktur"
+     "v": "stressfraktur",
+     "pop": "alle"
     }
    ]
   },
@@ -874,7 +893,8 @@
       "chung2016"
      ],
      "t": "RR 1,24 bis 1,31 in den Analysen von Bolland et al.; Huo et al. (2023) und Chung et al. (2016) ohne signifikante Erhöhung.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Schlaganfall (Calcium plus Vitamin D)",
@@ -889,7 +909,8 @@
       "huo2023"
      ],
      "t": "Umbrella Review RR 1,17 (moderate Sicherheit); neuere Analyse RR 1,02 nicht signifikant.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Gesamtsterblichkeit",
@@ -904,10 +925,11 @@
       "bolland2010"
      ],
      "t": "Kein Zusammenhang mit Calcium allein oder mit Vitamin D; Todesfälle RR 1,09 nicht signifikant.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
-     "n": "Blutdruck",
+     "n": "Alle Altersgruppen",
      "g": "A",
      "d": "ab",
      "m": 1,
@@ -918,8 +940,26 @@
       "cormick2022",
       "vanmierlo2006"
      ],
-     "t": "Systolisch −1,37 mmHg (18 Studien, hohe Sicherheit), unter 35 Jahren −1,86 mmHg; klein für Einzelne.",
-     "v": "blutdruck"
+     "t": "Systolisch −1,37 mmHg (18 Studien, hohe Sicherheit); klein für Einzelne.",
+     "v": "blutdruck",
+     "w": "Blutdruck",
+     "pop": "alle"
+    },
+    {
+     "n": "Unter 35 Jahren",
+     "g": "A",
+     "d": "ab",
+     "m": 1,
+     "b": "nutzen",
+     "k": 8,
+     "p": 452,
+     "s": [
+      "cormick2022"
+     ],
+     "t": "Systolisch −1,86 mmHg (8 Studien, n = 452), diastolisch −2,50 mmHg; moderate Sicherheit.",
+     "v": "blutdruck",
+     "w": "Blutdruck",
+     "pop": "alle"
     }
    ]
   },
@@ -940,7 +980,8 @@
       "kahwati2018"
      ],
      "t": "Calcium plus Vitamin D: +0,33 Prozentpunkte absolut (3 RCTs, n = 39 213); Calcium allein ohne Unterschied (n = 1 259). Relatives Risiko im Abstract nicht angegeben.",
-     "v": "nieren"
+     "v": "nieren",
+     "pop": "alle"
     }
    ]
   },
@@ -962,7 +1003,8 @@
       "booth2015"
      ],
      "t": "Gewicht −0,01 kg (33 Studien) bzw. −0,17 kg, Körperfett −0,19 kg; jeweils nicht signifikant.",
-     "v": "nieren"
+     "v": "nieren",
+     "pop": "alle"
     }
    ]
   }

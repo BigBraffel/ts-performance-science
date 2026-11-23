@@ -1,7 +1,7 @@
 {
  "id": "natriumbicarbonat",
  "title": "Natriumbicarbonat",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Bei welchen Belastungen hilft Natriumbicarbonat (Natron), wie dosiert man es, und wie lassen sich die häufigen Magen-Darm-Beschwerden vermeiden? Zusammengefasst aus Metaanalysen, einem Umbrella Review und dem ISSN-Positionspapier.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierte Erwachsene. Natriumbicarbonat puffert Säure im Blut und wirkt akut; der Nutzen ist klein und muss gegen Magen-Darm-Beschwerden abgewogen werden.",
@@ -629,6 +629,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert (Zielgruppe der Studien je Befund ergänzt)."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 1 374 Einträgen, 168 Übersichtsarbeiten nach Titel geprüft (davon 11 aus regelbasiert ausgeschlossenen Einträgen und 30 über eine ergänzende Suche nach Übersichtsarbeiten), 27 Quellen aufgenommen."
   }
@@ -654,7 +658,8 @@
       "christensen2017"
      ],
      "t": "ES 0,17 insgesamt (189 Studien), 0,18 bei 0,5–10 min und 0,22 über 10 min; in Prozent etwa +1,7 % Leistung.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     },
     {
      "n": "Radzeitfahren",
@@ -668,7 +673,8 @@
       "lopessilva2023"
      ],
      "t": "Mittlere Leistung SMD 0,42, Zeit SMD 0,22 (18 Studien, I² = 0 %).",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     },
     {
      "n": "Rudern 2 000 m",
@@ -683,7 +689,8 @@
       "grgic2021u"
      ],
      "t": "+2,6 % mittlere Leistung; Evidenzqualität niedrig.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "trainiert"
     },
     {
      "n": "Schwimmen 200–400 m",
@@ -698,7 +705,8 @@
       "huang2025"
      ],
      "t": "SMD −0,22 (1,3 % schneller) über 200 und 400 m; eine kleinere Analyse fand über 200 m keinen signifikanten Effekt.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     },
     {
      "n": "Dauerlauf 1–30 min",
@@ -712,7 +720,8 @@
       "miller2025"
      ],
      "t": "Nach Korrektur für Abbrüche und Publikationsbias SMD 0,18, nicht signifikant; bei Männern SMD 0,40.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -735,7 +744,8 @@
       "ge2026"
      ],
      "t": "Gesamtarbeit g = 0,43, bester Sprint g = 0,02, beide nicht signifikant; auch im Umbrella Review kein Effekt.",
-     "v": "sprints"
+     "v": "sprints",
+     "pop": "alle"
     },
     {
      "n": "Intermittierende Läufe (Yo-Yo-Test)",
@@ -750,7 +760,8 @@
       "grgic2021u"
      ],
      "t": "SMD 0,36 (+16,0 %) in 5 Studien; Evidenzqualität moderat.",
-     "v": "sprints"
+     "v": "sprints",
+     "pop": "alle"
     },
     {
      "n": "Hochintensive Intervallbelastungen",
@@ -764,7 +775,8 @@
       "ge2026"
      ],
      "t": "g = 0,23; Vorhersageintervall −0,22 bis 0,68, also nicht bei allen wirksam.",
-     "v": "sprints"
+     "v": "sprints",
+     "pop": "trainiert"
     },
     {
      "n": "Einzelner Wingate-Test (akut)",
@@ -779,7 +791,8 @@
       "grgic2022w"
      ],
      "t": "Spitzenleistung g = 0,02, mittlere Leistung g = 0,15; erst wiederholte Tests profitieren (SMD 0,09–0,62).",
-     "v": "sprints"
+     "v": "sprints",
+     "pop": "alle"
     }
    ]
   },
@@ -801,7 +814,8 @@
       "grgic2021u"
      ],
      "t": "SMD 0,37 für kleine und große Muskelgruppen (13 Studien).",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Maximalkraft",
@@ -815,7 +829,8 @@
       "grgic2020k"
      ],
      "t": "SMD −0,03, weder ausgeruht noch ermüdet ein Effekt (11 Studien).",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Kampfsportleistung",
@@ -830,7 +845,8 @@
       "luo2025"
      ],
      "t": "Kein signifikanter Leistungseffekt in 8 Studien; Netzwerk-Metaanalyse: Spitzenleistung SMD 0,35.",
-     "v": "kampfsport"
+     "v": "kampfsport",
+     "pop": "trainiert"
     }
    ]
   },
@@ -852,7 +868,8 @@
       "gilsanz2023"
      ],
      "t": "SMD 0,32 gegenüber Placebo; Unterschied zu den Einzelsubstanzen nicht signifikant.",
-     "v": "kombi"
+     "v": "kombi",
+     "pop": "alle"
     },
     {
      "n": "Zusatznutzen der Kombination mit Koffein",
@@ -867,7 +884,8 @@
       "liu2026"
      ],
      "t": "Kombination g = 0,28, Bicarbonat allein g = 0,21, Koffein allein g = 0,21; nicht klar überlegen.",
-     "v": "kombi"
+     "v": "kombi",
+     "pop": "alle"
     }
    ]
   },
@@ -890,7 +908,8 @@
       "grgic2021"
      ],
      "t": "29,5 % vs. 2,6 % mit Placebo (OR 5,9); dosisabhängig laut Review von 101 Untersuchungen.",
-     "v": "magen"
+     "v": "magen",
+     "pop": "alle"
     },
     {
      "n": "Studienabbruch wegen Beschwerden",
@@ -904,7 +923,8 @@
       "miller2025"
      ],
      "t": "8,7 % vs. 1,6 % (OR 2,9).",
-     "v": "magen"
+     "v": "magen",
+     "pop": "alle"
     }
    ]
   },
@@ -926,7 +946,8 @@
       "ge2026"
      ],
      "t": "+5,2 mmol/l im Mittel; größere Anstiege gingen mit größeren Leistungseffekten einher.",
-     "v": "dosis"
+     "v": "dosis",
+     "pop": "alle"
     }
    ]
   }

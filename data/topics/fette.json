@@ -1,7 +1,7 @@
 {
  "id": "fette",
  "title": "Fette",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Verbessert eine fettreiche oder ketogene Ernährung Ausdauer oder Kraft, senkt wenig Fett das Testosteron, und wie wirken gesättigte, ungesättigte und Transfette auf das Herz-Kreislauf-Risiko? Dazu: MCT-Öle. Zusammengefasst aus Metaanalysen, Cochrane-Reviews und Positionspapieren.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierende Erwachsene. Fett ist für die Leistung vor allem als Energieträger im Gesamtplan wichtig; für die Gesundheit zählt die Art der Fettsäuren mehr als die Gesamtmenge.",
@@ -760,6 +760,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 3 683 Einträgen, 630 Übersichtsarbeiten nach Titel geprüft (584 aus der Themensuche, 46 aus ergänzenden Suchen), 29 Quellen aufgenommen."
   }
@@ -784,10 +788,11 @@
       "leaf2024"
      ],
      "t": "In allen 30 Studien höher (+28 % bis +200 %); gepoolt +0,13 g/min. Als großer Stoffwechseleffekt eingestuft, der sich nicht in bessere Leistung übersetzt.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
-     "n": "Ausdauerleistung bei ketogener statt kohlenhydratreicher Ernährung",
+     "n": "Alle Studien",
      "g": "B",
      "d": null,
      "m": 0,
@@ -801,8 +806,45 @@
       "gawelczyk2026a",
       "leaf2024"
      ],
-     "t": "Zeitfahren −3,3 % mit Intervall über null; VO₂max und Zeit bis zur Erschöpfung unverändert. Ältere Analyse ES −0,60 bei hoher Heterogenität; bei Elitesportlern Einbußen.",
-     "v": "ausdauer"
+     "t": "VO₂max und Zeit bis zur Erschöpfung unverändert. Ältere Analyse ES −0,60 zugunsten Kohlenhydraten bei hoher Heterogenität (20 Studien).",
+     "v": "ausdauer",
+     "pop": "alle",
+     "w": "Ausdauerleistung bei ketogener statt kohlenhydratreicher Ernährung"
+    },
+    {
+     "g": "B",
+     "k": null,
+     "p": null,
+     "s": [
+      "koerich2023",
+      "gawelczyk2026a",
+      "erlenbusch2005",
+      "leaf2024"
+     ],
+     "v": "ausdauer",
+     "n": "Trainierte",
+     "pop": "trainiert",
+     "m": 0,
+     "d": null,
+     "b": "neutral",
+     "t": "Zeitfahren −3,3 % mit Intervall über null; Einbußen vor allem in der ersten Woche, danach Leistung meist erhalten. Ältere Analyse bei Trainierten ES −0,05; Studien mit Elitesportlern zeigten Einbußen.",
+     "w": "Ausdauerleistung bei ketogener statt kohlenhydratreicher Ernährung"
+    },
+    {
+     "g": "B",
+     "k": null,
+     "p": null,
+     "s": [
+      "erlenbusch2005"
+     ],
+     "v": "ausdauer",
+     "n": "Untrainierte",
+     "pop": "einsteiger",
+     "m": 4,
+     "d": "ab",
+     "b": "schaden",
+     "t": "ES −2,84 zugunsten Kohlenhydraten in einer älteren Analyse; Studienzahl und Signifikanz der Untergruppe nicht berichtet.",
+     "w": "Ausdauerleistung bei ketogener statt kohlenhydratreicher Ernährung"
     },
     {
      "n": "Bewegungsökonomie bei ketogener Ernährung",
@@ -816,7 +858,8 @@
       "gawelczyk2026a"
      ],
      "t": "In 50 % der Studien verschlechtert, besonders in der ersten Woche; Größe nicht gepoolt berichtet.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "trainiert"
     },
     {
      "n": "MCT-Öl und Ausdauerleistung",
@@ -830,7 +873,8 @@
       "chapmanlopez2022"
      ],
      "t": "Meist keine Verbesserung und keine veränderte Substratnutzung (systematischer Review ohne Metaanalyse).",
-     "v": "koerper"
+     "v": "koerper",
+     "pop": "alle"
     }
    ]
   },
@@ -853,7 +897,8 @@
       "leaf2024"
      ],
      "t": "Kniebeuge SMD −0,19, Bankdrücken SMD −0,15, beide nicht signifikant; 1RM −5,7 % mit Intervall über null.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Wiederholte Sprints bei kohlenhydratarmer Ernährung",
@@ -867,10 +912,11 @@
       "gawelczyk2026b"
      ],
      "t": "d = −0,33, nicht signifikant (13 Studien), in mehreren Einzelstudien verschlechtert; explorative Schätzung.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "trainiert"
     },
     {
-     "n": "Fettfreie Masse bei ketogener Ernährung",
+     "n": "Alle Studien",
      "g": "B",
      "d": "ab",
      "m": 1,
@@ -883,7 +929,25 @@
       "leaf2024"
      ],
      "t": "−0,48 kg (33 Studien); Muskelmasse selbst nicht signifikant verändert. Als sehr kleiner Effekt eingestuft, teils Wasser und Glykogen.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle",
+     "w": "Fettfreie Masse bei ketogener Ernährung"
+    },
+    {
+     "g": "B",
+     "k": 18,
+     "p": null,
+     "s": [
+      "koerich2023"
+     ],
+     "v": "kraft",
+     "n": "Trainierte",
+     "pop": "trainiert",
+     "m": 0,
+     "d": null,
+     "b": "neutral",
+     "t": "−0,8 kg [−3,4; 1,9], Intervall schließt null ein (18 Studien).",
+     "w": "Fettfreie Masse bei ketogener Ernährung"
     }
    ]
   },
@@ -905,7 +969,8 @@
       "soltani2025"
      ],
      "t": "Bei Männern SMD −0,38 (6 Studien, 206 Personen); in 11 RCTs mit 888 Erwachsenen kein signifikanter Unterschied.",
-     "v": "testosteron"
+     "v": "testosteron",
+     "pop": "alle"
     }
    ]
   },
@@ -930,7 +995,8 @@
       "yamada2025"
      ],
      "t": "RR 0,79 (Cochrane, moderate Evidenzqualität); mit mehrfach ungesättigtem Ersatz Herzinfarkt RR 0,75. Kleinere Analysen ohne signifikanten Effekt.",
-     "v": "gesaettigt"
+     "v": "gesaettigt",
+     "pop": "alle"
     },
     {
      "n": "Gesamtsterblichkeit bei weniger gesättigten Fetten",
@@ -945,7 +1011,8 @@
       "hooper2020a"
      ],
      "t": "RR 0,96 in beiden großen RCT-Analysen, nicht signifikant (17 Studien, 66 337 Personen).",
-     "v": "gesaettigt"
+     "v": "gesaettigt",
+     "pop": "alle"
     },
     {
      "n": "LDL-Cholesterin: mehrfach ungesättigte statt gesättigter Fette",
@@ -960,7 +1027,8 @@
       "mensink2003"
      ],
      "t": "−9,83 mg/dl, bei echtem Austausch −15,72 mg/dl (24 Fütterungsstudien); als kleiner bis mittlerer, klinisch relevanter Effekt eingestuft.",
-     "v": "gesaettigt"
+     "v": "gesaettigt",
+     "pop": "alle"
     },
     {
      "n": "Sterblichkeit und koronare Herzkrankheit bei hoher Transfettzufuhr",
@@ -976,7 +1044,8 @@
       "chowdhury2014"
      ],
      "t": "Gesamtsterblichkeit RR 1,34, koronare Herzkrankheit RR 1,21; industrielle Transfette RR 1,42, aus Wiederkäuern kein Zusammenhang.",
-     "v": "trans"
+     "v": "trans",
+     "pop": "alle"
     }
    ]
   },
@@ -997,7 +1066,8 @@
       "hooper2020b"
      ],
      "t": "−1,4 kg ohne Abnehmabsicht (26 RCTs, 53 875 Personen), hohe Konsistenz; als kleiner Effekt eingestuft.",
-     "v": "koerper"
+     "v": "koerper",
+     "pop": "alle"
     },
     {
      "n": "Körpergewicht: MCT statt langkettiger Fette",
@@ -1011,7 +1081,8 @@
       "mumme2015"
      ],
      "t": "−0,51 kg (13 RCTs, n = 749); Körperfett SMD −0,39; kommerzielle Verzerrung festgestellt.",
-     "v": "koerper"
+     "v": "koerper",
+     "pop": "alle"
     },
     {
      "n": "Triglyzeride bei MCT-Öl",
@@ -1025,7 +1096,8 @@
       "mckenzie2021"
      ],
      "t": "+0,14 mmol/l (7 Studien); Gesamt-, LDL- und HDL-Cholesterin insgesamt unverändert.",
-     "v": "koerper"
+     "v": "koerper",
+     "pop": "alle"
     }
    ]
   }

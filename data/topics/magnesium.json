@@ -1,7 +1,7 @@
 {
  "id": "magnesium",
  "title": "Magnesium",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Verbessert Magnesium Kraft und Leistung, hilft es gegen Muskelkrämpfe oder beim Schlaf, und welche Gesundheitseffekte sind belegt? Zusammengefasst aus Metaanalysen und einem Cochrane-Review.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Bei guter Versorgung bringt Magnesium keinen Leistungsvorteil; die belegten Effekte betreffen vor allem Blutdruck und Stoffwechsel.",
@@ -304,6 +304,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "PubMed: 2 neue Einträge gesichtet (1 regelbasiert, 1 manuell), 1 aufgenommen, 0 Vormerkungen ausgewertet. Neuer Abschnitt „Erholung nach Belastung“ auf Grundlage eines narrativen Reviews (Conti et al., 2026); Evidenz niedrig, keine Einstufung in der Wirkungsübersicht."
   },
@@ -430,7 +434,8 @@
       "wang2017"
      ],
      "t": "Kein Effekt auf Kraft (WMD 0,87), Drehmoment oder Leistung; untersucht u. a. bei Sportlern (n = 215) und Untrainierten (n = 95).",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -451,7 +456,8 @@
       "garrison2020"
      ],
      "t": "Bei idiopathischen Krämpfen, überwiegend bei Älteren, keine Abnahme (−0,18 Krämpfe pro Woche, nicht signifikant). Belastungskrämpfe bei Sportlern wurden nicht untersucht.",
-     "v": "kraempfe"
+     "v": "kraempfe",
+     "pop": "aelter"
     }
    ]
   },
@@ -472,7 +478,8 @@
       "mah2021"
      ],
      "t": "17,36 min schneller eingeschlafen, bei älteren Erwachsenen (3 Studien); Gesamtschlafdauer nicht signifikant verändert.",
-     "v": "schlaf"
+     "v": "schlaf",
+     "pop": "aelter"
     }
    ]
   },
@@ -497,7 +504,8 @@
       "behers2024"
      ],
      "t": "−2,81/−2,05 mmHg (38 Studien); bei normalem Blutdruck −2,79 mmHg systolisch. Schon 2 mmHg weniger senken auf Bevölkerungsebene die Herz-Kreislauf-Sterblichkeit.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Blutzucker und Insulinresistenz",
@@ -511,7 +519,8 @@
       "mohammadi2026"
      ],
      "t": "HOMA-IR −0,48; Nüchternblutzucker −3,60 mg/dL; HbA1c −0,15 %.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Blutfette",
@@ -525,7 +534,8 @@
       "mohammadi2026"
      ],
      "t": "LDL −3,21 mg/dL; Triglyzeride −9,24 mg/dL; HDL +1,45 mg/dL.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Gefäßfunktion",
@@ -539,7 +549,8 @@
       "amiri2026"
      ],
      "t": "Flussvermittelte Dilatation insgesamt nicht verändert (MD 2,86, nicht signifikant); nur über 400 mg/Tag wirksam, bei nur 2 Studien.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     }
    ]
   },
@@ -560,7 +571,8 @@
       "garrison2020"
      ],
      "t": "RR 1,51 (95-%-KI 0,98–2,33): Tendenz zu mehr leichten Nebenwirkungen, aber nicht signifikant.",
-     "v": "kraempfe"
+     "v": "kraempfe",
+     "pop": "alle"
     }
    ]
   }

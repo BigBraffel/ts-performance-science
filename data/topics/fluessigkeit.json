@@ -1,7 +1,7 @@
 {
  "id": "fluessigkeit",
  "title": "Flüssigkeit und Elektrolyte",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Ab wie viel Flüssigkeitsverlust leidet die Leistung, soll man nach Durst oder nach Plan trinken, und wann werden Natrium und Elektrolyte wichtig? Zusammengefasst aus Metaanalysen, systematischen Reviews und Positionspapieren (ACSM, NATA, SDA).",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Sporttreibende. Die bekannte 2-%-Regel gilt vor allem bei fest vorgegebener Belastung und Hitze; im Wettkampf mit freiem Tempo waren die Einbußen geringer.",
@@ -607,6 +607,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 3 831 Einträgen, 654 Übersichtsarbeiten nach Titel geprüft, 28 Quellen aufgenommen."
   }
@@ -618,7 +622,7 @@
    "kat": "ausdauer",
    "items": [
     {
-     "n": "Zeitfahren bei Dehydrierung während der Belastung (bis 4 %)",
+     "n": "Zeitfahren mit freiem Tempo (bis 4 % Gewichtsverlust)",
      "g": "B",
      "d": null,
      "m": 0,
@@ -630,10 +634,12 @@
       "goulet2011"
      ],
      "t": "Kein Effekt bei freiem Tempo (+0,09 %); zwei Analysen desselben Autors.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle",
+     "w": "Ausdauer bei Dehydrierung während der Belastung"
     },
     {
-     "n": "Ausdauer bei fester Intensität und über 2 % Gewichtsverlust",
+     "n": "Feste Intensität (ab 2 % Gewichtsverlust)",
      "g": "C",
      "d": "ab",
      "m": 2,
@@ -644,7 +650,9 @@
       "goulet2013"
      ],
      "t": "−1,91 % Leistung; in Ausdauersportarten praktisch relevant.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle",
+     "w": "Ausdauer bei Dehydrierung während der Belastung"
     },
     {
      "n": "Ausdauer bei Start in dehydriertem Zustand",
@@ -658,7 +666,8 @@
       "deshayes2020"
      ],
      "t": "Ausdauerleistung um 2,4 % [0,8; 4,0] verringert bei im Mittel 3,6 % Gewichtsverlust vor dem Start; VO₂peak −2,4 %.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
      "n": "Ausdauer mit Trinken (über 1 h, moderat)",
@@ -673,7 +682,8 @@
       "mccartney2017"
      ],
      "t": "+2,1 % bei >1–2 h, +3,2 % bei über 2 h; bei 1 h intensivem Fahren dagegen −2,5 %.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "trainiert"
     },
     {
      "n": "Trinken nach Durst statt nach Plan",
@@ -687,7 +697,8 @@
       "goulet2019"
      ],
      "t": "+0,98 % [0,11; 1,84], praktisch unbedeutend: Durst ist mindestens gleichwertig, bei halber Trinkmenge.",
-     "v": "trinkstrategie"
+     "v": "trinkstrategie",
+     "pop": "alle"
     },
     {
      "n": "Hyperhydrierung vor der Belastung",
@@ -701,7 +712,8 @@
       "mccubbin2024"
      ],
      "t": "Zeit bis zur Erschöpfung g 0,31 [0,13; 0,50], Zeitfahren g 0,25; keine Effekte auf Herzfrequenz und Körpertemperatur.",
-     "v": "trinkstrategie"
+     "v": "trinkstrategie",
+     "pop": "alle"
     },
     {
      "n": "Kohlenhydrat-Elektrolyt-Getränk in warmer Umgebung",
@@ -715,7 +727,8 @@
       "wang2026"
      ],
      "t": "g 0,37 [0,21; 0,53], aerobe Ausdauer g 0,45; Vorhersageintervall schließt null ein.",
-     "v": "hitze"
+     "v": "hitze",
+     "pop": "alle"
     }
    ]
   },
@@ -737,7 +750,8 @@
       "francisco2024"
      ],
      "t": "−5,5 %; Trainierte weniger betroffen. Isometrische Maximalkraft im Review meist unverändert.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Kraftausdauer bei Hypohydration",
@@ -752,7 +766,8 @@
       "francisco2024"
      ],
      "t": "−8,3 %; geringere Ermüdungswiderstandsfähigkeit auch im systematischen Review.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Leistung nach Gewichtmachen und Erholung (Kampfsport)",
@@ -766,7 +781,8 @@
       "brechney2022"
      ],
      "t": "Nach 3–36 h Erholung unverändert (g 0,22 [−0,18; 0,62]); direkt danach Maximalkraft g −0,29.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "trainiert"
     }
    ]
   },
@@ -787,7 +803,8 @@
       "mccartney2017"
      ],
      "t": "Ausdauer g 0,46 [0,32; 0,61], besonders in Hitze; für Kraft und Kognition unklar.",
-     "v": "rehydrierung"
+     "v": "rehydrierung",
+     "pop": "alle"
     },
     {
      "n": "Rehydrierung mit Kohlenhydrat-Elektrolyt-Getränk oder Milch statt Wasser",
@@ -803,7 +820,8 @@
       "rowlands2022"
      ],
      "t": "Besser als Wasser (vor allem 4–9 % Kohlenhydrate); fettarme Milch in 4 Studien besser. Größe nicht gepoolt, Evidenz niedrig bis sehr niedrig.",
-     "v": "rehydrierung"
+     "v": "rehydrierung",
+     "pop": "alle"
     }
    ]
   },
@@ -825,7 +843,8 @@
       "goodman2019"
      ],
      "t": "ES −0,21 [−0,31; −0,11] in der größeren Analyse, kein Effekt (g −0,177) bei aktiver Dehydrierung: Metaanalysen widersprechen sich.",
-     "v": "kognition"
+     "v": "kognition",
+     "pop": "alle"
     }
    ]
   },
@@ -848,7 +867,8 @@
       "rangan2021"
      ],
      "t": "9,11 % der untersuchten Läufer; Hauptursache übermäßiges Trinken. Bei Wasservergiftungen verliefen 13 % tödlich (Fallberichte).",
-     "v": "natrium"
+     "v": "natrium",
+     "pop": "alle"
     },
     {
      "n": "Muskelkrämpfe durch Flüssigkeitsmangel",
@@ -862,7 +882,8 @@
       "costa2026"
      ],
      "t": "Kein einheitlicher Zusammenhang mit Hydration; stärkster Risikofaktor sind frühere Krämpfe (rund 4,4-fache Odds).",
-     "v": "natrium"
+     "v": "natrium",
+     "pop": "alle"
     },
     {
      "n": "Urinmenge durch Koffein während Belastung",
@@ -876,7 +897,8 @@
       "zhang2015"
      ],
      "t": "ES 0,10 [−0,07; 0,27] bei Belastung; nur in Ruhe stieg die Urinmenge (ES 0,54).",
-     "v": "rehydrierung"
+     "v": "rehydrierung",
+     "pop": "alle"
     }
    ]
   }

@@ -1,7 +1,7 @@
 {
  "id": "beta-alanin",
  "title": "Beta-Alanin",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Für welche Belastungen lohnt sich Beta-Alanin, wie muss man es dosieren, und ist das Kribbeln bedenklich? Zusammengefasst aus Metaanalysen, systematischen Reviews und dem ISSN-Positionspapier.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Beta-Alanin wirkt nicht akut, sondern über den Aufbau von Muskelcarnosin in mehreren Wochen.",
@@ -483,6 +483,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "17.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 413 Einträgen, 170 Übersichtsarbeiten nach Titel geprüft (davon 58 über eine ergänzende Suche nach Übersichtsarbeiten), 17 Quellen aufgenommen."
   }
@@ -494,7 +498,7 @@
    "kat": "ausdauer",
    "items": [
     {
-     "n": "Zeit bis zur Erschöpfung bei 0,5–10 min (Zunahme)",
+     "n": "0,5–10 min: alle Studien",
      "g": "A",
      "d": "auf",
      "m": 2,
@@ -503,11 +507,44 @@
      "p": 1461,
      "s": [
       "saunders2017",
-      "georgiou2024",
       "hobson2012"
      ],
-     "t": "ES 0,50 für Kapazitätstests bei 0,5–10 min (40 Studien); bei trainierten Männern ES 0,39, bei 4–10 min 0,55.",
-     "v": "leistung"
+     "t": "ES 0,50 für Kapazitätstests bei 0,5–10 min (40 Studien).",
+     "v": "leistung",
+     "w": "Zeit bis zur Erschöpfung (Zunahme)",
+     "pop": "alle"
+    },
+    {
+     "n": "0,5–10 min: trainierte Männer",
+     "g": "A",
+     "d": "auf",
+     "m": 2,
+     "b": "nutzen",
+     "k": 18,
+     "p": 331,
+     "s": [
+      "georgiou2024"
+     ],
+     "t": "ES 0,39 bei trainierten Männern von 18–40 Jahren (18 Studien, n = 331); bei 4–10 min 0,55.",
+     "v": "leistung",
+     "w": "Zeit bis zur Erschöpfung (Zunahme)",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Frauen",
+     "g": "C",
+     "d": "auf",
+     "m": 2,
+     "b": "nutzen",
+     "k": 8,
+     "p": 187,
+     "s": [
+      "gu2026"
+     ],
+     "t": "SMD 0,49 (8 Studien), Evidenzqualität sehr niedrig.",
+     "v": "leistung",
+     "w": "Zeit bis zur Erschöpfung (Zunahme)",
+     "pop": "alle"
     },
     {
      "n": "Zeitfahrleistung bei 0,5–10 min",
@@ -521,21 +558,8 @@
       "saunders2017"
      ],
      "t": "ES 0,11 [−0,20; 0,42], nicht signifikant; wettkampfnahe Tests profitieren kaum.",
-     "v": "leistung"
-    },
-    {
-     "n": "Zeit bis zur Erschöpfung bei Frauen",
-     "g": "C",
-     "d": "auf",
-     "m": 2,
-     "b": "nutzen",
-     "k": 8,
-     "p": 187,
-     "s": [
-      "gu2026"
-     ],
-     "t": "SMD 0,49 (8 Studien), Evidenzqualität sehr niedrig.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     },
     {
      "n": "Belastungen unter 60 Sekunden",
@@ -549,7 +573,8 @@
       "hobson2012"
      ],
      "t": "Kein signifikanter Vorteil (P = 0,312) in der ersten Metaanalyse.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     },
     {
      "n": "Längere Ausdauer (aerob-anaerober Übergang)",
@@ -564,7 +589,8 @@
       "trexler2015"
      ],
      "t": "Zeitfahren SMD −0,36 und Zeitlimit-Tests SMD 0,25, jeweils mit KI über null; über 25 min kaum untersucht.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
      "n": "Yo-Yo-Test (Intervallsport)",
@@ -578,7 +604,8 @@
       "grgic2021"
      ],
      "t": "Insgesamt SMD 0,68, nicht signifikant; bei 6–12 Wochen Einnahme SMD 1,02 signifikant.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "trainiert"
     },
     {
      "n": "Kombination mit Natriumbicarbonat",
@@ -593,7 +620,8 @@
       "saunders2017"
      ],
      "t": "SMD 0,32 bzw. ES 0,43 gegenüber Placebo; Unterschied zu den Einzelsubstanzen nicht signifikant.",
-     "v": "kombi"
+     "v": "kombi",
+     "pop": "alle"
     }
    ]
   },
@@ -614,10 +642,11 @@
       "liang2026"
      ],
      "t": "Mittlere Leistung SMD −0,018, Spitzenleistung SMD 0,205, beide nicht signifikant (17 Studien).",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
-     "n": "Maximalkraft und Schnellkraft",
+     "n": "Kraftsportler",
      "g": "D",
      "d": null,
      "m": 0,
@@ -625,11 +654,28 @@
      "k": 9,
      "p": 197,
      "s": [
-      "ong2025",
+      "ong2025"
+     ],
+     "t": "Uneinheitlich, keine Metaanalyse (9 Studien, n = 197); eher wirksam bei 4–6,4 g pro Tag in mehreren kleinen Teilgaben.",
+     "v": "kraft",
+     "w": "Maximalkraft und Schnellkraft",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Ältere Erwachsene",
+     "g": "D",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": 5,
+     "p": 163,
+     "s": [
       "decamargo2025"
      ],
-     "t": "Uneinheitlich, keine Metaanalyse; bei Älteren keine Kraftzunahme.",
-     "v": "kraft"
+     "t": "Keine Verbesserung von Kraft und Funktion (5 Studien, n = 163).",
+     "v": "kraft",
+     "w": "Maximalkraft und Schnellkraft",
+     "pop": "aelter"
     }
    ]
   },
@@ -650,7 +696,8 @@
       "ashtarylarky2022"
      ],
      "t": "Fettfreie Masse +0,05 kg, Fettmasse −0,24 kg, beide nicht signifikant (I² = 0 %).",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     }
    ]
   },
@@ -673,7 +720,8 @@
       "trexler2015"
      ],
      "t": "+18,1 mmol/kg Trockenmasse in individuellen Daten; 99,3 % der Teilnehmenden reagierten mit einem Anstieg.",
-     "v": "carnosin"
+     "v": "carnosin",
+     "pop": "alle"
     }
    ]
   },
@@ -695,7 +743,8 @@
       "trexler2015"
      ],
      "t": "OR 8,9 gegenüber Placebo (101 Humanstudien); harmlos und durch kleine Einzeldosen zu mindern.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Leberwert ALT",
@@ -709,7 +758,8 @@
       "dolan2019"
      ],
      "t": "ES 0,274, Mittelwerte im Referenzbereich.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Taurin und Histidin im Muskel",
@@ -723,7 +773,8 @@
       "dolan2019"
      ],
      "t": "Keine Veränderung (Taurin ES 0,156; Histidin ES −0,15).",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

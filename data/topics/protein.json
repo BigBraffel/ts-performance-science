@@ -1,7 +1,7 @@
 {
  "id": "protein",
  "title": "Protein",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Wie viel Protein braucht man für Muskelaufbau und Kraft, spielt der Zeitpunkt eine Rolle, sind pflanzliche Quellen gleichwertig, und ist eine hohe Zufuhr gesundheitlich unbedenklich? Zusammengefasst aus Metaanalysen, Dosis-Wirkungs-Analysen und einem Positionspapier.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, krafttrainierende Erwachsene. Entscheidend ist die tägliche Gesamtmenge; Zeitpunkt und Quelle sind nachrangig.",
@@ -606,6 +606,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "17.11.2026",
    "t": "Wirkungsübersicht ergänzt: 10 Wirkungen nach Verlässlichkeit (Grad A–D), Effekt und Datenbasis eingestuft."
   },
@@ -816,7 +820,7 @@
    "kat": "masse",
    "items": [
     {
-     "n": "Fettfreie Masse (mit Krafttraining)",
+     "n": "Alle Studien",
      "g": "A",
      "d": "auf",
      "m": 2,
@@ -829,8 +833,42 @@
       "tagawa2020",
       "mohammadi2025"
      ],
-     "t": "Mehr Protein steigerte den Zuwachs an fettfreier Masse bei Krafttraining (SMD 0,22; 62 Studien); +0,30 kg in 49 Studien (n = 1863). Bei Trainierten stärker (+0,75 kg).",
-     "v": "menge"
+     "t": "Mehr Protein steigerte den Zuwachs an fettfreier Masse bei Krafttraining (SMD 0,22; 62 Studien); +0,30 kg in 49 Studien (n = 1863).",
+     "v": "menge",
+     "w": "Fettfreie Masse mit Krafttraining",
+     "pop": "alle"
+    },
+    {
+     "n": "Trainierte",
+     "g": "A",
+     "d": "auf",
+     "m": -1,
+     "b": "nutzen",
+     "k": null,
+     "p": null,
+     "s": [
+      "morton2018"
+     ],
+     "t": "Bei Krafttrainierten wirksamer: +0,75 kg fettfreie Masse (Morton et al., 2018).",
+     "v": "menge",
+     "w": "Fettfreie Masse mit Krafttraining",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Ältere (ab 65 Jahren)",
+     "g": "A",
+     "d": "auf",
+     "m": -1,
+     "b": "nutzen",
+     "k": null,
+     "p": null,
+     "s": [
+      "nunes2022"
+     ],
+     "t": "Signifikanter Zuwachs bei 1,2–1,59 g/kg/Tag (Nunes et al., 2022); Effektgröße für diese Gruppe im Abstract nicht angegeben.",
+     "v": "menge",
+     "w": "Fettfreie Masse mit Krafttraining",
+     "pop": "aelter"
     },
     {
      "n": "Körperfett (Milchprotein)",
@@ -845,7 +883,8 @@
       "sepandi2022"
      ],
      "t": "Milchprotein senkte die Fettmasse um 0,66 kg und den Körperfettanteil um 0,66 Prozentpunkte (150 Studien).",
-     "v": "praeparate"
+     "v": "praeparate",
+     "pop": "alle"
     },
     {
      "n": "Muskelmasse bei Zufuhr über 1,3–1,6 g/kg/Tag",
@@ -861,10 +900,11 @@
       "jager2017"
      ],
      "t": "Über 1,62 g/kg/Tag kein weiterer Zuwachs (Morton et al., 2018). In einer Dosis-Wirkungs-Analyse brachte jedes zusätzliche 0,1 g/kg oberhalb von 1,3 g/kg/Tag nur noch +0,12 kg statt +0,39 kg darunter.",
-     "v": "menge"
+     "v": "menge",
+     "pop": "alle"
     },
     {
-     "n": "Muskelmasse: pflanzliches statt tierisches Protein",
+     "n": "Alle Altersgruppen",
      "g": "B",
      "d": "ab",
      "m": 2,
@@ -877,7 +917,41 @@
       "zhao2024"
      ],
      "t": "Mit pflanzlichem Protein etwas weniger Muskelmasse (SMD −0,20; 30 Studien). Soja und Milchprotein unterschieden sich nicht (17 Studien), andere Pflanzenproteine schnitten schlechter ab (SMD −0,58).",
-     "v": "quelle"
+     "v": "quelle",
+     "w": "Muskelmasse: pflanzliches statt tierisches Protein",
+     "pop": "alle"
+    },
+    {
+     "n": "Jüngere (unter 60 Jahren)",
+     "g": "B",
+     "d": "ab",
+     "m": 2,
+     "b": "neutral",
+     "k": null,
+     "p": null,
+     "s": [
+      "reidmccann2025"
+     ],
+     "t": "SMD −0,20 zugunsten tierischen Proteins.",
+     "v": "quelle",
+     "w": "Muskelmasse: pflanzliches statt tierisches Protein",
+     "pop": "einsteiger"
+    },
+    {
+     "n": "Ältere (ab 60 Jahren)",
+     "g": "B",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": null,
+     "p": null,
+     "s": [
+      "reidmccann2025"
+     ],
+     "t": "SMD −0,05, kein signifikanter Unterschied.",
+     "v": "quelle",
+     "w": "Muskelmasse: pflanzliches statt tierisches Protein",
+     "pop": "aelter"
     }
    ]
   },
@@ -899,7 +973,8 @@
       "nunes2022"
      ],
      "t": "+2,49 kg im 1RM (49 Studien). Unterkörperkraft ab 1,6 g/kg/Tag SMD 0,40, Bankdrücken bei unter 65-Jährigen SMD 0,18; Evidenzqualität niedrig.",
-     "v": "menge"
+     "v": "menge",
+     "pop": "alle"
     },
     {
      "n": "Sportliche Leistungstests (pflanzliches Protein)",
@@ -913,7 +988,8 @@
       "zhao2024"
      ],
      "t": "Gegenüber keinem oder wenig Protein besser (SMD 0,281); gegenüber anderen Proteinarten etwas schwächer (SMD −0,119).",
-     "v": "quelle"
+     "v": "quelle",
+     "pop": "alle"
     },
     {
      "n": "Körperliche Funktion (Gehtests)",
@@ -927,7 +1003,8 @@
       "zhou2024"
      ],
      "t": "Weder Zeitpunkt noch Proteinart verbesserten Timed-up-and-go-Test, 6-Minuten-Gehtest oder Ganggeschwindigkeit (116 Studien).",
-     "v": "timing"
+     "v": "timing",
+     "pop": "alle"
     }
    ]
   },
@@ -950,7 +1027,8 @@
       "jager2017"
      ],
      "t": "Kein Unterschied für die fettfreie Masse (SMD −0,08; 5 Studien). Entscheidend ist die Tagesmenge; laut ISSN 20–40 g je Mahlzeit, verteilt alle 3–4 Stunden.",
-     "v": "timing"
+     "v": "timing",
+     "pop": "alle"
     }
    ]
   },
@@ -972,7 +1050,8 @@
       "teixeira2026"
      ],
      "t": "Die Veränderung der GFR unterschied sich nicht (SMD 0,11; 28 Studien); eGFR stieg sogar (SMD 0,39; 22 Studien), Serumkreatinin unverändert, ohne Hinweis auf Nierenschäden bei Nierengesunden.",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     },
     {
      "n": "Herz-Kreislauf-Ereignisse bei hoher Proteinzufuhr",
@@ -986,7 +1065,8 @@
       "mantzouranis2023"
      ],
      "t": "Kein Zusammenhang mit kardiovaskulärem Tod (OR 0,94) oder Schlaganfall (OR 1,02); nur Beobachtungsstudien.",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     }
    ]
   }

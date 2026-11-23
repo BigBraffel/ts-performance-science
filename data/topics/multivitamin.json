@@ -1,7 +1,7 @@
 {
  "id": "multivitamin",
  "title": "Multivitamin-Präparate",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Verlängern Multivitamin-Präparate das Leben, schützen sie vor Herz-Kreislauf-Erkrankungen, Krebs, geistigem Abbau oder Infekten, und verbessern sie die sportliche Leistung? Zusammengefasst aus Metaanalysen und systematischen Reviews.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, normal ernährte Erwachsene. Multivitamine sind sicher, wenn sie im Bereich der Zufuhrempfehlungen dosiert sind, bringen aber für die meisten Endpunkte keinen nachweisbaren Nutzen. Für sportliche Leistung gibt es keine Metaanalyse.",
@@ -626,6 +626,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "17.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 2 126 Einträgen, 514 Übersichtsarbeiten nach Titel geprüft, 22 Quellen aufgenommen."
   }
@@ -651,7 +655,8 @@
       "wang2026"
      ],
      "t": "RR 0,98 [0,94; 1,02] in 21 Studien. Große Kohorte (n = 390 124) ohne Überlebensvorteil.",
-     "v": "sterblichkeit"
+     "v": "sterblichkeit",
+     "pop": "alle"
     },
     {
      "n": "Kardiovaskuläre Sterblichkeit",
@@ -667,7 +672,8 @@
       "jenkins2018"
      ],
      "t": "RR 1,00 [0,97; 1,04]; gefäßbedingte Sterblichkeit in RCTs RR 1,01.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Koronare Herzkrankheit (Neuerkrankungen)",
@@ -681,7 +687,8 @@
       "kim2018"
      ],
      "t": "RR 0,88 [0,79; 0,97] über alle Studien, in RCTs nicht signifikant (RR 0,97). Wahrscheinlich Verzerrung durch Lebensstil.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Schlaganfall",
@@ -695,7 +702,8 @@
       "kim2018"
      ],
      "t": "Inzidenz RR 0,98 [0,91; 1,05]; Sterblichkeit RR 0,95 [0,82; 1,09].",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Systolischer Blutdruck",
@@ -709,7 +717,8 @@
       "li2018"
      ],
      "t": "−1,31 mmHg; zu klein, um Bluthochdruck vorzubeugen (4 RCTs, n = 21 196, ohne Effekt auf das Hypertonierisiko).",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     }
    ]
   },
@@ -731,7 +740,8 @@
       "fortmann2013"
      ],
      "t": "OR 0,93 [0,87; 0,99]; absolut −0,2 % bis −1,2 %. Effekt nur bei Männern gezeigt.",
-     "v": "krebs"
+     "v": "krebs",
+     "pop": "alle"
     },
     {
      "n": "Brust- und Prostatakrebs",
@@ -746,7 +756,8 @@
       "stratton2011"
      ],
      "t": "Kein signifikanter Zusammenhang mit Brustkrebs; kein Effekt auf Prostatakrebs.",
-     "v": "krebs"
+     "v": "krebs",
+     "pop": "alle"
     },
     {
      "n": "Lungenkrebs durch hoch dosiertes Beta-Carotin (Raucher)",
@@ -761,7 +772,8 @@
       "oconnor2022"
      ],
      "t": "OR 1,24 [1,10; 1,39] bei Rauchern mit 20–30 mg/Tag; USPSTF: OR 1,20 [1,01; 1,42].",
-     "v": "krebs"
+     "v": "krebs",
+     "pop": "alle"
     }
    ]
   },
@@ -782,7 +794,8 @@
       "grima2012"
      ],
      "t": "SMD 0,32 [0,09; 0,56]; verzögerter Abruf und Wortflüssigkeit unverändert.",
-     "v": "kognition"
+     "v": "kognition",
+     "pop": "alle"
     },
     {
      "n": "Globale Kognition bei über 60-Jährigen",
@@ -797,7 +810,8 @@
       "rutjes2018"
      ],
      "t": "+0,07 SD [0,03; 0,11] in 3 COSMOS-Teilstudien; der Cochrane-Review fand keinen bedeutsamen Effekt von Vitaminen auf kognitiven Abbau.",
-     "v": "kognition"
+     "v": "kognition",
+     "pop": "aelter"
     }
    ]
   },
@@ -807,7 +821,7 @@
    "kat": "infekte",
    "items": [
     {
-     "n": "Infekthäufigkeit",
+     "n": "Erwachsene insgesamt",
      "g": "C",
      "d": null,
      "m": 0,
@@ -816,11 +830,29 @@
      "p": null,
      "s": [
       "stephen2006",
-      "elkadiki2005",
       "vliegboerstra2022"
      ],
-     "t": "Bei Älteren kein Unterschied (WMD 0,06; OR 1,10); 17,5 Infekttage weniger pro Jahr nur in 3 Studien.",
-     "v": "infekte"
+     "t": "Unter 65 Jahren weniger Infektepisoden (WMD −1,20), aber nicht weniger Personen mit mindestens einem Infekt (RR 0,81, nicht signifikant). In der gesunden Allgemeinbevölkerung höchstens sehr begrenzter Effekt.",
+     "v": "infekte",
+     "w": "Infekthäufigkeit",
+     "pop": "alle"
+    },
+    {
+     "n": "Ab 65 Jahren",
+     "g": "C",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": null,
+     "p": null,
+     "s": [
+      "stephen2006",
+      "elkadiki2005"
+     ],
+     "t": "Kein Unterschied (WMD 0,06; OR 1,10); 17,5 Infekttage weniger pro Jahr nur in 3 Studien.",
+     "v": "infekte",
+     "w": "Infekthäufigkeit",
+     "pop": "aelter"
     }
    ]
   },
@@ -841,7 +873,8 @@
       "ghazzawi2023"
      ],
      "t": "Keine Metaanalyse vorhanden; ein systematischer Review ohne Effektschätzung sieht Nutzen nur bei Mangel oder Malabsorption.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "trainiert"
     }
    ]
   },
@@ -863,7 +896,8 @@
       "huang2006"
      ],
      "t": "Nur leichte Magen-Darm-Beschwerden, ohne Unterschied zu Placebo; bis 100 % der Zufuhrempfehlung auch über 10 Jahre sicher.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Hüftfrakturen",
@@ -878,7 +912,8 @@
       "wang2026"
      ],
      "t": "OR 0,49 [0,32; 0,77], nur aus Beobachtungsstudien und daher wahrscheinlich überschätzt.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

@@ -1,7 +1,7 @@
 {
  "id": "probiotika",
  "title": "Probiotika",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Was leisten Probiotika wirklich: Schützen sie vor Atemwegsinfekten und Antibiotika-Durchfall, helfen sie bei Magen-Darm-Beschwerden im Ausdauersport, und verbessern sie Leistung, Körperzusammensetzung oder Entzündungswerte? Zusammengefasst aus Cochrane-Reviews, Metaanalysen und Positionspapieren.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierende Erwachsene. Probiotika wirken stamm- und dosisabhängig; die Befunde gelten für die geprüften Präparate, nicht für jedes Produkt.",
@@ -813,6 +813,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 1 636 Einträgen, 448 Übersichtsarbeiten nach Titel geprüft (316 aus der Themensuche, 132 aus vier ergänzenden Suchen), 31 Quellen aufgenommen."
   }
@@ -837,7 +841,8 @@
       "hao2015"
      ],
      "t": "RR 0,76 im Cochrane-Review (16 Studien, n = 4 798; niedrige Vertrauenswürdigkeit); bei Erwachsenen von 18 bis 65 Jahren nur RR 0,91 (42 Publikationen, n = 9 179).",
-     "v": "atemwege"
+     "v": "atemwege",
+     "pop": "alle"
     },
     {
      "n": "Dauer einer Infektepisode (Verkürzung)",
@@ -852,7 +857,8 @@
       "coleman2022"
      ],
      "t": "−1,22 Tage je Episode (6 Studien, n = 2 406); bei Erwachsenen g = −0,23.",
-     "v": "atemwege"
+     "v": "atemwege",
+     "pop": "alle"
     },
     {
      "n": "Infekte bei Sportlern: Häufigkeit und Dauer",
@@ -867,7 +873,8 @@
       "coleman2022"
      ],
      "t": "Keine Wirkung auf Krankheitstage, Zahl und Dauer (14 Studien); nur die Symptomschwere sank (−0,65). In aktiven Gruppen kein Nutzen.",
-     "v": "atemwege"
+     "v": "atemwege",
+     "pop": "trainiert"
     }
    ]
   },
@@ -877,7 +884,7 @@
    "kat": "darm",
    "items": [
     {
-     "n": "Antibiotika-assoziierter Durchfall, Erwachsene",
+     "n": "Erwachsene",
      "g": "A",
      "d": "ab",
      "m": 3,
@@ -891,10 +898,12 @@
       "esmaeilinezhad2025"
      ],
      "t": "Bei Erwachsenen RR 0,63 (42 Studien, n = 11 305) und 0,62, also etwa 37 bis 38 % weniger Fälle; über alle Gruppen RR 0,58 (63 Studien).",
-     "v": "antibiotika"
+     "v": "antibiotika",
+     "w": "Antibiotika-assoziierter Durchfall",
+     "pop": "alle"
     },
     {
-     "n": "Antibiotika-assoziierter Durchfall, über 65 Jahre",
+     "n": "Über 65 Jahre",
      "g": "C",
      "d": null,
      "m": 0,
@@ -905,7 +914,9 @@
       "jafarnejad2016"
      ],
      "t": "RR 0,94 [0,76; 1,15], kein signifikanter Schutz bei Älteren.",
-     "v": "antibiotika"
+     "v": "antibiotika",
+     "w": "Antibiotika-assoziierter Durchfall",
+     "pop": "aelter"
     },
     {
      "n": "C.-difficile-Durchfall unter Antibiotika",
@@ -920,7 +931,8 @@
       "goldenberg2017"
      ],
      "t": "RR 0,50 (38 Studien, n = 13 179); absolut nur 1,6 % gegenüber 3,2 %, Number needed to treat 65.",
-     "v": "antibiotika"
+     "v": "antibiotika",
+     "pop": "alle"
     },
     {
      "n": "Magen-Darm-Beschwerden bei Ausdauerbelastung",
@@ -936,7 +948,8 @@
       "costa2025"
      ],
      "t": "Grenzwertiger Effekt in einer Metaanalyse (g = −0,62; p = 0,05), nur geringe Hinweise im Review mit 822 Sportlern; ein Positionspapier nennt negative Ergebnisse.",
-     "v": "magendarm"
+     "v": "magendarm",
+     "pop": "trainiert"
     }
    ]
   },
@@ -946,7 +959,7 @@
    "kat": "ausdauer",
    "items": [
     {
-     "n": "Leistung in aeroben Tests",
+     "n": "Gesunde Erwachsene",
      "g": "C",
      "d": "auf",
      "m": 2,
@@ -958,8 +971,27 @@
       "santibanez2022",
       "depaiva2023"
      ],
-     "t": "SMD 0,38 insgesamt und 0,74 für aerobe Ausdauer (21 Studien, n = 685); bei Trainierten SMD 0,29 (12 Studien). Ein Review fand überwiegend Nullbefunde.",
-     "v": "leistung"
+     "t": "SMD 0,38 insgesamt und 0,74 für aerobe Ausdauer (21 Studien, n = 685). Ein Review fand überwiegend Nullbefunde.",
+     "v": "leistung",
+     "w": "Leistung in aeroben Tests",
+     "pop": "alle"
+    },
+    {
+     "n": "Trainierte und Athleten",
+     "g": "C",
+     "d": "auf",
+     "m": 2,
+     "b": "nutzen",
+     "k": 12,
+     "p": 232,
+     "s": [
+      "santibanez2022",
+      "zhang2026"
+     ],
+     "t": "SMD 0,29 in Tests mit überwiegend aerobem Stoffwechsel (12 Studien, n = 232); bei Athleten SMD 0,38.",
+     "v": "leistung",
+     "w": "Leistung in aeroben Tests",
+     "pop": "trainiert"
     },
     {
      "n": "VO₂max",
@@ -974,7 +1006,8 @@
       "zhang2026"
      ],
      "t": "+1,55 ml/(kg·min) bei Aktiven; als sehr kleiner Effekt eingestuft. Moderate bis niedrige Vertrauenswürdigkeit.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "einsteiger"
     }
    ]
   },
@@ -995,7 +1028,8 @@
       "shirkoohi2025"
      ],
      "t": "−45,57 U/l gegenüber Kontrolle; Laktatdehydrogenase und Myoglobin unverändert.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "einsteiger"
     }
    ]
   },
@@ -1018,7 +1052,8 @@
       "mohr2020"
      ],
      "t": "ES −1,02 im Umbrella Review (I² 94,1 %), −1,35 mg/l in 20 Studien; vor allem in Patientengruppen, bei Gesunden begrenzt.",
-     "v": "entzuendung"
+     "v": "entzuendung",
+     "pop": "alle"
     },
     {
      "n": "TNF-α und IL-10 bei Sportlern",
@@ -1033,7 +1068,8 @@
       "aparicio2025"
      ],
      "t": "Eine Analyse fand weniger TNF-α (ES −0,59) ohne IL-10-Effekt, die andere mehr IL-10 (SMD 0,43) ohne TNF-α-Effekt.",
-     "v": "entzuendung"
+     "v": "entzuendung",
+     "pop": "trainiert"
     },
     {
      "n": "Sekretorisches IgA (Schleimhautabwehr)",
@@ -1047,7 +1083,8 @@
       "chen2026"
      ],
      "t": "ES 0,30 [0,03; 0,57] bei Sportlern.",
-     "v": "entzuendung"
+     "v": "entzuendung",
+     "pop": "trainiert"
     }
    ]
   },
@@ -1057,7 +1094,7 @@
    "kat": "koerper",
    "items": [
     {
-     "n": "Körpergewicht und Fettmasse",
+     "n": "Erwachsene",
      "g": "A",
      "d": "ab",
      "m": 1,
@@ -1069,8 +1106,26 @@
       "zhang2015",
       "shirkoohi2025"
      ],
-     "t": "−0,91 kg Körpergewicht und −0,92 kg Fettmasse (200 Studien, n = 12 603); bei Aktiven −0,55 kg. Praktisch sehr kleiner Effekt.",
-     "v": "koerper"
+     "t": "−0,91 kg Körpergewicht und −0,92 kg Fettmasse (200 Studien, n = 12 603). Praktisch sehr kleiner Effekt.",
+     "v": "koerper",
+     "w": "Körpergewicht und Fettmasse",
+     "pop": "alle"
+    },
+    {
+     "n": "Sportlich Aktive",
+     "g": "A",
+     "d": "ab",
+     "m": 1,
+     "b": "nutzen",
+     "k": null,
+     "p": null,
+     "s": [
+      "shirkoohi2025"
+     ],
+     "t": "Körpergewicht −0,55 kg, Körperfettanteil −0,46 Prozentpunkte.",
+     "v": "koerper",
+     "w": "Körpergewicht und Fettmasse",
+     "pop": "einsteiger"
     },
     {
      "n": "Fettfreie Masse",
@@ -1085,7 +1140,8 @@
       "shirkoohi2025"
      ],
      "t": "Keine Veränderung der fettfreien bzw. mageren Masse.",
-     "v": "koerper"
+     "v": "koerper",
+     "pop": "alle"
     }
    ]
   },
@@ -1109,7 +1165,8 @@
       "kumar2026"
      ],
      "t": "RR 0,86 (37 Studien, n = 11 911), 1,00 und 1,02 in weiteren Analysen; meist leichte Magen-Darm-Beschwerden. Die Berichterstattung ist oft lückenhaft.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

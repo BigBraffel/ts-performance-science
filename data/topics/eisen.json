@@ -1,7 +1,7 @@
 {
  "id": "eisen",
  "title": "Eisen",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Wem nützt zusätzliches Eisen: Steigert es bei Eisenmangel ohne Anämie Ausdauer und VO₂max, lindert es Müdigkeit, und wie dosiert man es verträglich? Zusammengefasst aus Metaanalysen, Cochrane-Reviews und systematischen Reviews.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierende Erwachsene. Eisen ist kein allgemeines Leistungssupplement: Ein Nutzen ist an einen niedrigen Eisenstatus gebunden, der vorher per Blutbild und Ferritin geprüft werden sollte.",
@@ -578,6 +578,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "17.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 1 470 Einträgen, 332 Übersichtsarbeiten nach Titel geprüft (232 aus der Themensuche, 100 aus ergänzenden Suchen), 19 Quellen aufgenommen."
   }
@@ -589,7 +593,7 @@
    "kat": "ausdauer",
    "items": [
     {
-     "n": "VO₂max bei Frauen im gebärfähigen Alter",
+     "n": "Frauen im gebärfähigen Alter",
      "g": "B",
      "d": "auf",
      "m": 2,
@@ -601,23 +605,57 @@
       "low2016"
      ],
      "t": "SMD 0,37 (20 Studien), relativ +2,35 ml/(kg·min); nur 3 Studien mit niedrigem Verzerrungsrisiko.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "w": "VO₂max",
+     "pop": "alle"
     },
     {
-     "n": "VO₂max bei Sportlern und Erwachsenen ohne Anämie",
+     "n": "Eisenarme Ausdauersportler ohne Anämie",
      "g": "C",
      "d": "auf",
-     "m": null,
+     "m": 3,
      "b": "nutzen",
      "k": 17,
      "p": null,
      "s": [
-      "burden2015",
-      "houston2018",
+      "burden2015"
+     ],
+     "t": "g = 0,61 (17 Studien).",
+     "v": "ausdauer",
+     "w": "VO₂max",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Sportler unabhängig vom Eisenstatus",
+     "g": "C",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": 13,
+     "p": 449,
+     "s": [
       "smid2024"
      ],
-     "t": "Bei eisenarmen Ausdauersportlern g = 0,61; bei Erwachsenen ohne Anämie (SMD 0,11) und Sportlern aller Ausgangswerte (SMD 0,49) nicht signifikant.",
-     "v": "ausdauer"
+     "t": "SMD 0,49, nicht signifikant (13 Studien, n = 449).",
+     "v": "ausdauer",
+     "w": "VO₂max",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Erwachsene mit Eisenmangel ohne Anämie",
+     "g": "C",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": 9,
+     "p": 235,
+     "s": [
+      "houston2018"
+     ],
+     "t": "SMD 0,11, nicht signifikant (9 Studien, n = 235).",
+     "v": "ausdauer",
+     "w": "VO₂max",
+     "pop": "alle"
     },
     {
      "n": "Herzfrequenz bei submaximaler Belastung",
@@ -631,7 +669,8 @@
       "pasricha2014"
      ],
      "t": "−4,05 Schläge/min (6 Studien) bei gleicher Belastung; als kleiner, praktisch spürbarer Effekt eingestuft.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     }
    ]
   },
@@ -641,7 +680,7 @@
    "kat": "status",
    "items": [
     {
-     "n": "Ferritin (Eisenspeicher)",
+     "n": "Gesamt",
      "g": "A",
      "d": "auf",
      "m": 4,
@@ -654,11 +693,45 @@
       "mccarthy2026",
       "houston2018"
      ],
-     "t": "g = 1,088 (17 Studien) und SMD 1,27 (13 Studien, n = 449); deutlich vor allem bei Ausgangsferritin ≤ 12 µg/l.",
-     "v": "status"
+     "t": "In allen Analysen deutlicher Anstieg, auch bei aktiven Frauen im gebärfähigen Alter (+12,61 ng/ml).",
+     "v": "status",
+     "w": "Ferritin (Eisenspeicher)",
+     "pop": "alle"
     },
     {
-     "n": "Hämoglobin",
+     "n": "Eisenarme Ausdauersportler ohne Anämie",
+     "g": "A",
+     "d": "auf",
+     "m": 4,
+     "b": "nutzen",
+     "k": 17,
+     "p": null,
+     "s": [
+      "burden2015"
+     ],
+     "t": "g = 1,088 (17 Studien).",
+     "v": "status",
+     "w": "Ferritin (Eisenspeicher)",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Sportler unabhängig vom Eisenstatus",
+     "g": "A",
+     "d": "auf",
+     "m": 4,
+     "b": "nutzen",
+     "k": 13,
+     "p": 449,
+     "s": [
+      "smid2024"
+     ],
+     "t": "SMD 1,27 (13 Studien, n = 449); deutlich vor allem bei Ausgangsferritin ≤ 12 µg/l, darüber kaum ein Effekt.",
+     "v": "status",
+     "w": "Ferritin (Eisenspeicher)",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Frauen im gebärfähigen Alter",
      "g": "A",
      "d": "auf",
      "m": 3,
@@ -671,8 +744,42 @@
       "smid2024",
       "mccarthy2026"
      ],
-     "t": "Frauen +5,30 g/l (51 Studien, hohe Evidenzqualität); eisenarme Ausdauersportler g = 0,695. Bei Sportlern aller Ausgangswerte nicht signifikant (SMD 1,31).",
-     "v": "status"
+     "t": "Frauen +5,30 g/l (51 Studien, hohe Evidenzqualität); auch bei aktiven Frauen gestiegen.",
+     "v": "status",
+     "w": "Hämoglobin",
+     "pop": "alle"
+    },
+    {
+     "n": "Eisenarme Ausdauersportler ohne Anämie",
+     "g": "A",
+     "d": "auf",
+     "m": 3,
+     "b": "nutzen",
+     "k": 17,
+     "p": null,
+     "s": [
+      "burden2015"
+     ],
+     "t": "g = 0,695 (17 Studien).",
+     "v": "status",
+     "w": "Hämoglobin",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Sportler unabhängig vom Eisenstatus",
+     "g": "A",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": 13,
+     "p": 449,
+     "s": [
+      "smid2024"
+     ],
+     "t": "SMD 1,31, nicht signifikant (13 Studien, n = 449).",
+     "v": "status",
+     "w": "Hämoglobin",
+     "pop": "trainiert"
     },
     {
      "n": "Risiko für Anämie",
@@ -686,7 +793,8 @@
       "low2016"
      ],
      "t": "RR 0,39 bei menstruierenden Frauen (10 Studien, n = 3 273, moderate Evidenzqualität).",
-     "v": "status"
+     "v": "status",
+     "pop": "alle"
     }
    ]
   },
@@ -710,7 +818,8 @@
       "dugan2022"
      ],
      "t": "SMD −0,38 bei Mangel ohne Anämie (4 Studien, n = 714); 0,33 in 6 RCTs; ohne Eisenmangel kein Effekt.",
-     "v": "muedigkeit"
+     "v": "muedigkeit",
+     "pop": "alle"
     },
     {
      "n": "Angst und Kurzzeitgedächtnis",
@@ -725,7 +834,8 @@
       "falkingham2010"
      ],
      "t": "Weniger Angst (d = 0,34), besseres Kurzzeitgedächtnis (d = 0,53); Depression und Aufmerksamkeit in RCTs unverändert.",
-     "v": "muedigkeit"
+     "v": "muedigkeit",
+     "pop": "alle"
     }
    ]
   },
@@ -747,7 +857,8 @@
       "low2016"
      ],
      "t": "OR 2,32 gegenüber Placebo (20 Studien, n = 3 168); bei Frauen RR 1,99, Verstopfung RR 2,07, Durchfall RR 2,13.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Hämoglobinanstieg: täglich statt jeden zweiten Tag",
@@ -762,7 +873,8 @@
       "kamath2024"
      ],
      "t": "MD 0,28 zugunsten täglicher Gabe, nicht signifikant (11 RCTs, n = 1 014); Ferritin ohne Unterschied.",
-     "v": "hepcidin"
+     "v": "hepcidin",
+     "pop": "alle"
     },
     {
      "n": "Nebenwirkungen bei Gabe jeden zweiten Tag",
@@ -777,7 +889,8 @@
       "kamath2024"
      ],
      "t": "Insgesamt kein Unterschied (RR 1,07); in einem Review seltener Übelkeit, metallischer Geschmack und veränderter Stuhlgang.",
-     "v": "hepcidin"
+     "v": "hepcidin",
+     "pop": "alle"
     },
     {
      "n": "Leichte Nebenwirkungen bei Infusion",
@@ -792,7 +905,8 @@
       "miles2019"
      ],
      "t": "RR 1,77 für leichte Nebenwirkungen; schwere Ereignisse nicht häufiger (Risikodifferenz 0).",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

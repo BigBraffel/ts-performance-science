@@ -1,7 +1,7 @@
 {
  "id": "nitrat",
  "title": "Nitrat (Rote-Bete-Saft)",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Verbessert Nitrat aus Rote-Bete-Saft Ausdauer, Sauerstoffökonomie, Kraft und Blutdruck, und profitieren davon auch gut trainierte Sportler? Zusammengefasst aus Umbrella Reviews und Metaanalysen.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Nitrat wirkt am ehesten bei Freizeitsportlern und bei Belastungen von wenigen Minuten bis zur Erschöpfung.",
@@ -759,6 +759,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "17.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 1 226 Einträgen, 290 Übersichtsarbeiten nach Titel geprüft (davon 83 über eine ergänzende Suche nach Übersichtsarbeiten), 26 Quellen aufgenommen."
   }
@@ -784,7 +788,8 @@
       "gao2021"
      ],
      "t": "SMD 0,33 im Umbrella Review; ES 0,33 bei 22 Versuchen (McMahon et al., 2017); im Mittel +25,3 s (Gao et al., 2021).",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
      "n": "Zeitfahrleistung",
@@ -800,7 +805,8 @@
       "gao2021"
      ],
      "t": "g = 0,15 (24 Studien, grenzwertig nicht signifikant); bei mehrtägiger Einnahme g = 0,30, ebenfalls grenzwertig.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
      "n": "Sauerstoffverbrauch bei submaximaler Belastung",
@@ -815,10 +821,11 @@
       "gao2021"
      ],
      "t": "SMD −0,26 (26 Studien); bessere Bewegungsökonomie bei moderater und schwerer Intensität.",
-     "v": "vo2"
+     "v": "vo2",
+     "pop": "alle"
     },
     {
-     "n": "VO₂max",
+     "n": "Alle Studien",
      "g": "C",
      "d": "auf",
      "m": null,
@@ -830,8 +837,42 @@
       "gao2021",
       "tian2025"
      ],
-     "t": "SMD 0,24, nach Bias-Korrektur 0,19 (38 Studien); in einer anderen Analyse ohne Effekt, bei Hochtrainierten 0,07.",
-     "v": "vo2"
+     "t": "SMD 0,24, nach Bias-Korrektur 0,19 (38 Studien); in einer anderen Analyse ohne Effekt.",
+     "v": "vo2",
+     "w": "VO₂max",
+     "pop": "alle"
+    },
+    {
+     "n": "Freizeitsportler",
+     "g": "C",
+     "d": "auf",
+     "m": 2,
+     "b": "nutzen",
+     "k": null,
+     "p": null,
+     "s": [
+      "qin2026"
+     ],
+     "t": "SMD 0,38 bei Freizeitsportlern.",
+     "v": "vo2",
+     "w": "VO₂max",
+     "pop": "einsteiger"
+    },
+    {
+     "n": "Hochtrainierte Athleten",
+     "g": "C",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": null,
+     "p": null,
+     "s": [
+      "qin2026"
+     ],
+     "t": "SMD 0,07, nicht signifikant.",
+     "v": "vo2",
+     "w": "VO₂max",
+     "pop": "trainiert"
     },
     {
      "n": "Trainingsanpassung (VO₂peak)",
@@ -845,7 +886,8 @@
       "hogwood2023"
      ],
      "t": "Nitrat plus Training gegenüber Training allein: SMD 0,18, nicht signifikant.",
-     "v": "vo2"
+     "v": "vo2",
+     "pop": "alle"
     }
    ]
   },
@@ -855,7 +897,23 @@
    "kat": "ausdauer",
    "items": [
     {
-     "n": "Leistung bei Freizeitsportlern",
+     "n": "Alle Studien",
+     "g": "A",
+     "d": "auf",
+     "m": 1,
+     "b": "nutzen",
+     "k": 80,
+     "p": null,
+     "s": [
+      "senefeld2020"
+     ],
+     "t": "Kleiner Vorteil über alle Studien (d = 0,174; 80 Studien); in Studien nur mit Frauen nicht signifikant (d = 0,116).",
+     "v": "trainiert",
+     "w": "Sportliche Leistung",
+     "pop": "alle"
+    },
+    {
+     "n": "Freizeitsportler",
      "g": "A",
      "d": "auf",
      "m": 2,
@@ -867,11 +925,13 @@
       "senefeld2020",
       "tian2025"
      ],
-     "t": "ES 0,25 bei Nichtsportlern, in langen Erschöpfungstests 0,47; insgesamt d = 0,174 (80 Studien).",
-     "v": "trainiert"
+     "t": "ES 0,25 bei Nichtsportlern, in langen Erschöpfungstests 0,47.",
+     "v": "trainiert",
+     "w": "Sportliche Leistung",
+     "pop": "einsteiger"
     },
     {
-     "n": "Leistung bei gut trainierten Athleten",
+     "n": "Gut trainierte Athleten",
      "g": "A",
      "d": null,
      "m": 0,
@@ -884,7 +944,9 @@
       "campos2018"
      ],
      "t": "Kein signifikanter Effekt in drei Analysen (ES 0,04; d = 0,021; 45 Studien mit Athleten).",
-     "v": "trainiert"
+     "v": "trainiert",
+     "w": "Sportliche Leistung",
+     "pop": "trainiert"
     }
    ]
   },
@@ -907,10 +969,11 @@
       "meng2025"
      ],
      "t": "g = 0,45 (etwa +5 %); im Umbrella Review Spitzenleistung SMD 0,25.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
-     "n": "Maximalkraft",
+     "n": "Alle Studien",
      "g": "B",
      "d": "auf",
      "m": 1,
@@ -923,10 +986,28 @@
       "tian2025"
      ],
      "t": "SMD 0,08, trivial; bei Frauen nicht signifikant (SMD 0,10).",
-     "v": "kraft"
+     "v": "kraft",
+     "w": "Maximalkraft",
+     "pop": "alle"
     },
     {
-     "n": "Kraftausdauer",
+     "n": "Profisportler",
+     "g": "B",
+     "d": "auf",
+     "m": 2,
+     "b": "nutzen",
+     "k": null,
+     "p": null,
+     "s": [
+      "tian2025"
+     ],
+     "t": "SMD 0,27 bei Profisportlern.",
+     "v": "kraft",
+     "w": "Maximalkraft",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Alle Studien",
      "g": "B",
      "d": "auf",
      "m": 2,
@@ -935,11 +1016,28 @@
      "p": null,
      "s": [
       "alvares2022",
-      "poon2025",
+      "poon2025"
+     ],
+     "t": "SMD 0,31 bzw. 0,48.",
+     "v": "kraft",
+     "w": "Kraftausdauer",
+     "pop": "alle"
+    },
+    {
+     "n": "Kraftsportler",
+     "g": "B",
+     "d": "auf",
+     "m": 2,
+     "b": "nutzen",
+     "k": 6,
+     "p": null,
+     "s": [
       "tan2023"
      ],
-     "t": "SMD 0,31 bzw. 0,48; mehr Wiederholungen bis zum Versagen (SMD 0,43).",
-     "v": "kraft"
+     "t": "Bei krafttrainierten Männern mehr Wiederholungen bis zum Versagen (SMD 0,43; 6 Studien).",
+     "v": "kraft",
+     "w": "Kraftausdauer",
+     "pop": "trainiert"
     },
     {
      "n": "Sprintleistung (10–20 m, wiederholte Sprints)",
@@ -954,7 +1052,8 @@
       "alsharif2023"
      ],
      "t": "Kein Effekt auf Sprintzeiten oder Spitzenleistung; nur die Zeit bis zur Spitzenleistung verbesserte sich.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     }
    ]
   },
@@ -964,7 +1063,7 @@
    "kat": "herz",
    "items": [
     {
-     "n": "Systolischer Blutdruck",
+     "n": "Alle Studien",
      "g": "A",
      "d": "ab",
      "m": 2,
@@ -974,11 +1073,28 @@
      "s": [
       "siervo2013",
       "ashor2017",
-      "norouzzadeh2025",
+      "norouzzadeh2025"
+     ],
+     "t": "Etwa −4 mmHg in Kurzzeitstudien, dosisabhängig; bei 24-Stunden-Messung nicht signifikant.",
+     "v": "blutdruck",
+     "w": "Systolischer Blutdruck",
+     "pop": "alle"
+    },
+    {
+     "n": "Ältere (Natriumnitrat)",
+     "g": "A",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": 6,
+     "p": 181,
+     "s": [
       "forster2026"
      ],
-     "t": "Etwa −4 mmHg in Kurzzeitstudien, dosisabhängig; bei 24-Stunden-Messung und mit Natriumnitrat bei Älteren nicht signifikant.",
-     "v": "blutdruck"
+     "t": "−3,81 mmHg, nicht signifikant (6 Studien, n = 181, über 50 Jahre).",
+     "v": "blutdruck",
+     "w": "Systolischer Blutdruck",
+     "pop": "aelter"
     },
     {
      "n": "Gefäßfunktion",
@@ -993,7 +1109,8 @@
       "norouzzadeh2025"
      ],
      "t": "SMD 0,36; flussvermittelte Dilatation pro mmol Nitrat +0,30 %.",
-     "v": "blutdruck"
+     "v": "blutdruck",
+     "pop": "alle"
     }
    ]
   },
@@ -1014,7 +1131,8 @@
       "zamani2021"
      ],
      "t": "Hohe Nitratzufuhr kann die körpereigene Bildung fördern; Daten zu tatsächlichen Schäden fehlen weitgehend.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

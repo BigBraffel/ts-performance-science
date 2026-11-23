@@ -1,7 +1,7 @@
 {
  "id": "vegan",
  "title": "Vegetarische und vegane Ernährung im Sport",
- "stand": "2026-11-21",
+ "stand": "2026-11-23",
  "lead": "Leisten Vegetarier und Veganer genauso viel wie Mischköstler, bauen sie mit pflanzlichem Protein gleich viel Muskeln auf, welche Nährstoffe werden knapp, und was bedeutet die Ernährungsform für Herz, Knochen und Lebenserwartung? Zusammengefasst aus Metaanalysen, Umbrella Reviews und systematischen Reviews.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierende Erwachsene, die sich vegetarisch oder vegan ernähren oder umstellen wollen. Die Leistungsdaten stammen aus wenigen kleinen Studien; die Daten zu Nährstoffen und Gesundheit überwiegend aus Beobachtungsstudien.",
@@ -675,6 +675,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "21.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 3 649 Einträgen, 611 Übersichtsarbeiten nach Titel geprüft, zusätzlich 180 regelbasiert ausgeschlossene Übersichtsarbeiten nachgesichtet; 25 Quellen aufgenommen."
   }
@@ -698,7 +702,8 @@
       "hernandez2023"
      ],
      "t": "Effekt 0,55 [0,29; 0,81] in 4 Studien; ein systematischer Review fand bei der VO₂max keinen Unterschied. Sehr kleine Datenbasis.",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     }
    ]
   },
@@ -720,7 +725,8 @@
       "hernandez2023"
      ],
      "t": "Kein signifikanter Unterschied (−0,30 [−0,67; 0,07]; 6 Studien).",
-     "v": "leistung"
+     "v": "leistung",
+     "pop": "alle"
     },
     {
      "n": "Muskelkraft (pflanzliches statt tierisches Protein)",
@@ -735,7 +741,8 @@
       "messina2018"
      ],
      "t": "Kein Unterschied bei der Kraft (14 RCTs); Soja und Molke steigerten Bankdrücken und Kniebeuge gleich stark.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     }
    ]
   },
@@ -745,7 +752,7 @@
    "kat": "masse",
    "items": [
     {
-     "n": "Muskelzuwachs (pflanzliches statt tierisches Protein)",
+     "n": "Alle Altersgruppen",
      "g": "B",
      "d": "ab",
      "m": 2,
@@ -757,7 +764,41 @@
       "messina2018"
      ],
      "t": "SMD −0,20 [−0,37; −0,03] in 30 RCTs; Soja gegen Milch ohne Unterschied, andere Pflanzenproteine −0,58.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle",
+     "w": "Muskelzuwachs (pflanzliches statt tierisches Protein)"
+    },
+    {
+     "g": "B",
+     "k": null,
+     "p": null,
+     "s": [
+      "reidmccann2025"
+     ],
+     "v": "muskel",
+     "n": "Jüngere Erwachsene (unter 60 Jahren)",
+     "pop": "einsteiger",
+     "m": 2,
+     "d": "ab",
+     "b": "schaden",
+     "t": "SMD −0,20 [−0,37; −0,03]: Der Nachteil zeigte sich bei Jüngeren.",
+     "w": "Muskelzuwachs (pflanzliches statt tierisches Protein)"
+    },
+    {
+     "g": "B",
+     "k": null,
+     "p": null,
+     "s": [
+      "reidmccann2025"
+     ],
+     "v": "muskel",
+     "n": "Ältere (ab 60 Jahren)",
+     "pop": "aelter",
+     "m": 0,
+     "d": null,
+     "b": "neutral",
+     "t": "SMD −0,05 [−0,32; 0,23], nicht signifikant.",
+     "w": "Muskelzuwachs (pflanzliches statt tierisches Protein)"
     }
    ]
   },
@@ -780,7 +821,8 @@
       "bakaloudi2021"
      ],
      "t": "Serum-B12 SMD −0,72, Homocystein +0,57 gegenüber Mischköstlern; mit Supplementen alle Biomarker besser.",
-     "v": "naehrstoffe"
+     "v": "naehrstoffe",
+     "pop": "alle"
     },
     {
      "n": "Eisenspeicher (Ferritin)",
@@ -795,7 +837,8 @@
       "neufingerl2021"
      ],
      "t": "−29,71 µg/l (24 Studien), bei Männern −61,88 µg/l, bei Frauen −13,50 µg/l; als klein bis mittel eingestuft, da niedrigere Werte nicht immer Mangel bedeuten.",
-     "v": "naehrstoffe"
+     "v": "naehrstoffe",
+     "pop": "alle"
     },
     {
      "n": "Zinkstatus",
@@ -810,7 +853,8 @@
       "neufingerl2021"
      ],
      "t": "Serumzink −0,93 µmol/l, Zufuhr −0,88 mg/Tag (26 Studien); kleiner Unterschied, stärker bei Veganern und Frauen.",
-     "v": "naehrstoffe"
+     "v": "naehrstoffe",
+     "pop": "alle"
     },
     {
      "n": "Calciumzufuhr (vegan)",
@@ -825,7 +869,8 @@
       "bakaloudi2021"
      ],
      "t": "SMD −0,70 gegenüber Mischköstlern (23 Studien an Veganern); Vegetarier ohne Unterschied.",
-     "v": "naehrstoffe"
+     "v": "naehrstoffe",
+     "pop": "alle"
     },
     {
      "n": "Kreatinspeicher mit Supplement",
@@ -839,7 +884,8 @@
       "kaviani2020"
      ],
      "t": "Muskelkreatin und Phosphokreatin stiegen, oft über das Niveau von Mischköstlern; Größe nicht gepoolt.",
-     "v": "kreatin"
+     "v": "kreatin",
+     "pop": "alle"
     }
    ]
   },
@@ -861,7 +907,8 @@
       "hopham2009"
      ],
      "t": "Etwa 4 % niedriger bei Vegetariern, 6 % bei Veganern (Lendenwirbelsäule); einheitlich in zwei Analysen.",
-     "v": "knochen"
+     "v": "knochen",
+     "pop": "alle"
     },
     {
      "n": "Hüftfrakturen",
@@ -877,7 +924,8 @@
       "iguacel2019"
      ],
      "t": "Vegetarier HR 1,25, Veganer HR 1,75; geringe bis sehr geringe Vertrauenswürdigkeit, wenige Kohorten.",
-     "v": "knochen"
+     "v": "knochen",
+     "pop": "alle"
     }
    ]
   },
@@ -899,7 +947,8 @@
       "dinu2017"
      ],
      "t": "RR 0,79 [0,71; 0,88] (13 Kohorten) bzw. 0,75 [0,68; 0,82]; Beobachtungsdaten, Lebensstil als Störfaktor möglich.",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     },
     {
      "n": "Gesamtsterblichkeit",
@@ -915,7 +964,8 @@
       "selinger2023"
      ],
      "t": "Nicht sicher gesenkt (vegan SRR 0,87 [0,75; 1,01]); außerhalb von Adventisten-Kohorten RR 1,04 [0,98; 1,10].",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     },
     {
      "n": "Sterblichkeit bei ungesunder Pflanzenkost",
@@ -929,7 +979,8 @@
       "etesami2025"
      ],
      "t": "RR 1,20 [1,13; 1,27] (19 Studien); gesunde Pflanzenkost dagegen RR 0,86.",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     }
    ]
   },
@@ -952,7 +1003,8 @@
       "selinger2023"
      ],
      "t": "Vegetarier RR 0,87 [0,84; 0,91], Veganer RR 0,77 [0,70; 0,85]; der BMI erklärte einen Teil.",
-     "v": "gesundheit"
+     "v": "gesundheit",
+     "pop": "alle"
     }
    ]
   }

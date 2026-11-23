@@ -1,7 +1,7 @@
 {
  "id": "omega-3",
  "title": "Omega-3-Fettsäuren",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Was bewirken die langkettigen Omega-3-Fettsäuren EPA und DHA bei Muskelkraft, Muskelmasse, Erholung und Herz-Kreislauf-Gesundheit? Zusammengefasst aus Metaanalysen und dem ISSN-Positionspapier 2025.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Omega-3 ist kein Muskelaufbaumittel, kann aber Entzündung und Muskelkater nach intensiver Belastung senken und hat gut belegte Herz-Kreislauf-Effekte.",
@@ -526,6 +526,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "PubMed: 1 neuer Eintrag gesichtet, 1 aufgenommen, 0 Vormerkungen ausgewertet. Narrativer Review (Conti et al., 2026) stützt den Erholungseffekt von Omega-3; Wirkungsübersicht um die Quelle ergänzt, Grad B unverändert."
   },
@@ -727,7 +731,8 @@
       "conti2026"
      ],
      "t": "Bei Trainierten der stärkste Effekt auf Erholungsparameter unter den verglichenen Supplementen (SMD 0,40; 35 Studien, n = 1211); Muskelkater sank (SMD −0,4 bis −0,7).",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "trainiert"
     },
     {
      "n": "Entzündungs- und Schädigungsmarker",
@@ -741,13 +746,14 @@
       "li2026"
      ],
      "t": "IL-6, TNF-α und Kreatinkinase sanken (SMD −0,4 bis −0,7), am deutlichsten ab 2 g/Tag EPA+DHA über mindestens 6 Wochen. CRP uneinheitlich. Einzelne Analyse ohne Angaben zur Studienqualität im Abstract.",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "trainiert"
     }
    ]
   },
   {
    "bereich": "Leistung",
-   "ziel": "Muskel bei jungen und gesunden Erwachsenen",
+   "ziel": "Muskel bei gesunden Erwachsenen",
    "kat": "kraft",
    "items": [
     {
@@ -763,7 +769,8 @@
       "jager2025"
      ],
      "t": "SMD 0,12 und damit sehr klein (14 Studien, n = 1443).",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     },
     {
      "n": "Muskelmasse",
@@ -778,7 +785,8 @@
       "delpino2021"
      ],
      "t": "SMD 0,07, nicht signifikant; auch 11 Studien zur fettfreien Masse ohne Effekt.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     },
     {
      "n": "Muskelproteinsynthese",
@@ -792,7 +800,8 @@
       "therdyothin2025"
      ],
      "t": "SMD 0,03 (6 Studien); nur die Ganzkörper-Proteinsynthese stieg (SMD 0,51; 3 Studien).",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     }
    ]
   },
@@ -816,7 +825,8 @@
       "rondanelli2021"
      ],
      "t": "Beinkraft SMD 0,54 und Handkraft +1,17 kg in zwei Analysen; Oberkörperkraft (SMD 0,05) und Handkraft in anderen Analysen ohne Effekt.",
-     "v": "alter"
+     "v": "alter",
+     "pop": "aelter"
     },
     {
      "n": "Gehtest-Zeit bei Älteren (Timed-up-and-go)",
@@ -832,7 +842,8 @@
       "ma2021"
      ],
      "t": "Test um 0,28 s bzw. 0,30 s schneller absolviert; in einer Analyse nicht signifikant (−0,25 s).",
-     "v": "alter"
+     "v": "alter",
+     "pop": "aelter"
     }
    ]
   },
@@ -858,7 +869,8 @@
       "rizos2021"
      ],
      "t": "RR 0,87 (40 Studien); 272 Personen müssen behandelt werden, um einen Infarkt zu verhindern. Bis 1 g/Tag kein Zusammenhang (Rizos et al., 2021).",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Kardiovaskuläre Sterblichkeit",
@@ -875,7 +887,8 @@
       "yan2024"
      ],
      "t": "RR 0,92 bis 0,94; mit EPA allein stärker (RR 0,82).",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Vorhofflimmern",
@@ -890,7 +903,8 @@
       "yan2024"
      ],
      "t": "Risiko erhöht: RR 1,26 bzw. 1,25 in zwei unabhängigen Analysen.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     }
    ]
   }

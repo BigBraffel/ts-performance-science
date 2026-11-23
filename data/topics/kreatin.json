@@ -884,7 +884,7 @@
    "kat": "kraft",
    "items": [
     {
-     "n": "Maximalkraft Oberkörper",
+     "n": "Oberkörper",
      "g": "A",
      "d": "auf",
      "m": 3,
@@ -898,10 +898,12 @@
       "wang2024"
      ],
      "t": "Krafttraining mit Kreatin steigerte die Oberkörperkraft stärker als Training allein (g = 0,54; 63 Studien). Ältere Analysen fanden kleinere Effekte (ES 0,317); in Kilogramm sind es meist wenige Kilo (Bankdrücken +1,43 kg bis +4,43 kg).",
-     "v": "kraft"
+     "v": "kraft",
+     "w": "Maximalkraft",
+     "pop": "alle"
     },
     {
-     "n": "Maximalkraft Unterkörper",
+     "n": "Unterkörper",
      "g": "A",
      "d": "auf",
      "m": 3,
@@ -914,10 +916,12 @@
       "kazeminasab2025"
      ],
      "t": "g = 0,55 (63 Studien). Kniebeuge +5,64 kg; die Beinpresse war in einer Analyse nicht signifikant (+3,129 kg).",
-     "v": "kraft"
+     "v": "kraft",
+     "w": "Maximalkraft",
+     "pop": "alle"
     },
     {
-     "n": "Kraft bei trainierten Sportlern",
+     "n": "Trainierte Sportler",
      "g": "B",
      "d": "auf",
      "m": 2,
@@ -928,10 +932,12 @@
       "wangz2026"
      ],
      "t": "Im Vergleich mit Protein und Omega-3 die stärkste Wirkung auf die Kraft (SMD 0,46; 35 Studien, n = 1211).",
-     "v": "kraft"
+     "v": "kraft",
+     "w": "Maximalkraft",
+     "pop": "trainiert"
     },
     {
-     "n": "Kraft bei älteren Frauen",
+     "n": "Ältere Frauen",
      "g": "C",
      "d": "auf",
      "m": 2,
@@ -943,7 +949,9 @@
       "naddafha2026"
      ],
      "t": "Oberkörperkraft stieg (7 Studien, n = 142), Unterkörperkraft nur bei mindestens 24 Wochen Training. Nach der Menopause: Beinpresse +7,5 kg (3 Studien, n = 111).",
-     "v": "kraft"
+     "v": "kraft",
+     "w": "Maximalkraft",
+     "pop": "aelter"
     },
     {
      "n": "Sprungkraft",
@@ -957,7 +965,8 @@
       "kazeminasab2025"
      ],
      "t": "Vertikalsprung +1,48 cm gegenüber Placebo.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     }
    ]
   },
@@ -981,7 +990,8 @@
       "wang2026"
      ],
      "t": "+0,82 kg (143 Studien) bis +1,39 kg (61 Studien); fettfreie Masse enthält auch eingelagertes Wasser.",
-     "v": "masse"
+     "v": "masse",
+     "pop": "alle"
     },
     {
      "n": "Direkt gemessene Muskeldicke",
@@ -995,7 +1005,8 @@
       "burke2023"
      ],
      "t": "Mit Bildgebung (MRT, CT, Ultraschall) nur ein sehr kleiner Vorteil: 0,11 (95-%-KrI −0,02 bis 0,25); Muskeldicke +0,10 bis 0,16 cm.",
-     "v": "masse"
+     "v": "masse",
+     "pop": "alle"
     },
     {
      "n": "Körperfettanteil",
@@ -1011,7 +1022,8 @@
       "pashayee2024"
      ],
      "t": "g = −0,14; −0,88 Prozentpunkte gegenüber Training allein (Desai et al., 2024).",
-     "v": "masse"
+     "v": "masse",
+     "pop": "alle"
     },
     {
      "n": "Körpergewicht",
@@ -1026,7 +1038,8 @@
       "ashtary2025"
      ],
      "t": "+0,86 kg (143 Studien), überwiegend durch Wasser im Muskel. Bedeutsam in Gewichtsklassen-Sportarten.",
-     "v": "masse"
+     "v": "masse",
+     "pop": "alle"
     }
    ]
   },
@@ -1047,7 +1060,8 @@
       "glaister2022"
      ],
      "t": "δ = 0,61 nach 3–7 Tagen mit etwa 20 g/Tag.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
      "n": "Wiederholte Sprints: Spitzenleistung",
@@ -1061,7 +1075,8 @@
       "glaister2022"
      ],
      "t": "δ = 0,41, nicht signifikant; auch keine Wirkung auf die Ermüdung.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
      "n": "Anaerobe Leistung (Wingate-Test)",
@@ -1076,7 +1091,8 @@
       "mielgoayuso2019"
      ],
      "t": "Wingate-Spitzenleistung +47,81 W. Bei Fußballern großer Effekt auf anaerobe Tests (SMD 1,23; 9 Studien), allerdings mit breitem Konfidenzintervall.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
      "n": "Ausdauerleistung",
@@ -1091,7 +1107,8 @@
       "mielgoayuso2019"
      ],
      "t": "Bei Trainierten kein Effekt (SMD −0,07; 13 Studien); aerobe Tests bei Fußballern SMD −0,05.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "trainiert"
     },
     {
      "n": "VO₂max",
@@ -1105,7 +1122,8 @@
       "gras2023"
      ],
      "t": "VO₂max stieg mit Kreatin weniger als mit Placebo (ES −0,32). Bisher eine einzelne Analyse; die Ausdauerleistung selbst blieb in anderen Analysen unverändert.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     }
    ]
   },
@@ -1126,7 +1144,8 @@
       "decamargo2026"
      ],
      "t": "Weder kurzfristig (CRP: SMD 0,32) noch langfristig (CRP: SMD −0,11; IL-6: SMD −0,06) signifikant; Vertrauenswürdigkeit moderat.",
-     "v": "entzuendung"
+     "v": "entzuendung",
+     "pop": "alle"
     }
    ]
   },
@@ -1136,18 +1155,52 @@
    "kat": "gehirn",
    "items": [
     {
-     "n": "Gedächtnis",
      "g": "C",
-     "d": "auf",
-     "m": 2,
-     "b": "nutzen",
      "k": 8,
      "p": null,
      "s": [
       "prokopidis2023"
      ],
-     "t": "SMD 0,29 insgesamt; bei Älteren (66–76 Jahre) 0,88, bei Jüngeren 0,03 und damit ohne Effekt.",
-     "v": "gehirn"
+     "v": "gehirn",
+     "w": "Gedächtnis",
+     "n": "Alle Altersgruppen",
+     "pop": "alle",
+     "d": "auf",
+     "m": 2,
+     "b": "nutzen",
+     "t": "SMD 0,29 über alle eingeschlossenen Studien."
+    },
+    {
+     "g": "C",
+     "k": 8,
+     "p": null,
+     "s": [
+      "prokopidis2023"
+     ],
+     "v": "gehirn",
+     "w": "Gedächtnis",
+     "n": "Ältere (66–76 Jahre)",
+     "pop": "aelter",
+     "d": "auf",
+     "m": 4,
+     "b": "nutzen",
+     "t": "SMD 0,88: deutlicher Vorteil bei älteren Erwachsenen."
+    },
+    {
+     "g": "C",
+     "k": 8,
+     "p": null,
+     "s": [
+      "prokopidis2023"
+     ],
+     "v": "gehirn",
+     "w": "Gedächtnis",
+     "n": "Jüngere Erwachsene",
+     "pop": "einsteiger",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "t": "SMD 0,03: bei Jüngeren kein Effekt."
     }
    ]
   },
@@ -1169,7 +1222,8 @@
       "kreider2017"
      ],
      "t": "Das Serumkreatinin stieg um 0,14 mg/dL. Das ist ein Messeffekt, weil Kreatin zu Kreatinin abgebaut wird. Mit einer kreatininunabhängigen Methode (Cr-EDTA) blieb die Filtrationsrate unverändert.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Nebenwirkungen",
@@ -1184,7 +1238,8 @@
       "kreider2017"
      ],
      "t": "Bei Frauen keine Zunahme unerwünschter Ereignisse (RR 1,24; 95-%-KI 0,51–2,98). Laut Positionspapier bis 30 g/Tag über 5 Jahre gut verträglich.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

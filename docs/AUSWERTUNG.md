@@ -90,6 +90,13 @@ Nutzer melden Fehler als GitHub-Issue (Vorlage „Fehler: <Thema>“, meist mit 
 3. Antwort als Kommentar im Issue mit Begründung und Quelle; berechtigte und nicht berechtigte Meldungen schließen, unklare offen lassen. Kommentieren/Schließen nur mit Token (`GH_PUSH_TOKEN`, Rechte „Issues: Read and write“); fehlt die Berechtigung, die Antwort im Bericht an Michael aufführen.
 4. Im Bericht jede Meldung mit Urteil und Begründung nennen.
 
+## Zielgruppen und zusammengefasste Wirkungen
+Jede Wirkung in `matrix` hat `pop` (Zielgruppe der Studien: `alle`, `einsteiger`, `trainiert`, `aelter`) und optional `w` (Oberbegriff). Items mit gleichem `w` in einer Gruppe erscheinen als eine aufklappbare Zeile (z. B. „Maximalkraft“ mit Oberkörper, Unterkörper, Ältere Frauen). Neue Befunde zu einer bestehenden Zielgröße bekommen dasselbe `w`; berichtet ein Abstract Ergebnisse getrennt nach Zielgruppe, als eigene Items mit passendem `pop` anlegen. Regeln:
+- `einsteiger` = jüngere Erwachsene, untrainiert oder Freizeitsport; `trainiert` = trainierte Sportler/Athleten; `aelter` = etwa ab 60 Jahren; gemischte oder klinische Populationen = `alle` (Population dann im Namen/Text).
+- Zusammenfassen nur bei derselben Zielgröße (Körperregion, Test, Untergruppe); verschiedene Zielgrößen bleiben getrennt. Ein `w` mit nur einem Item ist überflüssig.
+- Aufteilen nach Zielgruppe nur, wenn das Abstract die Untergruppenergebnisse ausdrücklich berichtet; jede Zahl muss dort stehen.
+- Die Zeile zeigt bei gewählter Zielgruppe deren eigenen Befund, sonst den Befund aus gemischten Gruppen; nur wenn beides fehlt und sich Befunde widersprechen, erscheint „uneinheitlich“.
+
 ## Mythen-Check und Verlaufsdiagramme
 - `data/mythen.json`: Behauptung (`m`), Urteil (`v`: falsch, stark übertrieben, nicht belegt, teilweise, stimmt), Erklärung (`t`), Thema (`topic`), Quellenschlüssel dieses Themas (`s`), Evidenz (`ev`). Ändert sich die Einschätzung eines Themas, den passenden Mythos mit anpassen.
 - Feld `trend` im Thema: Schätzer derselben Zielgröße und desselben Maßes über die Jahre (`data`: y, es, lo?, hi?, l, s). Nur aufnehmen, wenn die Werte wirklich vergleichbar sind; Abweichungen (anderes Maß, andere Population) in `cap` benennen. Neue Metaanalysen zur selben Zielgröße als Punkt ergänzen.

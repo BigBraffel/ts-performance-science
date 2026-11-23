@@ -1,7 +1,7 @@
 {
  "id": "energiebilanz",
  "title": "Energiebilanz und Abnehmen",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Wie verliert man Fett, ohne Muskeln und Leistung zu opfern? Zusammengefasst aus Metaanalysen und Positionspapieren zu Defizitgröße, Fastenformen, Abnehmtempo, Training und geringer Energieverfügbarkeit (RED-S).",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene und Sportler, die Körperfett reduzieren wollen. Viele Daten stammen aus Studien mit Übergewicht; für schlanke Trainierte ist die Evidenz dünner.",
@@ -660,6 +660,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 3 745 Einträgen, 655 Übersichtsarbeiten nach Titel geprüft, 30 Quellen aufgenommen."
   }
@@ -683,7 +687,8 @@
       "ballor1994"
      ],
      "t": "+0,87 kg [0,59; 1,16] gegenüber Diät ohne Training; 45,7 % weniger Verlust (daher Stufe „mittel“). Schon 1994 halbierte Training den Anteil der fettfreien Masse am Gewichtsverlust.",
-     "v": "muskelerhalt"
+     "v": "muskelerhalt",
+     "pop": "alle"
     },
     {
      "n": "Verlust an Muskelmasse bei Diät ohne Training",
@@ -697,7 +702,8 @@
       "anyiam2024"
      ],
      "t": "Muskelmasse machte rund ein Viertel des Gewichtsverlusts aus (27,5 % ohne Diabetes); als Effektstärke nicht berichtet.",
-     "v": "muskelerhalt"
+     "v": "muskelerhalt",
+     "pop": "alle"
     },
     {
      "n": "Magermassezuwachs bei Krafttraining im Defizit",
@@ -711,7 +717,8 @@
       "murphyc2022"
      ],
      "t": "ES −0,57 gegenüber Training ohne Defizit; ab rund 500 kcal Defizit pro Tag kein Zuwachs mehr. Studienzahl im Abstract nicht angegeben.",
-     "v": "muskelerhalt"
+     "v": "muskelerhalt",
+     "pop": "alle"
     },
     {
      "n": "Kraftzuwachs bei Krafttraining im Defizit",
@@ -725,7 +732,8 @@
       "murphyc2022"
      ],
      "t": "ES −0,31, nicht signifikant: Kraft stieg im Defizit ähnlich wie ohne Defizit.",
-     "v": "muskelerhalt"
+     "v": "muskelerhalt",
+     "pop": "alle"
     },
     {
      "n": "Magermasse durch Protein über 0,8 g/kg in der Diät",
@@ -740,7 +748,8 @@
       "aragon2026"
      ],
      "t": "+0,36 kg [0,06; 0,67] (14 Vergleiche); praktisch klein, aber bei längeren Diäten relevant. ISSN empfiehlt 1,6–2,2 g/kg, schlank und trainiert bis 3,2 g/kg.",
-     "v": "muskelerhalt"
+     "v": "muskelerhalt",
+     "pop": "alle"
     }
    ]
   },
@@ -763,7 +772,8 @@
       "patikorn2021"
      ],
      "t": "Kein Unterschied (−0,42 kg [−0,96; 0,13]); Fettmasse ebenfalls ohne Unterschied. ISSN-Positionspapier bestätigt.",
-     "v": "fasten"
+     "v": "fasten",
+     "pop": "alle"
     },
     {
      "n": "Fettfreie Masse: Intervallfasten vs. kontinuierliche Reduktion",
@@ -780,7 +790,8 @@
       "ali2026"
      ],
      "t": "−0,20 kg [−0,39; −0,01] bzw. −0,86 kg [−1,62; −0,10] mehr Verlust mit Fasten; mit Krafttraining kein Unterschied (−0,27 kg, nicht signifikant).",
-     "v": "fasten"
+     "v": "fasten",
+     "pop": "alle"
     },
     {
      "n": "Fettverlust: langsames vs. schnelles Abnehmen",
@@ -794,7 +805,8 @@
       "ashtarylarky2020"
      ],
      "t": "Bei gleichem Gewichtsverlust Fettmasse −1 kg [−1,70; −0,29] stärker gesenkt mit langsamem Tempo; fettfreie Masse ohne Unterschied. Praktisch klein.",
-     "v": "tempo"
+     "v": "tempo",
+     "pop": "alle"
     },
     {
      "n": "Abfall des Ruheumsatzes mit Diätpausen (vs. kontinuierlich)",
@@ -808,7 +820,8 @@
       "poon2025"
      ],
      "t": "Der Ruheumsatz sank nur bei kontinuierlicher Diät signifikant; Gewicht und Fett ohne Unterschied. Größe im Abstract nicht angegeben.",
-     "v": "tempo"
+     "v": "tempo",
+     "pop": "alle"
     },
     {
      "n": "Gewichtsverlust durch Ausdauertraining allein",
@@ -824,7 +837,8 @@
       "miller1997"
      ],
      "t": "−0,52 kg je 30 Minuten pro Woche; 6 Monate Training allein: −1,6 kg. Im Vergleich zur Diät gering.",
-     "v": "training"
+     "v": "training",
+     "pop": "alle"
     },
     {
      "n": "Bauchfett (viszeral) durch Training",
@@ -839,7 +853,8 @@
       "jayedi2024"
      ],
      "t": "Ohne Gewichtsverlust −6,1 % viszerales Fett mit Training, −1,1 % mit Diät; je 30 Minuten pro Woche −1,60 cm².",
-     "v": "training"
+     "v": "training",
+     "pop": "alle"
     },
     {
      "n": "Leistung bei Diät plus Training",
@@ -853,7 +868,8 @@
       "kazeminasab2025"
      ],
      "t": "VO₂max, Bankdrücken, Beinpresse und Sprung unverändert gegenüber Training allein; Griffkraft +1,707 kg.",
-     "v": "training"
+     "v": "training",
+     "pop": "alle"
     }
    ]
   },
@@ -877,7 +893,8 @@
       "dejong2026"
      ],
      "t": "Gallant et al. fanden schlechtere Ausdauer, Schnellkraft und Konzentration; Kuikman et al. keinen Leistungseffekt (d 0,09). Große kumulierte Defizite kosteten 7–10 % Beinleistung.",
-     "v": "reds"
+     "v": "reds",
+     "pop": "alle"
     },
     {
      "n": "Knochenstressverletzungen bei geringer Energieverfügbarkeit",
@@ -892,7 +909,8 @@
       "mountjoy2023"
      ],
      "t": "Die meisten Studien fanden schlechtere Knochengesundheit und mehr Knochenstressverletzungen; überwiegend Beobachtungsdaten.",
-     "v": "reds"
+     "v": "reds",
+     "pop": "trainiert"
     },
     {
      "n": "Knochendichte bei Diät plus Training",
@@ -906,7 +924,8 @@
       "yazdanpanah2022"
      ],
      "t": "Training insgesamt ohne Effekt (+0,002 g/cm²); nur Krafttraining in 3 Studien +0,01 g/cm².",
-     "v": "training"
+     "v": "training",
+     "pop": "alle"
     }
    ]
   }

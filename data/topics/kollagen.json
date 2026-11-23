@@ -1,7 +1,7 @@
 {
  "id": "kollagen",
  "title": "Kollagen",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Hilft Kollagen gegen Gelenkschmerzen, stärkt es Sehnen, Knochen und Haut, und bringt es zusammen mit Training mehr Muskeln oder Kraft? Zusammengefasst aus Metaanalysen, systematischen Reviews und einem Umbrella Review.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde, trainierende Erwachsene. Die Evidenz ist überwiegend von niedriger bis moderater Sicherheit; viele Studien sind klein und teils herstellerfinanziert.",
@@ -488,6 +488,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert (Zielgruppe der Studien je Befund ergänzt)."
+  },
+  {
    "d": "17.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 911 Einträgen, 105 Übersichtsarbeiten nach Titel geprüft (davon 44 zunächst per Titelregel einer anderen Kategorie zugeordnet), dazu 5 Übersichtsarbeiten aus einer ergänzenden Suche; 18 Quellen aufgenommen."
   }
@@ -511,7 +515,8 @@
       "jalili2023"
      ],
      "t": "SMD 0,48 bei moderater Evidenzsicherheit (19 Studien); +1,49 % fettfreie Masse in einer weiteren Analyse.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     },
     {
      "n": "Muskelproteinsynthese im Vergleich zu hochwertigem Protein",
@@ -525,7 +530,8 @@
       "khatri2021"
      ],
      "t": "Kollagen steigerte die Kollagensynthese, aber nicht die Muskelproteinsynthese im Vergleich zu gleich viel hochwertigerem Protein.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     }
    ]
   },
@@ -547,7 +553,8 @@
       "buchalski2026"
      ],
      "t": "SMD 0,19 (19 Studien, niedrige Sicherheit); in 8 Sehnenstudien kein Zusatzeffekt auf die Kraft.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     },
     {
      "n": "Muskelleistung",
@@ -561,7 +568,8 @@
       "sun2025"
      ],
      "t": "SMD 0,60 [0,05; 1,15] in einer Metaanalyse mit Fokus auf Knochen und Muskeln.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     }
    ]
   },
@@ -583,7 +591,8 @@
       "buchalski2026"
      ],
      "t": "Sehnenmorphologie SMD 0,67 bei sehr niedriger Sicherheit; Steifigkeit nur mit 15–30 g pro Tag erhöht.",
-     "v": "sehnen"
+     "v": "sehnen",
+     "pop": "alle"
     }
    ]
   },
@@ -604,7 +613,8 @@
       "bischof2024"
      ],
      "t": "SMD 0,43 bei niedriger Evidenzsicherheit.",
-     "v": "muskel"
+     "v": "muskel",
+     "pop": "alle"
     }
    ]
   },
@@ -628,7 +638,8 @@
       "kumar2023"
      ],
      "t": "Schmerz −13,63 Punkte (11 Studien) bzw. SMD −0,58; hohe Heterogenität (I² = 88 %), in einer älteren Analyse WOMAC-Schmerz nicht signifikant.",
-     "v": "gelenke"
+     "v": "gelenke",
+     "pop": "alle"
     },
     {
      "n": "Gelenkfunktion (Abnahme der Einschränkung)",
@@ -643,7 +654,8 @@
       "garciacoronado2019"
      ],
      "t": "Funktionswert −6,46 Punkte [−9,52; −3,40]; als klein eingestuft, da Skala und Bezugsgröße im Abstract nicht genannt sind.",
-     "v": "gelenke"
+     "v": "gelenke",
+     "pop": "alle"
     }
    ]
   },
@@ -667,7 +679,8 @@
       "demiranda2021"
      ],
      "t": "Gepoolt verbessert (SMD 1,25 in 10 Studien), in unabhängig finanzierten und hochwertigen Studien kein Effekt.",
-     "v": "haut"
+     "v": "haut",
+     "pop": "alle"
     },
     {
      "n": "Hautelastizität und Falten",
@@ -684,7 +697,8 @@
       "bassila2026"
      ],
      "t": "Elastizität gepoolt SMD 0,61; ohne Herstellerfinanzierung kein Effekt auf Elastizität und Falten.",
-     "v": "haut"
+     "v": "haut",
+     "pop": "alle"
     }
    ]
   },
@@ -707,7 +721,8 @@
       "brueckheimer2025"
      ],
      "t": "Höhere Knochendichte an Schenkelhals und Wirbelsäule, sehr heterogen (I² = 80,1 %); vor allem nach der Menopause.",
-     "v": "knochen"
+     "v": "knochen",
+     "pop": "alle"
     },
     {
      "n": "Knochenumbaumarker",
@@ -722,7 +737,8 @@
       "kuhlman2026"
      ],
      "t": "SMD 0,40 bis 0,58 bei geringer Heterogenität.",
-     "v": "knochen"
+     "v": "knochen",
+     "pop": "alle"
     }
    ]
   },
@@ -743,7 +759,8 @@
       "jalili2023"
      ],
      "t": "−5,04 mmHg [−9,22; −0,85], aber extrem heterogen (I² = 98,9 %).",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     },
     {
      "n": "Fettmasse",
@@ -757,7 +774,8 @@
       "jalili2023"
      ],
      "t": "−1,21 kg [−2,13; −0,29]; als sehr klein eingestuft.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   },
@@ -779,7 +797,8 @@
       "bassila2026"
      ],
      "t": "OR 1,66 [0,99; 2,78], nicht signifikant, sehr niedrige Sicherheit; in Hautstudien gut verträglich.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }

@@ -1,7 +1,7 @@
 {
  "id": "koffein",
  "title": "Koffein",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Wie stark verbessert Koffein Ausdauer, Kraft und Sprintleistung, welche Dosis ist sinnvoll, und welchen Preis zahlt man bei Schlaf, Nebenwirkungen und Blutdruck? Zusammengefasst aus Umbrella Reviews, Metaanalysen und ISSN-Positionspapieren.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene vor Training oder Wettkampf. Die Wirkung ist akut; ein Dauergebrauch ist für den Leistungseffekt nicht nötig.",
@@ -815,6 +815,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "17.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 3 346 Einträgen, 737 Übersichtsarbeiten nach Titel geprüft (davon 207 über eine ergänzende Suche nach Übersichtsarbeiten), 28 Quellen aufgenommen."
   }
@@ -840,10 +844,11 @@
       "grgic2020"
      ],
      "t": "SMD −0,27 bei niedriger und −0,52 bei moderater Dosis (48 Studien); Zeitfahrdauer im Mittel um 2,22 % verbessert (Southward et al., 2018).",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
-     "n": "Zeit bis zur Erschöpfung (Zunahme)",
+     "n": "Alle Studien",
      "g": "B",
      "d": "auf",
      "m": 2,
@@ -855,7 +860,41 @@
       "doherty2004"
      ],
      "t": "Beim Laufen g = 0,392 (21 Studien); Tests bis zur Erschöpfung zeigten schon 2004 die größten Effekte.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "w": "Zeit bis zur Erschöpfung (Zunahme)",
+     "pop": "alle"
+    },
+    {
+     "n": "Freizeitläufer",
+     "g": "B",
+     "d": "auf",
+     "m": 2,
+     "b": "nutzen",
+     "k": null,
+     "p": 167,
+     "s": [
+      "wang2022"
+     ],
+     "t": "Beim Laufen g = 0,469 (n = 167).",
+     "v": "ausdauer",
+     "w": "Zeit bis zur Erschöpfung (Zunahme)",
+     "pop": "einsteiger"
+    },
+    {
+     "n": "Trainierte Läufer",
+     "g": "B",
+     "d": "auf",
+     "m": 2,
+     "b": "nutzen",
+     "k": null,
+     "p": 87,
+     "s": [
+      "wang2022"
+     ],
+     "t": "Beim Laufen g = 0,344 (n = 87).",
+     "v": "ausdauer",
+     "w": "Zeit bis zur Erschöpfung (Zunahme)",
+     "pop": "trainiert"
     }
    ]
   },
@@ -879,7 +918,8 @@
       "grgic2022"
      ],
      "t": "SMD 0,18 über 9 Metaanalysen; Einzelanalysen ES 0,19–0,20. Schon 0,9–2 mg/kg wirksam.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Kraftausdauer",
@@ -894,7 +934,8 @@
       "warren2010"
      ],
      "t": "SMD 0,30 über 9 Metaanalysen; ES 0,28 in 23 Studien, nur bei Tests bis zur Erschöpfung.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Kraftanstiegsrate",
@@ -908,7 +949,8 @@
       "grgicmikulic2022"
      ],
      "t": "g = 0,37 (11 Studien); bei 6–10 mg/kg größer, im Sprungtest nicht signifikant.",
-     "v": "kraft"
+     "v": "kraft",
+     "pop": "alle"
     },
     {
      "n": "Wingate-Spitzenleistung",
@@ -922,7 +964,8 @@
       "grgic2018w"
      ],
      "t": "SMD 0,27 (+4 %); mittlere Leistung SMD 0,18 (+3 %).",
-     "v": "sprint"
+     "v": "sprint",
+     "pop": "alle"
     },
     {
      "n": "Wiederholte Sprints",
@@ -937,7 +980,8 @@
       "lopessilva2019"
      ],
      "t": "Neuere Analyse: Spitzenleistung gesteigert, vor allem ab 6 mg/kg; ältere Analyse (7 Studien): kein Effekt.",
-     "v": "sprint"
+     "v": "sprint",
+     "pop": "alle"
     }
    ]
   },
@@ -958,7 +1002,8 @@
       "carvalho2022"
      ],
      "t": "Gesamteffekt SMD 0,25 unabhängig vom Gewohnheitskonsum (60 Studien); Koffeinverzicht vorher ohne Vorteil.",
-     "v": "dosis"
+     "v": "dosis",
+     "pop": "alle"
     },
     {
      "n": "Leistung bei CYP1A2-Genotyp CC",
@@ -973,7 +1018,8 @@
       "wang2024"
      ],
      "t": "SMD −0,22 bei CC gegenüber +0,30 bei AA; ohne Studien mit Interessenkonflikten kein Genotypeinfluss mehr.",
-     "v": "genetik"
+     "v": "genetik",
+     "pop": "alle"
     }
    ]
   },
@@ -983,7 +1029,7 @@
    "kat": "regeneration",
    "items": [
     {
-     "n": "Gesamtschlafzeit",
+     "n": "Alle Studien",
      "g": "B",
      "d": "ab",
      "m": 3,
@@ -991,11 +1037,28 @@
      "k": 24,
      "p": null,
      "s": [
-      "gardiner2023",
+      "gardiner2023"
+     ],
+     "t": "−45 Minuten Schlaf (24 Studien), Tiefschlaf −11,4 Minuten.",
+     "v": "nebenwirkungen",
+     "w": "Gesamtschlafzeit",
+     "pop": "alle"
+    },
+    {
+     "n": "Sportler nach Abendtraining",
+     "g": "B",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": 10,
+     "p": 128,
+     "s": [
       "kocak2025"
      ],
-     "t": "−45 Minuten Schlaf (24 Studien), Tiefschlaf −11,4 Minuten; bei Sportlern nach Abendtraining −32,47 Minuten, nicht signifikant.",
-     "v": "nebenwirkungen"
+     "t": "−32,47 Minuten, nicht signifikant (10 Studien, n = 128).",
+     "v": "nebenwirkungen",
+     "w": "Gesamtschlafzeit",
+     "pop": "trainiert"
     },
     {
      "n": "Schlafeffizienz nach Abendtraining",
@@ -1009,7 +1072,8 @@
       "kocak2025"
      ],
      "t": "−4,87 % bei Sportlern (10 Studien), in Sensitivitätsanalysen nicht robust; subjektiv deutlich schlechterer Schlaf.",
-     "v": "nebenwirkungen"
+     "v": "nebenwirkungen",
+     "pop": "trainiert"
     }
    ]
   },
@@ -1031,7 +1095,8 @@
       "desouza2022"
      ],
      "t": "Mehr als vierfache Chance gegenüber Placebo (Log-OR 1,47; 38 Studien), mit der Dosis steigend.",
-     "v": "nebenwirkungen"
+     "v": "nebenwirkungen",
+     "pop": "trainiert"
     },
     {
      "n": "Angst, Nervosität und Magenbeschwerden",
@@ -1046,7 +1111,8 @@
       "desouza2022"
      ],
      "t": "Log-OR 1,29 (Angst), 0,82 (Nervosität), 1,12 (Magenbeschwerden); bei hohen Dosen bis 83 % Betroffene.",
-     "v": "nebenwirkungen"
+     "v": "nebenwirkungen",
+     "pop": "trainiert"
     }
    ]
   },
@@ -1068,7 +1134,8 @@
       "abbashashemi2023"
      ],
      "t": "Systolisch +2,04 mmHg (16 Studien) bzw. +1,94 mmHg (8 Studien); mit reinem Koffein +4,16 mmHg, mit Kaffee +1,22 mmHg. Klein, aber konsistent.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     },
     {
      "n": "Herz-Kreislauf-Erkrankungen (Kaffee, Beobachtung)",
@@ -1082,7 +1149,8 @@
       "poole2017"
      ],
      "t": "3–4 Tassen Kaffee täglich: RR 0,85 für Herz-Kreislauf-Erkrankungen; nur Beobachtungsdaten, nicht auf Koffeinkapseln übertragbar.",
-     "v": "herz"
+     "v": "herz",
+     "pop": "alle"
     }
    ]
   }

@@ -305,6 +305,14 @@ table.cmp td { vertical-align: top; width: 41%; }
 .tour-btns .btn-line, .tour-btns .btn-primary { padding: 7px 14px; font-size: .9rem; }
 .linkish { font: inherit; font-size: .85rem; color: var(--ink-3); background: none; border: 0; cursor: pointer; text-decoration: underline; padding: 0; }
 body.touring .side { z-index: auto; }
+.filters.zg { margin-top: 8px; align-items: center; }
+.zg-l { font-size: .8rem; color: var(--ink-3); margin-right: 2px; }
+.zg-chip { font-size: .72rem; color: var(--ink-3); border: 1px solid var(--line); border-radius: 99px; padding: 0 7px; white-space: nowrap; }
+.zg-chip.own { color: var(--accent); border-color: var(--accent); }
+.mx-kids { list-style: none; margin: 6px 0 10px; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.mx-kids li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: start; }
+.mx-kids p { margin: 4px 0; }
+.mx-kid-eff { font-size: .82rem; color: var(--ink-2); }
 .disclaimer { border-left: 4px solid var(--warn); background: var(--warn-bg); display: flex; flex-direction: column; gap: 8px; }
 .disclaimer h2, .disclaimer h3 { margin: 0; font-size: 1rem; }
 .disclaimer p { margin: 0; max-width: 95ch; font-size: .9rem; color: var(--ink); }
@@ -677,6 +685,7 @@ function renderTopic(t) {
     <h2>Wirkungsübersicht</h2>
     <p class="lead">Alle untersuchten Wirkungen auf einen Blick: welche Evidenz es gibt (Buchstabe A–D), was es bewirkt (Farbe: grün = Nutzen, grau = kein Effekt, rot = Nachteil), wie stark (Effekt) und wie breit die Datenbasis ist. Für Befund und Quellen eine Zeile anklicken.</p>
     <div class="filters" role="group" aria-label="Bereich filtern" id="mx-filters"></div>
+    ${zgButtons("mx-zg")}
     <div class="card mx" id="mx" style="margin-top:12px"></div>
     <details class="card table-view" style="margin-top:12px"><summary>Was bedeuten Buchstabe und Farbe?</summary><div style="margin-top:14px">${mxLegend()}</div></details>
   </section>` : ""}
@@ -815,15 +824,49 @@ function oldNote(keys, sources) {
   const y = newestYear(keys, sources);
   return y && NOW_YEAR - y > OLD_AFTER ? ` <span class="old-note" title="Die neueste Quelle zu diesem Punkt ist von ${y}. Die Studienlage ist älter als ${OLD_AFTER} Jahre.">Stand der Forschung: ${y}</span>` : "";
 }
+
+/* ----- Zielgruppen und zusammengefasste Wirkungen -----
+   Jede Wirkung (item) kann tragen: w = Oberbegriff (gleiche Zielgröße, z. B. „Maximalkraft“), pop = Zielgruppe der Studien.
+   Items mit gleichem w in einer Gruppe werden zu einer Zeile zusammengefasst und lassen sich aufklappen. */
+const ZG = [["alle", "Alle", "Alle Befunde"], ["einsteiger", "Einsteiger", "Jüngere Erwachsene, untrainiert oder Freizeitsport"], ["trainiert", "Trainierte", "Trainierte Sportler und Athleten"], ["aelter", "Ältere", "Ältere Erwachsene, etwa ab 60 Jahren"]];
+const ZG_KURZ = { alle: "gemischte Gruppen", einsteiger: "Einsteiger", trainiert: "Trainierte", aelter: "Ältere" };
+let zg = "alle"; try { zg = localStorage.getItem("fs-zg") || "alle"; } catch (e) {}
+const zgOk = (it) => zg === "alle" || !it.pop || it.pop === "alle" || it.pop === zg;
+function zgButtons(id) {
+  return `<div class="filters zg" role="group" aria-label="Zielgruppe" id="${id}"><span class="zg-l">Zielgruppe:</span>${ZG.map(([k, l, d]) => `<button type="button" data-zg="${k}" aria-pressed="${k === zg}" title="${d}">${l}</button>`).join("")}</div>`;
+}
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-zg]"); if (!b) return; zg = b.dataset.zg; try { localStorage.setItem("fs-zg", zg); } catch (err) {} const y = scrollY; load().then(() => scrollTo({ top: y, behavior: "instant" })); });
+function mergeRows(items, sources, kat) {
+  const out = [], by = {};
+  /* Sicherheit und Nachteile immer zeigen, auch wenn sie nur in einer anderen Zielgruppe untersucht wurden */
+  items.filter(it => kat === "sicherheit" || it.b === "schaden" || zgOk(it)).forEach(it => {
+    if (!it.w) { out.push(it); return; }
+    if (!by[it.w]) { by[it.w] = []; out.push({ w: it.w, kids: by[it.w] }); }
+    by[it.w].push(it);
+  });
+  return out.map(r => {
+    if (!r.kids) return r;
+    if (r.kids.length === 1) return { ...r.kids[0], n: `${r.w}: ${r.kids[0].n}` };
+    const L = (i) => "ABCD–".indexOf(evLetter(i, sources)), kids = [...r.kids].sort((a, b) => L(a) - L(b) || (b.m || 0) - (a.m || 0));
+    /* Stellvertreter: passende Zielgruppe, sonst Befund über gemischte Gruppen; nur ohne beides gilt ein Widerspruch als „uneinheitlich“ */
+    const own = kids.filter(k => zg !== "alle" && k.pop === zg), gen = kids.filter(k => !k.pop || k.pop === "alle");
+    const rep = (own[0] || gen[0] || kids[0]), pool = own.length ? own : gen.length ? gen : kids;
+    const pos = pool.filter(k => k.m > 0), zero = pool.filter(k => k.m === 0);
+    const mixed = (pos.length && zero.length && "ABC".includes(evLetter(zero[0], sources))) || new Set(pos.map(k => k.d)).size > 1;
+    return { ...rep, n: r.w, s: [...new Set(kids.flatMap(k => k.s))], k: Math.max(...kids.map(k => k.k || 0)) || null, p: Math.max(...kids.map(k => k.p || 0)) || null,
+      m: mixed ? null : rep.m, b: mixed ? "neutral" : rep.b, kids, pop: undefined };
+  });
+}
+const mxGroups = (t) => (t.matrix || []).map(g => ({ ...g, items: mergeRows(g.items, t.sources, g.kat) })).filter(g => g.items.length);
 function mxRow(it, opt) {
   const cites = it.s.length ? opt.cites(it.s) : "";
   return `<details class="mx-row"><summary>
-      <span class="mx-name">${opt.prefix ? `<span class="mx-sup">${opt.prefix}</span>` : ""}${it.n}${it.s.length ? oldNote(it.s, it.top ? it.top.sources : T.sources) : ""}</span>
+      <span class="mx-name">${opt.prefix ? `<span class="mx-sup">${opt.prefix}</span>` : ""}${it.n}${zg !== "alle" && (it.pop === zg || (it.kids || []).some(k => k.pop === zg)) ? ` <span class="zg-chip own">eigene Daten: ${ZG_KURZ[zg]}</span>` : ""}${it.s.length ? oldNote(it.s, it.top ? it.top.sources : T.sources) : ""}</span>
       ${ltHTML(it, it.top ? it.top.sources : T.sources)}
       <span class="mx-eff">${effGlyph(it)}<span>${effLabel(it)}${it.b === "schaden" ? ' <em class="mx-warn">Nachteil</em>' : ""}</span></span>
       <span class="mx-evi"><span>${ICON_DOC}${it.k ? `${fmtInt(it.k)} Studien` : "Studienzahl k. A."}</span><span>${ICON_PERS}${it.p ? `${fmtInt(it.p)} Teilnehmende` : "Teilnehmende k. A."}</span></span>
     </summary>
-    <div class="mx-detail"><p>${it.t}</p><span class="cite">${cites}</span>${opt.more(it)}</div></details>`;
+    <div class="mx-detail">${it.kids ? `<p class="cap">Zusammengefasst aus ${it.kids.length} Befunden. Der Buchstabe der Zeile ergibt sich aus allen Quellen zusammen:</p><ul class="mx-kids">${it.kids.map(k => `<li>${ltHTML(k, it.top ? it.top.sources : T.sources, true)}<div><b>${k.n}</b> <span class="zg-chip">${ZG_KURZ[k.pop || "alle"]}</span> <span class="mx-kid-eff">${effLabel(k)}${k.b === "schaden" ? " · Nachteil" : ""}</span><p>${k.t}</p><span class="cite">${opt.cites.call(opt, k.s)}</span></div></li>`).join("")}</ul>` : `<p>${it.t}${it.pop && it.pop !== "alle" ? ` <span class="zg-chip">${ZG_KURZ[it.pop]}</span>` : ""}</p><span class="cite">${cites}</span>`}${opt.more(it)}</div></details>`;
 }
 function mxGroup(title, sub, items, opt, open = true) {
   const src = new Set(items.flatMap(i => opt.srcKeys ? opt.srcKeys(i) : i.s)).size;
@@ -835,7 +878,7 @@ function mxGroup(title, sub, items, opt, open = true) {
 const MX_COLS = `<div class="mx-cols" aria-hidden="true"><span>Ziel · Wirkung</span><span>Evidenz</span><span>Effekt</span><span>Datenbasis</span></div>`;
 function renderMx() {
   $("mx-filters").innerHTML = AREAS.map(([k, l]) => `<button type="button" data-f="${k}" aria-pressed="${k === mxArea}">${l}</button>`).join("");
-  const groups = T.matrix.filter(g => mxArea === "alle" || g.bereich === mxArea);
+  const groups = mxGroups(T).filter(g => mxArea === "alle" || g.bereich === mxArea);
   const opt = { cites: (keys) => citeList(keys), more: (it) => `<a class="more" href="#var-${it.v}">Zum Abschnitt im Detail →</a>` };
   $("mx").innerHTML = MX_COLS + (groups.length ? groups.map(g => mxGroup(g.ziel, mxArea === "alle" ? g.bereich : "", g.items, opt)).join("") : `<p class="mx-empty">In diesem Bereich wurden keine Wirkungen untersucht.</p>`);
 }
@@ -868,7 +911,7 @@ async function renderSupOverview() {
   try { await Promise.all(supList().map(async id => { if (!cache[id]) cache[id] = await (await fetch(`data/topics/${id}.json`)).json(); })); }
   catch (e) { $("main").innerHTML = `<section><div class="card empty"><h2>Übersicht konnte nicht geladen werden</h2><p>Bitte die Seite neu laden.</p></div></section>`; return; }
   const tops = supList().map(id => cache[id]).filter(t => t.matrix);
-  const nW = tops.reduce((a, t) => a + t.matrix.reduce((b, g) => b + g.items.length, 0), 0);
+  const nW = tops.reduce((a, t) => a + mxGroups(t).reduce((b, g) => b + g.items.length, 0), 0);
   const nS = tops.reduce((a, t) => a + Object.keys(t.sources).length, 0);
   const stand = tops.map(t => t.stand).sort().pop();
   $("main").innerHTML = `
@@ -882,6 +925,7 @@ async function renderSupOverview() {
       <input type="search" id="sup-q" placeholder="Suchen, z. B. Kraft, Blutdruck, Erkältung" aria-label="Wirkungen durchsuchen" value="${esc(supQuery)}">
       <div class="filters" role="group" aria-label="Bereich filtern" id="sup-area-btns"></div>
     </div>
+    ${zgButtons("sup-zg")}
     <div id="sup-out"></div>
     <details class="card table-view" style="margin-top:14px"><summary>Was bedeuten Buchstabe und Farbe?</summary><div style="margin-top:14px">${mxLegend()}</div></details>
   </section>`;
@@ -895,7 +939,7 @@ function supItems() {
   const q = supQuery.trim().toLowerCase();
   const out = [];
   supList().forEach(id => { const t = cache[id]; if (!t || !t.matrix) return;
-    t.matrix.forEach(g => { if (supArea !== "alle" && g.bereich !== supArea) return;
+    mxGroups(t).forEach(g => { if (supArea !== "alle" && g.bereich !== supArea) return;
       g.items.forEach(it => { const hay = `${t.title} ${g.ziel} ${it.n} ${it.t} ${(KAT.find(k => k[0] === g.kat) || ["", ""])[1]}`.toLowerCase();
         if (!q || hay.includes(q)) out.push({ ...it, top: t, grp: g }); }); }); });
   return out;
@@ -1046,7 +1090,7 @@ const reportLink = (t) => `<a class="btn-line" href="${reportURL(t)}" target="_b
 const lt1 = (i) => ltHTML(i, i.top.sources, true);
 function allItems(tops) {
   const out = [];
-  tops.forEach(t => (t.matrix || []).forEach(g => g.items.forEach(it => out.push({ ...it, top: t, grp: g }))));
+  tops.forEach(t => mxGroups(t).forEach(g => g.items.forEach(it => out.push({ ...it, top: t, grp: g }))));
   return out;
 }
 const naviOf = (id) => { for (const g of NAV) for (const it of g.items) for (const c of it.children || [it]) if (c.id === id) return g.group; return ""; };
@@ -1074,6 +1118,7 @@ async function renderZiel() {
   $("main").innerHTML = `<section>
     <h1>Mein Ziel</h1>
     <p class="lead">Ziel wählen: Die Seite stellt zusammen, welche Themen dafür wichtig sind und welche Supplemente laut Studienlage etwas bringen – oder nachweislich nicht. Erst Training und Ernährung, dann Supplemente.</p>
+    ${zgButtons("ziel-zg")}
     <div class="filters" role="group" aria-label="Ziel" id="goal-btns">${GOALS.map(x => `<button type="button" data-f="${x.id}" aria-pressed="${x.id === g.id}">${x.title}</button>`).join("")}</div>
     <h2>1. Training und Ernährung</h2>
     <div class="goal-grid">${tp.map(t => { const k = (t.takeaways || [])[0]; return `<a class="card goal-card" href="#${t.id}"><span class="area">${naviOf(t.id)}</span><h3>${t.title}</h3>${k ? `<p>${strip(k.t)}${k.p ? ": " + strip(k.p) : ""}</p>` : ""}<span class="go">Zum Thema →</span></a>`; }).join("")}</div>
@@ -1133,6 +1178,7 @@ async function renderVergleich() {
   $("main").innerHTML = `<section>
     <h1>Supplemente vergleichen</h1>
     <p class="lead">Zwei Supplemente auswählen und Wirkung für Wirkung vergleichen. Buchstabe = Evidenz (A–D), Farbe = Effekt (grün Nutzen, grau kein Effekt, rot Nachteil).</p>
+    ${zgButtons("cmp-zg")}
     <div class="cmp-pick"><label>Links <select id="cmp-a">${opts(cmpSel[0])}</select></label><label>Rechts <select id="cmp-b">${opts(cmpSel[1])}</select></label></div>
     <div class="tbl-wrap"><table class="cmp"><thead><tr><th>Bereich</th><th><a href="#${A.id}">${A.title}</a></th><th><a href="#${B.id}">${B.title}</a></th></tr></thead><tbody>${groups}</tbody></table></div>
   </section>`;
@@ -1159,6 +1205,7 @@ async function renderSicherheit() {
   $("main").innerHTML = `<section>
     <h1>Risiken und Gegenanzeigen</h1>
     <p class="lead">Alle untersuchten Nebenwirkungen, Nachteile und Warnhinweise der Supplemente auf einen Blick, mit Evidenzbuchstabe. Grau heißt hier: In Studien kein erhöhtes Risiko gefunden – das schließt seltene oder langfristige Risiken nicht aus.</p>
+    ${zgButtons("sich-zg")}
     ${disclaimerHTML(true)}
     <div class="card" role="note"><h3>Allgemein gilt</h3><p>Bei Erkrankungen, Medikamenteneinnahme, Schwangerschaft oder Stillzeit vor der Einnahme ärztlich abklären.</p></div>
     <div class="sup-grid" style="margin-top:14px">${cards}</div>
@@ -1205,7 +1252,7 @@ const TOUR = [
   { sel: "#nav-tools", menu: true, t: "Werkzeuge", x: "<b>Mein Ziel</b> stellt Themen und Supplemente zu deinem Ziel zusammen. <b>Mythen-Check</b> prüft verbreitete Behauptungen. <b>Neu</b> zeigt alle Änderungen, <b>Glossar</b> erklärt Fachbegriffe. Über <b>Hilfe</b> startest du diese Einführung erneut." },
   { sel: "#nav-topics > ul:first-of-type", menu: true, t: "Themen", x: "Drei Bereiche: Training (hier zu sehen), Ernährung und Supplemente. Ein Klick auf eine Gruppe klappt sie auf. Bei den Supplementen gibt es zusätzlich eine Übersicht, einen direkten Vergleich zweier Präparate und alle Risiken auf einen Blick." },
   { page: "kreatin", sel: ".takeaways > :first-child", t: "Jede Themenseite: das Kurzfazit", x: "Oben stehen die wichtigsten Aussagen, jede als eigene Karte wie diese. Das Etikett zeigt, wie gut sie belegt sind: <b>hoch</b> (mehrere übereinstimmende Metaanalysen), <b>moderat</b> oder <b>niedrig</b> (wenige oder widersprüchliche Studien). Unterstrichene Fachbegriffe erklären sich beim Antippen." },
-  { page: "kreatin", sel: ["#wirkung .mx-cols", "#wirkung .mx-grp > summary", "#wirkung .mx-grp > .mx-row:nth-of-type(2)"], t: "Wirkungsübersicht", x: "Bei Supplementen und Ernährungsthemen, nach Zielen gruppiert (hier: Kraft). Der <b>Buchstabe</b> sagt, worauf eine Aussage beruht – A mindestens zwei Metaanalysen, B eine Metaanalyse, C systematische Reviews oder Positionspapiere, D nur Einzelstudien. Die <b>Farbe</b> zeigt den Effekt: dunkelgrün stark, hellgrün klein, grau kein Effekt, sandfarben uneinheitlich, rot ein Nachteil." },
+  { page: "kreatin", sel: ["#wirkung .mx-cols", "#wirkung .mx-grp > summary", "#wirkung .mx-grp > .mx-row:nth-of-type(2)"], t: "Wirkungsübersicht", x: "Bei Supplementen und Ernährungsthemen, nach Zielen gruppiert (hier: Kraft). Der <b>Buchstabe</b> sagt, worauf eine Aussage beruht – A mindestens zwei Metaanalysen, B eine Metaanalyse, C systematische Reviews oder Positionspapiere, D nur Einzelstudien. Die <b>Farbe</b> zeigt den Effekt: dunkelgrün stark, hellgrün klein, grau kein Effekt, sandfarben uneinheitlich, rot ein Nachteil. Über <b>Zielgruppe</b> wählst du Einsteiger, Trainierte oder Ältere; zusammengefasste Zeilen lassen sich aufklappen und zeigen die einzelnen Befunde." },
   { page: "kreatin", sel: "#ableitungen .rx > :first-child", t: "Ableitungen für die Praxis", x: "Was folgt daraus für Training und Ernährung? Dosierung, Zeitpunkt, für wen es sich lohnt – jeweils mit Quelle. Darunter rechnet „Für dich berechnet“ die Dosierungen auf dein Körpergewicht um; bei Kraft- und Ausdauerdiagnostik kannst du dort deine Testergebnisse auswerten." },
   { page: "kreatin", sel: "#variablen .findings > li:first-child", t: "Im Detail", x: "Jeder Abschnitt listet die Befunde nach Aussagekraft – wie hier: Studienart, Zahl der Studien und Jahr stehen über jedem Befund, Metaanalysen zuerst. Die Abbildungen zeigen Effektgrößen; beim Darüberfahren erscheinen Details, darunter gibt es jede Grafik als Tabelle. Die <b>kritische Einordnung</b> erklärt Schwächen und Widersprüche." },
   { page: "kreatin", sel: "#timeline > li:first-child", t: "Forschungsverlauf", x: "Wie hat sich die Einschätzung über die Jahre entwickelt? Die Zeitleiste – hier ihr erster Eintrag – markiert Bestätigungen und Widersprüche; bei einigen Themen zeigt ein Diagramm, wie sich der geschätzte Effekt mit neuen Metaanalysen verändert hat." },

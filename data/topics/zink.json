@@ -1,7 +1,7 @@
 {
  "id": "zink",
  "title": "Zink",
- "stand": "2026-11-17",
+ "stand": "2026-11-23",
  "lead": "Braucht man als Sportler zusätzliches Zink, hilft es gegen Erkältungen, und wirkt es auf Testosteron oder Stoffwechsel? Zusammengefasst aus Metaanalysen und systematischen Reviews.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Zur sportlichen Leistung selbst gibt es keine belastbaren Metaanalysen; die Evidenz betrifft Versorgungsstatus, Infekte und Stoffwechsel.",
@@ -278,6 +278,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Wirkungsübersicht: „Kraft- und Ausdauerleistung“ als nicht untersucht ergänzt (keine Metaanalyse vorhanden)."
   },
@@ -397,7 +401,8 @@
       "abioye2021"
      ],
      "t": "Symptome etwa 2 Tage früher abgeklungen (sehr niedrige Vertrauenswürdigkeit). Bei gesunden Erwachsenen −2,25 Tage; in einer weiteren Analyse −47 % Symptomdauer.",
-     "v": "infekte"
+     "v": "infekte",
+     "pop": "alle"
     },
     {
      "n": "Infektrisiko (Vorbeugung)",
@@ -413,7 +418,8 @@
       "vlieg2022"
      ],
      "t": "5 Atemwegsinfekte weniger pro 100 Personenmonate (Hunter et al., 2021). Eine weitere Analyse fand kein geringeres Risiko; in einer dritten wirkte Zink nur in Studien aus Asien (RR 0,86).",
-     "v": "infekte"
+     "v": "infekte",
+     "pop": "alle"
     },
     {
      "n": "Symptomschwere",
@@ -427,7 +433,8 @@
       "hunter2021"
      ],
      "t": "Am 3. Tag milder (MD −1,20 Punkte), im Tagesmittel nicht (SMD −0,15).",
-     "v": "infekte"
+     "v": "infekte",
+     "pop": "alle"
     }
    ]
   },
@@ -449,7 +456,8 @@
       "ceylan2021"
      ],
      "t": "CRP, hs-CRP und TNF-α sanken; CRP bei Erwachsenen MD −0,75 (22 Studien). Überwiegend Studien mit Erkrankten.",
-     "v": "infekte"
+     "v": "infekte",
+     "pop": "alle"
     }
    ]
   },
@@ -470,7 +478,8 @@
       "daneshvar2024"
      ],
      "t": "Umbrella-Analyse: Nüchternblutzucker SMD −0,52, HOMA-IR SMD −0,78, HbA1c −0,35. Untersucht an Biomarkern des Typ-2-Diabetes.",
-     "v": "stoffwechsel"
+     "v": "stoffwechsel",
+     "pop": "alle"
     }
    ]
   },
@@ -489,7 +498,8 @@
      "p": null,
      "s": [],
      "t": "Zu Zink und sportlicher Leistung bei Gesunden wurde in PubMed keine Metaanalyse und kein systematischer Review gefunden.",
-     "v": "hormone"
+     "v": "hormone",
+     "pop": "alle"
     },
     {
      "n": "Testosteron",
@@ -503,7 +513,8 @@
       "te2023"
      ],
      "t": "Nur 8 Studien am Menschen neben 30 Tierstudien. Für gesunde Sportler ohne Zinkmangel nicht belegt.",
-     "v": "hormone"
+     "v": "hormone",
+     "pop": "alle"
     }
    ]
   },
@@ -524,7 +535,8 @@
       "hunter2021"
      ],
      "t": "RR 1,41 für nicht schwerwiegende Nebenwirkungen (bei 7 Behandelten tritt eine zusätzlich auf); keine schweren Nebenwirkungen.",
-     "v": "infekte"
+     "v": "infekte",
+     "pop": "alle"
     }
    ]
   }

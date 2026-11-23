@@ -1,7 +1,7 @@
 {
  "id": "hmb",
  "title": "HMB (β-Hydroxy-β-Methylbutyrat)",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Steigert HMB, ein Abbauprodukt der Aminosäure Leucin, Kraft und Muskelmasse, beschleunigt es die Erholung, und hält der frühe Optimismus unabhängigen Metaanalysen stand? Zusammengefasst aus Metaanalysen, Umbrella Reviews und Positionspapieren.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene. Die Effekte hängen stark von Trainingsstatus, Alter und Proteinzufuhr ab. Unabhängige Metaanalysen fallen deutlich zurückhaltender aus als frühe Arbeiten und herstellernahe Positionspapiere.",
@@ -671,6 +671,10 @@
  ],
  "changelog": [
   {
+   "d": "23.11.2026",
+   "t": "Wirkungsübersicht nach Zielgruppen gegliedert; zusammengehörige Befunde zusammengefasst."
+  },
+  {
    "d": "20.11.2026",
    "t": "Erstfassung: PubMed-Sichtung von 837 Einträgen, 146 Übersichtsarbeiten nach Titel geprüft (davon 15 zunächst per Titelregel einer anderen Kategorie zugeordnet), dazu 11 Übersichtsarbeiten aus einer ergänzenden Suche; 25 Quellen aufgenommen."
   }
@@ -682,7 +686,7 @@
    "kat": "kraft",
    "items": [
     {
-     "n": "Kraft bei Untrainierten",
+     "n": "Untrainierte",
      "g": "C",
      "d": "auf",
      "m": 2,
@@ -692,11 +696,29 @@
      "s": [
       "rowlands2009"
      ],
-     "t": "Beinkraft +9,9 % und mittlere Kraft +6,6 %, nach Cohen-Schwellen als klein eingestuft; eine neuere Analyse junger Erwachsener fand keinen Krafteffekt.",
-     "v": "kraft"
+     "t": "Beinkraft +9,9 % und mittlere Kraft +6,6 %, nach Cohen-Schwellen als klein eingestuft.",
+     "v": "kraft",
+     "w": "Kraft",
+     "pop": "einsteiger"
     },
     {
-     "n": "Kraft bei Trainierten und Sportlern",
+     "n": "Junge Erwachsene mit Krafttraining",
+     "g": "C",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": null,
+     "p": 248,
+     "s": [
+      "jakubowski2020"
+     ],
+     "t": "Kein signifikanter Krafteffekt bei 18- bis 45-Jährigen (n = 248).",
+     "v": "kraft",
+     "w": "Kraft",
+     "pop": "einsteiger"
+    },
+    {
+     "n": "Trainierte und Sportler",
      "g": "B",
      "d": null,
      "m": 0,
@@ -705,11 +727,12 @@
      "p": 193,
      "s": [
       "sanchezmartinez2018",
-      "rowlands2009",
-      "jakubowski2020"
+      "rowlands2009"
      ],
-     "t": "Bankdrücken ES 0,00, Beinpresse 0,09 (I² = 0 %); auch bei jungen Erwachsenen mit Krafttraining (11 Studien) kein Effekt.",
-     "v": "kraft"
+     "t": "Bankdrücken ES 0,00, Beinpresse 0,09 (I² = 0 %); auch in älteren Daten bei Trainierten trivial.",
+     "v": "kraft",
+     "w": "Kraft",
+     "pop": "trainiert"
     }
    ]
   },
@@ -719,7 +742,7 @@
    "kat": "masse",
    "items": [
     {
-     "n": "Fettfreie Masse",
+     "n": "Alle Studien",
      "g": "C",
      "d": null,
      "m": null,
@@ -732,8 +755,43 @@
       "sanchezmartinez2018",
       "bideshki2025a"
      ],
-     "t": "Bei jungen Erwachsenen und Sportlern nicht signifikant (Sportler 0,30 [−0,07; 0,68]); im Umbrella Review über alle Altersgruppen ES 0,22.",
-     "v": "kraft"
+     "t": "Uneinheitlich: im Umbrella Review über alle Altersgruppen (23–79 Jahre) ES 0,22, bei jungen Erwachsenen und Sportlern nicht signifikant.",
+     "v": "kraft",
+     "w": "Fettfreie Masse",
+     "pop": "alle"
+    },
+    {
+     "n": "Sportler",
+     "g": "C",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": null,
+     "p": null,
+     "s": [
+      "holland2022",
+      "sanchezmartinez2018"
+     ],
+     "t": "Nicht signifikant: 0,30 [−0,07; 0,68] bzw. ES 0,16; ein möglicher kleiner Vorteil nur bei Proteinzufuhr unter 1,6 g/kg/Tag.",
+     "v": "kraft",
+     "w": "Fettfreie Masse",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Junge Erwachsene mit Krafttraining",
+     "g": "C",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": 11,
+     "p": 302,
+     "s": [
+      "jakubowski2020"
+     ],
+     "t": "Kein signifikanter Effekt bei 18- bis 45-Jährigen (11 Studien, n = 302).",
+     "v": "kraft",
+     "w": "Fettfreie Masse",
+     "pop": "einsteiger"
     }
    ]
   },
@@ -743,7 +801,7 @@
    "kat": "koerper",
    "items": [
     {
-     "n": "Fettmasse",
+     "n": "Alle Studien",
      "g": "B",
      "d": null,
      "m": 0,
@@ -756,8 +814,43 @@
       "sanchezmartinez2018",
       "bideshki2025a"
      ],
-     "t": "In allen Analysen kein signifikanter Effekt (Sportler −0,33 [−0,96; 0,31]; Umbrella Review 0,03).",
-     "v": "kraft"
+     "t": "In allen Analysen kein signifikanter Effekt (Umbrella Review 0,03).",
+     "v": "kraft",
+     "w": "Fettmasse",
+     "pop": "alle"
+    },
+    {
+     "n": "Sportler",
+     "g": "B",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": null,
+     "p": null,
+     "s": [
+      "holland2022",
+      "sanchezmartinez2018"
+     ],
+     "t": "−0,33 [−0,96; 0,31] bzw. ES −0,20, jeweils nicht signifikant.",
+     "v": "kraft",
+     "w": "Fettmasse",
+     "pop": "trainiert"
+    },
+    {
+     "n": "Junge Erwachsene mit Krafttraining",
+     "g": "B",
+     "d": null,
+     "m": 0,
+     "b": "neutral",
+     "k": 11,
+     "p": 302,
+     "s": [
+      "jakubowski2020"
+     ],
+     "t": "Kein signifikanter Effekt bei 18- bis 45-Jährigen (11 Studien, n = 302).",
+     "v": "kraft",
+     "w": "Fettmasse",
+     "pop": "einsteiger"
     }
    ]
   },
@@ -767,7 +860,7 @@
    "kat": "masse",
    "items": [
     {
-     "n": "Muskelmasse bei Älteren (HMB allein)",
+     "n": "HMB allein",
      "g": "B",
      "d": "auf",
      "m": 2,
@@ -780,10 +873,12 @@
       "wu2015"
      ],
      "t": "Fettfreie Masse +0,28 kg; ES 0,37 insgesamt, 0,59 bei HMB ohne Training.",
-     "v": "aeltere"
+     "v": "aeltere",
+     "w": "Muskelmasse",
+     "pop": "aelter"
     },
     {
-     "n": "Muskelmasse bei Älteren mit Krafttraining",
+     "n": "Zusätzlich zu Krafttraining",
      "g": "B",
      "d": null,
      "m": 0,
@@ -797,7 +892,9 @@
       "courelibanez2019"
      ],
      "t": "Kein Zusatzeffekt zum Training: SMD 0,05 [−0,10; 0,20]; ebenso 0,06 in einer früheren Analyse.",
-     "v": "aeltere"
+     "v": "aeltere",
+     "w": "Muskelmasse",
+     "pop": "aelter"
     }
    ]
   },
@@ -807,7 +904,7 @@
    "kat": "kraft",
    "items": [
     {
-     "n": "Kraft bei Älteren (HMB allein oder in Präparaten)",
+     "n": "HMB allein oder in Präparaten",
      "g": "C",
      "d": "auf",
      "m": 2,
@@ -820,10 +917,12 @@
       "phillips2022"
      ],
      "t": "SMD 0,41 [0,28; 0,54] (9 Studien); Handkraft +0,54 kg. Umbrella Review: Belege überwiegend uneinheitlich.",
-     "v": "aeltere"
+     "v": "aeltere",
+     "w": "Kraft",
+     "pop": "aelter"
     },
     {
-     "n": "Kraft bei Älteren mit Krafttraining",
+     "n": "Zusätzlich zu Krafttraining",
      "g": "C",
      "d": null,
      "m": 0,
@@ -835,7 +934,9 @@
       "garciaalonso2025"
      ],
      "t": "SMD 0,04 [−0,72; 0,63] bei hoher Heterogenität; Handkraft in einer zweiten Analyse grenzwertig (0,24 [0,00; 0,48]).",
-     "v": "aeltere"
+     "v": "aeltere",
+     "w": "Kraft",
+     "pop": "aelter"
     },
     {
      "n": "Körperliche Funktion bei Älteren",
@@ -851,7 +952,8 @@
       "phillips2022"
      ],
      "t": "Gehgeschwindigkeit +0,06 m/s und SPPB SMD 0,54 in zwei Analysen; laut Umbrella Review kein Review mit Beleg für bessere Funktion.",
-     "v": "aeltere"
+     "v": "aeltere",
+     "pop": "aelter"
     }
    ]
   },
@@ -872,7 +974,8 @@
       "fernandezlanda2024"
      ],
      "t": "SMD 0,58, nach Bereinigung um Funnel-Plot-Asymmetrie 0,38 [0,22; 0,53]; VO₂max bereinigt 0,25.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     },
     {
      "n": "Spitzenleistung (Peak Power)",
@@ -886,7 +989,8 @@
       "sun2026"
      ],
      "t": "+64,70 W bzw. +0,84 W/kg gegenüber Placebo, moderate Vertrauenswürdigkeit; überwiegend indirekte Vergleiche, standardisierte Größe nicht berichtet.",
-     "v": "ausdauer"
+     "v": "ausdauer",
+     "pop": "alle"
     }
    ]
   },
@@ -908,7 +1012,8 @@
       "talebi2024"
      ],
      "t": "Kreatinkinase −60,71 U/l, LDH −15,42 U/l; nur bei mindestens 6 Wochen Einnahme signifikant. Nur als Rohwerte berichtet.",
-     "v": "erholung"
+     "v": "erholung",
+     "pop": "alle"
     }
    ]
   },
@@ -929,7 +1034,8 @@
       "bideshki2025b"
      ],
      "t": "SMD 0,82 [0,35; 1,29]; Evidenzqualität niedrig bis hoch. Cortisol, IGF-1 und Wachstumshormon unverändert; kein erkennbarer Nutzen für Kraft bei Trainierten.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   },
@@ -950,7 +1056,8 @@
       "sadeghi2024"
      ],
      "t": "Gesamtcholesterin, Triglyzeride, LDL und HDL unverändert; Evidenzqualität moderat bis niedrig.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   },
@@ -972,7 +1079,8 @@
       "wilson2013"
      ],
      "t": "Laut ISSN bis mindestens ein Jahr sicher, ohne negative Effekte auf den Glukosestoffwechsel; Bewertung durch Autoren mit Herstellerbindung, keine eigene Sicherheits-Metaanalyse.",
-     "v": "sicherheit"
+     "v": "sicherheit",
+     "pop": "alle"
     }
    ]
   }
