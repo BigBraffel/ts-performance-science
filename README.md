@@ -1,4 +1,6 @@
-# Forschungsstand Sport
+# TS Performance Science
+
+*Thesaurus Scientiae* – „Schatzkammer des Wissens“ für Training und Ernährung.
 
 Eine sich selbst aktualisierende Website, die den Forschungsstand zu Trainings- und Ernährungswissenschaft auf Deutsch zusammenfasst. Sie stützt sich ausschließlich auf wissenschaftliche Quellen, bewertet sie kritisch und zitiert sie nach APA 7 (deutsche Fassung).
 

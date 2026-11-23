@@ -6,7 +6,9 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <meta name="theme-color" content="#12151a">
-<title>Forschungsstand Sport</title>
+<title>TS Performance Science</title>
+<meta name="description" content="TS Performance Science (Thesaurus Scientiae): der Forschungsstand zu Training, Ernährung und Supplementen – evidenzbasiert und automatisch aktualisiert.">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -102,7 +104,8 @@ p { margin: 0; }
   background: var(--surface); border-right: 1px solid var(--line);
   padding: 24px 18px; display: flex; flex-direction: column; gap: 22px;
 }
-.brand { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1.25; }
+.brand { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.25; display: flex; gap: 10px; align-items: center; color: var(--ink); text-decoration: none; }
+.brand img { border-radius: 8px; flex: none; }
 .brand small { display: block; font-family: var(--font-body); font-weight: 400; font-size: .8rem; color: var(--ink-3); }
 .side h4 { margin: 0 0 6px; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
 .topics, .toc { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
@@ -243,7 +246,7 @@ html { scroll-behavior: smooth; }
 .tools a:hover { background: var(--surface-2); }
 .tools a.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
 .side-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
-.menu-btn { display: none; align-items: center; gap: 6px; font: inherit; font-size: .85rem; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+.menu-btn { white-space: nowrap; display: none; align-items: center; gap: 6px; font: inherit; font-size: .85rem; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
 .app-box { display: flex; flex-direction: column; gap: 6px; }
 .app-box .btn-primary { font-size: .85rem; padding: 8px 12px; }
 .side-note { margin: auto 0 0; font-size: .75rem; color: var(--ink-3); }
@@ -253,6 +256,11 @@ html { scroll-behavior: smooth; }
 .popup .disclaimer { margin-bottom: 12px; }
 .popup form { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 6px; }
 .btn-primary { font: inherit; font-weight: 600; color: var(--surface); background: var(--accent); border: 0; border-radius: 8px; padding: 9px 18px; cursor: pointer; }
+.hero { display: flex; gap: 18px; align-items: center; margin: 4px 0 8px; }
+.hero img { border-radius: 18px; flex: none; }
+@media (max-width: 600px) { .hero img { width: 64px; height: 64px; border-radius: 14px; } .hero h1 { font-size: 1.6rem; } }
+.hero h1 { margin: 0; }
+.hero-sub { margin: 4px 0 0; color: var(--accent); font-size: .95rem; letter-spacing: .02em; }
 .goal-grid, .area-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .goal-card { display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: var(--ink); }
 .goal-card:hover { border-color: var(--accent); }
@@ -437,7 +445,7 @@ ol.findings .lvl { font-size: .72rem; font-weight: 600; letter-spacing: .03em; t
 <body>
 <div class="shell">
   <aside class="side" aria-label="Navigation">
-    <div class="side-top"><div class="brand">Forschungsstand Sport<small>Training &amp; Ernährung – evidenzbasiert</small></div><button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-topics">☰ Themen</button></div>
+    <div class="side-top"><a class="brand" href="#start"><img src="logo-ts.png" alt="" width="40" height="40"><span>TS Performance Science<small>Thesaurus Scientiae</small></span></a><button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-topics">☰ Themen</button></div>
     <form class="side-search" role="search" id="q-form"><input type="search" id="q" placeholder="Alle Themen durchsuchen" aria-label="Alle Themen durchsuchen" autocomplete="off"></form>
     <nav aria-label="Werkzeuge" class="tools" id="nav-tools"></nav>
     <nav aria-label="Themen" id="nav-topics"></nav>
@@ -453,7 +461,7 @@ ol.findings .lvl { font-size: .72rem; font-weight: 600; letter-spacing: .03em; t
 <div class="tip" id="tip" role="tooltip"></div>
 <div class="gltip" id="gltip" role="tooltip" hidden></div>
 <dialog class="popup" id="popup" aria-labelledby="popup-h">
-  <h2 id="popup-h" tabindex="-1" autofocus>Willkommen – bitte kurz lesen</h2>
+  <h2 id="popup-h" tabindex="-1" autofocus>Willkommen bei TS Performance Science – bitte kurz lesen</h2>
   <div class="card disclaimer" role="note"><h3>Die Seite ist im Aufbau</h3><p>An dieser Website wird noch sehr viel gearbeitet: Themen, Darstellung und Funktionen kommen laufend hinzu oder ändern sich. Einzelne Inhalte können unvollständig sein.</p></div>
   <div id="popup-disc"></div>
   <form method="dialog"><button class="btn-primary" type="submit">Verstanden</button></form>
@@ -597,7 +605,7 @@ async function load() {
   T = cache[r.topic]; active = "alle";
   renderTopic(T);
   applyGlossar($("main"));
-  document.title = `Forschungsstand ${T.title}`;
+  document.title = `${T.title} – TS Performance Science`;
   const pend = pendingScroll; pendingScroll = null;
   if (r.scroll || pend) setTimeout(() => scrollToId(r.scroll || pend), 50); else window.scrollTo(0, 0);
 }
@@ -847,7 +855,7 @@ function mxLegend() {
 let supView = "sup", supArea = "alle", supQuery = "";
 async function renderSupOverview() {
   $("toc").innerHTML = "";
-  document.title = "Forschungsstand Supplemente";
+  document.title = "Supplemente – TS Performance Science";
   $("main").innerHTML = `<section><p class="lead">Wird geladen …</p></section>`;
   try { await Promise.all(supList().map(async id => { if (!cache[id]) cache[id] = await (await fetch(`data/topics/${id}.json`)).json(); })); }
   catch (e) { $("main").innerHTML = `<section><div class="card empty"><h2>Übersicht konnte nicht geladen werden</h2><p>Bitte die Seite neu laden.</p></div></section>`; return; }
@@ -962,7 +970,7 @@ function snippet(text, words) {
   return sn;
 }
 async function renderSearch() {
-  $("toc").innerHTML = ""; document.title = "Suche – Forschungsstand Sport";
+  $("toc").innerHTML = ""; document.title = "Suche – TS Performance Science";
   const m = location.hash.match(/\?q=([^&]*)/); if (m) searchQ = decodeURIComponent(m[1]);
   $("main").innerHTML = `<section><h1>Suche</h1>
     <p class="lead">Durchsucht Definitionen, Kurzfazits, Ableitungen, Wirkungen, Befunde und Einordnungen aller Themen.</p>
@@ -1000,7 +1008,7 @@ document.addEventListener("submit", (e) => {
 const parseDE = (d) => { const m = String(d).match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/); return m ? new Date(+m[3], +m[2] - 1, +m[1]) : new Date(0); };
 let seenBefore = null;
 async function renderNews() {
-  $("toc").innerHTML = ""; document.title = "Was ist neu? – Forschungsstand Sport";
+  $("toc").innerHTML = ""; document.title = "Was ist neu? – TS Performance Science";
   $("main").innerHTML = `<section><h1>Was ist neu?</h1><p class="cap">Wird geladen …</p></section>`;
   const tops = await loadAll();
   if (seenBefore === null) { try { seenBefore = +(localStorage.getItem("fs-neu-gesehen") || 0); localStorage.setItem("fs-neu-gesehen", String(Date.now())); } catch (e) { seenBefore = 0; } }
@@ -1045,7 +1053,7 @@ const GOALS = [
   { id: "gesundheit", title: "Gesundheit und Älterwerden", kat: ["herz", "knochen", "gehirn", "infekte", "psyche", "status"], topics: ["alter", "koerpergewicht", "schlaf", "fette", "vegan", "alkohol", "ausdauer"] }];
 let goalSel = "muskel";
 async function renderZiel() {
-  $("toc").innerHTML = ""; document.title = "Mein Ziel – Forschungsstand Sport";
+  $("toc").innerHTML = ""; document.title = "Mein Ziel – TS Performance Science";
   $("main").innerHTML = `<section><h1>Mein Ziel</h1><p class="cap">Wird geladen …</p></section>`;
   const tops = await loadAll();
   const items = allItems(tops);
@@ -1071,8 +1079,8 @@ async function renderZiel() {
 }
 
 async function renderStart() {
-  $("toc").innerHTML = ""; document.title = "Forschungsstand Sport – Training und Ernährung evidenzbasiert";
-  $("main").innerHTML = `<section><h1>Forschungsstand Sport</h1><p class="cap">Wird geladen …</p></section>`;
+  $("toc").innerHTML = ""; document.title = "TS Performance Science – Training und Ernährung evidenzbasiert";
+  $("main").innerHTML = `<section><h1>TS Performance Science</h1><p class="cap">Wird geladen …</p></section>`;
   const tops = await loadAll();
   const nS = new Set(tops.flatMap(t => Object.values(t.sources).map(s => s.pmid || s.apa))).size;
   const stand = tops.map(t => t.stand).sort().pop();
@@ -1083,7 +1091,7 @@ async function renderStart() {
   news.sort((a, b) => b.d - a.d);
   $("main").innerHTML = `<section>
     <div class="status-bar"><span><b>Stand:</b> ${fmtDate(stand)}</span><span><b>Themen:</b> <span class="num">${tops.length}</span></span><span><b>Quellen:</b> <span class="num">${fmtInt(nS)}</span></span><span><b>Aktualisierung:</b> alle 2 Wochen automatisch aus PubMed</span></div>
-    <h1>Forschungsstand Sport</h1>
+    <div class="hero"><img src="icon-192.png" alt="TS-Logo" width="96" height="96"><div><h1>TS Performance Science</h1><p class="hero-sub">Thesaurus Scientiae – Schatzkammer des Wissens für Training und Ernährung</p></div></div>
     <p class="lead">Was sagt die Wissenschaft zu Training, Ernährung und Supplementen? Jede Aussage stützt sich auf Studien – vor allem Metaanalysen und systematische Reviews –, ist kritisch eingeordnet und wird automatisch aktualisiert, wenn neue Forschung erscheint.</p>
     <div class="start-cta"><a class="btn-primary" href="#ziel">Nach Ziel einsteigen →</a><a class="btn-line" href="#supplemente">Alle Supplemente vergleichen</a>${PWA ? `<button type="button" class="btn-line" data-app>📲 Als App installieren und offline speichern</button>` : ""}</div>
     <h2>Bereiche</h2>
@@ -1099,7 +1107,7 @@ async function renderStart() {
 
 let cmpSel = ["kreatin", "beta-alanin"];
 async function renderVergleich() {
-  $("toc").innerHTML = ""; document.title = "Supplemente vergleichen – Forschungsstand Sport";
+  $("toc").innerHTML = ""; document.title = "Supplemente vergleichen – TS Performance Science";
   $("main").innerHTML = `<section><h1>Supplemente vergleichen</h1><p class="cap">Wird geladen …</p></section>`;
   await loadAll();
   const ids = supList().filter(id => cache[id] && cache[id].matrix);
@@ -1126,7 +1134,7 @@ async function renderVergleich() {
 
 const RISK_RX = /nicht|vorsicht|sicherheit|rechtlich|magen|neigung|kribbeln|warnzeichen|zu viel/i;
 async function renderSicherheit() {
-  $("toc").innerHTML = ""; document.title = "Risiken und Gegenanzeigen – Forschungsstand Sport";
+  $("toc").innerHTML = ""; document.title = "Risiken und Gegenanzeigen – TS Performance Science";
   $("main").innerHTML = `<section><h1>Risiken und Gegenanzeigen</h1><p class="cap">Wird geladen …</p></section>`;
   await loadAll();
   const ids = supList().filter(id => cache[id] && cache[id].matrix);
@@ -1152,7 +1160,7 @@ async function renderSicherheit() {
 
 const VERDICT = { "falsch": ["e4", "Falsch"], "stark übertrieben": ["e3", "Stark übertrieben"], "nicht belegt": ["e0", "Nicht belegt"], "teilweise": ["em", "Teilweise richtig"], "stimmt": ["e1", "Stimmt"] };
 async function renderMythen() {
-  $("toc").innerHTML = ""; document.title = "Mythen-Check – Forschungsstand Sport";
+  $("toc").innerHTML = ""; document.title = "Mythen-Check – TS Performance Science";
   $("main").innerHTML = `<section><h1>Mythen-Check</h1><p class="cap">Wird geladen …</p></section>`;
   const [M] = await Promise.all([fetch("data/mythen.json").then(r => r.json()), loadAll()]);
   $("main").innerHTML = `<section>
@@ -1189,7 +1197,7 @@ function showPopup() {
   if (d.showModal) d.showModal(); else d.setAttribute("open", "");
 }
 function renderHinweis() {
-  $("toc").innerHTML = ""; document.title = "Hinweise und Haftungsausschluss – Forschungsstand Sport";
+  $("toc").innerHTML = ""; document.title = "Hinweise und Haftungsausschluss – TS Performance Science";
   $("main").innerHTML = `<section><h1>Hinweise und Haftungsausschluss</h1><p class="lead">Bitte vor der Nutzung der Inhalte lesen.</p>${disclaimerHTML(false)}</section>`;
   window.scrollTo(0, 0);
 }
@@ -1215,7 +1223,7 @@ const CALC = [
 ];
 const ARTEN = [["kraft", "Krafttraining", "Maximalkraft oder Muskelaufbau"], ["intervall", "Kraftausdauer und Intervalle", "hochintensiv, 30 Sekunden bis 10 Minuten"], ["ausdauer", "Ausdauer", "Laufen, Rad, Schwimmen, Rudern …"]];
 function renderCalc() {
-  $("toc").innerHTML = ""; document.title = "Rechner – Forschungsstand Sport";
+  $("toc").innerHTML = ""; document.title = "Rechner – TS Performance Science";
   let st = { kg: 75, art: "kraft", min: 90, wk: false, doppel: false };
   try { st = { ...st, ...JSON.parse(localStorage.getItem("fs-rechner") || "{}") }; } catch (e) {}
   $("main").innerHTML = `<section>
@@ -1352,7 +1360,7 @@ document.addEventListener("focusin", (e) => { const g = e.target.closest(".gl");
 document.addEventListener("click", (e) => { const g = e.target.closest(".gl"); if (g) { showGl(g); e.stopPropagation(); } else if (!e.target.closest("#gltip")) hideGl(); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") hideGl(); });
 function renderGlossar() {
-  $("toc").innerHTML = ""; document.title = "Glossar – Forschungsstand Sport";
+  $("toc").innerHTML = ""; document.title = "Glossar – TS Performance Science";
   const list = [...GLOSSAR].sort((a, b) => a[0].localeCompare(b[0], "de"));
   $("main").innerHTML = `<section><h1>Glossar</h1>
     <p class="lead">Die wichtigsten Fachbegriffe dieser Website in einfachen Worten. In den Themen sind diese Begriffe gepunktet unterstrichen; beim Darüberfahren oder Antippen erscheint die Erklärung.</p>
@@ -1534,7 +1542,7 @@ window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); inst
 const appText = () => { const o = offlineInfo(); return o ? `Offline gespeichert am ${new Date(o.datum).toLocaleDateString("de-DE")} (${o.ok} Dateien); wird bei jedem Besuch mit Internet aktualisiert.` : "Speichert alle Themen auf dem Gerät, damit die Seite auch ohne Internet funktioniert."; };
 function offlineInfo() { try { return JSON.parse(localStorage.getItem("fs-offline") || "null"); } catch (e) { return null; } }
 function speichernAlles() {
-  const urls = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "data/mythen.json", ...AVAILABLE.flatMap(id => [`data/topics/${id}.json`, `data/screening/${id}.json`])];
+  const urls = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "logo-ts.png", "data/mythen.json", ...AVAILABLE.flatMap(id => [`data/topics/${id}.json`, `data/screening/${id}.json`])];
   navigator.serviceWorker.ready.then(reg => reg.active.postMessage({ type: "alles-speichern", urls }));
 }
 async function appButton() {
