@@ -61,7 +61,7 @@ Bei Rohwerten (kg, mmHg, Tage) wird die Größe nach praktischer Bedeutung einge
 
 - **Suche, „Was ist neu?“ und Glossar** lesen die Themen-JSON direkt. „Was ist neu?“ zeigt die `changelog`-Einträge aller Themen. Ein Eintrag gilt als „Einschätzung geändert“, wenn er Wörter wie „widerlegt“, „relativiert“, „abgestuft“, „korrigiert“ oder „zurückgezogen“ enthält. Solche Änderungen deshalb im Changelog ausdrücklich so benennen.
 - **Hinweis auf veraltete Studienlage:** Ist die neueste Quelle einer Wirkung oder eines Abschnitts älter als 8 Jahre, erscheint „Stand der Forschung: Jahr“. Neue Metaanalysen zu solchen Punkten haben Vorrang.
-- **Rechner:** Die Werte stehen in `index.html` (`CALC`) und müssen zu den `rx` der Themen passen. Ändert sich eine Dosisempfehlung, den Rechner mit anpassen.
+- **Für dich berechnet:** Die Werte stehen in `index.html` (`DOSIS`) und müssen zu den `rx` der Themen passen. Ändert sich eine Dosisempfehlung, `DOSIS` mit anpassen.
 
 ## Navigation (neue Themen einordnen)
 Die Seitenleiste hat drei Bereiche mit aufklappbaren Gruppen (`NAV` in `index.html`):
@@ -71,17 +71,17 @@ Die Seitenleiste hat drei Bereiche mit aufklappbaren Gruppen (`NAV` in `index.ht
 
 Zusätzlich: Startseite (`#start`) und „Mein Ziel“ (`#ziel`). Neue Themen in `GOALS` den passenden Zielen zuordnen.
 
-Ein neues Thema kommt in die passende bestehende Gruppe; eine neue Gruppe nur, wenn mindestens drei Themen hineinpassen. Supplemente zusätzlich in `SUPPS` eintragen. Der Titel in `NAV` soll dem Feld `title` der Themendatei entsprechen (bestimmt die Sortierung der Supplement-Übersicht). Der Haftungsausschluss (`DISCLAIMER`) steht auf der Supplement-Übersicht, im Rechner und unter `#hinweis`.
+Ein neues Thema kommt in die passende bestehende Gruppe; eine neue Gruppe nur, wenn mindestens drei Themen hineinpassen. Supplemente zusätzlich in `SUPPS` eintragen. Der Titel in `NAV` soll dem Feld `title` der Themendatei entsprechen (bestimmt die Sortierung der Supplement-Übersicht). Der Haftungsausschluss (`DISCLAIMER`) steht auf der Supplement-Übersicht, in jedem Abschnitt „Für dich berechnet“ und unter `#hinweis`.
 
 ## Einführung (Tour)
 `TOUR` in `index.html`: Schritte mit optionaler Seite (`page`), hervorzuhebendem Element (`sel`) und Text. Startet beim ersten Besuch, sonst über „? Hilfe“. Bei neuen Hauptfunktionen einen Schritt ergänzen bzw. Texte anpassen; ändert sich die Tour stark, `TOUR_KEY` hochzählen, damit alle sie neu sehen.
 
-## Rechner und App
-- Rechner-Karten (`CALC`) haben eine Bedingung `wann` je Trainingsart (kraft, intervall, ausdauer), Dauer, Wettkampf und Doppeleinheit. Neue Karten nur, wenn die Empfehlung für diese Trainingsart in den Quellen des Themas steht.
+## Für dich berechnet und App
+- „Für dich berechnet“ (`DOSIS` in `index.html`): Dosierungen nach Körpergewicht direkt im Thema, unter den Ableitungen. Nur Werte, die in den Ableitungen des Themas mit Quelle stehen; widersprüchliche oder nicht gewichtsbezogene Angaben nicht umrechnen. Testauswertungen (`TESTS`) stehen in Kraft- bzw. Ausdauerdiagnostik; Formeln nur, wenn sie wörtlich im Abstract stehen.
 - App/Offline (nur GitHub Pages): `sw.js` speichert auf Knopfdruck alle Themen und Register und erneuert sie bei jedem Online-Besuch. Bei Änderungen an `sw.js` die Konstante `CACHE` hochzählen.
 
 ## Profil „diagnostik“ im Register
-Für Diagnostik-Themen (Kraft-, Ausdauerdiagnostik) steht im Register `meta.profil = "diagnostik"`. Dann überspringt die Titelregel die Codes M (Messmethodik), C und K, weil gerade Reliabilitäts- und Validitätsstudien hier die Kernliteratur sind. Formeln im Rechner (Abschnitt „Leistungstests auswerten“) nur, wenn sie wörtlich im Abstract der zitierten Quelle stehen; Gültigkeitsbereich und Schätzfehler dazuschreiben.
+Für Diagnostik-Themen (Kraft-, Ausdauerdiagnostik) steht im Register `meta.profil = "diagnostik"`. Dann überspringt die Titelregel die Codes M (Messmethodik), C und K, weil gerade Reliabilitäts- und Validitätsstudien hier die Kernliteratur sind. Formeln zur Testauswertung nur, wenn sie wörtlich im Abstract der zitierten Quelle stehen; Gültigkeitsbereich und Schätzfehler dazuschreiben.
 
 ## Fehlermeldungen über GitHub
 Nutzer melden Fehler als GitHub-Issue (Vorlage „Fehler: <Thema>“, meist mit Label `fehler`). Bei jeder Aktualisierung alle offenen Issues lesen (`https://api.github.com/repos/BigBraffel/forschungsstand-sport/issues?state=open`). Meldungen werden **kritisch geprüft, bevor etwas geändert wird** – auch Meldende können sich irren:

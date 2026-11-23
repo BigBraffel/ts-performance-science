@@ -1,7 +1,7 @@
 {
  "id": "kreatin",
  "title": "Kreatin",
- "stand": "2026-11-20",
+ "stand": "2026-11-23",
  "lead": "Was bewirkt Kreatin bei Kraft, Muskelmasse, Ausdauer und Gehirnleistung, welche Dosis und Form sind sinnvoll, und ist es sicher? Zusammengefasst aus Metaanalysen und dem ISSN-Positionspapier.",
  "rxtitle": "Ableitungen für Ernährung und Training",
  "rxlead": "Für gesunde Erwachsene, die Krafttraining betreiben. Kreatin ist eines der am besten untersuchten Supplemente; die Wirkung entsteht vor allem in Kombination mit Training.",
@@ -14,8 +14,8 @@
   },
   {
    "label": "Dosis",
-   "value": "3–5 g pro Tag, ggf. 0,3 g/kg",
-   "text": "Mit etwa 7 g bzw. 0,3 g/kg pro Tag im Mittel rund 1 kg mehr fettfreie Masse als Training allein; höhere Dosen brachten keinen Zusatznutzen. Eine Ladephase (20 g/Tag, 5–7 Tage) war in vielen Studien üblich, bei Älteren hingen Kraftvorteile teilweise davon ab; bei Frauen nach der Menopause wirkten erst ≥ 5 g mit Training.",
+   "value": "3–5 g pro Tag",
+   "text": "Eine Metaanalyse nennt „etwa 7 g bzw. 0,3 g/kg pro Tag“ für rund 1 kg mehr fettfreie Masse als Training allein – die beiden Angaben passen nicht zusammen (0,3 g/kg wären bei 70 kg rund 21 g, also eher die übliche Ladedosis); höhere Dosen brachten keinen Zusatznutzen. Eine Ladephase (20 g/Tag, 5–7 Tage) war in vielen Studien üblich, bei Älteren hingen Kraftvorteile teilweise davon ab; bei Frauen nach der Menopause wirkten erst ≥ 5 g mit Training.",
    "cite": "Desai et al. 2024; Zhang et al. 2025; Forbes et al. 2021; Naddafha et al. 2026"
   },
   {
@@ -629,6 +629,10 @@
   }
  ],
  "changelog": [
+  {
+   "d": "23.11.2026",
+   "t": "Dosis-Ableitung präzisiert: Die Angabe „7 g bzw. 0,3 g/kg“ aus Desai et al. (2024) ist in sich widersprüchlich; empfohlen bleiben 3–5 g pro Tag."
+  },
   {
    "d": "20.11.2026",
    "t": "PubMed: 1 neuer Eintrag gesichtet, 1 aufgenommen, 0 Vormerkungen ausgewertet. Narrativer Review zu Erholungssupplementen (Conti et al., 2026) im Abschnitt „Entzündung und Erholung“ ergänzt; Einstufungen unverändert, da keine gepoolten Daten."
