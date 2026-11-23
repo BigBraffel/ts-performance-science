@@ -221,7 +221,7 @@ td.r, th.r { text-align: right; }
   .toc { flex-direction: row; flex-wrap: wrap; }
   .figs { grid-template-columns: 1fr; }
   .side .menu-btn { display: inline-flex; }
-  .side:not(.open) > nav:not(.tools), .side:not(.open) > .side-note { display: none; }
+  .side:not(.open) > nav:not(.tools), .side:not(.open) > .side-note, .side:not(.open) > .app-box { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 html { scroll-behavior: smooth; }
@@ -244,6 +244,8 @@ html { scroll-behavior: smooth; }
 .tools a.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
 .side-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
 .menu-btn { display: none; align-items: center; gap: 6px; font: inherit; font-size: .85rem; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+.app-box { display: flex; flex-direction: column; gap: 6px; }
+.app-box .btn-primary { font-size: .85rem; padding: 8px 12px; }
 .side-note { margin: auto 0 0; font-size: .75rem; color: var(--ink-3); }
 .popup { max-width: 640px; width: calc(100% - 32px); max-height: calc(100vh - 48px); overflow-y: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); color: var(--ink); padding: 22px; box-sizing: border-box; }
 .popup::backdrop { background: rgba(0, 0, 0, .6); }
@@ -262,7 +264,7 @@ html { scroll-behavior: smooth; }
 .area-card p { margin: 4px 0; font-size: .9rem; line-height: 1.6; }
 .start-cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 6px 0 4px; }
 .btn-primary { text-decoration: none; display: inline-block; }
-.btn-line { display: inline-block; text-decoration: none; color: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 8px 16px; font-weight: 500; }
+.btn-line { font: inherit; background: none; cursor: pointer; display: inline-block; text-decoration: none; color: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 8px 16px; font-weight: 500; }
 .plain-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .plain-list li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: start; }
 .plain-list small { display: block; color: var(--ink-3); font-size: .8rem; }
@@ -285,7 +287,19 @@ table.cmp td { vertical-align: top; width: 41%; }
 .verdict.e0 { background: var(--e0); } .verdict.em { background: var(--em); color: #2a2410; }
 .tools .toggle { font: inherit; font-size: .8rem; color: var(--ink-2); background: none; border: 1px dashed var(--line); border-radius: 99px; padding: 4px 10px; cursor: pointer; }
 .tools .toggle[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
-body.einfach .crit-box, body.einfach #methodik, body.einfach .mx-evi, body.einfach .lvl, body.einfach .table-view, body.einfach .old-note { display: none; }
+.simple-hint { font-size: .85rem; color: var(--ink-3); margin: 0 0 4px; }
+.linkbtn { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
+.simple h1 { margin-top: 4px; }
+.simple .lead { font-size: 1.1rem; max-width: 70ch; }
+.simple-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.simple-cards .card { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.simple-cards h3 { margin: 0; font-size: 1.05rem; }
+.simple-cards p { margin: 0; color: var(--ink-2); }
+.simple-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.simple-list h3 { margin: 0 0 10px; font-size: 1rem; }
+.simple-list ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.simple-list li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: center; }
+.simple-list.ok { border-top: 3px solid var(--e1); } .simple-list.no { border-top: 3px solid var(--e0); } .simple-list.warn { border-top: 3px solid var(--e4); }
 .disclaimer { border-left: 4px solid var(--warn); background: var(--warn-bg); display: flex; flex-direction: column; gap: 8px; }
 .disclaimer h2, .disclaimer h3 { margin: 0; font-size: 1rem; }
 .disclaimer p { margin: 0; max-width: 95ch; font-size: .9rem; color: var(--ink); }
@@ -415,6 +429,8 @@ ol.findings .lvl { font-size: .72rem; font-weight: 600; letter-spacing: .03em; t
 .news .contra { font-size: .7rem; font-weight: 700; color: var(--warn); background: var(--warn-bg); border-radius: 99px; padding: 1px 8px; margin-left: 8px; }
 .calc-in { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 18px; }
 .calc-in label { display: flex; flex-direction: column; gap: 6px; font-size: .85rem; color: var(--ink-2); }
+.calc-in label.chk { flex-direction: row; align-items: center; gap: 10px; font-size: .95rem; color: var(--ink); }
+.calc-in label.chk input { width: 20px; height: 20px; padding: 0; }
 .calc-in input, .calc-in select { font: inherit; font-size: 1.1rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
 .calc { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
 .calc .card { display: flex; flex-direction: column; gap: 6px; border-top: 3px solid var(--accent); }
@@ -444,6 +460,7 @@ ol.findings .lvl { font-size: .72rem; font-weight: 600; letter-spacing: .03em; t
       <h4>Auf dieser Seite</h4>
       <ul class="toc" id="toc"></ul>
     </nav>
+    <div class="app-box" id="app-box" hidden><button type="button" class="btn-primary" data-app>📲 App installieren und offline speichern</button><span class="cap" id="app-status"></span></div>
     <p class="side-note">Automatisch erstellt, ohne Gewähr. <a href="#hinweis">Haftungsausschluss</a></p>
   </aside>
   <main id="main"></main>
@@ -565,8 +582,8 @@ function navItem(it, cur) {
 }
 function renderNav(cur) {
   $("nav-tools").innerHTML = TOOLS.map(t => `<a href="#${t.id}"${t.id === cur ? ' class="active" aria-current="page"' : ""}>${t.title}</a>`).join("")
-    + `<button type="button" id="einfach-btn" class="toggle" aria-pressed="${einfach}" title="Statistik und Zitate im Text ausblenden">Einfach erklärt</button>`;
-  $("einfach-btn").addEventListener("click", () => { einfach = !einfach; try { localStorage.setItem("fs-einfach", einfach ? "1" : "0"); } catch (e) {} load(); });
+    + `<button type="button" id="einfach-btn" class="toggle" aria-pressed="${einfach}" title="Nur das Wichtigste, ohne Statistik und Quellen">${einfach ? "✓ Einfach erklärt" : "Einfach erklärt"}</button>`;
+  $("einfach-btn").addEventListener("click", () => setEinfach(!einfach));
   $("nav-topics").innerHTML = NAV.map(g => `<h4>${g.group}</h4><ul class="topics">${g.items.map(it => {
     if (!it.children) return navItem(it, cur);
     const open = it.children.some(c => c.id === cur);
@@ -584,6 +601,7 @@ document.addEventListener("click", (e) => { const b = e.target.closest("[data-sc
 /* ----- Laden ----- */
 async function load() {
   const r = routeOf(location.hash);
+  if (r.topic !== "suche") $("q").value = "";
   renderNav(location.hash.replace("#", "") || r.topic);
   const PAGE_FN = { supplemente: renderSupOverview, suche: renderSearch, neu: renderNews, rechner: renderCalc, glossar: renderGlossar, hinweis: renderHinweis,
     start: renderStart, ziel: renderZiel, mythen: renderMythen, vergleich: renderVergleich, sicherheit: renderSicherheit };
@@ -594,7 +612,7 @@ async function load() {
     catch (e) { $("main").innerHTML = `<section><div class="card empty"><h2>Thema konnte nicht geladen werden</h2><p>Bitte die Seite neu laden.</p></div></section>`; return; }
   }
   T = cache[r.topic]; active = "alle";
-  renderTopic(T);
+  if (einfach) await renderSimple(T); else renderTopic(T);
   applyEinfach();
   applyGlossar($("main"));
   document.title = `Forschungsstand ${T.title}`;
@@ -1085,7 +1103,7 @@ async function renderStart() {
     <div class="status-bar"><span><b>Stand:</b> ${fmtDate(stand)}</span><span><b>Themen:</b> <span class="num">${tops.length}</span></span><span><b>Quellen:</b> <span class="num">${fmtInt(nS)}</span></span><span><b>Aktualisierung:</b> alle 2 Wochen automatisch aus PubMed</span></div>
     <h1>Forschungsstand Sport</h1>
     <p class="lead">Was sagt die Wissenschaft zu Training, Ernährung und Supplementen? Jede Aussage stützt sich auf Studien – vor allem Metaanalysen und systematische Reviews –, ist kritisch eingeordnet und wird automatisch aktualisiert, wenn neue Forschung erscheint.</p>
-    <div class="start-cta"><a class="btn-primary" href="#ziel">Nach Ziel einsteigen →</a><a class="btn-line" href="#supplemente">Alle Supplemente vergleichen</a></div>
+    <div class="start-cta"><a class="btn-primary" href="#ziel">Nach Ziel einsteigen →</a><a class="btn-line" href="#supplemente">Alle Supplemente vergleichen</a>${PWA ? `<button type="button" class="btn-line" data-app>📲 Als App installieren und offline speichern</button>` : ""}</div>
     <h2>Bereiche</h2>
     <div class="area-grid">${NAV.map(g => `<div class="card area-card"><h3>${g.group}</h3>${g.items.map(it => it.children ? `<p><b>${it.title}:</b> ${it.children.filter(c => !c.var).map(c => `<a href="#${c.id}">${c.title}</a>`).join(" · ")}</p>` : `<p><a href="#${it.id}"><b>${it.title}</b></a></p>`).join("")}</div>`).join("")}</div>
     <h2>Gut belegte Kernaussagen</h2>
@@ -1154,7 +1172,7 @@ const VERDICT = { "falsch": ["e4", "Falsch"], "stark übertrieben": ["e3", "Star
 async function renderMythen() {
   $("toc").innerHTML = ""; document.title = "Mythen-Check – Forschungsstand Sport";
   $("main").innerHTML = `<section><h1>Mythen-Check</h1><p class="cap">Wird geladen …</p></section>`;
-  const [M] = await Promise.all([fetch("data/mythen.json").then(r => r.json()), loadAll()]);
+  if (!MYTHEN) MYTHEN = await fetch("data/mythen.json").then(r => r.json()); const M = MYTHEN; await loadAll();
   $("main").innerHTML = `<section>
     <h1>Mythen-Check</h1>
     <p class="lead">Verbreitete Behauptungen aus Gym, Laufgruppe und Social Media – geprüft an der Studienlage. Jede Einschätzung stützt sich auf die Quellen des jeweiligen Themas.</p>
@@ -1179,6 +1197,34 @@ function applyEinfach() {
     el.dataset.simple = "1"; el.innerHTML = el.innerHTML.replace(STAT, "");
   });
 }
+
+/* Einfache Themenansicht: eigenes, reduziertes Layout statt der Detailseite */
+let MYTHEN = null;
+async function renderSimple(t) {
+  if (!MYTHEN) MYTHEN = await fetch("data/mythen.json").then(r => r.json()).catch(() => ({ items: [] }));
+  const plain = (x) => strip(String(x || "")).replace(STAT, "");
+  const myths = MYTHEN.items.filter(m => m.topic === t.id);
+  const items = t.matrix ? allItems([t]) : [];
+  const grp = (f) => items.filter(f).sort((a, b) => rank(a) - rank(b));
+  const hilft = grp(i => i.b === "nutzen" && i.m !== 0 && i.m != null), nicht = grp(i => i.m === 0 || i.g === "0"), vorsicht = grp(i => i.b === "schaden" && i.m !== 0);
+  const list = (h, l, cls) => l.length ? `<div class="card simple-list ${cls}"><h3>${h}</h3><ul>${l.map(i => `<li>${lt1(i)}<span>${i.n}</span></li>`).join("")}</ul></div>` : "";
+  $("main").innerHTML = `<section id="ueberblick" class="simple">
+    <p class="simple-hint">Einfache Ansicht · Stand ${fmtDate(t.stand)} · <button type="button" class="linkbtn" data-detail>Alle Details und Quellen anzeigen</button></p>
+    <h1>${t.title}</h1>
+    ${t.def ? `<p class="lead">${plain(t.def.t)}</p>` : ""}
+    <h2>Das Wichtigste</h2>
+    <div class="simple-cards">${t.takeaways.map(k => `<div class="card"><span class="pill ev-${k.ev}">Evidenz ${k.ev}</span><h3>${plain(k.t)}</h3><p>${plain(k.p)}</p></div>`).join("")}</div>
+    ${items.length ? `<h2 id="wirkung">Wobei hilft es?</h2><p class="cap">Buchstabe = wie gut belegt (A sehr gut … D wenig), Farbe = Effekt.</p><div class="simple-grid">${list("Hilft", hilft, "ok")}${list("Hilft nicht", nicht, "no")}${list("Vorsicht", vorsicht, "warn")}</div>` : ""}
+    <h2 id="ableitungen">Was heißt das für dich?</h2>
+    <div class="rx">${t.rx.map(c => `<div class="card"><span class="label">${c.label}</span><span class="value">${c.value}</span><p>${plain(c.text)}</p></div>`).join("")}</div>
+    ${myths.length ? `<h2>Mythen zu diesem Thema</h2><div class="myth-list">${myths.map(m => `<div class="card myth"><div class="myth-head"><span class="verdict ${VERDICT[m.v][0]}">${VERDICT[m.v][1]}</span></div><h3>„${m.m}“</h3><p>${m.t}</p></div>`).join("")}</div>` : ""}
+    <div class="card report"><p>Die Inhalte werden mit KI erstellt und können Fehler enthalten. Alle Zahlen, Quellen und die kritische Einordnung stehen in der Detailansicht.</p><div class="start-cta"><button type="button" class="btn-primary" data-detail>Detailansicht öffnen</button>${reportLink(t)}</div></div>
+  </section>`;
+  $("toc").innerHTML = [["ueberblick", "Das Wichtigste"], ...(items.length ? [["wirkung", "Wobei hilft es?"]] : []), ["ableitungen", "Für dich"]].map(([i, l]) => `<li><button type="button" data-scroll="${i}">${l}</button></li>`).join("");
+}
+/* per Delegation, weil applyGlossar die Absätze neu schreibt */
+document.addEventListener("click", (e) => { if (e.target.closest("[data-detail]")) setEinfach(false); });
+function setEinfach(on) { einfach = on; try { localStorage.setItem("fs-einfach", on ? "1" : "0"); } catch (e) {} load(); }
 
 /* --- Hinweise und Haftungsausschluss --- */
 const DISCLAIMER = [
@@ -1208,36 +1254,53 @@ function renderHinweis() {
 
 /* --- Rechner --- */
 const fmtK = (x, d = 0) => Number(x).toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
+/* Rechner: Karten mit Bedingung (wann). ctx = { kg, art: "kraft" | "intervall" | "ausdauer", min, wk (Wettkampf), doppel (2. Einheit < 4 h) } */
+const sm = (t) => ` <small style="font-size:.9rem;font-weight:500">${t}</small>`;
 const CALC = [
-  { lbl: "Protein pro Tag", topic: "protein", go: "ableitungen", f: (kg) => `${fmtK(kg * 1.6)} g`, p: "Etwa 1,6 g pro kg Körpergewicht und Tag; darüber brachte zusätzliches Protein im Mittel keinen weiteren Zuwachs an fettfreier Masse.", cite: "Morton et al., 2018; Tagawa et al., 2020" },
-  { lbl: "Protein pro Mahlzeit", topic: "protein", go: "ableitungen", f: () => "20–40 g", p: "Auf mehrere Mahlzeiten über den Tag verteilt; 30–40 g Casein vor dem Schlafen erhöhen die nächtliche Muskelproteinsynthese.", cite: "Jäger et al., 2017" },
-  { lbl: "Kreatin pro Tag", topic: "kreatin", go: "ableitungen", f: (kg) => `3–5 g <small style="font-size:.9rem;font-weight:500">(0,3 g/kg = ${fmtK(kg * 0.3)} g)</small>`, p: "Kreatin-Monohydrat, kombiniert mit Krafttraining; höhere Dosen brachten keinen Zusatznutzen. Eine Ladephase (20 g/Tag für 5–7 Tage) ist möglich, aber nicht nötig.", cite: "Desai et al., 2024; Forbes et al., 2021; Kreider et al., 2017" },
-  { lbl: "Koffein vor der Belastung", topic: "koffein", go: "ableitungen", f: (kg) => `${fmtK(kg * 3)} mg <small style="font-size:.9rem;font-weight:500">(Spanne ${fmtK(kg * 2)}–${fmtK(kg * 6)} mg)</small>`, p: "Etwa 3 mg/kg rund 60 Minuten vorher; für Krafttraining wirkten schon 0,9–2 mg/kg. Ab 9 mg/kg kein Zusatznutzen, aber mehr Nebenwirkungen. Bei Abendtraining an den Schlaf denken.", cite: "Guest et al., 2021; Xue et al., 2025; Gardiner et al., 2023" },
-  { lbl: "Kohlenhydrate während der Belastung", topic: "kohlenhydrate", go: "ableitungen", f: (kg, h) => h < 1 ? "kaum nötig" : h <= 2.5 ? `30–60 g/h <small style="font-size:.9rem;font-weight:500">(gesamt ${fmtK(30 * h)}–${fmtK(60 * h)} g)</small>` : `bis 90 g/h <small style="font-size:.9rem;font-weight:500">(gesamt bis ${fmtK(90 * h)} g)</small>`, p: "Bei Einheiten über etwa 1 Stunde 30–60 g/h; über 2,5 Stunden bis 90 g/h als Mischung aus Glukose und Fruktose. Bei rund 1 Stunde genügen kleine Mengen oder eine Mundspülung.", cite: "Burke et al., 2011; Temesi et al., 2011; Stellingwerff & Cox, 2014" },
-  { lbl: "Carb-Loading vor dem Wettkampf", topic: "kohlenhydrate", go: "ableitungen", f: (kg) => `über ${fmtK(kg * 8)} g/Tag`, p: "Mehr als 8 g/kg/Tag für 36–48 Stunden füllt die Glykogenspeicher; lohnt sich vor allem bei Wettkämpfen über 90 Minuten.", cite: "Jones et al., 2026; Hawley et al., 1997" },
-  { lbl: "Kohlenhydrate bei kurzer Erholungspause", topic: "kohlenhydrate", go: "ableitungen", f: (kg) => `ca. ${fmtK(kg * 1.2)} g/h`, p: "Liegen weniger als 4 Stunden zwischen zwei Einheiten: etwa 1,2 g/kg/h, zusammen mit Flüssigkeit.", cite: "Kerksick et al., 2017; McCartney et al., 2018" },
-  { lbl: "Beta-Alanin pro Tag", topic: "beta-alanin", go: "ableitungen", f: () => "4–6 g", p: "Über mindestens 2–4 Wochen, aufgeteilt auf Einzeldosen von höchstens 1,6 g gegen das harmlose Kribbeln. Wirkt vor allem bei Belastungen von 30 Sekunden bis 10 Minuten.", cite: "Trexler et al., 2015; Saunders et al., 2017" },
-  { lbl: "Nitrat (Rote-Bete-Saft)", topic: "nitrat", go: "ableitungen", f: () => "5–15 mmol", p: "Etwa 2–3 Stunden vor der Belastung oder über mehrere Tage; Nutzen vor allem bei Freizeitsportlern, kaum bei Hochtrainierten.", cite: "Silva et al., 2022; Tian et al., 2025" }
+  { lbl: "Protein pro Tag", topic: "protein", wann: c => c.art !== "ausdauer", f: c => `${fmtK(c.kg * 1.6)} g`, p: "Etwa 1,6 g pro kg Körpergewicht und Tag; darüber brachte zusätzliches Protein im Mittel keinen weiteren Zuwachs an fettfreier Masse. Gilt für Maximalkraft und Muskelaufbau gleichermaßen.", cite: "Morton et al., 2018; Tagawa et al., 2020" },
+  { lbl: "Protein pro Mahlzeit", topic: "protein", wann: c => c.art !== "ausdauer", f: () => "20–40 g", p: "Auf mehrere Mahlzeiten über den Tag verteilt; 30–40 g Casein vor dem Schlafen erhöhen die nächtliche Muskelproteinsynthese.", cite: "Jäger et al., 2017" },
+  { lbl: "Kreatin pro Tag", topic: "kreatin", wann: c => c.art !== "ausdauer", f: c => `3–5 g` + sm(`(0,3 g/kg = ${fmtK(c.kg * 0.3)} g)`), p: "Kreatin-Monohydrat, kombiniert mit Krafttraining; höhere Dosen brachten keinen Zusatznutzen. Bei wiederholten Sprints stieg die mittlere Leistung, für Ausdauer und VO₂max brachte Kreatin nichts.", cite: "Desai et al., 2024; Forbes et al., 2021; Kreider et al., 2017" },
+  { lbl: "Koffein vor dem Krafttraining", topic: "koffein", wann: c => c.art === "kraft", f: c => `${fmtK(c.kg * 0.9)}–${fmtK(c.kg * 2)} mg` + sm("(0,9–2 mg/kg)"), p: "Schon niedrige Dosen steigerten Kraft, Kraftausdauer und Bewegungsgeschwindigkeit leicht. Etwa 60 Minuten vorher; bei Abendtraining an den Schlaf denken.", cite: "Grgic, 2022; Gardiner et al., 2023" },
+  { lbl: "Koffein vor der Belastung", topic: "koffein", wann: c => c.art !== "kraft", f: c => `${fmtK(c.kg * 3)} mg` + sm(`(Spanne ${fmtK(c.kg * 2)}–${fmtK(c.kg * 6)} mg)`), p: "Etwa 3 mg/kg rund 60 Minuten vorher; Ausdauer profitiert am deutlichsten. Ab 9 mg/kg kein Zusatznutzen, aber mehr Nebenwirkungen. Bei Abendtraining an den Schlaf denken.", cite: "Guest et al., 2021; Xue et al., 2025; Gardiner et al., 2023" },
+  { lbl: "Kohlenhydrate", topic: "kohlenhydrate", wann: c => c.art === "kraft", f: () => "keine Sondermenge", p: "Bei üblichem Volumen (bis etwa 10 Sätze pro Muskelgruppe) verbesserten mehr Kohlenhydrate weder die Kraftleistung noch das Muskelwachstum; die Studienlage ist klein.", cite: "Henselmans et al., 2022; Henselmans et al., 2026" },
+  { lbl: "Beta-Alanin pro Tag", topic: "beta-alanin", wann: c => c.art === "intervall" || (c.art === "ausdauer" && c.min <= 10), f: () => "4–6 g", p: "Über mindestens 2–4 Wochen, aufgeteilt auf Einzeldosen von höchstens 1,6 g gegen das harmlose Kribbeln. Wirkt vor allem bei Belastungen von 30 Sekunden bis 10 Minuten.", cite: "Trexler et al., 2015; Saunders et al., 2017" },
+  { lbl: "Natriumbicarbonat", topic: "natriumbicarbonat", wann: c => c.art === "intervall", f: c => `${fmtK(c.kg * 0.2)}–${fmtK(c.kg * 0.3)} g` + sm("(0,2–0,3 g/kg)"), p: "60–180 Minuten vorher; kleiner, verlässlicher Gewinn bei hochintensiven Belastungen ab etwa 30 Sekunden, nicht für Maximalkraft oder Einzelsprints. Magen-Darm-Beschwerden sind häufig – immer erst im Training testen.", cite: "Grgic et al., 2021; Miller et al., 2025" },
+  { lbl: "Kohlenhydrate während der Belastung", topic: "kohlenhydrate", wann: c => c.art === "ausdauer", f: c => { const h = c.min / 60; return h < 1 ? "kaum nötig" + sm("(Mundspülung möglich)") : h <= 2.5 ? `30–60 g/h` + sm(`(gesamt ${fmtK(30 * h)}–${fmtK(60 * h)} g)`) : `bis 90 g/h` + sm(`(gesamt bis ${fmtK(90 * h)} g)`); }, p: "Bei Einheiten über etwa 1 Stunde 30–60 g/h; über 2,5 Stunden bis 90 g/h als Mischung aus Glukose und Fruktose. Bei rund 1 Stunde genügen kleine Mengen oder eine Mundspülung.", cite: "Burke et al., 2011; Temesi et al., 2011; Stellingwerff & Cox, 2014" },
+  { lbl: "Trinken während der Belastung", topic: "fluessigkeit", wann: c => c.art === "ausdauer" && c.min >= 60, f: () => "nach Durst", p: "Trinken nach Durst brachte dieselbe Leistung wie ein fester Trinkplan; übermäßiges Trinken birgt das Risiko einer Hyponatriämie. In warmer Umgebung halfen Kohlenhydrat-Elektrolyt-Getränke.", cite: "Goulet & Hoffman, 2019; McDermott et al., 2017; Wang et al., 2026" },
+  { lbl: "Carb-Loading vor dem Wettkampf", topic: "kohlenhydrate", wann: c => c.art === "ausdauer" && c.wk && c.min > 90, f: c => `über ${fmtK(c.kg * 8)} g/Tag`, p: "Mehr als 8 g/kg/Tag für 36–48 Stunden füllt die Glykogenspeicher; lohnt sich vor allem bei Wettkämpfen über 90 Minuten.", cite: "Jones et al., 2026; Hawley et al., 1997" },
+  { lbl: "Nitrat (Rote-Bete-Saft)", topic: "nitrat", wann: c => c.art === "ausdauer", f: () => "5–15 mmol", p: "Etwa 2–3 Stunden vor der Belastung oder über mehrere Tage; Nutzen vor allem bei Freizeitsportlern, kaum bei Hochtrainierten.", cite: "Silva et al., 2022; Tian et al., 2025" },
+  { lbl: "Kohlenhydrate bei kurzer Erholungspause", topic: "kohlenhydrate", wann: c => c.doppel, f: c => `ca. ${fmtK(c.kg * 1.2)} g/h`, p: "Liegen weniger als 4 Stunden zwischen zwei Einheiten: etwa 1,2 g/kg/h, zusammen mit Flüssigkeit.", cite: "Kerksick et al., 2017; McCartney et al., 2018" }
 ];
+const ARTEN = [["kraft", "Krafttraining", "Maximalkraft oder Muskelaufbau"], ["intervall", "Kraftausdauer und Intervalle", "hochintensiv, 30 Sekunden bis 10 Minuten"], ["ausdauer", "Ausdauer", "Laufen, Rad, Schwimmen, Rudern …"]];
 function renderCalc() {
   $("toc").innerHTML = ""; document.title = "Rechner – Forschungsstand Sport";
-  let kg = 75, h = 1.5; try { kg = +localStorage.getItem("fs-kg") || kg; h = +localStorage.getItem("fs-h") || h; } catch (e) {}
-  const avail = CALC.filter(c => AVAILABLE.includes(c.topic)).concat(window.EXTRA_CALC || []);
+  let st = { kg: 75, art: "kraft", min: 90, wk: false, doppel: false };
+  try { st = { ...st, ...JSON.parse(localStorage.getItem("fs-rechner") || "{}") }; } catch (e) {}
   $("main").innerHTML = `<section>
     <h1>Rechner</h1>
-    <p class="lead">Rechnet die Empfehlungen aus den Ableitungen dieser Website auf dein Körpergewicht um. Die Werte stammen aus Studien mit gesunden Erwachsenen und sind Richtwerte, keine individuelle Beratung. Bei Erkrankungen, Medikamenten oder Schwangerschaft vorher ärztlich abklären.</p>
+    <p class="lead">Rechnet die Empfehlungen aus den Ableitungen dieser Website auf dich und dein Training um. Es erscheinen nur Angaben, die für die gewählte Trainingsart in Studien untersucht wurden. Richtwerte für gesunde Erwachsene, keine individuelle Beratung.</p>
     ${disclaimerHTML(true)}
     <div class="calc-in">
-      <label>Körpergewicht in kg<input type="number" id="c-kg" min="30" max="250" step="1" value="${kg}" inputmode="decimal"></label>
-      <label>Dauer der Belastung in Stunden<input type="number" id="c-h" min="0" max="24" step="0.25" value="${h}" inputmode="decimal"></label>
+      <label>Körpergewicht in kg<input type="number" id="c-kg" min="30" max="250" step="1" value="${st.kg}" inputmode="decimal"></label>
     </div>
+    <div class="filters" role="group" aria-label="Trainingsart" id="c-art">${ARTEN.map(([id, t, d]) => `<button type="button" data-f="${id}" aria-pressed="${id === st.art}" title="${d}">${t}</button>`).join("")}</div>
+    <p class="cap" id="c-art-d"></p>
+    <div class="calc-in" id="c-aus">
+      <label>Dauer der Einheit in Minuten<input type="number" id="c-min" min="1" max="1440" step="5" value="${st.min}" inputmode="numeric"></label>
+      <label class="chk"><input type="checkbox" id="c-wk"${st.wk ? " checked" : ""}> Wettkampf (nicht Training)</label>
+    </div>
+    <div class="calc-in"><label class="chk"><input type="checkbox" id="c-dop"${st.doppel ? " checked" : ""}> Zweite Einheit am selben Tag, weniger als 4 Stunden Pause</label></div>
     <div class="calc" id="c-out"></div></section>`;
   const draw = () => {
-    const k = Math.min(250, Math.max(30, +$("c-kg").value || 0)), hh = Math.max(0, +$("c-h").value || 0);
-    try { localStorage.setItem("fs-kg", String(k)); localStorage.setItem("fs-h", String(hh)); } catch (e) {}
-    $("c-out").innerHTML = avail.map(c => `<div class="card"><span class="lbl">${c.lbl}</span><span class="val">${c.f(k, hh)}</span><p>${c.p}</p><span class="cite">[${escH(c.cite)}] · <a href="#${c.topic}" data-goto="${c.go}">Zum Thema →</a></span></div>`).join("");
+    st = { kg: Math.min(250, Math.max(30, +$("c-kg").value || 75)), art: st.art, min: Math.max(1, +$("c-min").value || 60), wk: $("c-wk").checked, doppel: $("c-dop").checked };
+    try { localStorage.setItem("fs-rechner", JSON.stringify(st)); } catch (e) {}
+    $("c-art").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.f === st.art)));
+    $("c-art-d").textContent = ARTEN.find(a => a[0] === st.art)[2] + (st.art === "kraft" ? ". Für Maximalkraft und Muskelaufbau unterscheiden sich die Empfehlungen zu Ernährung und Supplementen laut Studienlage nicht." : "");
+    $("c-aus").hidden = st.art !== "ausdauer";
+    $("c-out").innerHTML = CALC.filter(c => AVAILABLE.includes(c.topic) && c.wann(st)).map(c => `<div class="card"><span class="lbl">${c.lbl}</span><span class="val">${c.f(st)}</span><p>${c.p}</p><span class="cite">[${escH(c.cite)}] · <a href="#${c.topic}" data-goto="ableitungen">Zum Thema →</a></span></div>`).join("");
   };
-  $("c-kg").addEventListener("input", draw); $("c-h").addEventListener("input", draw);
+  $("c-art").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { st.art = b.dataset.f; draw(); } });
+  $("main").querySelectorAll("#c-kg, #c-min, #c-wk, #c-dop").forEach(el => el.addEventListener("input", draw));
   draw(); renderTests(); window.scrollTo(0, 0);
 }
 
@@ -1265,15 +1328,15 @@ function renderTests() {
         <span class="cite">[George et al., 1993] · <a href="#ausdauerdiagnostik">Ausdauerdiagnostik</a></span></div>
     </div>`;
   $("main").appendChild(box);
-  const num = (id) => +$(id).value || 0, small = (t) => ` <small style="font-size:.9rem;font-weight:500">${t}</small>`;
+  const num = (id) => +$(id).value || 0;
   const draw = () => {
     const lp = $("t-ex").value === "lp", r5 = num("t-5rm");
-    $("t-1rm").innerHTML = `ca. ${fmtK(lp ? 1.0970 * r5 + 14.2546 : 1.1307 * r5 + 0.6999)} kg` + small(`± ${lp ? "16,2" : "3,0"} kg Schätzfehler`);
+    $("t-1rm").innerHTML = `ca. ${fmtK(lp ? 1.0970 * r5 + 14.2546 : 1.1307 * r5 + 0.6999)} kg` + sm(`± ${lp ? "16,2" : "3,0"} kg Schätzfehler`);
     $("t-1rm-p").textContent = `Formel aus einer Validierungsstudie mit 70 Erwachsenen (18–69 Jahre). ${lp ? "Bei der Beinpresse ist die Schätzung deutlich ungenauer." : "Beim Bankdrücken sehr genau (R² = 0,99)."} Für lineare Schätzformeln höchstens 10 Wiederholungen verwenden.`;
     const X = 8 + 0.5 * num("t-st"), A = 18;
-    $("t-sr").innerHTML = `ca. ${fmtK(31.025 + 3.238 * X - 3.248 * A + 0.1536 * A * X)} ml/kg/min` + small(`(Endgeschwindigkeit ${String(X).replace(".", ",")} km/h)`);
+    $("t-sr").innerHTML = `ca. ${fmtK(31.025 + 3.238 * X - 3.248 * A + 0.1536 * A * X)} ml/kg/min` + sm(`(Endgeschwindigkeit ${String(X).replace(".", ",")} km/h)`);
     const kg = Math.min(250, Math.max(30, +$("c-kg").value || 75)), m = num("t-min"), hr = num("t-hr"), sex = +$("t-sex").value;
-    $("t-mile").innerHTML = `ca. ${fmtK(100.5 + 8.344 * sex - 0.1636 * kg - 1.438 * m - 0.1928 * hr)} ml/kg/min` + small("± 3 ml/kg/min Schätzfehler");
+    $("t-mile").innerHTML = `ca. ${fmtK(100.5 + 8.344 * sex - 0.1636 * kg - 1.438 * m - 0.1928 * hr)} ml/kg/min` + sm("± 3 ml/kg/min Schätzfehler");
     const warn = [];
     if (m < (sex ? 8 : 9)) warn.push(`Zeit unter ${sex ? 8 : 9} Minuten: Die Formel gilt nur für ein lockeres Tempo.`);
     if (hr > 180) warn.push("Herzfrequenz über 180: außerhalb des Gültigkeitsbereichs.");
@@ -1522,10 +1585,36 @@ const CHARTS = {
     mount(id, s, table(["Stufe", "Wert"], rows.map(d => [d.l, d.v === null ? "kein sicherer Zusatznutzen" : d.v === 0 ? "bereits wirksam" : d.txt])));
   }
 };
+/* App und Offline-Modus, nur auf GitHub Pages (die claude.ai-Fassung unterstützt keinen Service Worker) */
+const PWA = "serviceWorker" in navigator && (location.hostname.endsWith("github.io") || location.hostname === "localhost");
+let installEvt = null;
+window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installEvt = e; });
+const appText = () => { const o = offlineInfo(); return o ? `Offline gespeichert am ${new Date(o.datum).toLocaleDateString("de-DE")} (${o.ok} Dateien); wird bei jedem Besuch mit Internet aktualisiert.` : "Speichert alle Themen auf dem Gerät, damit die Seite auch ohne Internet funktioniert."; };
+function offlineInfo() { try { return JSON.parse(localStorage.getItem("fs-offline") || "null"); } catch (e) { return null; } }
+function speichernAlles() {
+  const urls = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "data/mythen.json", ...AVAILABLE.flatMap(id => [`data/topics/${id}.json`, `data/screening/${id}.json`])];
+  navigator.serviceWorker.ready.then(reg => reg.active.postMessage({ type: "alles-speichern", urls }));
+}
+async function appButton() {
+  if (installEvt) { installEvt.prompt(); await installEvt.userChoice; installEvt = null; }
+  else if (/iPhone|iPad|iPod/.test(navigator.userAgent) && !matchMedia("(display-mode: standalone)").matches) alert("Auf dem iPhone: In Safari unten auf „Teilen“ tippen und „Zum Home-Bildschirm“ wählen.");
+  $("app-status").textContent = "Wird gespeichert …"; speichernAlles();
+  if (!$("app-box").checkVisibility()) alert("Die Seite wird jetzt auf dem Gerät gespeichert und funktioniert danach auch ohne Internet.");
+}
+if (PWA) {
+  $("app-box").hidden = false; $("app-status").textContent = appText(); document.addEventListener("click", (e) => { if (e.target.closest("[data-app]")) appButton(); });
+  navigator.serviceWorker.register("sw.js").catch(() => {});
+  navigator.serviceWorker.addEventListener("message", (e) => {
+    if (e.data?.type !== "gespeichert") return;
+    const info = { datum: new Date().toISOString(), ok: e.data.ok };
+    try { localStorage.setItem("fs-offline", JSON.stringify(info)); } catch (err) {}
+    if ($("app-status")) $("app-status").textContent = appText();
+  });
+  /* Wer schon offline gespeichert hat, bekommt bei jedem Online-Besuch automatisch den neuesten Stand */
+  if (offlineInfo() && navigator.onLine) speichernAlles();
+}
 load();
 showPopup();
-/* Installierbar und offline lesbar, nur auf GitHub Pages (claude.ai-Fassung unterstützt keinen Service Worker) */
-if ("serviceWorker" in navigator && location.hostname.endsWith("github.io")) navigator.serviceWorker.register("sw.js").catch(() => {});
 </script>
 </body>
 </html>
