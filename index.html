@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-ts.png?v=2">
+<link rel="icon" href="favicon.ico?v=2" sizes="any">
 <meta name="theme-color" content="#12151a">
 <title>TS Performance Science</title>
 <meta name="description" content="TS Performance Science (Thesaurus Scientiae): der Forschungsstand zu Training, Ernährung und Supplementen – evidenzbasiert und automatisch aktualisiert.">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -263,8 +264,17 @@ html { scroll-behavior: smooth; }
 .goal-card p { margin: 0; color: var(--ink-2); font-size: .9rem; }
 .goal-card .area { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); }
 .goal-card .go { margin-top: auto; color: var(--accent); font-size: .85rem; }
-.area-card h3 { margin: 0 0 6px; }
-.area-card p { margin: 4px 0; font-size: .9rem; line-height: 1.6; }
+.area-card { display: flex; flex-direction: column; gap: 14px; }
+.area-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+.area-head h3 { margin: 0; font-size: 1.15rem; }
+.area-head span { font-size: .78rem; color: var(--ink-3); }
+.area-grp h4 { margin: 0 0 8px; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); font-weight: 600; }
+.area-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.area-chips a { font-size: .85rem; text-decoration: none; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 5px 10px; line-height: 1.3; }
+.area-chips a:hover, .area-chips a:focus-visible { border-color: var(--accent); color: var(--accent); }
+.area-tools { display: flex; flex-direction: column; gap: 4px; }
+.area-tools a { font-size: .9rem; font-weight: 600; text-decoration: none; color: var(--accent); padding: 4px 0; }
+.area-tools a:hover { text-decoration: underline; }
 .start-cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 6px 0 4px; }
 .btn-primary { text-decoration: none; display: inline-block; }
 .btn-line { font: inherit; background: none; cursor: pointer; display: inline-block; text-decoration: none; color: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 8px 16px; font-weight: 500; }
@@ -1148,7 +1158,12 @@ async function renderStart() {
     <p class="lead">Was sagt die Wissenschaft zu Training, Ernährung und Supplementen? Jede Aussage stützt sich auf Studien – vor allem Metaanalysen und systematische Reviews –, ist kritisch eingeordnet und wird automatisch aktualisiert, wenn neue Forschung erscheint.</p>
     <div class="start-cta"><a class="btn-primary" href="#ziel">Nach Ziel einsteigen →</a><a class="btn-line" href="#supplemente">Alle Supplemente vergleichen</a>${PWA ? `<button type="button" class="btn-line" data-app>📲 Als App installieren und offline speichern</button>` : ""}</div>
     <h2>Bereiche</h2>
-    <div class="area-grid">${NAV.map(g => `<div class="card area-card"><h3>${g.group}</h3>${g.items.map(it => it.children ? `<p><b>${it.title}:</b> ${it.children.filter(c => !c.var).map(c => `<a href="#${c.id}">${c.title}</a>`).join(" · ")}</p>` : `<p><a href="#${it.id}"><b>${it.title}</b></a></p>`).join("")}</div>`).join("")}</div>
+    <div class="area-grid">${NAV.map(g => {
+      const n = g.items.reduce((a, it) => a + (it.children ? it.children.filter(c => !c.var).length : 0), 0);
+      const tools = g.items.filter(it => !it.children), groups = g.items.filter(it => it.children);
+      return `<div class="card area-card"><div class="area-head"><h3>${g.group}</h3><span>${n} Themen</span></div>
+        ${tools.length ? `<div class="area-tools">${tools.map(it => `<a href="#${it.id}">${it.title} →</a>`).join("")}</div>` : ""}
+        ${groups.map(it => `<div class="area-grp"><h4>${it.title}</h4><div class="area-chips">${it.children.filter(c => !c.var).map(c => `<a href="#${c.id}">${c.title}</a>`).join("")}</div></div>`).join("")}</div>`; }).join("")}</div>
     <h2>Gut belegte Kernaussagen</h2>
     <div class="goal-grid">${best.map(({ t, k }) => `<a class="card goal-card" href="#${t.id}"><span class="area">${t.title}</span><h3>${strip(k.t)}</h3>${k.p ? `<p>${strip(k.p)}</p>` : ""}</a>`).join("")}</div>
     <h2>Zuletzt geändert</h2>
