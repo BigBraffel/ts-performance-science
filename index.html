@@ -614,7 +614,7 @@ function navItem(it, cur) {
 }
 function renderNav(cur) {
   $("nav-tools").innerHTML = TOOLS.map(t => `<a href="#${t.id}"${t.id === cur ? ' class="active" aria-current="page"' : ""}>${t.title}</a>`).join("")
-    + `<button type="button" class="help" onclick="startTour()">? Hilfe</button>`;
+    + `<button type="button" class="help" onclick="startTour()">? Hilfe</button><button type="button" class="help" data-share>↗ Teilen</button>`;
   $("nav-topics").innerHTML = NAV.map(g => `<h4>${g.group}</h4><ul class="topics">${g.items.map(it => {
     if (!it.children) return navItem(it, cur);
     const open = it.children.some(c => c.id === cur);
@@ -1164,7 +1164,7 @@ async function renderStart() {
     <div class="status-bar"><span><b>Stand:</b> ${fmtDate(stand)}</span><span><b>Themen:</b> <span class="num">${tops.length}</span></span><span><b>Quellen:</b> <span class="num">${fmtK(nS)}</span></span><span><b>Aktualisierung:</b> alle 2 Wochen automatisch aus PubMed</span></div>
     <div class="hero"><img src="icon-192.png" alt="TS-Logo" width="96" height="96"><div><h1>TS Performance Science</h1><p class="hero-sub">Thesaurus Scientiae – Schatzkammer des Wissens für Training und Ernährung</p></div></div>
     <p class="lead">Was sagt die Wissenschaft zu Training, Ernährung und Supplementen? Jede Aussage stützt sich auf Studien – vor allem Metaanalysen und systematische Reviews –, ist kritisch eingeordnet und wird automatisch aktualisiert, wenn neue Forschung erscheint.</p>
-    <div class="start-cta"><a class="btn-primary" href="#ziel">Nach Ziel einsteigen →</a><a class="btn-line" href="#supplemente">Alle Supplemente vergleichen</a>${PWA ? `<button type="button" class="btn-line" data-app>📲 Als App installieren und offline speichern</button>` : ""}</div>
+    <div class="start-cta"><a class="btn-primary" href="#ziel">Nach Ziel einsteigen →</a><a class="btn-line" href="#supplemente">Alle Supplemente vergleichen</a><button type="button" class="btn-line" data-share>↗ App teilen</button>${PWA ? `<button type="button" class="btn-line" data-app>📲 Als App installieren und offline speichern</button>` : ""}</div>
     <h2>Bereiche</h2>
     <div class="area-grid">${NAV.map(g => {
       const n = g.items.reduce((a, it) => a + (it.children ? it.children.filter(c => !c.var).length : 0), 0);
@@ -1264,6 +1264,16 @@ function disclaimerHTML(short) {
   if (short) return `<div class="card disclaimer" role="note"><h3>Hinweis</h3><p>Diese Inhalte werden mit Hilfe künstlicher Intelligenz recherchiert und zusammengefasst; Fehler sind möglich, es besteht kein Anspruch auf Richtigkeit oder Vollständigkeit. Angaben zu Dosierungen und Anwendung können im Einzelfall abweichen oder unbekannte Risiken haben. Umsetzung auf eigene Gefahr, keine Haftung für Folgen. <a href="#hinweis">Vollständiger Haftungsausschluss</a></p></div>`;
   return `<div class="card disclaimer" role="note">${DISCLAIMER.map(([h, p]) => `<h3>${h}</h3><p>${p}</p>`).join("")}</div>`;
 }
+/* --- Teilen: feste Adresse, damit es auch aus der installierten App und der claude.ai-Fassung klappt --- */
+const SITE = "https://bigbraffel.github.io/ts-performance-science/";
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-share]"); if (!b) return;
+  const d = { title: "TS Performance Science", text: "Forschungsstand zu Training, Ernährung und Supplementen – im Browser öffnen und über „App installieren“ aufs Handy holen:", url: SITE };
+  if (navigator.share) { try { await navigator.share(d); } catch (err) {} return; }
+  const alt = b.textContent;
+  try { await navigator.clipboard.writeText(`${d.text} ${SITE}`); b.textContent = "Link kopiert ✓"; } catch (err) { prompt("Link zum Teilen:", SITE); }
+  setTimeout(() => { b.textContent = alt; }, 2000);
+});
 /* --- Melden: schwebender Knopf; Meldungen werden als GitHub-Issues gesammelt und bei der nächsten Aktualisierung geprüft --- */
 const REPO = "https://github.com/BigBraffel/ts-performance-science";
 let fabArt = "Inhalt";
@@ -1286,7 +1296,7 @@ const TOUR = [
   { t: "Wie eingeordnet wird", x: "Nicht jede Studie zählt gleich viel. Ganz oben stehen Umbrella Reviews und Positionspapiere, dann Metaanalysen, systematische Reviews, Einzelstudien und zuletzt narrative Übersichten. Sagt eine Metaanalyse A und eine Einzelstudie B, gilt vermutlich A. Ältere Studien bleiben im Forschungsverlauf sichtbar." },
   { t: "Bitte beachten", x: "Die Seite ist im Aufbau, und an vielem wird noch gearbeitet. Recherche und Zusammenfassung macht eine KI: Fehler sind möglich, es gibt keinen Anspruch auf Richtigkeit oder Vollständigkeit. Dosierungen und Empfehlungen setzt du auf eigene Gefahr um; es kann unbekannte Risiken geben. Keine Haftung für Folgen. <a href=\"#hinweis\" data-tour-end>Vollständiger Haftungsausschluss</a>" },
   { sel: "#q", menu: true, t: "Suche", x: "Durchsucht alle Themen, Befunde, Empfehlungen und Quellen auf einmal – zum Beispiel nach „Koffein“ oder „Schlaf“." },
-  { sel: "#nav-tools", menu: true, t: "Werkzeuge", x: "<b>Mein Ziel</b> stellt Themen und Supplemente zu deinem Ziel zusammen. <b>Mythen-Check</b> prüft verbreitete Behauptungen. <b>Neu</b> zeigt alle Änderungen, <b>Glossar</b> erklärt Fachbegriffe. Über <b>Hilfe</b> startest du diese Einführung erneut." },
+  { sel: "#nav-tools", menu: true, t: "Werkzeuge", x: "<b>Mein Ziel</b> stellt Themen und Supplemente zu deinem Ziel zusammen. <b>Mythen-Check</b> prüft verbreitete Behauptungen. <b>Neu</b> zeigt alle Änderungen, <b>Glossar</b> erklärt Fachbegriffe. Über <b>Hilfe</b> startest du diese Einführung erneut, über <b>Teilen</b> schickst du die App an Freunde." },
   { sel: "#nav-topics > ul:first-of-type", menu: true, t: "Themen", x: "Drei Bereiche: Training (hier zu sehen), Ernährung und Supplemente. Ein Klick auf eine Gruppe klappt sie auf. Bei den Supplementen gibt es zusätzlich eine Übersicht, einen direkten Vergleich zweier Präparate und alle Risiken auf einen Blick." },
   { page: "kreatin", sel: ".takeaways > :first-child", t: "Jede Themenseite: das Kurzfazit", x: "Oben stehen die wichtigsten Aussagen, jede als eigene Karte wie diese. Das Etikett zeigt, wie gut sie belegt sind: <b>hoch</b> (mehrere übereinstimmende Metaanalysen), <b>moderat</b> oder <b>niedrig</b> (wenige oder widersprüchliche Studien). Unterstrichene Fachbegriffe erklären sich beim Antippen." },
   { page: "kreatin", sel: ["#wirkung .mx-cols", "#wirkung .mx-grp > summary", "#wirkung .mx-grp > .mx-row:nth-of-type(2)"], t: "Wirkungsübersicht", x: "Bei Supplementen und Ernährungsthemen, nach Zielen gruppiert (hier: Kraft). Der <b>Buchstabe</b> sagt, worauf eine Aussage beruht – A mindestens zwei Metaanalysen, B eine Metaanalyse, C systematische Reviews oder Positionspapiere, D nur Einzelstudien. Die <b>Farbe</b> zeigt den Effekt: dunkelgrün stark, hellgrün klein, grau kein Effekt, sandfarben uneinheitlich, rot ein Nachteil. Über <b>Zielgruppe</b> wählst du Einsteiger, Trainierte oder Ältere; zusammengefasste Zeilen lassen sich aufklappen und zeigen die einzelnen Befunde." },
