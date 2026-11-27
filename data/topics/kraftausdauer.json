@@ -1,0 +1,673 @@
+{
+ "id": "kraftausdauer",
+ "title": "Kraftausdauer",
+ "stand": "2026-11-27",
+ "lead": "Reicht Maximalkrafttraining, um mehr Wiederholungen zu schaffen, oder muss man Kraftausdauer gezielt mit vielen Wiederholungen trainieren? Die Antwort hängt davon ab, ob die Last fest bleibt oder mit der Kraft mitwächst. Zusammengefasst aus Reviews, einem Positionspapier, Metaanalysen zur Satzgestaltung und direkten Vergleichsstudien.",
+ "def": {
+  "t": "Kraftausdauer (lokale Muskelausdauer) ist die Fähigkeit eines Muskels, wiederholt oder anhaltend gegen einen Widerstand zu arbeiten. Gemessen wird sie auf zwei Arten: als <b>absolute</b> Kraftausdauer mit einer festen Last, die vor und nach dem Training gleich ist, oder als <b>relative</b> Kraftausdauer mit einer Last, die an die aktuelle Maximalkraft angepasst wird (z. B. 60 % des 1RM).",
+  "s": [
+   "hammert2025"
+  ]
+ },
+ "rxtitle": "Ableitungen für Ernährung und Training",
+ "rxlead": "Für gesunde Erwachsene. Entscheidend ist, ob die Last im Wettkampf oder Test fest ist (eigenes Körpergewicht, vorgegebene Hantel) oder sich nach deiner Maximalkraft richtet.",
+ "rx": [
+  {
+   "label": "Feste Last",
+   "value": "Maximalkraft aufbauen",
+   "text": "Bei fester Last, etwa Klimmzügen, Liegestützen oder einem Sporttest mit vorgegebenem Gewicht, steigert mehr Maximalkraft die Wiederholungszahl deutlich, weil dieselbe Last relativ leichter wird.",
+   "cite": "Hammert et al. 2025; Song et al. 2025"
+  },
+  {
+   "label": "Leichte Last, viele Wdh.",
+   "value": "zusätzlich spezifisch trainieren",
+   "text": "Wer mit leichter Last möglichst viele Wiederholungen schaffen will, profitiert am meisten von Sätzen im Zielbereich: Leichte Lasten verbesserten die Wiederholungen mit leichter Last stärker als schwere.",
+   "cite": "Fliss et al. 2022; Campos et al. 2002"
+  },
+  {
+   "label": "Belastung",
+   "value": "etwa 40–60 % 1RM, über 15 Wdh.",
+   "text": "Für gezieltes Kraftausdauertraining empfiehlt das ACSM leichte bis mittlere Lasten mit vielen Wiederholungen und kurzen Pausen unter 90 Sekunden.",
+   "cite": "ACSM 2009"
+  },
+  {
+   "label": "Versagen",
+   "value": "nicht nötig",
+   "text": "Training bis zum Muskelversagen brachte für die Kraftausdauer keinen Vorteil gegenüber Training mit Reserve.",
+   "cite": "Wu et al. 2026"
+  },
+  {
+   "label": "Satzform",
+   "value": "frei wählbar",
+   "text": "Klassische Sätze waren für die Kraftausdauer etwas wirksamer als Cluster- oder Pausen-Sätze; Supersätze und Drop-Sätze sparen Zeit ohne messbaren Nachteil.",
+   "cite": "Jukic et al. 2021; Zhang et al. 2025"
+  }
+ ],
+ "note": "<b>Deine These geprüft:</b> Teilweise richtig. Maximalkrafttraining steigert die <i>absolute</i> Kraftausdauer, also die Wiederholungen mit derselben Last, und das ist bei Körpergewichtsübungen der entscheidende Fall. Die <i>relative</i> Kraftausdauer, also wie viele Wiederholungen du bei einem bestimmten Prozentsatz deiner Maximalkraft schaffst, steigt dadurch kaum; hier wirkt Training mit vielen Wiederholungen besser. Am meisten verbessert sich, was in ähnlicher Form trainiert wird. Siehe auch <a href=\"#maximalkraft\">Maximalkraft</a> und <a href=\"#koerpergewicht\">Körpergewichtstraining</a>.",
+ "varstitle": "Wirkungen im Detail",
+ "takeaways": [
+  {
+   "t": "Mehr Maximalkraft, mehr Wiederholungen mit derselben Last",
+   "ev": "moderat",
+   "p": "Nach Krafttraining steigt die absolute Kraftausdauer deutlich häufiger als die relative; der Zuwachs an Maximalkraft erklärt einen großen Teil davon.",
+   "s": [
+    "hammert2025",
+    "song2025"
+   ]
+  },
+  {
+   "t": "Wiederholungen bei gleichem Prozentsatz bleiben ähnlich",
+   "ev": "hoch",
+   "p": "Wie viele Wiederholungen bei einem bestimmten Prozentsatz des 1RM möglich sind, hängt kaum von Trainingsstand, Alter oder Geschlecht ab. Darum ändert sich die relative Kraftausdauer durch Training wenig.",
+   "s": [
+    "nuzzo2024",
+    "hammert2025"
+   ]
+  },
+  {
+   "t": "Lastspezifisch: Was trainiert wird, verbessert sich am meisten",
+   "ev": "moderat",
+   "p": "Schwere Lasten verbesserten die Wiederholungen mit schwerer Last, leichte Lasten die mit leichter Last stärker. Hochwiederholungstraining verbesserte die Wiederholungen bei 60 % 1RM am meisten.",
+   "s": [
+    "fliss2022",
+    "campos2002",
+    "schoenfeld2015"
+   ]
+  },
+  {
+   "t": "Versagen und Satzform sind zweitrangig",
+   "ev": "moderat",
+   "p": "Ob bis zum Versagen trainiert wird, ob mit Drop-, Cluster- oder Supersätzen: Für die Kraftausdauer zeigten Metaanalysen keine oder nur kleine Unterschiede.",
+   "s": [
+    "wu2026",
+    "jukic2021",
+    "davies2021",
+    "havers2026",
+    "zhang2025"
+   ]
+  }
+ ],
+ "vars": [
+  {
+   "id": "absolut",
+   "name": "Absolute und relative Kraftausdauer",
+   "q": "Warum steigert Maximalkraft die Wiederholungen nur mit fester Last?",
+   "ev": "moderat",
+   "key": [
+    "Systematische Suche, 51 Studien: Die absolute Kraftausdauer stieg nach Krafttraining deutlich häufiger als die relative. Am ehesten verbesserten Programme mit leichten Lasten oder vielen Wiederholungen die relative Kraftausdauer, möglicherweise weil sie die Maximalkraft weniger steigern (Hammert et al., 2025).",
+    "269 Studien mit 7289 Personen: Die Zahl der möglichen Wiederholungen bei einem bestimmten Prozentsatz des 1RM hing kaum von Geschlecht, Alter oder Trainingsstand ab (Nuzzo et al., 2024).",
+    "Einseitiges Training mit schweren Lasten steigerte die absolute Kraftausdauer im trainierten Arm um 10,1 bis 10,7 Wiederholungen und im untrainierten Arm um 4,9 (Kontrolle 1,2). Die relative Kraftausdauer stieg nur im trainierten Arm um 1,6 bis 2,0 Wiederholungen. Der Kraftzuwachs förderte die absolute und bremste die relative Kraftausdauer (Song et al., 2025).",
+    "Ob sich Kraftausdauer auf die untrainierte Seite überträgt, lässt sich aus 21 Studien nicht sicher sagen; viele Studien gaben nicht einmal an, ob absolut oder relativ gemessen wurde (Song et al., 2024).",
+    "Muskelwachstum und absolute Kraftausdauer verbessern sich oft gemeinsam, ein ursächlicher Zusammenhang ist aber nicht belegt (Chatlaong et al., 2026)."
+   ],
+   "critic": "Die Befunde passen zusammen: Wer stärker wird, für den ist eine feste Last ein kleinerer Prozentsatz der Maximalkraft, und bei kleinerem Prozentsatz sind mehr Wiederholungen möglich. Die Metaregression zeigt zugleich, dass die Wiederholungszahl bei gleichem Prozentsatz bei Trainierten und Untrainierten ähnlich ist. Daraus folgt, dass die relative Kraftausdauer durch Training nur begrenzt steigt. Einschränkung: Der Review hat keine Effektstärken zusammengefasst, und viele Studien beschreiben ihren Test unklar. Die Hinweise zum Mechanismus stammen vor allem aus einer kleinen Studie der gleichen Arbeitsgruppe.",
+   "figs": [
+    {
+     "id": "ka-abs",
+     "title": "Absolute Kraftausdauer (feste Last)",
+     "cap": "Zuwachs an Wiederholungen im nicht dominanten Arm nach einseitigem Training mit schweren Lasten (Song et al., 2025). „Nur Gegenarm“ = nur der dominante Arm wurde trainiert.",
+     "type": "bars",
+     "data": [
+      {
+       "l": "Beide Arme",
+       "es": 10.7
+      },
+      {
+       "l": "Nur dieser Arm",
+       "es": 10.1
+      },
+      {
+       "l": "Nur Gegenarm",
+       "es": 4.9
+      },
+      {
+       "l": "Kontrolle",
+       "es": 1.2
+      }
+     ],
+     "opts": {
+      "max": 12,
+      "ticks": [
+       0,
+       4,
+       8,
+       12
+      ],
+      "unit": "Wdh.",
+      "dec": 1,
+      "xlab": "Zuwachs an Wiederholungen",
+      "src": "Song et al., 2025"
+     }
+    },
+    {
+     "id": "ka-rel",
+     "title": "Relative Kraftausdauer (% der Maximalkraft)",
+     "cap": "Gleiche Studie: Zuwachs der relativen Kraftausdauer; nur in den Gruppen, in denen dieser Arm trainiert wurde, gab es Veränderungen (Song et al., 2025). Gleiche Skala wie links, damit der Unterschied sichtbar bleibt.",
+     "type": "bars",
+     "data": [
+      {
+       "l": "Beide Arme",
+       "es": 1.6
+      },
+      {
+       "l": "Nur dieser Arm",
+       "es": 2.0
+      }
+     ],
+     "opts": {
+      "max": 12,
+      "ticks": [
+       0,
+       4,
+       8,
+       12
+      ],
+      "unit": "Wdh.",
+      "dec": 1,
+      "xlab": "Zuwachs an Wiederholungen",
+      "src": "Song et al., 2025"
+     }
+    }
+   ],
+   "s": [
+    "hammert2025",
+    "nuzzo2024",
+    "song2025",
+    "song2024",
+    "chatlaong2026"
+   ]
+  },
+  {
+   "id": "last",
+   "name": "Schwere oder leichte Lasten",
+   "q": "Muss Kraftausdauer mit vielen Wiederholungen trainiert werden?",
+   "ev": "moderat",
+   "key": [
+    "Positionspapier: Für die lokale Muskelausdauer leichte bis mittlere Lasten (40–60 % 1RM) mit vielen Wiederholungen (über 15) und kurzen Pausen (unter 90 s) (American College of Sports Medicine, 2009).",
+    "Untrainierte Männer, 8 Wochen: Die Maximalkraft stieg am stärksten mit 3–5 Wiederholungen, die Wiederholungen bei 60 % 1RM am stärksten mit 20–28 Wiederholungen. Nur diese Gruppe verbesserte auch die maximale aerobe Leistung und die Zeit bis zur Erschöpfung (Campos et al., 2002).",
+    "Trainierte Männer: Schwere Lasten steigerten die Kniebeuge-Maximalkraft stärker (19,6 vs. 8,8 %), leichte Lasten die Wiederholungen im Bankdrücken bei 50 % 1RM (16,6 vs. −1,2 %) (Schoenfeld et al., 2015).",
+    "Untrainierte Frauen, 10 Wochen: Schwere Lasten verbesserten die Wiederholungen mit schwerer Last stärker (9,3 vs. 7,5 Wdh.), leichte Lasten die mit leichter Last (24,7 vs. 15,2 Wdh.); am Oberkörper gab es keine Unterschiede (Fliss et al., 2022).",
+    "Militärkadetten, 22 Wochen: Schwere Lasten steigerten Kraft und Schnellkraft stärker, die Kraftausdauer verbesserte sich mit beiden Lasten ähnlich (Øfsteng et al., 2024).",
+    "Die klassische Einteilung (schwer für Kraft, mittel für Muskelaufbau, leicht für Kraftausdauer) wird von der Forschung nur teilweise gestützt; Anpassungen sind über ein breites Lastspektrum möglich (Schoenfeld et al., 2021)."
+   ],
+   "critic": "Die Einzelstudien widersprechen sich nicht grundsätzlich, wenn man auf den Test achtet: Wo mit leichter Last oder bei festem Prozentsatz gemessen wurde (Campos, Schoenfeld, Fliss), lag das Training mit leichten Lasten vorn; wo die Kraftausdauer allgemeiner gemessen wurde (Øfsteng), waren beide gleich. Es handelt sich um kleine Studien; eine Metaanalyse mit Effektstärken fehlt. Die ACSM-Empfehlung ist von 2009 und stützt sich auf ältere Daten, deckt sich aber mit den neueren Vergleichsstudien. Wahrscheinlich ist: Für die absolute Kraftausdauer mit schwerer Last reicht Krafttraining, für viele Wiederholungen mit leichter Last ist spezifisches Training überlegen.",
+   "figs": [
+    {
+     "id": "ka-last-s",
+     "title": "Test mit schwerer Last",
+     "cap": "Zuwachs an Wiederholungen der Beine nach 10 Wochen (Fliss et al., 2022). Mittelwerte; Streuung im Abstract als ± angegeben und hier nicht dargestellt.",
+     "type": "bars",
+     "data": [
+      {
+       "l": "Schwer trainiert",
+       "es": 9.3
+      },
+      {
+       "l": "Leicht trainiert",
+       "es": 7.5
+      }
+     ],
+     "opts": {
+      "max": 30,
+      "ticks": [
+       0,
+       10,
+       20,
+       30
+      ],
+      "unit": "Wdh.",
+      "dec": 1,
+      "xlab": "Zuwachs an Wiederholungen",
+      "src": "Fliss et al., 2022"
+     }
+    },
+    {
+     "id": "ka-last-l",
+     "title": "Test mit leichter Last",
+     "cap": "Gleiche Studie, getestet mit leichter Last (Fliss et al., 2022). Jede Last verbessert vor allem die Wiederholungen mit ähnlicher Last.",
+     "type": "bars",
+     "data": [
+      {
+       "l": "Schwer trainiert",
+       "es": 15.2
+      },
+      {
+       "l": "Leicht trainiert",
+       "es": 24.7
+      }
+     ],
+     "opts": {
+      "max": 30,
+      "ticks": [
+       0,
+       10,
+       20,
+       30
+      ],
+      "unit": "Wdh.",
+      "dec": 1,
+      "xlab": "Zuwachs an Wiederholungen",
+      "src": "Fliss et al., 2022"
+     }
+    },
+    {
+     "id": "ka-schoenfeld",
+     "title": "Schwere vs. leichte Lasten bei Trainierten",
+     "cap": "Prozentuale Veränderung nach 8 Wochen (Schoenfeld et al., 2015). Kraftausdauer = Wiederholungen im Bankdrücken bei 50 % 1RM.",
+     "type": "forest",
+     "data": [
+      {
+       "l": "Kniebeuge 1RM: schwer",
+       "sub": "Schoenfeld et al., 2015",
+       "es": 19.6
+      },
+      {
+       "l": "Kniebeuge 1RM: leicht",
+       "sub": "Schoenfeld et al., 2015",
+       "es": 8.8
+      },
+      {
+       "l": "Kraftausdauer: leicht",
+       "sub": "Schoenfeld et al., 2015",
+       "es": 16.6
+      },
+      {
+       "l": "Kraftausdauer: schwer",
+       "sub": "Schoenfeld et al., 2015",
+       "es": -1.2
+      }
+     ],
+     "opts": {
+      "min": -5,
+      "max": 25,
+      "ticks": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "unit": "%"
+     }
+    }
+   ],
+   "s": [
+    "acsm2009",
+    "campos2002",
+    "schoenfeld2015",
+    "fliss2022",
+    "ofsteng2024",
+    "schoenfeld2021"
+   ]
+  },
+  {
+   "id": "saetze",
+   "name": "Versagen, Wiederholungen und Satzform",
+   "q": "Kommt es auf Versagen oder besondere Satzformen an?",
+   "ev": "moderat",
+   "key": [
+    "20 Studien: Training ohne Muskelversagen war für die dynamische Kraft leicht überlegen (SMD 0,24 [0,06; 0,42]); für die Kraftausdauer gab es keinen Unterschied (Wu et al., 2026).",
+    "17 Studien: Klassische Sätze verbesserten die Kraftausdauer stärker als Cluster- oder Pausen-Sätze (SMD −0,38); für Kraft und Muskelaufbau gab es keinen Unterschied (Jukic et al., 2021).",
+    "29 Studien: Cluster-Sätze und klassische Sätze wirkten gleich auf die Kraftausdauer (ES −0,07 [−0,43; 0,29]) (Davies et al., 2021).",
+    "Wie stark die Geschwindigkeit innerhalb eines Satzes abfällt, beeinflusste den Zuwachs an Kraft und Kraftausdauer nicht (Jukic et al., 2023).",
+    "Drop-Sätze: kein signifikanter Unterschied zu klassischen Sätzen bei der Kraftausdauer (SMD 0,53 [−0,20; 1,26]) (Havers et al., 2026). Supersätze erreichten bei kürzerer Trainingsdauer ähnliche Zuwächse an Kraftausdauer (Zhang et al., 2025).",
+    "Blutflussrestriktion bei leichten Lasten verringerte die Zahl der Wiederholungen und schwächte dadurch die Anpassung der Kraftausdauer ab, bei gleichem Kraft- und Muskelzuwachs (Ida et al., 2024)."
+   ],
+   "critic": "Die Metaanalysen zeigen übereinstimmend keine großen Unterschiede. Der kleine Vorteil klassischer Sätze bei Jukic et al. (2021) passt dazu, dass mehr Ermüdung im Satz dem Kraftausdauertest ähnelt; die Metaanalyse von Davies et al. (2021) mit mehr Studien fand ihn jedoch nicht, daher ist er unsicher. Bei Drop-Sätzen ist das Intervall breit, ein Vorteil ist möglich, aber nicht belegt. Die Studie zur Blutflussrestriktion stützt, dass die Zahl der trainierten Wiederholungen für die Kraftausdauer zählt.",
+   "figs": [
+    {
+     "id": "ka-saetze",
+     "title": "Satzform und Kraftausdauer",
+     "cap": "Effektstärken für die Kraftausdauer im Vergleich zu klassischen Sätzen. 95-%-KI, wo im Abstract angegeben; für Jukic et al. (2021) kein Intervall im Abstract.",
+     "type": "forest",
+     "data": [
+      {
+       "l": "Cluster- und Pausen-Sätze",
+       "sub": "Jukic et al., 2021",
+       "es": -0.38
+      },
+      {
+       "l": "Cluster-Sätze",
+       "sub": "Davies et al., 2021",
+       "es": -0.07,
+       "lo": -0.43,
+       "hi": 0.29
+      },
+      {
+       "l": "Drop-Sätze",
+       "sub": "Havers et al., 2026",
+       "es": 0.53,
+       "lo": -0.2,
+       "hi": 1.26
+      }
+     ],
+     "opts": {
+      "min": -1,
+      "max": 1.4,
+      "ticks": [
+       -0.8,
+       -0.4,
+       0,
+       0.4,
+       0.8,
+       1.2
+      ],
+      "leftLab": "klassische Sätze besser",
+      "rightLab": "Alternative besser"
+     }
+    }
+   ],
+   "s": [
+    "wu2026",
+    "jukic2021",
+    "davies2021",
+    "jukic2023",
+    "havers2026",
+    "zhang2025",
+    "ida2024"
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "y": 2002,
+   "t": "Kontinuum von Kraft bis Ausdauer",
+   "p": "Wenige Wiederholungen steigern die Maximalkraft, viele die Wiederholungen bei 60 % 1RM am stärksten.",
+   "tag": "neu",
+   "s": "campos2002"
+  },
+  {
+   "y": 2009,
+   "t": "ACSM-Empfehlung zur Kraftausdauer",
+   "p": "40–60 % 1RM, über 15 Wiederholungen, kurze Pausen.",
+   "tag": "neu",
+   "s": "acsm2009"
+  },
+  {
+   "y": 2015,
+   "t": "Auch bei Trainierten lastspezifisch",
+   "p": "Leichte Lasten verbessern die Kraftausdauer, schwere die Maximalkraft.",
+   "tag": "conf",
+   "s": "schoenfeld2015"
+  },
+  {
+   "y": 2021,
+   "t": "Kontinuum neu bewertet",
+   "p": "Anpassungen sind über ein breites Lastspektrum möglich.",
+   "tag": "rel",
+   "s": "schoenfeld2021"
+  },
+  {
+   "y": 2021,
+   "t": "Klassische Sätze für Kraftausdauer",
+   "p": "Etwas wirksamer als Cluster- und Pausen-Sätze.",
+   "tag": "neu",
+   "s": "jukic2021"
+  },
+  {
+   "y": 2021,
+   "t": "Cluster-Sätze gleichwertig",
+   "p": "Kein Unterschied bei der Kraftausdauer.",
+   "tag": "contra",
+   "s": "davies2021"
+  },
+  {
+   "y": 2022,
+   "t": "Lastspezifische Kraftausdauer",
+   "p": "Jede Last verbessert vor allem die Wiederholungen mit ähnlicher Last.",
+   "tag": "conf",
+   "s": "fliss2022"
+  },
+  {
+   "y": 2023,
+   "t": "Geschwindigkeitsverlust ohne Einfluss",
+   "p": "Kraft und Kraftausdauer steigen unabhängig vom Abbruchkriterium.",
+   "tag": "neu",
+   "s": "jukic2023"
+  },
+  {
+   "y": 2024,
+   "t": "Wiederholungen je Prozentsatz",
+   "p": "Kaum abhängig von Trainingsstand, Alter oder Geschlecht.",
+   "tag": "neu",
+   "s": "nuzzo2024"
+  },
+  {
+   "y": 2024,
+   "t": "Schwer und leicht bei Kadetten gleich",
+   "p": "Ähnliche Verbesserung der Kraftausdauer.",
+   "tag": "rel",
+   "s": "ofsteng2024"
+  },
+  {
+   "y": 2024,
+   "t": "Wiederholungszahl zählt",
+   "p": "Weniger Wiederholungen durch Blutflussrestriktion bremsen die Kraftausdauer.",
+   "tag": "conf",
+   "s": "ida2024"
+  },
+  {
+   "y": 2024,
+   "t": "Übertragung auf die Gegenseite unklar",
+   "p": "Zu wenige und unklar beschriebene Studien.",
+   "tag": "neu",
+   "s": "song2024"
+  },
+  {
+   "y": 2025,
+   "t": "Absolut ≠ relativ",
+   "p": "Krafttraining steigert vor allem die absolute Kraftausdauer.",
+   "tag": "neu",
+   "s": "hammert2025"
+  },
+  {
+   "y": 2025,
+   "t": "Kraftzuwachs erklärt absolute Kraftausdauer",
+   "p": "Mehr Kraft fördert die absolute, bremst die relative Kraftausdauer.",
+   "tag": "conf",
+   "s": "song2025"
+  },
+  {
+   "y": 2025,
+   "t": "Supersätze zeitsparend",
+   "p": "Ähnliche Zuwächse an Kraftausdauer in kürzerer Zeit.",
+   "tag": "neu",
+   "s": "zhang2025"
+  },
+  {
+   "y": 2026,
+   "t": "Versagen nicht nötig",
+   "p": "Kein Unterschied bei der Kraftausdauer.",
+   "tag": "neu",
+   "s": "wu2026"
+  },
+  {
+   "y": 2026,
+   "t": "Drop-Sätze ohne gesicherten Vorteil",
+   "p": "Breites Intervall, Unterschied nicht signifikant.",
+   "tag": "neu",
+   "s": "havers2026"
+  },
+  {
+   "y": 2026,
+   "t": "Muskelwachstum und Kraftausdauer",
+   "p": "Treten oft gemeinsam auf, Ursache unklar.",
+   "tag": "neu",
+   "s": "chatlaong2026"
+  }
+ ],
+ "changelog": [
+  {
+   "d": "27.11.2026",
+   "t": "Erstfassung: PubMed-Sichtung von 2195 Einträgen, 100 Übersichtsarbeiten nach Titel geprüft, ergänzt um eine Zusatzsuche nach Übersichtsarbeiten und direkten Vergleichsstudien zu Lasten; 18 Quellen aufgenommen."
+  }
+ ],
+ "sources": {
+  "hammert2025": {
+   "short": "Hammert et al., 2025",
+   "year": 2025,
+   "type": "Systematischer Review",
+   "basis": "Abstract",
+   "pmid": "40153563",
+   "apa": "Hammert, W. B., Yamada, Y., Kataoka, R., Song, J. S., Spitz, R. W., Wong, V., Seffrin, A. &amp; Loenneke, J. P. (2025). Changes in absolute and relative muscular endurance after resistance training: A review of the literature with considerations for future research. <em>Journal of Strength and Conditioning Research, 39</em>(4), 474–491.",
+   "doi": "10.1519/JSC.0000000000005084"
+  },
+  "nuzzo2024": {
+   "short": "Nuzzo et al., 2024",
+   "year": 2024,
+   "type": "Metaregression",
+   "basis": "Abstract",
+   "pmid": "37792272",
+   "apa": "Nuzzo, J. L., Pinto, M. D., Nosaka, K. &amp; Steele, J. (2024). Maximal number of repetitions at percentages of the one repetition maximum: A meta-regression and moderator analysis of sex, age, training status, and exercise. <em>Sports Medicine, 54</em>(2), 303–321.",
+   "doi": "10.1007/s40279-023-01937-7",
+   "journal": "Sports Medicine"
+  },
+  "song2025": {
+   "short": "Song et al., 2025",
+   "year": 2025,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "40658615",
+   "apa": "Song, J. S., Kataoka, R., Yamada, Y., Hammert, W. B., Kang, A., Wong, V., Spitz, R. W., Seffrin, A., Kassiano, W. &amp; Loenneke, J. P. (2025). Unilateral high-load resistance training increases absolute but not relative muscular endurance in the contralateral untrained limb. <em>Research Quarterly for Exercise and Sport, 96</em>(4), 875–883.",
+   "doi": "10.1080/02701367.2025.2528821"
+  },
+  "song2024": {
+   "short": "Song et al., 2024",
+   "year": 2024,
+   "type": "Scoping Review",
+   "basis": "Abstract",
+   "pmid": "38758463",
+   "apa": "Song, J. S., Yamada, Y., Kataoka, R., Hammert, W. B., Kang, A. &amp; Loenneke, J. P. (2024). Cross-Education of muscular endurance: A scoping review. <em>Sports Medicine, 54</em>(7), 1771–1783.",
+   "doi": "10.1007/s40279-024-02042-z"
+  },
+  "chatlaong2026": {
+   "short": "Chatlaong et al., 2026",
+   "year": 2026,
+   "type": "Narrativer Review",
+   "basis": "Abstract",
+   "pmid": "42867626",
+   "apa": "Chatlaong, M. A., Hammert, W. B., Wohlgemuth, K. J., Loenneke, J. P. &amp; Jessee, M. B. (2026). Can resistance training-induced skeletal muscle growth improve local muscular endurance?. <em>Sports Medicine, None</em>, 10.1007/s40279–026–02539–9.",
+   "doi": "10.1007/s40279-026-02539-9"
+  },
+  "acsm2009": {
+   "short": "American College of Sports Medicine, 2009",
+   "year": 2009,
+   "type": "Positionspapier (ACSM)",
+   "basis": "Abstract",
+   "pmid": "19204579",
+   "apa": "American College of Sports Medicine. (2009). American College of Sports Medicine position stand. Progression models in resistance training for healthy adults. <em>Medicine &amp; Science in Sports &amp; Exercise, 41</em>(3), 687–708.",
+   "doi": "10.1249/MSS.0b013e3181915670"
+  },
+  "schoenfeld2021": {
+   "short": "Schoenfeld et al., 2021",
+   "year": 2021,
+   "type": "Narrativer Review",
+   "basis": "Abstract",
+   "pmid": "33671664",
+   "apa": "Schoenfeld, B. J., Grgic, J., Van Every, D. W. &amp; Plotkin, D. L. (2021). Loading recommendations for muscle strength, hypertrophy, and local endurance: A re-examination of the repetition continuum. <em>Sports, 9</em>(2), Artikel 32.",
+   "doi": "10.3390/sports9020032"
+  },
+  "campos2002": {
+   "short": "Campos et al., 2002",
+   "year": 2002,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "12436270",
+   "apa": "Campos, G. E., Luecke, T. J., Wendeln, H. K., Toma, K., Hagerman, F. C., Murray, T. F., Ragg, K. E., Ratamess, N. A., Kraemer, W. J. &amp; Staron, R. S. (2002). Muscular adaptations in response to three different resistance-training regimens: Specificity of repetition maximum training zones. <em>European Journal of Applied Physiology, 88</em>(1-2), 50–60.",
+   "doi": "10.1007/s00421-002-0681-6"
+  },
+  "schoenfeld2015": {
+   "short": "Schoenfeld et al., 2015",
+   "year": 2015,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "25853914",
+   "apa": "Schoenfeld, B. J., Peterson, M. D., Ogborn, D., Contreras, B. &amp; Sonmez, G. T. (2015). Effects of low- vs. high-load resistance training on muscle strength and hypertrophy in well-trained men. <em>Journal of Strength and Conditioning Research, 29</em>(10), 2954–2963.",
+   "doi": "10.1519/JSC.0000000000000958"
+  },
+  "fliss2022": {
+   "short": "Fliss et al., 2022",
+   "year": 2022,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "36027601",
+   "apa": "Fliss, M. D., Stevenson, J., Mardan-Dezfouli, S., Li, D. C. W. &amp; Mitchell, C. J. (2022). Higher- and lower-load resistance exercise training induce load-specific local muscle endurance changes in young women: A randomised trial. <em>Applied Physiology, Nutrition, and Metabolism, 47</em>(12), 1143–1159.",
+   "doi": "10.1139/apnm-2022-0263"
+  },
+  "ofsteng2024": {
+   "short": "Øfsteng et al., 2024",
+   "year": 2024,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "39179241",
+   "apa": "Øfsteng, S. F., Hammarström, D., Knox, S., Jøsok, Ø., Helkala, K., Koll, L., Hanestadhaugen, M., Raastad, T., Rønnestad, B. R. &amp; Ellefsen, S. (2024). Superiority of high-load vs. low-load resistance training in military cadets. <em>Journal of Strength and Conditioning Research, 38</em>(9), 1584–1595.",
+   "doi": "10.1519/JSC.0000000000004830"
+  },
+  "ida2024": {
+   "short": "Ida & Sasaki, 2024",
+   "year": 2024,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "38502540",
+   "apa": "Ida, A. &amp; Sasaki, K. (2024). Distinct adaptations of muscle endurance but not strength or hypertrophy to low-load resistance training with and without blood flow restriction. <em>Experimental Physiology, 109</em>(6), 926–938.",
+   "doi": "10.1113/EP091310"
+  },
+  "wu2026": {
+   "short": "Wu et al., 2026",
+   "year": 2026,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "42410632",
+   "apa": "Wu, S., Xie, L., Zhao, Z., Zheng, X., Yin, X., Hou, J., Zhou, K. &amp; Tang, P. (2026). Effects of resistance training performed to repetition non-failure on exercise performance in healthy adults: A systematic review and meta-analysis. <em>BMC Sports Science, Medicine and Rehabilitation, 18</em>(1), Artikel 333.",
+   "doi": "10.1186/s13102-026-01861-z"
+  },
+  "jukic2021": {
+   "short": "Jukic et al., 2021",
+   "year": 2021,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "33417154",
+   "apa": "Jukic, I., Van Hooren, B., Ramos, A. G., Helms, E. R., McGuigan, M. R. &amp; Tufano, J. J. (2021). The effects of set structure manipulation on chronic adaptations to resistance training: A systematic review and meta-analysis. <em>Sports Medicine, 51</em>(5), 1061–1086.",
+   "doi": "10.1007/s40279-020-01423-4",
+   "journal": "Sports Medicine"
+  },
+  "davies2021": {
+   "short": "Davies et al., 2021",
+   "year": 2021,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "33475986",
+   "apa": "Davies, T. B., Tran, D. L., Hogan, C. M., Haff, G. G. &amp; Latella, C. (2021). Chronic effects of altering resistance training set configurations using cluster sets: A systematic review and meta-analysis. <em>Sports Medicine, 51</em>(4), 707–736.",
+   "doi": "10.1007/s40279-020-01408-3",
+   "journal": "Sports Medicine"
+  },
+  "jukic2023": {
+   "short": "Jukic et al., 2023",
+   "year": 2023,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "36178597",
+   "apa": "Jukic, I., Castilla, A. P., Ramos, A. G., Van Hooren, B., McGuigan, M. R. &amp; Helms, E. R. (2023). The acute and chronic effects of implementing velocity loss thresholds during resistance training: A systematic review, meta-analysis, and critical evaluation of the literature. <em>Sports Medicine, 53</em>(1), 177–214.",
+   "doi": "10.1007/s40279-022-01754-4",
+   "journal": "Sports Medicine"
+  },
+  "havers2026": {
+   "short": "Havers et al., 2026",
+   "year": 2026,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "41920484",
+   "apa": "Havers, T., Micke, F., Geisler, S. &amp; Held, S. (2026). Acute and chronic effects of drop-set training: A meta-analysis and systematic review. <em>Sports Medicine – Open, 12</em>(1), 38.",
+   "doi": "10.1186/s40798-026-01012-1"
+  },
+  "zhang2025": {
+   "short": "Zhang et al., 2025",
+   "year": 2025,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "39903375",
+   "apa": "Zhang, X., Weakley, J., Li, H., Li, Z. &amp; García-Ramos, A. (2025). Superset versus traditional resistance training prescriptions: A systematic review and meta-analysis exploring acute and chronic effects on mechanical, metabolic, and perceptual variables. <em>Sports Medicine, 55</em>(4), 953–975.",
+   "doi": "10.1007/s40279-025-02176-8"
+  }
+ }
+}

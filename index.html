@@ -512,6 +512,7 @@ const NAV = [
     { title: "Krafttraining", children: [
       { id: "maximalkraft", title: "Maximalkraft" },
       { id: "hypertrophie", title: "Hypertrophie (Muskelaufbau)" },
+      { id: "kraftausdauer", title: "Kraftausdauer" },
       { id: "koerpergewicht", title: "Körpergewichtstraining (Calisthenics)" },
       { id: "kraftdiagnostik", title: "Kraftdiagnostik und Tests" } ] },
     { title: "Ausdauertraining", children: [
@@ -580,7 +581,7 @@ const NAV = [
 /* Werkzeuge: als kompakte Leiste unter der Suche */
 const TOOLS = [{ id: "start", title: "Start" }, { id: "ziel", title: "Mein Ziel" }, { id: "mythen", title: "Mythen-Check" }, { id: "neu", title: "Neu" }, { id: "glossar", title: "Glossar" }];
 NAV.forEach(g => g.items.forEach(it => { if (it.sort) it.children.sort((x, y) => x.title.localeCompare(y.title, "de")); }));
-const AVAILABLE = ["maximalkraft", "hypertrophie", "ausdauer", "regeneration", "protein", "kreatin", "omega-3", "zink", "magnesium", "vitamin-d-k2", "koffein", "beta-alanin", "nitrat", "aminosaeuren", "kollagen", "multivitamin", "vitamin-c", "eisen", "calcium", "ashwagandha", "b-vitamine", "probiotika", "kohlenhydrate", "fette", "dehnen", "aufwaermen", "verletzungspraevention", "koerpergewicht", "tapering", "zyklus", "schlaf", "energiebilanz", "fluessigkeit", "timing", "natriumbicarbonat", "citrullin", "hmb", "melatonin", "curcumin", "interferenz", "periodisierung", "hiit", "alter", "vegan", "alkohol", "kraftdiagnostik", "ausdauerdiagnostik"];
+const AVAILABLE = ["maximalkraft", "hypertrophie", "ausdauer", "regeneration", "protein", "kreatin", "omega-3", "zink", "magnesium", "vitamin-d-k2", "koffein", "beta-alanin", "nitrat", "aminosaeuren", "kollagen", "multivitamin", "vitamin-c", "eisen", "calcium", "ashwagandha", "b-vitamine", "probiotika", "kohlenhydrate", "fette", "dehnen", "aufwaermen", "verletzungspraevention", "koerpergewicht", "tapering", "zyklus", "schlaf", "energiebilanz", "fluessigkeit", "timing", "natriumbicarbonat", "citrullin", "hmb", "melatonin", "curcumin", "interferenz", "periodisierung", "hiit", "alter", "vegan", "alkohol", "kraftdiagnostik", "ausdauerdiagnostik", "kraftausdauer"];
 
 const PAGES = ["start", "ziel", "mythen", "vergleich", "sicherheit", "supplemente", "suche", "neu", "glossar", "hinweis"]; /* Seiten ohne eigene Themendatei */
 const SUPPS = ["protein", "kreatin", "koffein", "beta-alanin", "nitrat", "aminosaeuren", "natriumbicarbonat", "citrullin", "hmb", "vitamin-d-k2", "vitamin-c", "b-vitamine", "multivitamin", "magnesium", "zink", "eisen", "calcium", "omega-3", "kollagen", "probiotika", "ashwagandha", "melatonin", "curcumin"]; /* Supplemente mit Wirkungsübersicht */
@@ -1116,7 +1117,7 @@ const naviOf = (id) => { for (const g of NAV) for (const it of g.items) for (con
 /* Ziele: Themen sind redaktionell zugeordnet, Supplement-Wirkungen werden über die Kategorie (kat) der Wirkungsübersicht gefunden */
 const GOALS = [
   { id: "muskel", title: "Muskelaufbau", kat: ["masse"], topics: ["hypertrophie", "protein", "periodisierung", "interferenz", "energiebilanz", "schlaf", "timing"] },
-  { id: "kraft", title: "Kraft", kat: ["kraft"], topics: ["maximalkraft", "periodisierung", "koerpergewicht", "kraftdiagnostik", "aufwaermen", "interferenz", "tapering"] },
+  { id: "kraft", title: "Kraft", kat: ["kraft"], topics: ["maximalkraft", "kraftausdauer", "periodisierung", "koerpergewicht", "kraftdiagnostik", "aufwaermen", "interferenz", "tapering"] },
   { id: "ausdauer", title: "Ausdauer", kat: ["ausdauer"], topics: ["ausdauer", "hiit", "ausdauerdiagnostik", "kohlenhydrate", "fluessigkeit", "tapering", "interferenz"] },
   { id: "abnehmen", title: "Abnehmen und Körperfett", kat: ["koerper", "stoffwechsel"], topics: ["energiebilanz", "protein", "hiit", "timing", "fette", "kohlenhydrate", "alkohol"] },
   { id: "regeneration", title: "Regeneration und Verletzungsschutz", kat: ["regeneration", "entzuendung"], topics: ["regeneration", "schlaf", "verletzungspraevention", "dehnen", "aufwaermen", "alkohol"] },
@@ -1572,14 +1573,14 @@ function mount(id, svg, tbl) {
   });
 }
 const table = (head, rows) => `<table><thead><tr>${head.map((h, i) => `<th${i ? ' class="r"' : ""}>${h}</th>`).join("")}</tr></thead><tbody>${rows.map(r => `<tr>${r.map((c, i) => `<td${i ? ' class="r num"' : ""}>${c}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
-const unitFmt = (o) => (n) => o.unit === "%" ? fmt1(n) + " %" : o.unit === "kg" ? fmt(n) + " kg" : o.unit ? fmtN(n) + " " + o.unit : fmt(n);
+const unitFmt = (o) => (n) => o.unit === "%" ? fmt1(n) + " %" : o.unit === "kg" ? fmt(n) + " kg" : o.unit ? (o.dec ? fmt1(n) : fmtN(n)) + " " + o.unit : fmt(n);
 const tickFmt = (o, t) => o.unit ? String(t).replace(".", ",") + " " + o.unit : fmt1(t);
 const bar = (x0, y0, w, yb) => `M${x0},${yb} V${y0 + 4} Q${x0},${y0} ${x0 + 4},${y0} H${x0 + w - 4} Q${x0 + w},${y0} ${x0 + w},${y0 + 4} V${yb} Z`;
 
 /* ----- Diagrammtypen -----
    forest: Zeilen {l, sub, es, lo?, hi?, pooled?}; opts {min, max, ticks, unit?, leftLab?, rightLab?}
    dots:   Zeilen {l, sub, v, open?, sym?}; opts {min, max, ticks, ref?, unit, openTo?}
-   bars:   Kategorien {l, es}; opts {max, ticks, xlab, src, unit?}
+   bars:   Kategorien {l, es}; opts {max, ticks, xlab, src, unit?, dec? (eine Nachkommastelle)}
    lineci: Kategorien {l, es?, lo?, hi?}; opts {max, ticks, xlab, src, unit?, min?}
    tiers:  Kategorien {l, v (null = kein Nutzen, 0 = bereits wirksam), txt}; opts {max, ticks, xlab, src}
    trend:  Punkte {y (Jahr), es, lo?, hi?, l, sub}; opts {min, max, ticks, ref?, ylab} – Schätzer im Zeitverlauf */
