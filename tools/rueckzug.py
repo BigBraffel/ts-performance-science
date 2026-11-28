@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Prueft alle zitierten Quellen (data/topics/*.json) bei PubMed auf Rueckzug, Korrektur oder Bedenken
+# Prueft alle zitierten Quellen (data/topics/*.json und data/wechselwirkungen.json) bei PubMed auf Rueckzug, Korrektur oder Bedenken
 # und schreibt Treffer nach data/kandidaten/_rueckzuege.json. Laeuft mit der PubMed-Abfrage (scan_all.py).
 import json, os, sys, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -15,6 +15,9 @@ def main():
             for k, s in json.load(open(os.path.join(tdir, f))).get('sources', {}).items():
                 if s.get('pmid'):
                     zit.setdefault(str(s['pmid']), []).append((f[:-5], k))
+    for k, s in json.load(open(os.path.join(ROOT, 'data', 'wechselwirkungen.json'))).get('sources', {}).items():
+        if s.get('pmid'):
+            zit.setdefault(str(s['pmid']), []).append(('wechselwirkungen', k))
     info = summaries(sorted(zit))
     treffer = [dict(pmid=p, titel=x['t'], hinweis=sorted(set(x['pt']) & FLAGPT), zitiert=[dict(thema=t, quelle=k) for t, k in zit[p]])
                for p, x in info.items() if set(x['pt']) & FLAGPT]

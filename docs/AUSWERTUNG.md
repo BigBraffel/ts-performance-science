@@ -101,6 +101,12 @@ Jede Wirkung in `matrix` hat `pop` (Zielgruppe der Studien: `alle`, `einsteiger`
 - `data/mythen.json`: Behauptung (`m`), Urteil (`v`: falsch, stark übertrieben, nicht belegt, teilweise, stimmt), Erklärung (`t`), Thema (`topic`), Quellenschlüssel dieses Themas (`s`), Evidenz (`ev`). Ändert sich die Einschätzung eines Themas, den passenden Mythos mit anpassen.
 - Feld `trend` im Thema: Schätzer derselben Zielgröße und desselben Maßes über die Jahre (`data`: y, es, lo?, hi?, l, s). Nur aufnehmen, wenn die Werte wirklich vergleichbar sind; Abweichungen (anderes Maß, andere Population) in `cap` benennen. Neue Metaanalysen zur selben Zielgröße als Punkt ergänzen.
 
+## Wechselwirkungs-Check und Stack-Baukasten
+- `data/wechselwirkungen.json` enthält eigene Quellen (`sources`, gleiches Format wie in den Themen) und Paare (`items`): `a`, `b` (Themen-IDs), `art` (ergaenzt, kein, achtung, hemmt, unklar), `ev` (hoch, moderat, niedrig), `titel`, `t` (Befunde mit Zitat im Text), `rat` (Praxis), `s` (Quellenschlüssel).
+- Nur Paare aufnehmen, zu denen Studien zur gemeinsamen Einnahme vorliegen. Fehlende Paare bedeuten „nicht untersucht“, nicht „keine Wechselwirkung“.
+- Bei jeder Aktualisierung: Neue Übersichtsarbeiten oder RCTs zu einer Kombination zweier Supplemente der Seite (Titel mit beiden Stoffen, z. B. „co-supplementation“, „combined“, „co-ingestion“) gegen die Paare prüfen und Befunde, Art und Evidenz anpassen. Medikamenten-Wechselwirkungen werden nicht aufgenommen.
+- Der Stack-Baukasten liest Wirkungen, Einnahme (`rx`-Einträge mit „Dosis“, „Form“, „Zeitpunkt“, „Rhythmus“, „Dauer“), Warnhinweise und `DOSIS` aus den Themen; dort ist nichts zusätzlich zu pflegen.
+
 ## Rückzüge und Korrekturen
 `tools/rueckzug.py` (läuft mit jeder PubMed-Abfrage) prüft alle zitierten PMIDs und schreibt Treffer nach `data/kandidaten/_rueckzuege.json`. Jeder Treffer mit „Retracted Publication“ wird so behandelt:
 - Befunde, Wirkungsübersicht und Kurzfazit: Quelle entfernen; stützt sie einen Befund allein, den Befund entfernen.

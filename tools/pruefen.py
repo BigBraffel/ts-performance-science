@@ -69,6 +69,19 @@ for m in json.load(open(os.path.join(ROOT, 'data', 'mythen.json')))['items']:
     for k in m['s']:
         if k not in src: fehler.append(f'mythen.json: „{m["m"][:40]}…“ zitiert fehlende Quelle "{k}" ({m["topic"]})')
 
+ww = json.load(open(os.path.join(ROOT, 'data', 'wechselwirkungen.json')))
+for i in ww['items']:
+    nm = f'wechselwirkungen.json: {i["a"]} + {i["b"]}'
+    for t in (i['a'], i['b']):
+        if not os.path.exists(os.path.join(ROOT, 'data', 'topics', t + '.json')): fehler.append(f'{nm}: unbekanntes Thema "{t}"')
+    if i.get('art') not in ('ergaenzt', 'kein', 'achtung', 'hemmt', 'unklar'): fehler.append(f'{nm}: unbekannte Art "{i.get("art")}"')
+    if i.get('ev') not in ('hoch', 'moderat', 'niedrig'): fehler.append(f'{nm}: unbekannte Evidenz "{i.get("ev")}"')
+    for k in i['s']:
+        if k not in ww['sources']: fehler.append(f'{nm}: zitiert fehlende Quelle "{k}"')
+    for x in i['t']:
+        for sh in re.findall(r'\(([^()]*?, \d{4})\)', x):
+            if not any(ww['sources'][k]['short'].replace('&', '&amp;') == sh or ww['sources'][k]['short'] == sh for k in i['s']): fehler.append(f'{nm}: Zitat "({sh})" ohne passende Quelle')
+
 html = open(os.path.join(ROOT, 'index.html')).read()
 m = re.search(r'const AVAILABLE = \[(.*?)\]', html)
 if m:

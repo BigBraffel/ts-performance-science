@@ -1,0 +1,517 @@
+{
+ "stand": "2026-11-27",
+ "hinweis": "Nur Paare, zu denen Studien vorliegen. Fehlt ein Paar, heißt das nicht, dass keine Wechselwirkung besteht.",
+ "sources": {
+  "abioye2021": {
+   "short": "Abioye et al., 2021",
+   "year": 2021,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "33758936",
+   "apa": "Abioye, A. I., Okuneye, T. A., Odesanya, A. O., Adisa, O., Abioye, A. I., Soipe, A. I., Ismail, K. A., Yang, J. F., Fasehun, L. K. &amp; Omotayo, M. O. (2021). Calcium intake and iron status in human studies: A systematic review and dose-response meta-analysis of randomized trials and crossover studies. <em>The Journal of Nutrition, 151</em>(5), 1084–1101.",
+   "doi": "10.1093/jn/nxaa437"
+  },
+  "lonnerdal2010": {
+   "short": "Lönnerdal, 2010",
+   "year": 2010,
+   "type": "Narrativer Review",
+   "basis": "Abstract",
+   "pmid": "21462112",
+   "apa": "Lönnerdal, B. (2010). Calcium and iron absorption – mechanisms and public health relevance. <em>International Journal for Vitamin and Nutrition Research, 80</em>(4–5), 293–299.",
+   "doi": "10.1024/0300-9831/a000036"
+  },
+  "rios2014": {
+   "short": "Ríos-Castillo et al., 2014",
+   "year": 2014,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "24290597",
+   "apa": "Ríos-Castillo, I., Olivares, M., Brito, A., de Romaña, D. L. &amp; Pizarro, F. (2014). One-month of calcium supplementation does not affect iron bioavailability: A randomized controlled trial. <em>Nutrition, 30</em>(1), 44–48.",
+   "doi": "10.1016/j.nut.2013.06.007"
+  },
+  "deng2024": {
+   "short": "Deng et al., 2024",
+   "year": 2024,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "40765927",
+   "apa": "Deng, J., Ramelli, L., Li, P. Y., Eshaghpour, A., Li, A., Schuenemann, G. &amp; Crowther, M. A. (2024). Efficacy of vitamin C with Fe supplementation in patients with iron deficiency anemia: A systematic review and meta-analysis. <em>Blood Vessels, Thrombosis &amp; Hemostasis, 1</em>(4), Artikel 100023.",
+   "doi": "10.1016/j.bvth.2024.100023"
+  },
+  "loganathan2023": {
+   "short": "Loganathan et al., 2023",
+   "year": 2023,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "37739692",
+   "apa": "Loganathan, V., Bharathi, A., Prince, A. M. &amp; Ramakrishnan, J. (2023). Treatment efficacy of vitamin C or ascorbate given as co-intervention with iron for anemia: A systematic review and meta-analysis of experimental studies. <em>Clinical Nutrition ESPEN, 57</em>, 459–468.",
+   "doi": "10.1016/j.clnesp.2023.07.081"
+  },
+  "li2020": {
+   "short": "Li et al., 2020",
+   "year": 2020,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "33136134",
+   "apa": "Li, N., Zhao, G., Wu, W., Zhang, M., Liu, W., Chen, Q. &amp; Wang, X. (2020). The efficacy and safety of vitamin C for iron supplementation in adult patients with iron deficiency anemia: A randomized clinical trial. <em>JAMA Network Open, 3</em>(11), Artikel e2023644.",
+   "doi": "10.1001/jamanetworkopen.2020.23644"
+  },
+  "knez2017": {
+   "short": "Knez et al., 2017",
+   "year": 2017,
+   "type": "Narrativer Review",
+   "basis": "Abstract",
+   "pmid": "26177050",
+   "apa": "Knez, M., Graham, R. D., Welch, R. M. &amp; Stangoulis, J. C. (2017). New perspectives on the regulation of iron absorption via cellular zinc concentrations in humans. <em>Critical Reviews in Food Science and Nutrition, 57</em>(10), 2128–2143.",
+   "doi": "10.1080/10408398.2015.1050483"
+  },
+  "yao2019": {
+   "short": "Yao et al., 2019",
+   "year": 2019,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "31860103",
+   "apa": "Yao, P., Bennett, D., Mafham, M., Lin, X., Chen, Z., Armitage, J. &amp; Clarke, R. (2019). Vitamin D and calcium for the prevention of fracture: A systematic review and meta-analysis. <em>JAMA Network Open, 2</em>(12), Artikel e1917789.",
+   "doi": "10.1001/jamanetworkopen.2019.17789"
+  },
+  "masse2026": {
+   "short": "Massé et al., 2026",
+   "year": 2026,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "42161415",
+   "apa": "Massé, O., Mercurio, C. M., Dupuis, S., Al Sahwi, M., Arruda, A., Dallaire, G., Desforges, K., Dugré, N. &amp; Williamson, D. (2026). Calcium, vitamin D, or combined supplementation to prevent fractures and falls: Systematic review and meta-analysis. <em>BMJ, 393</em>, Artikel e088050.",
+   "doi": "10.1136/bmj-2025-088050"
+  },
+  "dai2018": {
+   "short": "Dai et al., 2018",
+   "year": 2018,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "30541089",
+   "apa": "Dai, Q., Zhu, X., Manson, J. E., Song, Y., Li, X., Franke, A. A., Costello, R. B., Rosanoff, A., Nian, H., Fan, L., Murff, H., Ness, R. M., Seidner, D. L., Yu, C. &amp; Shrubsole, M. J. (2018). Magnesium status and supplementation influence vitamin D status and metabolism: Results from a randomized trial. <em>The American Journal of Clinical Nutrition, 108</em>(6), 1249–1258.",
+   "doi": "10.1093/ajcn/nqy274"
+  },
+  "rosanoff2016": {
+   "short": "Rosanoff et al., 2016",
+   "year": 2016,
+   "type": "Narrativer Review",
+   "basis": "Abstract",
+   "pmid": "26773013",
+   "apa": "Rosanoff, A., Dai, Q. &amp; Shapses, S. A. (2016). Essential nutrient interactions: Does low or suboptimal magnesium status interact with vitamin D and/or calcium status?. <em>Advances in Nutrition, 7</em>(1), 25–43.",
+   "doi": "10.3945/an.115.008631"
+  },
+  "elosegui2022": {
+   "short": "Elosegui et al., 2022",
+   "year": 2022,
+   "type": "Systematischer Review",
+   "basis": "Abstract",
+   "pmid": "35016154",
+   "apa": "Elosegui, S., López-Seoane, J., Martínez-Ferrán, M. &amp; Pareja-Galeano, H. (2022). Interaction between caffeine and creatine when used as concurrent ergogenic supplements: A systematic review. <em>International Journal of Sport Nutrition and Exercise Metabolism, 32</em>(4), 285–295.",
+   "doi": "10.1123/ijsnem.2021-0262"
+  },
+  "marinho2023": {
+   "short": "Marinho et al., 2023",
+   "year": 2023,
+   "type": "Systematischer Review",
+   "basis": "Abstract",
+   "pmid": "34845944",
+   "apa": "Marinho, A. H., Gonçalves, J. S., Araújo, P. K., Lima-Silva, A. E., Ataide-Silva, T. &amp; de Araujo, G. G. (2023). Effects of creatine and caffeine ingestion in combination on exercise performance: A systematic review. <em>Critical Reviews in Food Science and Nutrition, 63</em>(20), 4785–4798.",
+   "doi": "10.1080/10408398.2021.2007470"
+  },
+  "moesgaard2024": {
+   "short": "Moesgaard et al., 2024",
+   "year": 2024,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "38646853",
+   "apa": "Moesgaard, L., Jessen, S., Christensen, P. M., Bangsbo, J. &amp; Hostrup, M. (2024). No additive effect of creatine, caffeine, and sodium bicarbonate on intense exercise performance in endurance-trained individuals. <em>Scandinavian Journal of Medicine &amp; Science in Sports, 34</em>(4), Artikel e14629.",
+   "doi": "10.1111/sms.14629"
+  },
+  "curranbowen2024": {
+   "short": "Curran-Bowen et al., 2024",
+   "year": 2024,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "38952910",
+   "apa": "Curran-Bowen, T., Guedes da Silva, A., Barreto, G., Buckley, J. &amp; Saunders, B. (2024). Sodium bicarbonate and beta-alanine supplementation: Is combining both better than either alone? A systematic review and meta-analysis. <em>Biology of Sport, 41</em>(3), 79–87.",
+   "doi": "10.5114/biolsport.2024.132997"
+  },
+  "gilsanz2023": {
+   "short": "Gilsanz et al., 2023",
+   "year": 2023,
+   "type": "Systematischer Review",
+   "basis": "Abstract",
+   "pmid": "34882489",
+   "apa": "Gilsanz, L., López-Seoane, J., Jiménez, S. L. &amp; Pareja-Galeano, H. (2023). Effect of β-alanine and sodium bicarbonate co-supplementation on the body's buffering capacity and sports performance: A systematic review. <em>Critical Reviews in Food Science and Nutrition, 63</em>(21), 5080–5093.",
+   "doi": "10.1080/10408398.2021.2012642"
+  },
+  "grgic2021": {
+   "short": "Grgic, 2021",
+   "year": 2021,
+   "type": "Narrativer Review",
+   "basis": "Abstract",
+   "pmid": "32583697",
+   "apa": "Grgic, J. (2021). Effects of combining caffeine and sodium bicarbonate on exercise performance: A review with suggestions for future research. <em>Journal of Dietary Supplements, 18</em>(4), 444–460.",
+   "doi": "10.1080/19390211.2020.1783422"
+  },
+  "chen2026": {
+   "short": "Chen et al., 2026",
+   "year": 2026,
+   "type": "Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "42884622",
+   "apa": "Chen, X., Tu, W. &amp; Wang, J. (2026). The effects of combined caffeine and sodium bicarbonate supplementation on exercise performance, physiological responses, and gastrointestinal tolerability: A systematic review and meta-analysis. <em>Nutrients, 18</em>(19), Artikel 3171.",
+   "doi": "10.3390/nu18193171"
+  },
+  "handzlik2013": {
+   "short": "Handzlik & Gleeson, 2013",
+   "year": 2013,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "24967257",
+   "apa": "Handzlik, M. K. &amp; Gleeson, M. (2013). Likely additive ergogenic effects of combined preexercise dietary nitrate and caffeine ingestion in trained cyclists. <em>ISRN Nutrition, 2013</em>, Artikel 396581.",
+   "doi": "10.5402/2013/396581"
+  },
+  "glaister2015": {
+   "short": "Glaister et al., 2015",
+   "year": 2015,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "24978834",
+   "apa": "Glaister, M., Pattison, J. R., Muniz-Pumares, D., Patterson, S. D. &amp; Foley, P. (2015). Effects of dietary nitrate, caffeine, and their combination on 20-km cycling time trial performance. <em>Journal of Strength and Conditioning Research, 29</em>(1), 165–174.",
+   "doi": "10.1519/JSC.0000000000000596"
+  },
+  "oskarsson2018": {
+   "short": "Oskarsson & McGawley, 2018",
+   "year": 2018,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "29444414",
+   "apa": "Oskarsson, J. &amp; McGawley, K. (2018). No individual or combined effects of caffeine and beetroot-juice supplementation during submaximal or maximal running. <em>Applied Physiology, Nutrition, and Metabolism, 43</em>(7), 697–703.",
+   "doi": "10.1139/apnm-2017-0547"
+  },
+  "montalvo2025": {
+   "short": "Montalvo-Alonso et al., 2025",
+   "year": 2025,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "40369047",
+   "apa": "Montalvo-Alonso, J. J., Del Val-Manzano, M., Ferragut, C., Valadés, D., López-Samanes, Á., Domínguez, R. &amp; Pérez-López, A. (2025). Single and combined effect of beetroot juice and caffeine intake on muscular strength, power and endurance performance in resistance-trained males. <em>Scientific Reports, 15</em>(1), Artikel 16781.",
+   "doi": "10.1038/s41598-025-02021-y"
+  },
+  "ashtary2025": {
+   "short": "Ashtary-Larky et al., 2025",
+   "year": 2025,
+   "type": "Systematischer Review",
+   "basis": "Abstract",
+   "pmid": "40647180",
+   "apa": "Ashtary-Larky, D., Candow, D. G., Forbes, S. C., Hajizadeh, L., Antonio, J. &amp; Suzuki, K. (2025). Effects of creatine and β-alanine co-supplementation on exercise performance and body composition: A systematic review. <em>Nutrients, 17</em>(13), Artikel 2074.",
+   "doi": "10.3390/nu17132074"
+  },
+  "bai2026": {
+   "short": "Bai & Xu, 2026",
+   "year": 2026,
+   "type": "Netzwerk-Metaanalyse",
+   "basis": "Abstract",
+   "pmid": "42384726",
+   "apa": "Bai, X. &amp; Xu, T. (2026). Effects of combined versus single supplementation of creatine and beta-alanine on aerobic and anerobic performance: A systematic review and network meta-analysis. <em>Journal of the International Society of Sports Nutrition, 23</em>(1), Artikel 2695133.",
+   "doi": "10.1080/15502783.2026.2695133"
+  },
+  "jowko2001": {
+   "short": "Jówko et al., 2001",
+   "year": 2001,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "11448573",
+   "apa": "Jówko, E., Ostaszewski, P., Jank, M., Sacharuk, J., Zieniewicz, A., Wilczak, J. &amp; Nissen, S. (2001). Creatine and beta-hydroxy-beta-methylbutyrate (HMB) additively increase lean body mass and muscle strength during a weight-training program. <em>Nutrition, 17</em>(7-8), 558–566.",
+   "doi": "10.1016/s0899-9007(01)00540-8"
+  },
+  "mangine2020": {
+   "short": "Mangine et al., 2020",
+   "year": 2020,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "32460801",
+   "apa": "Mangine, G. T., VanDusseldorp, T. A., Hester, G. M., Julian, J. M. &amp; Feito, Y. (2020). The addition of β-hydroxy β-methylbutyrate (HMB) to creatine monohydrate supplementation does not improve anthropometric and performance maintenance across a collegiate rugby season. <em>Journal of the International Society of Sports Nutrition, 17</em>(1), 28.",
+   "doi": "10.1186/s12970-020-00359-4"
+  },
+  "martos2025": {
+   "short": "Martos-Arregui et al., 2025",
+   "year": 2025,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "39438314",
+   "apa": "Martos-Arregui, A., Li, Z., Miras-Moreno, S., Marcos-Frutos, D., Jiménez-Martínez, P., Alix-Fages, C., Janicijevic, D. &amp; García-Ramos, A. (2025). Comparative effects of caffeine, beta-alanine, and their combination on mechanical, physiological, and perceptual responses to upper-body superset resistance training. <em>European Journal of Applied Physiology, 125</em>(3), 837–850.",
+   "doi": "10.1007/s00421-024-05639-4"
+  },
+  "hartter2003": {
+   "short": "Härtter et al., 2003",
+   "year": 2003,
+   "type": "Klinische Studie",
+   "basis": "Abstract",
+   "pmid": "14616429",
+   "apa": "Härtter, S., Nordmark, A., Rose, D. M., Bertilsson, L., Tybring, G. &amp; Laine, K. (2003). Effects of caffeine intake on the pharmacokinetics of melatonin, a probe drug for CYP1A2 activity. <em>British Journal of Clinical Pharmacology, 56</em>(6), 679–682.",
+   "doi": "10.1046/j.1365-2125.2003.01933.x"
+  },
+  "mahdi2026": {
+   "short": "Mahdi et al., 2026",
+   "year": 2026,
+   "type": "RCT",
+   "basis": "Abstract",
+   "pmid": "42124027",
+   "apa": "Mahdi, N., Delleli, S., Maaoui, K. B., Jebabli, A., Del Coso, J., Chtourou, H., Ardigò, L. P. &amp; Ouergui, I. (2026). Melatonin, caffeine, or their combination: Effects on sleep, performance, perceived exertion in a placebo-controlled crossover study. <em>Nutrients, 18</em>(9), Artikel 1425.",
+   "doi": "10.3390/nu18091425"
+  },
+  "heaney2002": {
+   "short": "Heaney, 2002",
+   "year": 2002,
+   "type": "Narrativer Review",
+   "basis": "Abstract",
+   "pmid": "12204390",
+   "apa": "Heaney, R. P. (2002). Effects of caffeine on bone and the calcium economy. <em>Food and Chemical Toxicology, 40</em>(9), 1263–1270.",
+   "doi": "10.1016/s0278-6915(02)00094-7"
+  }
+ },
+ "items": [
+  {
+   "a": "calcium",
+   "b": "eisen",
+   "art": "hemmt",
+   "ev": "moderat",
+   "titel": "Calcium bremst die Eisenaufnahme kurzfristig",
+   "t": [
+    "Metaanalyse: In Kurzzeitstudien senkte Calcium die Eisenaufnahme (−5,57 % [−7,09; −4,04]). Je mehr Calcium, desto niedriger das Ferritin; der Hämoglobinwert sank aber nicht (Abioye et al., 2021).",
+    "34 Tage Calcium als Supplement veränderten die Verfügbarkeit von Eisen nicht (Ríos-Castillo et al., 2014). Die Hemmung ist vermutlich kurzlebig, der Darm passt sich an (Lönnerdal, 2010)."
+   ],
+   "rat": "Wer gezielt Eisen gegen einen Mangel nimmt, kann Calcium zu einer anderen Tageszeit nehmen. Für den Eisenstatus insgesamt brachte die Trennung laut Metaanalyse vermutlich wenig.",
+   "s": [
+    "abioye2021",
+    "rios2014",
+    "lonnerdal2010"
+   ]
+  },
+  {
+   "a": "vitamin-c",
+   "b": "eisen",
+   "art": "kein",
+   "ev": "hoch",
+   "titel": "Vitamin C zur Eisentablette bringt kaum etwas",
+   "t": [
+    "10 RCTs bei Eisenmangelanämie: Mit Vitamin C stieg das Hämoglobin nur um 0,14 g/dl [0,08; 0,20] stärker, laut Autoren klinisch wahrscheinlich bedeutungslos (Deng et al., 2024).",
+    "Großes RCT mit 440 Erwachsenen: Eisen allein war Eisen plus Vitamin C gleichwertig (Unterschied im Hämoglobin 0,16 g/dl [−0,03; 0,35]) (Li et al., 2020). Eine weitere Metaanalyse fand keinen signifikanten Vorteil (Loganathan et al., 2023)."
+   ],
+   "rat": "Vitamin C muss nicht zusätzlich zur Eisentablette genommen werden.",
+   "s": [
+    "deng2024",
+    "li2020",
+    "loganathan2023"
+   ]
+  },
+  {
+   "a": "zink",
+   "b": "eisen",
+   "art": "achtung",
+   "ev": "niedrig",
+   "titel": "Zink und Eisen konkurrieren um die Aufnahme",
+   "t": [
+    "Eisen und Zink beeinflussen wegen ähnlicher Eigenschaften gegenseitig ihren Transport und ihre Aufnahme im Darm; ein Zinkmangel kann zum Eisenmangel beitragen (Knez et al., 2017)."
+   ],
+   "rat": "Gesicherte Zahlen für gesunde Erwachsene fehlen. Bei hohen Einzeldosen beider Mineralien ist eine zeitlich getrennte Einnahme eine vorsichtige, aber nicht geprüfte Option.",
+   "s": [
+    "knez2017"
+   ]
+  },
+  {
+   "a": "vitamin-d-k2",
+   "b": "calcium",
+   "art": "ergaenzt",
+   "ev": "hoch",
+   "titel": "Vitamin D und Calcium wirken nur zusammen auf Brüche",
+   "t": [
+    "Vitamin D allein senkte das Bruchrisiko nicht (RR 1,06 [0,98; 1,14]); Vitamin D plus Calcium täglich senkte es um 6 % (RR 0,94 [0,89; 0,99]), Hüftbrüche um 16 % (Yao et al., 2019).",
+    "69 Studien: Die Kombination senkte Brüche kaum (RR 0,91 [0,84; 0,99]); gemessen an klinisch bedeutsamen Schwellen gab es wenig bis keinen Nutzen, auch nicht für Calcium oder Vitamin D allein (Massé et al., 2026)."
+   ],
+   "rat": "Wenn es um die Knochen geht, wirkt nur die Kombination, und auch die nur gering. Für junge, gesunde Sportler ohne Mangel ist kein Nutzen belegt.",
+   "s": [
+    "yao2019",
+    "masse2026"
+   ]
+  },
+  {
+   "a": "magnesium",
+   "b": "vitamin-d-k2",
+   "art": "unklar",
+   "ev": "niedrig",
+   "titel": "Magnesium beeinflusst den Vitamin-D-Spiegel",
+   "t": [
+    "RCT: Magnesium hob den Vitamin-D-Spiegel, wenn er anfangs bei etwa 30 ng/ml lag, senkte ihn aber bei höheren Ausgangswerten (30 bis 50 ng/ml) (Dai et al., 2018).",
+    "Magnesium ist an Bildung, Transport und Aktivierung von Vitamin D beteiligt; Studien zu Wechselwirkungen beim Menschen sind selten (Rosanoff et al., 2016)."
+   ],
+   "rat": "Ein ausreichender Magnesiumstatus ist für Vitamin D vermutlich wichtig. Eine feste Empfehlung zur gemeinsamen Einnahme lässt sich daraus nicht ableiten.",
+   "s": [
+    "dai2018",
+    "rosanoff2016"
+   ]
+  },
+  {
+   "a": "kreatin",
+   "b": "koffein",
+   "art": "achtung",
+   "ev": "niedrig",
+   "titel": "Kreatin und Koffein: auf den Zeitpunkt kommt es an",
+   "t": [
+    "10 Studien: Eine Ladephase mit Kreatin störte die akute Wirkung von Koffein nicht. Täglich Koffein während der Ladephase schwächte in zwei Studien die Kreatinwirkung ab, in drei nicht (Elosegui et al., 2022).",
+    "Koffein etwa 1 Stunde vor der Belastung nach einer Kreatin-Ladephase brachte in drei von fünf Studien einen Zusatznutzen; Koffein täglich während der Ladephase nur in einer von fünf (Marinho et al., 2023).",
+    "RCT mit Ausdauertrainierten: Kreatin verbesserte den Sprint, Koffein das 6-Minuten-Zeitfahren; zusammen wirkten sie nicht stärker (Moesgaard et al., 2024)."
+   ],
+   "rat": "Beides zu nehmen ist möglich. Koffein am besten gezielt vor einzelnen Einheiten und nicht dauerhaft hochdosiert während einer Kreatin-Ladephase.",
+   "s": [
+    "elosegui2022",
+    "marinho2023",
+    "moesgaard2024"
+   ]
+  },
+  {
+   "a": "beta-alanin",
+   "b": "natriumbicarbonat",
+   "art": "ergaenzt",
+   "ev": "moderat",
+   "titel": "Beta-Alanin und Natron ergänzen sich",
+   "t": [
+    "10 Studien mit 243 Personen: Die Kombination verbesserte die Leistung (SMD 0,32 [0,07; 0,57]); einzeln waren beide in diesen Studien nicht signifikant (Curran-Bowen et al., 2024).",
+    "9 Studien mit 221 Sportlern: In fünf Studien steigerte die Kombination Pufferkapazität und Leistung zusätzlich; empfohlen für hochintensive Belastungen von 30 Sekunden bis 10 Minuten (Gilsanz et al., 2023)."
+   ],
+   "rat": "Sinnvolle Kombination für intensive Belastungen von etwa 30 Sekunden bis 10 Minuten. Beta-Alanin täglich über Wochen, Natron akut vor der Belastung.",
+   "s": [
+    "curranbowen2024",
+    "gilsanz2023"
+   ]
+  },
+  {
+   "a": "koffein",
+   "b": "natriumbicarbonat",
+   "art": "kein",
+   "ev": "moderat",
+   "titel": "Koffein plus Natron: kein Zusatznutzen belegt",
+   "t": [
+    "Metaanalyse: Die Kombination steigerte die mittlere Leistung nicht stärker als Koffein oder Natron allein; Magen-Darm-Verträglichkeit unklar (Chen et al., 2026).",
+    "Die Reaktion auf Natron schwankte stark, und die üblichen Einnahmeprotokolle verursachten häufig Nebenwirkungen, die die Leistung schmälern können (Grgic, 2021). Im RCT mit Ausdauertrainierten brachte Natron zu Koffein nichts hinzu (Moesgaard et al., 2024)."
+   ],
+   "rat": "Koffein allein ist meist ausreichend. Wer beides nehmen will, sollte die Magenverträglichkeit vorher im Training testen.",
+   "s": [
+    "chen2026",
+    "grgic2021",
+    "moesgaard2024"
+   ]
+  },
+  {
+   "a": "kreatin",
+   "b": "natriumbicarbonat",
+   "art": "kein",
+   "ev": "niedrig",
+   "titel": "Natron verstärkt Kreatin nicht",
+   "t": [
+    "RCT: Kreatin steigerte die Leistung im 15-Sekunden-Sprint (+34 W [10; 58]); Natron zusätzlich brachte nichts (+5 W [−4; 13]) (Moesgaard et al., 2024)."
+   ],
+   "rat": "Für kurze Sprints reicht Kreatin allein.",
+   "s": [
+    "moesgaard2024"
+   ]
+  },
+  {
+   "a": "koffein",
+   "b": "nitrat",
+   "art": "kein",
+   "ev": "niedrig",
+   "titel": "Koffein und Nitrat: kein verlässlicher Zusatznutzen",
+   "t": [
+    "20-km-Radzeitfahren: Koffein verbesserte die Leistung, Nitrat brachte zusätzlich nichts (Glaister et al., 2015). Beim Laufen wirkte weder einzeln noch kombiniert etwas (Oskarsson &amp; McGawley, 2018).",
+    "Zeit bis zur Erschöpfung mit Kombination nicht signifikant länger als einzeln (Handzlik &amp; Gleeson, 2013). Kniebeuge bei 65 % 1RM: Koffein, Rote-Bete-Saft und Kombination steigerten die Wiederholungen ähnlich (Montalvo-Alonso et al., 2025)."
+   ],
+   "rat": "Kein Grund, beides zu kombinieren. Koffein ist das stärker belegte der beiden.",
+   "s": [
+    "glaister2015",
+    "oskarsson2018",
+    "handzlik2013",
+    "montalvo2025"
+   ]
+  },
+  {
+   "a": "kreatin",
+   "b": "beta-alanin",
+   "art": "kein",
+   "ev": "moderat",
+   "titel": "Kreatin plus Beta-Alanin: kaum Zusatznutzen",
+   "t": [
+    "Netzwerk-Metaanalyse: Kreatin allein verbesserte Sprint, Sprung und Wiederholungssprints am beständigsten; die Kombination zeigte keine Synergie (Bai &amp; Xu, 2026).",
+    "Systematischer Review: Die Kombination könnte hochintensive Leistung verbessern, steigerte aber Maximalkraft, Körperzusammensetzung und aerobe Leistung nicht stärker als einzeln (Ashtary-Larky et al., 2025)."
+   ],
+   "rat": "Kreatin ist die wichtigere Wahl. Beta-Alanin lohnt sich zusätzlich nur, wenn intensive Belastungen von etwa 30 Sekunden bis 10 Minuten im Vordergrund stehen.",
+   "s": [
+    "bai2026",
+    "ashtary2025"
+   ]
+  },
+  {
+   "a": "kreatin",
+   "b": "hmb",
+   "art": "unklar",
+   "ev": "niedrig",
+   "titel": "Kreatin plus HMB: widersprüchliche Ergebnisse",
+   "t": [
+    "Untrainierte, Krafttraining: Kreatin und HMB steigerten Magermasse und Kraft additiv (Jówko et al., 2001).",
+    "Trainierte Sportler über eine Saison: HMB zusätzlich zu Kreatin brachte keinen Vorteil gegenüber Kreatin allein (Mangine et al., 2020)."
+   ],
+   "rat": "Für Trainierte spricht wenig für den Zusatz von HMB. Der ältere positive Befund stammt von Untrainierten.",
+   "s": [
+    "jowko2001",
+    "mangine2020"
+   ]
+  },
+  {
+   "a": "koffein",
+   "b": "beta-alanin",
+   "art": "kein",
+   "ev": "niedrig",
+   "titel": "Koffein plus Beta-Alanin: kaum Wirkung im Krafttraining",
+   "t": [
+    "RCT mit Supersätzen am Oberkörper ohne Muskelversagen: Koffein, Beta-Alanin und die Kombination veränderten Leistung und Anstrengungsempfinden kaum (Martos-Arregui et al., 2025)."
+   ],
+   "rat": "Für Krafttraining ohne Versagen ist kein Kombinationseffekt belegt.",
+   "s": [
+    "martos2025"
+   ]
+  },
+  {
+   "a": "koffein",
+   "b": "melatonin",
+   "art": "achtung",
+   "ev": "niedrig",
+   "titel": "Koffein erhöht den Melatoninspiegel stark",
+   "t": [
+    "Mit Koffein stieg der Spitzenspiegel von eingenommenem Melatonin im Mittel um 142 % und die Gesamtmenge im Blut um 120 %, vermutlich weil Koffein den Abbau über das Leberenzym CYP1A2 hemmt (Härtter et al., 2003).",
+    "Melatonin am Abend und Koffein am nächsten Tag: kein Einfluss auf den Schlaf, Sprintleistung verbessert (Mahdi et al., 2026)."
+   ],
+   "rat": "Melatonin und Koffein nicht zur gleichen Zeit nehmen. Melatonin abends und Koffein am nächsten Tag vor dem Training war in einer Studie unproblematisch.",
+   "s": [
+    "hartter2003",
+    "mahdi2026"
+   ]
+  },
+  {
+   "a": "koffein",
+   "b": "calcium",
+   "art": "kein",
+   "ev": "niedrig",
+   "titel": "Koffein und Calcium: praktisch bedeutungslos",
+   "t": [
+    "Koffein senkt die Calciumaufnahme nur geringfügig; der Effekt wird schon durch 1 bis 2 Esslöffel Milch ausgeglichen. Bei ausreichender Calciumzufuhr gibt es keinen Hinweis auf Schaden für die Knochen (Heaney, 2002)."
+   ],
+   "rat": "Bei ausreichender Calciumzufuhr ist keine Trennung nötig.",
+   "s": [
+    "heaney2002"
+   ]
+  }
+ ]
+}

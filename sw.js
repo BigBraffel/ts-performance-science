@@ -1,6 +1,6 @@
 /* Offline-Unterstützung. Online: immer zuerst aus dem Netz (neuester Stand) und die Kopie im Speicher erneuern.
    Offline: aus dem Speicher. „Offline speichern“ lädt alle Dateien auf einmal in den Speicher. */
-const CACHE = "fs-v12";
+const CACHE = "fs-v13";
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "logo-ts.png", "favicon-ts.png", "favicon.ico", "data/mythen.json"]))); self.skipWaiting(); });
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k))))); self.clients.claim(); });
 self.addEventListener("fetch", (e) => {

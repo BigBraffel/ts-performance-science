@@ -294,6 +294,8 @@ table.cmp td { vertical-align: top; width: 41%; }
 .verdict { font-size: .78rem; font-weight: 700; border-radius: 99px; padding: 2px 10px; color: #fff; }
 .verdict.e1 { background: var(--e1); } .verdict.e3 { background: var(--e3); color: #2a1010; } .verdict.e4 { background: var(--e4); }
 .verdict.e0 { background: var(--e0); } .verdict.em { background: var(--em); color: #2a2410; }
+.ww-sub { font-weight: 600; margin-top: -4px; } .ww-rat { background: var(--surface-2, rgba(127,127,127,.08)); border-radius: 8px; padding: 8px 10px; }
+.st-l { margin: 0; } .ww-src summary { cursor: pointer; font-size: .85rem; color: var(--accent); } .ww-src li { font-size: .85rem; margin: 6px 0; }
 .tools .help { font: inherit; font-size: .8rem; color: var(--accent); background: none; border: 1px dashed var(--accent); border-radius: 99px; padding: 4px 10px; cursor: pointer; }
 .tour { position: fixed; inset: 0; z-index: 1000; }
 .tour[hidden] { display: none; }
@@ -552,6 +554,8 @@ const NAV = [
     { id: "supplemente", title: "Übersicht aller Supplemente" },
     { id: "vergleich", title: "Zwei Supplemente vergleichen" },
     { id: "sicherheit", title: "Risiken und Gegenanzeigen" },
+    { id: "wechselwirkungen", title: "Wechselwirkungs-Check" },
+    { id: "stack", title: "Stack-Baukasten" },
     { title: "Leistung", sort: true, children: [
       { id: "aminosaeuren", title: "BCAA und EAA" },
       { id: "beta-alanin", title: "Beta-Alanin" },
@@ -583,7 +587,7 @@ const TOOLS = [{ id: "start", title: "Start" }, { id: "ziel", title: "Mein Ziel"
 NAV.forEach(g => g.items.forEach(it => { if (it.sort) it.children.sort((x, y) => x.title.localeCompare(y.title, "de")); }));
 const AVAILABLE = ["maximalkraft", "hypertrophie", "ausdauer", "regeneration", "protein", "kreatin", "omega-3", "zink", "magnesium", "vitamin-d-k2", "koffein", "beta-alanin", "nitrat", "aminosaeuren", "kollagen", "multivitamin", "vitamin-c", "eisen", "calcium", "ashwagandha", "b-vitamine", "probiotika", "kohlenhydrate", "fette", "dehnen", "aufwaermen", "verletzungspraevention", "koerpergewicht", "tapering", "zyklus", "schlaf", "energiebilanz", "fluessigkeit", "timing", "natriumbicarbonat", "citrullin", "hmb", "melatonin", "curcumin", "interferenz", "periodisierung", "hiit", "alter", "vegan", "alkohol", "kraftdiagnostik", "ausdauerdiagnostik", "kraftausdauer"];
 
-const PAGES = ["start", "ziel", "mythen", "vergleich", "sicherheit", "supplemente", "suche", "neu", "glossar", "hinweis"]; /* Seiten ohne eigene Themendatei */
+const PAGES = ["start", "ziel", "mythen", "vergleich", "sicherheit", "wechselwirkungen", "stack", "supplemente", "suche", "neu", "glossar", "hinweis"]; /* Seiten ohne eigene Themendatei */
 const SUPPS = ["protein", "kreatin", "koffein", "beta-alanin", "nitrat", "aminosaeuren", "natriumbicarbonat", "citrullin", "hmb", "vitamin-d-k2", "vitamin-c", "b-vitamine", "multivitamin", "magnesium", "zink", "eisen", "calcium", "omega-3", "kollagen", "probiotika", "ashwagandha", "melatonin", "curcumin"]; /* Supplemente mit Wirkungsübersicht */
 const supList = () => SUPPS.filter(id => AVAILABLE.includes(id)).sort((a, b) => findTitle(a).localeCompare(findTitle(b), "de"));
 const $ = (id) => document.getElementById(id);
@@ -636,7 +640,7 @@ async function load() {
   if (r.topic !== "suche") $("q").value = "";
   renderNav(location.hash.replace("#", "") || r.topic);
   const PAGE_FN = { supplemente: renderSupOverview, suche: renderSearch, neu: renderNews, glossar: renderGlossar, hinweis: renderHinweis,
-    start: renderStart, ziel: renderZiel, mythen: renderMythen, vergleich: renderVergleich, sicherheit: renderSicherheit };
+    start: renderStart, ziel: renderZiel, mythen: renderMythen, vergleich: renderVergleich, sicherheit: renderSicherheit, wechselwirkungen: renderWW, stack: renderStack };
   if (PAGE_FN[r.topic]) return PAGE_FN[r.topic]();
   if (!AVAILABLE.includes(r.topic)) return renderPlanned(r.topic);
   if (!cache[r.topic]) {
@@ -1237,6 +1241,85 @@ async function renderSicherheit() {
   window.scrollTo(0, 0);
 }
 
+/* --- Wechselwirkungen (data/wechselwirkungen.json) und Stack-Baukasten --- */
+const WW_ART = { ergaenzt: ["e1", "Ergänzen sich"], kein: ["e0", "Kein Zusatznutzen"], achtung: ["em", "Zeitpunkt beachten"], hemmt: ["e3", "Hemmen sich"], unklar: ["em", "Unklar"] };
+let WW = null;
+async function loadWW() { if (!WW) WW = await (await fetch("data/wechselwirkungen.json")).json(); await loadAll(); return WW; }
+const wwTitle = (id) => cache[id] ? `<a href="#${id}">${cache[id].title}</a>` : findTitle(id);
+function wwCard(i) {
+  const [c, lab] = WW_ART[i.art];
+  return `<article class="card myth"><div class="myth-head"><span class="verdict ${c}">${lab}</span><span class="pill ev-${i.ev}">Evidenz ${i.ev}</span></div>
+    <h3>${wwTitle(i.a)} + ${wwTitle(i.b)}</h3><p class="ww-sub">${i.titel}</p>${i.t.map(x => `<p>${x}</p>`).join("")}
+    <p class="ww-rat"><b>Praxis:</b> ${i.rat}</p>
+    <details class="ww-src"><summary>Quellen (${i.s.length})</summary><ul>${i.s.map(k => `<li>${WW.sources[k].apa} <small>${WW.sources[k].type}</small></li>`).join("")}</ul></details></article>`;
+}
+let wwSel = "";
+async function renderWW() {
+  page("Wechselwirkungs-Check");
+  $("main").innerHTML = `<section><h1>Wechselwirkungs-Check</h1><p class="cap">Wird geladen …</p></section>`;
+  await loadWW();
+  const ids = [...new Set(WW.items.flatMap(i => [i.a, i.b]))].sort((a, b) => findTitle(a).localeCompare(findTitle(b), "de"));
+  const list = WW.items.filter(i => !wwSel || i.a === wwSel || i.b === wwSel);
+  $("main").innerHTML = `<section>
+    <h1>Wechselwirkungs-Check</h1>
+    <p class="lead">Welche Supplemente sich gegenseitig verstärken, abschwächen oder nichts zusätzlich bringen. ${WW.hinweis}</p>
+    <div class="filters" role="group" aria-label="Supplement wählen"><button type="button" data-ww="" aria-pressed="${!wwSel}">Alle</button>${ids.map(id => `<button type="button" data-ww="${id}" aria-pressed="${id === wwSel}">${findTitle(id)}</button>`).join("")}</div>
+    <p><a href="#stack">Eigene Kombination im Stack-Baukasten prüfen →</a></p>
+    <div class="myth-list">${list.map(wwCard).join("")}</div>
+    ${disclaimerHTML(true)}
+    <p class="cap">Stand ${fmtDate(WW.stand)}. Wechselwirkungen mit Medikamenten sind hier nicht erfasst – dafür ärztlich oder in der Apotheke beraten lassen.</p></section>`;
+  window.scrollTo(0, 0);
+}
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-ww]"); if (!b) return; wwSel = b.dataset.ww; renderWW(); });
+
+let stack = []; try { stack = JSON.parse(localStorage.getItem("fs-stack") || "[]"); } catch (e) {}
+const MINERALE = ["zink", "eisen", "magnesium", "calcium", "vitamin-c", "vitamin-d-k2", "b-vitamine"];
+async function renderStack() {
+  page("Stack-Baukasten");
+  $("main").innerHTML = `<section><h1>Stack-Baukasten</h1><p class="cap">Wird geladen …</p></section>`;
+  await loadWW();
+  const ids = supList().filter(id => cache[id] && cache[id].matrix);
+  stack = stack.filter(id => ids.includes(id));
+  let kg = 75; try { kg = +localStorage.getItem("fs-kg") || kg; } catch (e) {}
+  const card = (id) => {
+    const t = cache[id];
+    const best = allItems([t]).filter(i => i.b === "nutzen" && zgOk(i)).sort((a, b) => rank(a) - rank(b)).slice(0, 3);
+    const rx = (re) => (t.rx || []).filter(r => re.test(r.label));
+    const dos = rx(/^(form|zeitpunkt|rhythmus|dauer)$|dosis/i), risk = rx(RISK_RX);
+    const calc = (DOSIS[id] || []).map(c => `<p class="st-l"><b>${c.lbl}:</b> ${c.f(kg)}</p>`).join("");
+    return `<article class="card sup-card"><h3><a href="#${id}">${t.title}</a></h3>
+      <h4>Stärkste Wirkungen</h4>${best.length ? `<ul>${best.map(i => `<li>${lt1(i)}<span>${i.n}<small>${effLabel(i)}</small></span></li>`).join("")}</ul>` : `<p class="cap">Kein belegter Nutzen${zg !== "alle" ? " für diese Zielgruppe" : ""}.</p>`}
+      ${dos.length ? `<h4>Einnahme</h4>${dos.map(r => `<p class="st-l"><b>${r.label}:</b> ${r.value}</p>`).join("")}` : ""}
+      ${calc ? `<h4>Für ${fmtK(kg)} kg</h4>${calc}` : ""}
+      ${risk.length ? `<h4>Beachten</h4>${risk.map(r => `<p class="risk-p"><b>${r.label}:</b> ${r.text}</p>`).join("")}` : ""}
+      <a class="go" href="#${id}">Zum Thema →</a></article>`;
+  };
+  const pairs = WW.items.filter(i => stack.includes(i.a) && stack.includes(i.b));
+  const nPairs = stack.length * (stack.length - 1) / 2;
+  const multi = stack.includes("multivitamin") ? stack.filter(id => MINERALE.includes(id)) : [];
+  $("main").innerHTML = `<section>
+    <h1>Stack-Baukasten</h1>
+    <p class="lead">Stell deine Kombination zusammen: Du siehst für jedes Supplement die stärksten Wirkungen mit Evidenzbuchstabe, Einnahme und Warnhinweise sowie alle untersuchten Wechselwirkungen innerhalb deiner Auswahl. Die Auswahl wird auf diesem Gerät gespeichert.</p>
+    <div class="filters" role="group" aria-label="Supplemente auswählen">${ids.map(id => `<button type="button" data-stack="${id}" aria-pressed="${stack.includes(id)}">${cache[id].title}</button>`).join("")}</div>
+    ${stack.length ? `${zgButtons("stack-zg")}
+    <div class="calc-in kg-in" style="margin-top:10px"><label>Dein Körpergewicht in kg<input type="number" id="stack-kg" min="30" max="250" step="1" value="${kg}" inputmode="decimal"></label></div>
+    <h2>Wechselwirkungen in deiner Auswahl</h2>
+    ${stack.length < 2 ? `<p class="cap">Wähle mindestens zwei Supplemente.</p>` : pairs.length ? `<div class="myth-list">${pairs.map(wwCard).join("")}</div>` : ""}
+    ${stack.length >= 2 ? `<p class="cap">${pairs.length} von ${nPairs} möglichen Kombinationen sind untersucht. Für die übrigen liegen keine Studien vor – das heißt nicht, dass es keine Wechselwirkung gibt.</p>` : ""}
+    ${multi.length ? `<div class="card" role="note"><h3>Doppelt eingenommen</h3><p>Multivitaminpräparate enthalten meist auch ${multi.map(findTitle).join(", ")}. Die Mengen addieren sich – Gesamtmenge mit dem Etikett abgleichen und die Hinweise im jeweiligen Thema beachten.</p></div>` : ""}
+    <h2>Deine Supplemente</h2>
+    <div class="sup-grid">${stack.map(card).join("")}</div>` : `<p class="cap" style="margin-top:12px">Tippe oben auf die Supplemente, die du nimmst oder nehmen möchtest.</p>`}
+    ${disclaimerHTML(true)}
+    <p class="cap">Wechselwirkungen mit Medikamenten sind nicht erfasst. Bei Erkrankungen, Medikamenteneinnahme, Schwangerschaft oder Stillzeit vor der Einnahme ärztlich abklären.</p></section>`;
+  if ($("stack-kg")) $("stack-kg").addEventListener("change", (e) => { const v = Math.min(250, Math.max(30, +e.target.value || 75)); try { localStorage.setItem("fs-kg", String(v)); } catch (err) {} const y = scrollY; renderStack().then(() => scrollTo({ top: y, behavior: "instant" })); });
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-stack]"); if (!b) return;
+  const id = b.dataset.stack; stack = stack.includes(id) ? stack.filter(x => x !== id) : [...stack, id];
+  try { localStorage.setItem("fs-stack", JSON.stringify(stack)); } catch (err) {}
+  const y = scrollY; renderStack().then(() => scrollTo({ top: y, behavior: "instant" }));
+});
+
 const VERDICT = { "falsch": ["e4", "Falsch"], "stark übertrieben": ["e3", "Stark übertrieben"], "nicht belegt": ["e0", "Nicht belegt"], "teilweise": ["em", "Teilweise richtig"], "stimmt": ["e1", "Stimmt"] };
 async function renderMythen() {
   page("Mythen-Check");
@@ -1298,7 +1381,7 @@ const TOUR = [
   { t: "Bitte beachten", x: "Die Seite ist im Aufbau, und an vielem wird noch gearbeitet. Recherche und Zusammenfassung macht eine KI: Fehler sind möglich, es gibt keinen Anspruch auf Richtigkeit oder Vollständigkeit. Dosierungen und Empfehlungen setzt du auf eigene Gefahr um; es kann unbekannte Risiken geben. Keine Haftung für Folgen. <a href=\"#hinweis\" data-tour-end>Vollständiger Haftungsausschluss</a>" },
   { sel: "#q", menu: true, t: "Suche", x: "Durchsucht alle Themen, Befunde, Empfehlungen und Quellen auf einmal – zum Beispiel nach „Koffein“ oder „Schlaf“." },
   { sel: "#nav-tools", menu: true, t: "Werkzeuge", x: "<b>Mein Ziel</b> stellt Themen und Supplemente zu deinem Ziel zusammen. <b>Mythen-Check</b> prüft verbreitete Behauptungen. <b>Neu</b> zeigt alle Änderungen, <b>Glossar</b> erklärt Fachbegriffe. Über <b>Hilfe</b> startest du diese Einführung erneut, über <b>Teilen</b> schickst du die App an Freunde." },
-  { sel: "#nav-topics > ul:first-of-type", menu: true, t: "Themen", x: "Drei Bereiche: Training (hier zu sehen), Ernährung und Supplemente. Ein Klick auf eine Gruppe klappt sie auf. Bei den Supplementen gibt es zusätzlich eine Übersicht, einen direkten Vergleich zweier Präparate und alle Risiken auf einen Blick." },
+  { sel: "#nav-topics > ul:first-of-type", menu: true, t: "Themen", x: "Drei Bereiche: Training (hier zu sehen), Ernährung und Supplemente. Ein Klick auf eine Gruppe klappt sie auf. Bei den Supplementen gibt es zusätzlich eine Übersicht, einen direkten Vergleich zweier Präparate, alle Risiken auf einen Blick, einen Wechselwirkungs-Check und den Stack-Baukasten für deine eigene Kombination." },
   { page: "kreatin", sel: ".takeaways > :first-child", t: "Jede Themenseite: das Kurzfazit", x: "Oben stehen die wichtigsten Aussagen, jede als eigene Karte wie diese. Das Etikett zeigt, wie gut sie belegt sind: <b>hoch</b> (mehrere übereinstimmende Metaanalysen), <b>moderat</b> oder <b>niedrig</b> (wenige oder widersprüchliche Studien). Unterstrichene Fachbegriffe erklären sich beim Antippen." },
   { page: "kreatin", sel: ["#wirkung .mx-cols", "#wirkung .mx-grp > summary", "#wirkung .mx-grp > .mx-row:nth-of-type(2)"], t: "Wirkungsübersicht", x: "Bei Supplementen und Ernährungsthemen, nach Zielen gruppiert (hier: Kraft). Der <b>Buchstabe</b> sagt, worauf eine Aussage beruht – A mindestens zwei Metaanalysen, B eine Metaanalyse, C systematische Reviews oder Positionspapiere, D nur Einzelstudien. Die <b>Farbe</b> zeigt den Effekt: dunkelgrün stark, hellgrün klein, grau kein Effekt, sandfarben uneinheitlich, rot ein Nachteil. Über <b>Zielgruppe</b> wählst du Einsteiger, Trainierte oder Ältere; zusammengefasste Zeilen lassen sich aufklappen und zeigen die einzelnen Befunde." },
   { page: "kreatin", sel: "#ableitungen .rx > :first-child", t: "Ableitungen für die Praxis", x: "Was folgt daraus für Training und Ernährung? Dosierung, Zeitpunkt, für wen es sich lohnt – jeweils mit Quelle. Darunter rechnet „Für dich berechnet“ die Dosierungen auf dein Körpergewicht um; bei Kraft- und Ausdauerdiagnostik kannst du dort deine Testergebnisse auswerten." },
@@ -1703,7 +1786,7 @@ window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); inst
 const appText = () => { const o = offlineInfo(); return o ? `Offline gespeichert am ${new Date(o.datum).toLocaleDateString("de-DE")} (${o.ok} Dateien); wird bei jedem Besuch mit Internet aktualisiert.` : "Speichert alle Themen auf dem Gerät, damit die Seite auch ohne Internet funktioniert."; };
 function offlineInfo() { try { return JSON.parse(localStorage.getItem("fs-offline") || "null"); } catch (e) { return null; } }
 function speichernAlles() {
-  const urls = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "logo-ts.png", "data/mythen.json", ...AVAILABLE.flatMap(id => [`data/topics/${id}.json`, `data/screening/${id}.json`])];
+  const urls = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "logo-ts.png", "data/mythen.json", "data/wechselwirkungen.json", ...AVAILABLE.flatMap(id => [`data/topics/${id}.json`, `data/screening/${id}.json`])];
   navigator.serviceWorker.ready.then(reg => reg.active.postMessage({ type: "alles-speichern", urls }));
 }
 async function appButton() {
